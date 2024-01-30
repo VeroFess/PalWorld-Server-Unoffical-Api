@@ -10,3 +10,6 @@
 [submodule "3rd/funchook"]
 	path = 3rd/funchook
 	url = https://github.com/kubo/funchook.git
+[submodule "3rd/fmt"]
+	path = 3rd/fmt
+	url = https://github.com/fmtlib/fmt.git
