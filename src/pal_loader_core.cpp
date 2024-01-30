@@ -9,6 +9,15 @@
 
 typedef void (*ForceGarbageCollectionType)(SDK::UEngine *engine, bool bForcePurge);
 typedef SDK::FString *(*LowLevelGetRemoteAddressType)(SDK::UIpConnection *connection, bool bAppendPort);
+typedef bool (*KickPlayerType)(const SDK::UObject *WorldContextObject, const SDK::FGuid *PlayerUId, const SDK::FText *KickReason);
+typedef SDK::FText *(*GetEmptyFTextType)();
+
+std::string str_tolower(std::string s) {
+    std::transform(s.begin(), s.end(), s.begin(), [](unsigned char c) {
+        return std::tolower(c);
+    });
+    return s;
+}
 
 void pal_loader_thread_start() {
     spdlog::info("loading ...");
@@ -21,6 +30,8 @@ void pal_loader_thread_start() {
     SDK::APalGameStateInGame    *stateInGame              = nullptr;
     ForceGarbageCollectionType   ForceGarbageCollection   = nullptr;
     LowLevelGetRemoteAddressType LowLevelGetRemoteAddress = nullptr;
+    KickPlayerType               KickPlayer               = nullptr;
+    GetEmptyFTextType            GetEmptyFText            = nullptr;
 
     for (int i = 0; i < SDK::UObject::GObjects->Num(); i++) {
         SDK::UObject *object = SDK::UObject::GObjects->GetByIndex(i);
@@ -42,6 +53,8 @@ void pal_loader_thread_start() {
 
     ForceGarbageCollection   = reinterpret_cast<ForceGarbageCollectionType>(uintptr_t(GetImageBaseOffset()) + Offsets::ForceGarbageCollection);
     LowLevelGetRemoteAddress = reinterpret_cast<LowLevelGetRemoteAddressType>(uintptr_t(GetImageBaseOffset()) + Offsets::LowLevelGetRemoteAddress);
+    KickPlayer               = reinterpret_cast<KickPlayerType>(uintptr_t(GetImageBaseOffset()) + Offsets::KickPlayer);
+    GetEmptyFText            = reinterpret_cast<GetEmptyFTextType>(uintptr_t(GetImageBaseOffset()) + Offsets::GetEmptyFText);
 
     spdlog::info("Unreal::GObjects         = {:x}", uintptr_t(SDK::UObject::GObjects));
     spdlog::info("Unreal::GEngine          = {}", uintptr_t(engine));
@@ -80,6 +93,8 @@ void pal_loader_thread_start() {
             utility->GetAllPlayerCharacters(world, &player_characters);
 
             if (player_characters.IsValid()) {
+                spdlog::info("[CMD::List] current {} player online", player_characters.Num());
+
                 for (int i = 0; i < player_characters.Num(); i++) {
                     auto character = static_cast<SDK::APalPlayerCharacter *>(player_characters[i]);
 
@@ -95,11 +110,40 @@ void pal_loader_thread_start() {
                         }
                     }
 
-                    auto state = utility->GetPlayerStateByPlayer(character);
+                    auto state    = utility->GetPlayerStateByPlayer(character);
+                    auto raw_name = state->GetPlayerName();
+                    auto uid      = utility->GetPlayerUIDByActor(character);
 
-                    std::string name = state->GetPlayerName().ToString();
+                    std::string name = utf16_to_local_codepage(raw_name.Data, raw_name.NumElements);
 
-                    spdlog::info("[CMD::List] GetController = {}, {}", name, address);
+                    spdlog::info("[CMD::List] {}, {:08x}, {}", name, static_cast<uint32_t>(uid.A), address);
+                }
+            }
+        } else if (userInput.starts_with("kick")) {
+            auto                              kick_uid = str_tolower(userInput.substr(5));
+            SDK::TArray<SDK::APalCharacter *> player_characters;
+            utility->GetAllPlayerCharacters(world, &player_characters);
+
+            if (player_characters.IsValid()) {
+                for (int i = 0; i < player_characters.Num(); i++) {
+                    char        hexuid[9] = {};
+                    auto        character = static_cast<SDK::APalPlayerCharacter *>(player_characters[i]);
+                    auto        uid       = utility->GetPlayerUIDByActor(character);
+                    auto        state     = utility->GetPlayerStateByPlayer(character);
+                    auto        raw_name  = state->GetPlayerName();
+                    std::string name      = utf16_to_local_codepage(raw_name.Data, raw_name.NumElements);
+
+                    sprintf_s(hexuid, "%08x", static_cast<uint32_t>(uid.A));
+
+                    if (kick_uid == std::string(hexuid)) {
+                        SDK::FText *reason = GetEmptyFText();
+
+                        auto kicked = KickPlayer(world, &uid, reason);
+
+                        if (kicked) {
+                            spdlog::info("[CMD::Kick] player {} kicked", name);
+                        }
+                    }
                 }
             }
         } else {

@@ -60,7 +60,7 @@ namespace SDK {
 
     template<class T>
     class TArray {
-        protected:
+        public:
             T    *Data;
             int32 NumElements;
             int32 MaxElements;
