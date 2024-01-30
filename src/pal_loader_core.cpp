@@ -5,15 +5,18 @@
 #include <cstdio>
 #include <iostream>
 
+typedef void (*ForceGarbageCollectionType)(SDK::UEngine *engine, bool bForcePurge);
+
 void pal_loader_thread_start() {
     spdlog::info("loading ...");
 
     SDK::InitGObjects();
 
-    SDK::UEngine             *engine      = nullptr;
-    SDK::UWorld              *world       = nullptr;
-    SDK::UPalUtility         *utility     = nullptr;
-    SDK::APalGameStateInGame *stateInGame = nullptr;
+    SDK::UEngine              *engine                 = nullptr;
+    SDK::UWorld               *world                  = nullptr;
+    SDK::UPalUtility          *utility                = nullptr;
+    SDK::APalGameStateInGame  *stateInGame            = nullptr;
+    ForceGarbageCollectionType ForceGarbageCollection = nullptr;
 
     for (int i = 0; i < SDK::UObject::GObjects->Num(); i++) {
         SDK::UObject *object = SDK::UObject::GObjects->GetByIndex(i);
@@ -28,6 +31,8 @@ void pal_loader_thread_start() {
     }
 
     world = *reinterpret_cast<SDK::UWorld **>(uintptr_t(GetImageBaseOffset()) + Offsets::GWorld);
+
+    ForceGarbageCollection = reinterpret_cast<ForceGarbageCollectionType>(uintptr_t(GetImageBaseOffset()) + Offsets::ForceGarbageCollection);
 
     utility = SDK::UPalUtility::GetDefaultObj();
 
@@ -63,6 +68,10 @@ void pal_loader_thread_start() {
             utility->SendSystemAnnounce(world, SDK::FString(std::wstring(message.begin(), message.end()).c_str()));
 
             spdlog::info("[CMD::BroadcastChatMessage] {}", message);
+        } else if (userInput == "gc") {
+            ForceGarbageCollection(engine, true);
+            
+            spdlog::info("[CMD::ForceGarbageCollection] done");
         } else {
             spdlog::info("[CMD::???] Unknown command");
         }
