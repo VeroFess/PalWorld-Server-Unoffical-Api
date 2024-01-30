@@ -13,3 +13,6 @@
 [submodule "3rd/fmt"]
 	path = 3rd/fmt
 	url = https://github.com/fmtlib/fmt.git
+[submodule "3rd/spdlog"]
+	path = 3rd/spdlog
+	url = https://github.com/gabime/spdlog.git
