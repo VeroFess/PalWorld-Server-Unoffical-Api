@@ -165,6 +165,7 @@ target("pal-plugin-loader")
 
     if is_os("windows") then
         add_includedirs(path.join(os.scriptdir(), "include/os/windows/sdk"))
+        add_includedirs(path.join(os.scriptdir(), "include/os/windows"))
         add_files("src/os/windows/*.cpp")
     end
 

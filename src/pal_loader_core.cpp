@@ -2,6 +2,8 @@
 #include "spdlog/spdlog.h"
 #include "sdk.hpp"
 
+#include "utils.h"
+
 #include <cstdio>
 #include <iostream>
 
@@ -65,10 +67,7 @@ void pal_loader_thread_start() {
         } else if (userInput.starts_with("broadcast")) {
             auto message = userInput.substr(10);
 
-            // Chinese need UTF16-LE
-            // MultiByteToWideChar(CP_ACP, 0, message.c_str(), message.size(), unicodeMessage, 0x100);
-
-            utility->SendSystemAnnounce(world, SDK::FString(std::wstring(message.begin(), message.end()).c_str()));
+            utility->SendSystemAnnounce(world, SDK::FString(local_codepage_to_utf16(message).c_str()));
 
             spdlog::info("[CMD::BroadcastChatMessage] {}", message);
         } else if (userInput == "gc") {
@@ -98,8 +97,7 @@ void pal_loader_thread_start() {
 
                     auto state = utility->GetPlayerStateByPlayer(character);
 
-                    //TODO: name is also utf16-le, cover it to local
-                    std::string name = state->GetPlayerInfoForMap().PlayerName.ToString();
+                    std::string name = state->GetPlayerName().ToString();
 
                     spdlog::info("[CMD::List] GetController = {}, {}", name, address);
                 }
