@@ -1,0 +1,12 @@
+[submodule "3rd/wasmtime"]
+	path = 3rd/wasmtime
+	url = https://github.com/bytecodealliance/wasmtime.git
+[submodule "3rd/zycore"]
+	path = 3rd/zycore
+	url = https://github.com/zyantific/zycore-c.git
+[submodule "3rd/zydis"]
+	path = 3rd/zydis
+	url = https://github.com/zyantific/zydis.git
+[submodule "3rd/funchook"]
+	path = 3rd/funchook
+	url = https://github.com/kubo/funchook.git
