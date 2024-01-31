@@ -171,7 +171,7 @@ target("pal-plugin-loader")
 
     add_files("src/*.cpp")
     add_files("src/sdk/*.cpp")
-    
+    add_files("src/hooks/*.cpp")
 
 
 

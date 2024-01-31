@@ -13,6 +13,7 @@ namespace Offsets {
     constexpr int32_t LowLevelGetRemoteAddress = 0x013CBA00;
     constexpr int32_t KickPlayer               = 0x02B41240;
     constexpr int32_t GetEmptyFText            = 0x02C3AF30;
+    constexpr int32_t SpawnPlayActor           = 0x04ADA840;
 } // namespace Offsets
 
 uintptr_t GetImageBaseOffset();

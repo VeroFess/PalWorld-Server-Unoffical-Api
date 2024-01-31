@@ -2,15 +2,17 @@
 #include "spdlog/spdlog.h"
 #include "sdk.hpp"
 
+#include "hooks.h"
 #include "utils.h"
+#include "engine_functions.h"
 
 #include <cstdio>
 #include <iostream>
 
-typedef void (*ForceGarbageCollectionType)(SDK::UEngine *engine, bool bForcePurge);
-typedef SDK::FString *(*LowLevelGetRemoteAddressType)(SDK::UIpConnection *connection, bool bAppendPort);
-typedef bool (*KickPlayerType)(const SDK::UObject *WorldContextObject, const SDK::FGuid *PlayerUId, const SDK::FText *KickReason);
-typedef SDK::FText *(*GetEmptyFTextType)();
+ForceGarbageCollectionType   ForceGarbageCollection   = nullptr;
+LowLevelGetRemoteAddressType LowLevelGetRemoteAddress = nullptr;
+KickPlayerType               KickPlayer               = nullptr;
+GetEmptyFTextType            GetEmptyFText            = nullptr;
 
 std::string str_tolower(std::string s) {
     std::transform(s.begin(), s.end(), s.begin(), [](unsigned char c) {
@@ -24,14 +26,10 @@ void pal_loader_thread_start() {
 
     SDK::InitGObjects();
 
-    SDK::UEngine                *engine                   = nullptr;
-    SDK::UWorld                 *world                    = nullptr;
-    SDK::UPalUtility            *utility                  = nullptr;
-    SDK::APalGameStateInGame    *stateInGame              = nullptr;
-    ForceGarbageCollectionType   ForceGarbageCollection   = nullptr;
-    LowLevelGetRemoteAddressType LowLevelGetRemoteAddress = nullptr;
-    KickPlayerType               KickPlayer               = nullptr;
-    GetEmptyFTextType            GetEmptyFText            = nullptr;
+    SDK::UEngine             *engine      = nullptr;
+    SDK::UWorld              *world       = nullptr;
+    SDK::UPalUtility         *utility     = nullptr;
+    SDK::APalGameStateInGame *stateInGame = nullptr;
 
     for (int i = 0; i < SDK::UObject::GObjects->Num(); i++) {
         SDK::UObject *object = SDK::UObject::GObjects->GetByIndex(i);
@@ -62,6 +60,8 @@ void pal_loader_thread_start() {
     spdlog::info("UPalUtility              = {:x}", uintptr_t(utility));
     spdlog::info("PalGameStateInGame       = {:x}", uintptr_t(stateInGame));
     spdlog::info("IsDevelopmentBuild       = {}", utility->IsDevelopmentBuild());
+
+    install_hooks();
 
     // Now wo can do some magic!
 
