@@ -197,17 +197,17 @@ enum class EAkSpeakerConfiguration : uint8
 	Ak_Speaker_Low_Frequency       = 8,
 	Ak_Speaker_Back_Left           = 16,
 	Ak_Speaker_Back_Right          = 32,
-	Ak_Speaker_Back_Center         = 256,
-	Ak_Speaker_Side_Left           = 512,
-	Ak_Speaker_Side_Right          = 1024,
-	Ak_Speaker_Top                 = 2048,
-	Ak_Speaker_Height_Front_Left   = 4096,
-	Ak_Speaker_Height_Front_Center = 8192,
-	Ak_Speaker_Height_Front_Right  = 16384,
-	Ak_Speaker_Height_Back_Left    = 32768,
-	Ak_Speaker_Height_Back_Center  = 65536,
-	Ak_Speaker_Height_Back_Right   = 131072,
-	Ak_Speaker_MAX                 = 131073,
+	// Ak_Speaker_Back_Center         = 256,
+	// Ak_Speaker_Side_Left           = 512,
+	// Ak_Speaker_Side_Right          = 1024,
+	// Ak_Speaker_Top                 = 2048,
+	// Ak_Speaker_Height_Front_Left   = 4096,
+	// Ak_Speaker_Height_Front_Center = 8192,
+	// Ak_Speaker_Height_Front_Right  = 16384,
+	// Ak_Speaker_Height_Back_Left    = 32768,
+	// Ak_Speaker_Height_Back_Center  = 65536,
+	// Ak_Speaker_Height_Back_Right   = 131072,
+	// Ak_Speaker_MAX                 = 131073,
 };
 
 enum class EAkMultiPositionType : uint8
@@ -267,7 +267,7 @@ enum class EAkMidiEventType : uint8
 	AkMidiEventTypeSysex           = 240,
 	AkMidiEventTypeEscape          = 247,
 	AkMidiEventTypeMeta            = 255,
-	EAkMidiEventType_MAX           = 256,
+
 };
 
 enum class EAkMidiCcValues : uint8

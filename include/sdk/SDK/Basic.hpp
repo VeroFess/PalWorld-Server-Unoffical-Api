@@ -1,8 +1,15 @@
 #pragma once
 
 #include <platform_sdk.h>
+#include <iostream>
+#include <locale>
+#include <memory>
+#include <codecvt>
+#include <string>
 
 // Dumped with Dumper-7!
+
+extern std::wstring_convert<std::codecvt_utf16<wchar_t, 0x10ffff, std::little_endian>, wchar_t> u16_convert;
 
 namespace SDK {
 
@@ -106,27 +113,40 @@ namespace SDK {
             }
     };
 
+#ifdef __linux_off
+    class FString : public TArray<char16_t> {
+#else
     class FString : public TArray<wchar_t> {
+#endif
         public:
             inline FString() = default;
 
             using TArray::TArray;
 
+#ifdef __linux_off
+            inline FString(const char16_t *WChar, int32 size) {
+#else
             inline FString(const wchar_t *WChar) {
-                MaxElements = NumElements = *WChar ? std::wcslen(WChar) + 1 : 0;
+#endif
 
+#ifdef __linux_off
+                MaxElements = NumElements = size;
+                Data = const_cast<char16_t *>(WChar);      
+#else
+                MaxElements = NumElements = *WChar ? std::wcslen(WChar) + 1 : 0;
                 if (NumElements) {
                     Data = const_cast<wchar_t *>(WChar);
                 }
-            }
-
-            inline FString operator=(const wchar_t *&&Other) {
-                return FString(Other);
+#endif
             }
 
             inline std::wstring ToWString() {
                 if (IsValid()) {
+#ifdef __linux_off
+                    return u16_convert.from_bytes(reinterpret_cast<const char*>(&Data[0]), reinterpret_cast<const char*>(&Data[0] + NumElements));    
+#else
                     return Data;
+#endif
                 }
 
                 return L"";
@@ -134,7 +154,7 @@ namespace SDK {
 
             inline std::string ToString() {
                 if (IsValid()) {
-                    std::wstring WData(Data);
+                    std::wstring WData = ToWString();
                     return std::string(WData.begin(), WData.end());
                 }
 
@@ -162,7 +182,7 @@ namespace SDK {
                 static void (*AppendString)(const FName *, FString &) = nullptr;
 
                 if (!AppendString)
-                    AppendString = reinterpret_cast<void (*)(const FName *, FString &)>(uintptr_t(GetImageBaseOffset()) + Offsets::AppendString);
+                    AppendString = reinterpret_cast<void (*)(const FName *, FString &)>(uintptr_t(GetImageBaseOffset()) + Offsets::FNameAppendString);
 
                 AppendString(this, TempString);
 
@@ -170,10 +190,6 @@ namespace SDK {
                 TempString.ResetNum();
 
                 return OutputString;
-            }
-
-            static inline void InitGNames() {
-                GNames = reinterpret_cast<void *>(uint64(GetImageBaseOffset()) + Offsets::GNames);
             }
 
             // ToString - returns an edited string as it's used by most SDKs ["/Script/CoreUObject" -> "CoreUObject"]
@@ -380,7 +396,7 @@ namespace SDK {
             FString     GetSubPathString();
             std::string GetSubPathStringStr();
 
-            template<class SoftObjectPath = FSoftObjectPath>
+            template<class SoftObjectPath = SoftObjPathWrapper::FSoftObjectPath>
             SoftObjectPath &GetObjectPath();
     };
 
@@ -472,7 +488,7 @@ namespace SDK {
         return (static_cast<CastFlagsType>(Left) & static_cast<CastFlagsType>(Right)) == static_cast<CastFlagsType>(Right);
     }
 
-    enum class EClassFlags : int32 {
+    enum class EClassFlags : uint32_t {
         CLASS_None               = 0x00000000u,
         Abstract                 = 0x00000001u,
         DefaultConfig            = 0x00000002u,
@@ -533,9 +549,9 @@ namespace SDK {
         public:
     };
 
-#ifdef _MSC_VER
+//#ifdef _MSC_VER
     #pragma pack(push, 0x1)
-#endif
+//#endif
     class FFieldClass {
         public:
             FName        Name;          // (0x00[0x08]) NOT AUTO-GENERATED PROPERTY
@@ -545,13 +561,13 @@ namespace SDK {
             uint8        Pad_509B[0x4]; // Fixing Size After Last (Predefined) Property  [ Dumper-7 ]
             FFieldClass *SuperClass;    // (0x20[0x08]) NOT AUTO-GENERATED PROPERTY
     };
-#ifdef _MSC_VER
+//#ifdef _MSC_VER
     #pragma pack(pop)
-#endif
+//#endif
 
-#ifdef _MSC_VER
+//#ifdef _MSC_VER
     #pragma pack(push, 0x1)
-#endif
+//#endif
     class FFieldVariant {
         public:
             union {
@@ -561,13 +577,13 @@ namespace SDK {
             bool  bIsUObject; // (0x08[0x01]) NOT AUTO-GENERATED PROPERTY
             uint8 Pad[0x7];   // (0x09[0x07]) NOT AUTO-GENERATED PROPERTY
     };
-#ifdef _MSC_VER
+//#ifdef _MSC_VER
     #pragma pack(pop)
-#endif
+//#endif
 
-#ifdef _MSC_VER
+//#ifdef _MSC_VER
     #pragma pack(push, 0x1)
-#endif
+//#endif
     class FField {
         public:
             void         *Vft;   // (0x00[0x08]) NOT AUTO-GENERATED PROPERTY
@@ -577,9 +593,9 @@ namespace SDK {
             FName         Name;  // (0x28[0x08]) NOT AUTO-GENERATED PROPERTY
             int32         Flags; // (0x30[0x04]) NOT AUTO-GENERATED PROPERTY
     };
-#ifdef _MSC_VER
+//#ifdef _MSC_VER
     #pragma pack(pop)
-#endif
+//#endif
 
 #ifdef _MSC_VER
     #pragma pack(push, 0x1)

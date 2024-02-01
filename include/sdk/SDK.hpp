@@ -6,9 +6,12 @@
 
 // Main-package: Pal
 
+#include <stdint.h>
 #include <string>
 #include <iostream>
 #include <type_traits>
+
+uintptr_t GetImageBaseOffset();
 
 typedef int8_t  int8;
 typedef int16_t int16;

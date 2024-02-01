@@ -49,7 +49,7 @@ enum class EHoudiniAssetStateResult : uint8
 
 enum class EHoudiniRampInterpolationType : uint8
 {
-	InValid                        = -1,
+	
 	CONSTANT                       = 0,
 	LINEAR                         = 1,
 	CATMULL_ROM                    = 2,
@@ -97,7 +97,7 @@ enum class EHoudiniOutputType : uint8
 
 enum class EHoudiniCurveType : uint8
 {
-	Invalid                        = -1,
+	
 	Polygon                        = 0,
 	Nurbs                          = 1,
 	Bezier                         = 2,
@@ -107,7 +107,7 @@ enum class EHoudiniCurveType : uint8
 
 enum class EHoudiniCurveMethod : uint8
 {
-	Invalid                        = -1,
+	
 	CVs                            = 0,
 	Breakpoints                    = 1,
 	Freehand                       = 2,
@@ -116,7 +116,7 @@ enum class EHoudiniCurveMethod : uint8
 
 enum class EHoudiniCurveBreakpointParameterization : uint8
 {
-	Invalid                        = -1,
+	
 	Uniform                        = 0,
 	Chord                          = 1,
 	Centripetal                    = 2,
@@ -151,7 +151,7 @@ enum class EHoudiniProxyRefineRequestResult : uint8
 
 enum class EAttribStorageType : uint8
 {
-	Invalid                        = -1,
+	
 	INT                            = 0,
 	INT64                          = 1,
 	FLOAT                          = 2,
@@ -162,7 +162,7 @@ enum class EAttribStorageType : uint8
 
 enum class EAttribOwner : uint8
 {
-	Invalid                        = -1,
+	
 	Vertex                         = 0,
 	Point                          = 1,
 	Prim                           = 2,

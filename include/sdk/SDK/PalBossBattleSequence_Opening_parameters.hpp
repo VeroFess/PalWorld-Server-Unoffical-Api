@@ -3,7 +3,7 @@
 // Dumped with Dumper-7!
 
 
-#include "../SDK.hpp"
+#include "SDK.hpp"
 
 namespace SDK
 {
@@ -290,7 +290,7 @@ public:
 };
 
 // 0x8 (0x8 - 0x0)
-// Function PalBossBattleSequence_Opening.PalBossBattleSequence_Opening_C.«¹¿à¤ÙóÈ_0
+// Function PalBossBattleSequence_Opening.PalBossBattleSequence_Opening_C.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½_0
 struct UPalBossBattleSequence_Opening_C__________0_Params
 {
 public:

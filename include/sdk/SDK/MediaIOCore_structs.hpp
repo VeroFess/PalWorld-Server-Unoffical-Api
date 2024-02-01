@@ -87,7 +87,7 @@ enum class EMediaIOAutoDetectableTimecodeFormat : uint8
 	LTC                            = 1,
 	VITC                           = 2,
 	Auto                           = 255,
-	EMediaIOAutoDetectableTimecodeFormat_MAX = 256,
+
 };
 
 enum class EMediaIOInputType : int32

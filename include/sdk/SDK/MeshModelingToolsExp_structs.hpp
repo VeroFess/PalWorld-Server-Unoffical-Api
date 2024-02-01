@@ -177,11 +177,11 @@ enum class EBakeMapType : uint8
 	Curvature                      = 32,
 	AmbientOcclusion               = 64,
 	Texture                        = 128,
-	MultiTexture                   = 256,
-	VertexColor                    = 512,
-	MaterialID                     = 1024,
-	All                            = 2047,
-	EBakeMapType_MAX               = 2048,
+	// MultiTexture                   = 256,
+	// VertexColor                    = 512,
+	// MaterialID                     = 1024,
+	// All                            = 2047,
+	// EBakeMapType_MAX               = 2048,
 };
 
 enum class EBakeVertexOutput : int32

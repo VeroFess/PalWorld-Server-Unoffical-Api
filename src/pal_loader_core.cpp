@@ -1,6 +1,6 @@
 #include "common_entry.h"
 #include "spdlog/spdlog.h"
-#include "sdk.hpp"
+#include "SDKDirect.h"
 
 #include "hooks.h"
 #include "utils.h"
@@ -8,11 +8,6 @@
 
 #include <cstdio>
 #include <iostream>
-
-ForceGarbageCollectionType   ForceGarbageCollection   = nullptr;
-LowLevelGetRemoteAddressType LowLevelGetRemoteAddress = nullptr;
-KickPlayerType               KickPlayer               = nullptr;
-GetEmptyFTextType            GetEmptyFText            = nullptr;
 
 std::string str_tolower(std::string s) {
     std::transform(s.begin(), s.end(), s.begin(), [](unsigned char c) {
@@ -24,48 +19,12 @@ std::string str_tolower(std::string s) {
 void pal_loader_thread_start() {
     spdlog::info("loading ...");
 
-    SDK::InitGObjects();
-
-    SDK::UEngine             *engine      = nullptr;
-    SDK::UWorld              *world       = nullptr;
-    SDK::UPalUtility         *utility     = nullptr;
-    SDK::APalGameStateInGame *stateInGame = nullptr;
-
-    for (int i = 0; i < SDK::UObject::GObjects->Num(); i++) {
-        SDK::UObject *object = SDK::UObject::GObjects->GetByIndex(i);
-
-        if (!object)
-            continue;
-
-        if (object->IsA(SDK::UEngine::StaticClass()) && !object->IsDefaultObject()) {
-            engine = static_cast<SDK::UEngine *>(object);
-            break;
-        }
-    }
-
-    world = *reinterpret_cast<SDK::UWorld **>(uintptr_t(GetImageBaseOffset()) + Offsets::GWorld);
-
-    utility = SDK::UPalUtility::GetDefaultObj();
-
-    stateInGame = utility->GetPalGameStateInGame(world);
-
-    ForceGarbageCollection   = reinterpret_cast<ForceGarbageCollectionType>(uintptr_t(GetImageBaseOffset()) + Offsets::ForceGarbageCollection);
-    LowLevelGetRemoteAddress = reinterpret_cast<LowLevelGetRemoteAddressType>(uintptr_t(GetImageBaseOffset()) + Offsets::LowLevelGetRemoteAddress);
-    KickPlayer               = reinterpret_cast<KickPlayerType>(uintptr_t(GetImageBaseOffset()) + Offsets::KickPlayer);
-    GetEmptyFText            = reinterpret_cast<GetEmptyFTextType>(uintptr_t(GetImageBaseOffset()) + Offsets::GetEmptyFText);
-
-    spdlog::info("Unreal::GObjects         = {:x}", uintptr_t(SDK::UObject::GObjects));
-    spdlog::info("Unreal::GEngine          = {}", uintptr_t(engine));
-    spdlog::info("Unreal::GWorld           = {}", uintptr_t(world));
-    spdlog::info("UPalUtility              = {:x}", uintptr_t(utility));
-    spdlog::info("PalGameStateInGame       = {:x}", uintptr_t(stateInGame));
-    spdlog::info("IsDevelopmentBuild       = {}", utility->IsDevelopmentBuild());
-
+    engine_init();
+    SDK::sdk_init();
     install_hooks();
 
-    // Now wo can do some magic!
-
-    // Hook code removed, it's unstable
+    spdlog::info("Unreal::GWorld           = {:x}", uintptr_t(SDK::World));
+    spdlog::info("PalGameStateInGame       = {:x}", uintptr_t(SDK::StateInGame));
 
     while (true) {
         std::cout << "Pal Loader > ";
@@ -73,72 +32,116 @@ void pal_loader_thread_start() {
         std::getline(std::cin, userInput);
 
         if (userInput == "state") {
-            spdlog::info("[CMD::State] WorldName               = {}", stateInGame->GetWorldName().ToString());
-            spdlog::info("[CMD::State] World Save Directory    = {}", stateInGame->WorldSaveDirectoryName.ToString());
-            spdlog::info("[CMD::State] Server Frame Time       = {}", stateInGame->GetServerFrameTime());
-            spdlog::info("[CMD::State] Max Player              = {}", stateInGame->GetMaxPlayerNum());
+            spdlog::info("[CMD::State] Lazy, add in next version Owo");
         } else if (userInput.starts_with("broadcast")) {
             auto message = userInput.substr(10);
 
-            utility->SendSystemAnnounce(world, SDK::FString(local_codepage_to_utf16(message).c_str()));
+#ifdef __linux_off
+            auto u16str     = local_codepage_to_utf16(message);
+            auto fstringMsg = SDK::FString((char16_t *)(u16str.c_str()), u16str.size());
+#else
+            auto fstringMsg = SDK::FString(local_codepage_to_utf16(message).c_str());
+#endif
+
+            SDK::SendSystemAnnounce(fstringMsg);
 
             spdlog::info("[CMD::BroadcastChatMessage] {}", message);
         } else if (userInput == "gc") {
-            ForceGarbageCollection(engine, true);
+            ForceGarbageCollection(Engine, true);
 
             spdlog::info("[CMD::ForceGarbageCollection] done");
         } else if (userInput == "list") {
             SDK::TArray<SDK::APalCharacter *> player_characters;
 
-            utility->GetAllPlayerCharacters(world, &player_characters);
+            SDK::GetAllPlayerCharacters(&player_characters);
 
             if (player_characters.IsValid()) {
                 spdlog::info("[CMD::List] current {} player online", player_characters.Num());
 
                 for (int i = 0; i < player_characters.Num(); i++) {
-                    auto character = static_cast<SDK::APalPlayerCharacter *>(player_characters[i]);
+                    auto character  = static_cast<SDK::APalPlayerCharacter *>(player_characters[i]);
+                    auto controller = static_cast<SDK::APlayerController *>(SDK::GetController(character));
 
-                    auto controller = static_cast<SDK::APlayerController *>(character->GetController());
+                    SDK::FString faddress;
 
-                    std::string address = std::string("[UNK]");
+#ifdef __linux_off
+                    char16_t faddress_buffer[64] = { 0 };
+#else
+                    wchar_t faddress_buffer[64] = { 0 };
+#endif
 
-                    if (controller->NetConnection) {
-                        auto fsaddress = LowLevelGetRemoteAddress(static_cast<SDK::UIpConnection *>(controller->NetConnection), true);
+                    faddress.Data        = faddress_buffer;
+                    faddress.MaxElements = 64;
+                    faddress.NumElements = 0;
 
-                        if (fsaddress && fsaddress->IsValid() && fsaddress->Num() > 1) {
-                            address = fsaddress->ToString();
-                        }
-                    }
+#ifdef __linux
+                    GetPlayerNetworkAddress(&faddress, controller);
+#else
+                    GetPlayerNetworkAddress(controller, &faddress);
+#endif
 
-                    auto state    = utility->GetPlayerStateByPlayer(character);
-                    auto raw_name = state->GetPlayerName();
-                    auto uid      = utility->GetPlayerUIDByActor(character);
+                    std::string address = faddress.ToString();
 
-                    std::string name = utf16_to_local_codepage(raw_name.Data, raw_name.NumElements);
+                    auto state = SDK::GetPlayerStateByPlayer(character);
 
-                    spdlog::info("[CMD::List] {}, {:08x}, {}", name, static_cast<uint32_t>(uid.A), address);
+                    SDK::FString fraw_name;
+
+#ifdef __linux_off
+                    char16_t fraw_name_buffer[64] = { 0 };
+#else
+                    wchar_t fraw_name_buffer[64] = { 0 };
+#endif
+
+                    fraw_name.Data        = fraw_name_buffer;
+                    fraw_name.MaxElements = 64;
+                    fraw_name.NumElements = 0;
+
+                    SDK::GetPlayerName(state, &fraw_name);
+
+                    auto uid = SDK::GetPlayerUID(state);
+
+                    std::string name = utf16_to_local_codepage(fraw_name.Data, fraw_name.NumElements);
+
+                    spdlog::info("[CMD::List] {}, {:08x}, {}", name, static_cast<uint32_t>(uid->A), address);
                 }
             }
         } else if (userInput.starts_with("kick")) {
             auto                              kick_uid = str_tolower(userInput.substr(5));
             SDK::TArray<SDK::APalCharacter *> player_characters;
-            utility->GetAllPlayerCharacters(world, &player_characters);
+            SDK::GetAllPlayerCharacters(&player_characters);
 
             if (player_characters.IsValid()) {
                 for (int i = 0; i < player_characters.Num(); i++) {
-                    char        hexuid[9] = {};
-                    auto        character = static_cast<SDK::APalPlayerCharacter *>(player_characters[i]);
-                    auto        uid       = utility->GetPlayerUIDByActor(character);
-                    auto        state     = utility->GetPlayerStateByPlayer(character);
-                    auto        raw_name  = state->GetPlayerName();
-                    std::string name      = utf16_to_local_codepage(raw_name.Data, raw_name.NumElements);
+                    SDK::FString fraw_name;
 
-                    sprintf_s(hexuid, "%08x", static_cast<uint32_t>(uid.A));
+#ifdef __linux_off
+                    char16_t fraw_name_buffer[64] = { 0 };
+#else
+                    wchar_t fraw_name_buffer[64] = { 0 };
+#endif
+
+                    char hexuid[9] = {};
+
+                    fraw_name.Data        = fraw_name_buffer;
+                    fraw_name.MaxElements = 64;
+                    fraw_name.NumElements = 0;
+
+                    auto        character = static_cast<SDK::APalPlayerCharacter *>(player_characters[i]);
+                    auto        state     = SDK::GetPlayerStateByPlayer(character);
+                    auto        uid       = SDK::GetPlayerUID(state);
+                    auto        raw_name  = SDK::GetPlayerName(state, &fraw_name);
+                    std::string name      = utf16_to_local_codepage(raw_name->Data, raw_name->NumElements);
+
+#ifdef __linux
+                    sprintf(hexuid, "%08x", static_cast<uint32_t>(uid->A));
+#else
+                    sprintf_s(hexuid, "%08x", static_cast<uint32_t>(uid->A));
+#endif
 
                     if (kick_uid == std::string(hexuid)) {
                         SDK::FText *reason = GetEmptyFText();
 
-                        auto kicked = KickPlayer(world, &uid, reason);
+                        auto kicked = KickPlayer(SDK::World, uid, reason);
 
                         if (kicked) {
                             spdlog::info("[CMD::Kick] player {} kicked", name);

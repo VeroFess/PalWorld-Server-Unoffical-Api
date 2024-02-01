@@ -2,55 +2,76 @@
 #include "spdlog/spdlog.h"
 #include "engine_functions.h"
 #include "utils.h"
+#include "SDKDirect.h"
 
 SDK::APlayerController *spawn_play_actor_proxy(SDK::UWorld *that, SDK::UPlayer *player, SDK::ENetRole role, const SDK::FURL *url, const SDK::FUniqueNetIdRepl *uid, SDK::FString *error, uint8_t index) {
-    static SDK::UPalUtility *utility = nullptr;
-    if (!utility) {
-        utility = SDK::UPalUtility::GetDefaultObj();
-    }
+    spdlog::info("-1");
 
     auto controller = engine_spawn_play_actor(that, player, role, url, uid, error, index);
     if (!controller) {
         return nullptr;
     }
 
+    spdlog::info("0");
+
+    // Verified
     auto state_raw = controller->PlayerState;
+    static_assert(offsetof(SDK::APlayerController, PlayerState) == 0x298);
+    ;
 
-    if (!state_raw) {
-        spdlog::warn("state is null!");
-        return nullptr;
-    }
+    spdlog::info("1");
 
-    if (!state_raw->IsA(SDK::APalPlayerState::StaticClass())) {
-        spdlog::warn("state not a APalPlayerState!");
-        return nullptr;
-    }
+    SDK::FString faddress;
 
-    std::string address = std::string("[UNK]");
+#ifdef __linux_off
+    char16_t faddress_buffer[64] = { 0 };
+#else
+    wchar_t faddress_buffer[64]  = { 0 };
+#endif
 
-    if (controller->NetConnection) {
-        auto fsaddress = LowLevelGetRemoteAddress(static_cast<SDK::UIpConnection *>(controller->NetConnection), true);
+    faddress.Data        = faddress_buffer;
+    faddress.MaxElements = 64;
+    faddress.NumElements = 0;
 
-        if (fsaddress && fsaddress->IsValid() && fsaddress->Num() > 1) {
-            address = fsaddress->ToString();
-        }
-    }
+    spdlog::info("2");
 
-    auto     state    = static_cast<SDK::APalPlayerState *>(state_raw);
-    auto     raw_name = state->GetPlayerName();
-    uint32_t pid      = 0;
+    faddress.ResetNum();
 
-    if (state->PlayerUId.A != 0) {
-        pid = static_cast<uint32_t>(state->PlayerUId.A);
-    } else if (state->LoginTryingPlayerUId_InServer.A != 0) {
-        pid = static_cast<uint32_t>(state->LoginTryingPlayerUId_InServer.A);
-    } else {
-        pid = state->GetPlayerId();
-    }
+#ifdef __linux
+    auto faddress_ret = GetPlayerNetworkAddress(&faddress, controller);
+#else
+    auto    faddress_ret         = GetPlayerNetworkAddress(controller, &faddress);
+#endif
 
-    std::string name = utf16_to_local_codepage(raw_name.Data, raw_name.NumElements);
+    spdlog::info("3");
 
-    spdlog::info("[Event::Login] player {} login from {} with id {:08x}, ", name, address, static_cast<uint32_t>(pid));
+    std::string address = faddress_ret->ToString();
+
+    auto state = static_cast<SDK::APalPlayerState *>(state_raw);
+
+    spdlog::info("4");
+
+    SDK::FString fraw_name;
+
+#ifdef __linux_off
+    char16_t fraw_name_buffer[64] = { 0 };
+#else
+    wchar_t fraw_name_buffer[64] = { 0 };
+#endif
+
+    fraw_name.Data        = fraw_name_buffer;
+    fraw_name.MaxElements = 64;
+    fraw_name.NumElements = 0;
+
+    spdlog::info("5");
+
+    SDK::GetPlayerName(state, &fraw_name);
+
+    std::string name = utf16_to_local_codepage(fraw_name.Data, fraw_name.NumElements);
+
+    spdlog::info("6");
+
+    spdlog::info("[Event::Login] player {} login from {}", name, address);
 
     // if we return null, connection will close
 

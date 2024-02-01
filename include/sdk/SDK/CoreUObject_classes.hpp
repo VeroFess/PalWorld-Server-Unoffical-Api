@@ -89,10 +89,7 @@ public:
 
 	bool IsA(class UClass* Clss) const;
 
-	inline void ProcessEvent(class UFunction* Function, void* Parms) const
-	{
-		return GetVFunction<void(*)(const UObject*, class UFunction*, void*)>(this, Offsets::ProcessEventIdx)(this, Function, Parms);
-	}
+	void ProcessEvent(class UFunction* Function, void* Parms) const;
 
 	static class UClass* StaticClass();
 	static class UObject* GetDefaultObj();

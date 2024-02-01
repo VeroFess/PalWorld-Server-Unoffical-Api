@@ -2,7 +2,7 @@ add_rules("mode.debug", "mode.release")
 
 set_kind("static")
 
-package("zycore")
+package("Zycore")
     add_deps("cmake")
 
     set_sourcedir(path.join(os.scriptdir(), "3rd/zycore"))
@@ -27,14 +27,10 @@ package("zycore")
     end)
 package_end()
 
-package("zydis")
-    add_deps("cmake", "zycore")
+package("Zydis")
+    add_deps("cmake", "Zycore")
 
     set_sourcedir(path.join(os.scriptdir(), "3rd/zydis"))
-
-    on_load(function (package)
-        package:add("deps", "zycore")
-    end)
 
     on_install(function (package)
         local configs = {}
@@ -58,18 +54,13 @@ package("zydis")
 package_end()
 
 package("funchook")
-    add_deps("cmake", "zydis")
+    add_deps("cmake", "Zydis")
 
     set_sourcedir(path.join(os.scriptdir(), "3rd/funchook"))
 
     if is_os("windows") then
         add_syslinks("psapi.lib")
     end
-
-    on_load(function (package)
-        package:add("deps", "zycore")
-        package:add("deps", "zydis")
-    end)
 
     on_install(function (package)
         local configs = {}
@@ -106,10 +97,6 @@ package_end()
 package("spdlog")
     add_deps("cmake", "fmt")
     set_sourcedir(path.join(os.scriptdir(), "3rd/spdlog"))
-
-    on_load(function (package)
-        package:add("deps", "fmt")
-    end)
 
     on_install(function (package)
         local configs = {}
@@ -167,6 +154,10 @@ target("pal-plugin-loader")
         add_includedirs(path.join(os.scriptdir(), "include/os/windows/sdk"))
         add_includedirs(path.join(os.scriptdir(), "include/os/windows"))
         add_files("src/os/windows/*.cpp")
+    else 
+        add_includedirs(path.join(os.scriptdir(), "include/os/linux/sdk"))
+        add_includedirs(path.join(os.scriptdir(), "include/os/linux"))
+        add_files("src/os/linux/*.cpp")
     end
 
     add_files("src/*.cpp")

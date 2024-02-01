@@ -3,7 +3,7 @@
 // Dumped with Dumper-7!
 
 
-#include "../SDK.hpp"
+#include "SDK.hpp"
 
 namespace SDK
 {
