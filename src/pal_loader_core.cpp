@@ -20,7 +20,7 @@ std::string str_tolower(std::string s) {
 void pal_loader_thread_start() {
     spdlog::info("loading ...");
 
-    setting_init("pum_setting.json");
+    setting_init("psua_setting.json");
     offset_init();
     engine_init();
     SDK::sdk_init();
