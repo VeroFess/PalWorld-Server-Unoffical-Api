@@ -2,7 +2,7 @@
 
 #include <string>
 
-#ifdef __linux_off
+#ifdef __linux
 std::string utf16_to_local_codepage(char16_t *data, size_t len);
 std::string local_codepage_to_utf16(std::string input);
 #else

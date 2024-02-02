@@ -123,8 +123,12 @@ add_requires("funchook")
 add_requires("spdlog")
 add_requires("wasmtime")
 
-target("pal-plugin-loader")
-    set_kind("shared")
+target("pal-plugin-loader-static")
+    set_policy("build.merge_archive", true)
+    set_policy("build.optimization.lto", true)
+    set_policy("build.ccache", false)
+
+    set_kind("static")
 
     set_languages("c17", "cxx20")
 
@@ -146,7 +150,13 @@ target("pal-plugin-loader")
         add_syslinks("shell32.lib")
     end
 
-    add_includedirs(path.join(os.scriptdir(), "include/sdk/sdk"))
+    if is_os("linux") then
+        add_cxflags("-fPIC")
+        add_shflags("-fPIC")
+        add_ldflags("-fPIC")
+    end
+
+    add_includedirs(path.join(os.scriptdir(), "include/sdk/SDK"))
     add_includedirs(path.join(os.scriptdir(), "include/sdk"))
     add_includedirs(path.join(os.scriptdir(), "include"))
 
@@ -163,6 +173,31 @@ target("pal-plugin-loader")
     add_files("src/*.cpp")
     add_files("src/sdk/*.cpp")
     add_files("src/hooks/*.cpp")
+
+target("pal-plugin-loader")
+    set_policy("build.merge_archive", true)
+
+    set_kind("shared")
+
+    set_languages("c17", "cxx20")
+
+    add_deps("pal-plugin-loader-static")
+
+    add_links("pal-plugin-loader-static")
+
+    add_includedirs(path.join(os.scriptdir(), "include/sdk/SDK"))
+    add_includedirs(path.join(os.scriptdir(), "include/sdk"))
+    add_includedirs(path.join(os.scriptdir(), "include"))
+
+    if is_os("windows") then
+        add_includedirs(path.join(os.scriptdir(), "include/os/windows/sdk"))
+        add_includedirs(path.join(os.scriptdir(), "include/os/windows"))
+        add_files("src/os/windows/libentry/*.cpp")
+    else 
+        add_includedirs(path.join(os.scriptdir(), "include/os/linux/sdk"))
+        add_includedirs(path.join(os.scriptdir(), "include/os/linux"))
+        add_files("src/os/linux/libentry/*.cpp")
+    end
 
 
 

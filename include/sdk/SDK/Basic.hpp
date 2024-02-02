@@ -9,8 +9,6 @@
 
 // Dumped with Dumper-7!
 
-extern std::wstring_convert<std::codecvt_utf16<wchar_t, 0x10ffff, std::little_endian>, wchar_t> u16_convert;
-
 namespace SDK {
 
     void InitGObjects();
@@ -113,7 +111,7 @@ namespace SDK {
             }
     };
 
-#ifdef __linux_off
+#ifdef __linux
     class FString : public TArray<char16_t> {
 #else
     class FString : public TArray<wchar_t> {
@@ -123,13 +121,13 @@ namespace SDK {
 
             using TArray::TArray;
 
-#ifdef __linux_off
+#ifdef __linux
             inline FString(const char16_t *WChar, int32 size) {
 #else
             inline FString(const wchar_t *WChar) {
 #endif
 
-#ifdef __linux_off
+#ifdef __linux
                 MaxElements = NumElements = size;
                 Data = const_cast<char16_t *>(WChar);      
 #else
@@ -142,8 +140,9 @@ namespace SDK {
 
             inline std::wstring ToWString() {
                 if (IsValid()) {
-#ifdef __linux_off
-                    return u16_convert.from_bytes(reinterpret_cast<const char*>(&Data[0]), reinterpret_cast<const char*>(&Data[0] + NumElements));    
+#ifdef __linux
+                    std::wstring_convert<std::codecvt_utf16<wchar_t, 0x10ffff, std::little_endian>, wchar_t> converter;
+                    return converter.from_bytes(reinterpret_cast<char*>(Data), reinterpret_cast<char*>(Data) + size_t(NumElements * sizeof(char16_t)));  
 #else
                     return Data;
 #endif

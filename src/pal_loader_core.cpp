@@ -36,9 +36,13 @@ void pal_loader_thread_start() {
         } else if (userInput.starts_with("broadcast")) {
             auto message = userInput.substr(10);
 
-#ifdef __linux_off
+#ifdef __linux
             auto u16str     = local_codepage_to_utf16(message);
-            auto fstringMsg = SDK::FString((char16_t *)(u16str.c_str()), u16str.size());
+            auto fstringMsg = SDK::FString();
+
+            fstringMsg.Data        = (char16_t *)u16str.c_str();
+            fstringMsg.NumElements = u16str.size() / sizeof(char16_t);
+            fstringMsg.MaxElements = fstringMsg.NumElements;
 #else
             auto fstringMsg = SDK::FString(local_codepage_to_utf16(message).c_str());
 #endif
@@ -64,7 +68,7 @@ void pal_loader_thread_start() {
 
                     SDK::FString faddress;
 
-#ifdef __linux_off
+#ifdef __linux
                     char16_t faddress_buffer[64] = { 0 };
 #else
                     wchar_t faddress_buffer[64] = { 0 };
@@ -86,7 +90,7 @@ void pal_loader_thread_start() {
 
                     SDK::FString fraw_name;
 
-#ifdef __linux_off
+#ifdef __linux
                     char16_t fraw_name_buffer[64] = { 0 };
 #else
                     wchar_t fraw_name_buffer[64] = { 0 };
@@ -114,7 +118,7 @@ void pal_loader_thread_start() {
                 for (int i = 0; i < player_characters.Num(); i++) {
                     SDK::FString fraw_name;
 
-#ifdef __linux_off
+#ifdef __linux
                     char16_t fraw_name_buffer[64] = { 0 };
 #else
                     wchar_t fraw_name_buffer[64] = { 0 };

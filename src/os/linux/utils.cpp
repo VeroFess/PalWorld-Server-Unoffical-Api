@@ -1,30 +1,57 @@
 #include "utils.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <iostream>
+#include <vector>
+#include <string>
+#include <locale>
 #include <iconv.h>
-#include <langinfo.h>
 
-std::wstring local_codepage_to_utf16(std::string input) {
-    const char *codepage     = nl_langinfo(CODESET);
-    iconv_t     cd           = iconv_open("UTF-16LE", codepage);
-    char       *utf16_string = (char *)malloc(input.size() * 2 + 2);
+std::string local_codepage_to_utf16(std::string input) {
+    iconv_t conv = iconv_open("UTF-16LE", "UTF-8");
+    if (conv == (iconv_t)-1) {
+        perror("iconv_open");
+        return "";
+    }
 
-    printf("local_codepage_to_utf16 still broken! input.size() = %d, input.c_str() = %s\n", input.size(), input.c_str());
+    size_t            in_bytes_left  = input.size();
+    size_t            out_bytes_left = in_bytes_left * 4;
+    std::vector<char> outbuf(out_bytes_left, 0);
 
-    size_t in_len  = input.size();
-    size_t out_len = in_len * 2 + 2;
+    char *in_buf  = const_cast<char *>(input.data());
+    char *out_ptr = outbuf.data();
 
-    memset(utf16_string, 0, out_len);
+    if (iconv(conv, &in_buf, &in_bytes_left, &out_ptr, &out_bytes_left) == (size_t)-1) {
+        perror("iconv");
+        iconv_close(conv);
+        return "";
+    }
 
-    char *in_buf  = (char *)input.c_str();
-    char *out_buf = utf16_string;
-
-    iconv(cd, &in_buf, &in_len, &out_buf, &out_len);
-
-    return std::wstring((wchar_t *)utf16_string, out_len);
+    iconv_close(conv);
+    std::string utf16_str(outbuf.data(), out_ptr - outbuf.data());
+    return utf16_str;
 }
 
-std::string utf16_to_local_codepage(wchar_t *data, size_t len) {
-    return std::string("utf16_to_local_codepage still broken! search __linux_off and give me some help!");
+std::string utf16_to_local_codepage(char16_t *data, size_t len) {
+    std::string utf16_str((char *)data, len * sizeof(char16_t));
+
+    iconv_t conv = iconv_open("UTF-8", "UTF-16LE");
+    if (conv == (iconv_t)-1) {
+        perror("iconv_open");
+        return "";
+    }
+
+    size_t            in_bytes_left  = utf16_str.size();
+    size_t            out_bytes_left = in_bytes_left * 4;
+    std::vector<char> outbuf(out_bytes_left, 0);
+
+    char *in_buf  = const_cast<char *>(utf16_str.data());
+    char *out_ptr = outbuf.data();
+
+    if (iconv(conv, &in_buf, &in_bytes_left, &out_ptr, &out_bytes_left) == (size_t)-1) {
+        perror("iconv");
+        iconv_close(conv);
+        return "";
+    }
+
+    iconv_close(conv);
+    return std::string(outbuf.data());
 }
