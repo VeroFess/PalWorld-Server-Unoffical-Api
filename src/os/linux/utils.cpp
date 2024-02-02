@@ -13,7 +13,7 @@ std::string local_codepage_to_utf16(std::string input) {
     }
 
     size_t            in_bytes_left  = input.size();
-    size_t            out_bytes_left = in_bytes_left * 4;
+    size_t            out_bytes_left = in_bytes_left * 4 + 2;
     std::vector<char> outbuf(out_bytes_left, 0);
 
     char *in_buf  = const_cast<char *>(input.data());
@@ -24,6 +24,9 @@ std::string local_codepage_to_utf16(std::string input) {
         iconv_close(conv);
         return "";
     }
+
+    *out_ptr++ = 0;
+    *out_ptr++ = 0;
 
     iconv_close(conv);
     std::string utf16_str(outbuf.data(), out_ptr - outbuf.data());
