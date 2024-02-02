@@ -119,9 +119,22 @@ package("wasmtime")
     end)
 package_end()
 
+package("nlohmann_json")
+    add_deps("cmake")
+    set_sourcedir(path.join(os.scriptdir(), "3rd/json"))
+
+    on_install(function (package)
+        local configs = {"-DJSON_BuildTests=OFF"}
+        table.insert(configs, "-DCMAKE_BUILD_TYPE=" .. (package:debug() and "Debug" or "Release"))
+        table.insert(configs, "-DBUILD_SHARED_LIBS=OFF")
+        import("package.tools.cmake").install(package, configs)
+    end)
+package_end()
+
 add_requires("funchook")
 add_requires("spdlog")
 add_requires("wasmtime")
+add_requires("nlohmann_json")
 
 target("pal-plugin-loader-static")
     set_policy("build.merge_archive", true)
@@ -139,7 +152,8 @@ target("pal-plugin-loader-static")
     add_packages("funchook")
     add_packages("spdlog")
     add_packages("wasmtime")
-
+    add_packages("nlohmann_json")
+    
     if is_os("windows") then
         add_syslinks("ws2_32.lib")
         add_syslinks("ntdll.lib")

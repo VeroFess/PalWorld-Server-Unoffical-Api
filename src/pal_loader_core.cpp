@@ -2,6 +2,7 @@
 #include "spdlog/spdlog.h"
 #include "SDKDirect.h"
 
+#include "setting.h"
 #include "hooks.h"
 #include "utils.h"
 #include "engine_functions.h"
@@ -19,6 +20,8 @@ std::string str_tolower(std::string s) {
 void pal_loader_thread_start() {
     spdlog::info("loading ...");
 
+    setting_init("psua_setting.json");
+    offset_init();
     engine_init();
     SDK::sdk_init();
     install_hooks();

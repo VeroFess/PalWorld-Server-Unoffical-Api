@@ -16,3 +16,6 @@
 [submodule "3rd/spdlog"]
 	path = 3rd/spdlog
 	url = https://github.com/gabime/spdlog.git
+[submodule "3rd/json"]
+	path = 3rd/json
+	url = https://github.com/nlohmann/json.git

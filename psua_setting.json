@@ -1,0 +1,44 @@
+{
+  "pal-plugin-loader": {
+    "signature": {
+      "windows": {
+        "GWorld": "48 8B 1D ?? ?? ?? ?? 48 85 DB 74 33 41 B0",
+        "GEngine": "48 8B ?? ?? ?? ?? ?? B2 02 E8 ?? ?? ?? ?? 80 7C 24 ?? ?? 0F ?? ?? ?? ?? ??",
+        "FNameAppendString": "48 89 5C 24 10 48 89 74 24 18 57 48 83 EC 20 80 3D ?? ?? ?? ?? 00 48 8B F2 8B 19 48 8B F9",
+        "ForceGarbageCollection": "48 89 5C 24 08 57 48 83 EC 20 0F B6 FA 48 8B D9 E8 ?? ?? ?? ?? 80 BB ?? ?? ?? ?? 00 F3 0F 58 05 ?? ?? ?? ?? F3 0F 11 83 ?? ?? ?? ??",
+        "KickPlayer": "48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 48 83 EC 20 49 8B E8 48 8B DA 48 8B F1",
+        "GetEmptyFText": "48 83 EC 38 65 48 8B 04 25 58 00 00 00 8B 0D ?? ?? ?? ?? BA 5C 04 00 00 48 8B 0C C8 8B 04 0A 39 05 ?? ?? ?? ?? 7F 44 48 8D 05 ?? ?? ?? ?? 48 83 C4 38 C3",
+        "SpawnPlayActor": "48 89 5C 24 10 48 89 6C 24 18 48 89 74 24 20 57 41 54 41 55 41 56 41 57 48 83 EC 60 4C 8B E2 4C 8D 3D ?? ?? ?? ?? 4C 8B E9 49 8B D7 48 8B 8C 24 B8 00 00 00 49 8B F9 45 8B F0 33 DB E8 ?? ?? ?? ??",
+        "GetGameState": "40 53 48 83 EC 20 E8 15 13 E6 01 48 8B D8 48 85 C0 74 29 E8 28 C3 BB FF",
+        "SendAnnounce": "48 89 5C 24 08 48 89 74 24 10 48 89 7C 24 18 4C 89 74 24 20 55 48 8B EC 48 81 EC 80 00 00 00 48 8B FA C6 45 B0 00 48 8B F1",
+        "GetCharacters": "48 89 5C 24 10 48 89 6C 24 18 48 89 7C 24 20 41 56 48 83 EC 20 83 7A ?? 00 48 8B DA 48 8B F9 C7 42 ?? 00 00 00 00",
+        "GetController": "40 53 48 83 EC 20 48 8B DA 48 85 D2 74 31 66 90 E8 ?? ?? ?? ??",
+        "GetPlayerState": "48 89 5C 24 18 55 56 57 41 56 41 57 48 8B EC 48 83 EC 70 48 8B F1 48 85 C9",
+        "GetPlayerName": "40 53 48 83 EC 40 48 89 6C 24 58 48 8B DA 33 ED 48 89 7C 24 68 89 6C 24 50 40 38 A9 ?? ?? ?? ??",
+        "GetPlayerUID": "80 B9 ?? ?? ?? ?? ?? 75 ?? 8B 81 BC 04 00 00 0B 81 B8 04 00 00 0B 81 B4 04 00 00 0B 81 B0 04 00 00",
+        "GetWorldName": "40 53 48 83 EC ?? 48 8B DA 48 8D 91 78 03 00 00 48 8B CB E8 ?? ?? ?? ?? 48 8B C3 48 83 C4 20 5B C3",
+        "GetPlayerStateFromController": "40 53 48 83 EC 20 48 83 B9 98 02 00 00 00 48 8B D9 74 39 E8 F8 F9 26 02 48 8B D0 48 8B 83 98 02 00 00 48 85 C0 74 25 48 8B 48 10 48 85 C9 74 1C 48 85 D2 74 17 4C 8D 42 30 48 63 52 38 3B 51 38 7F 0A 48 8B 49 30 4C 39 04 D1 74 02 33 C0 48 83 C4 20 5B C3",
+        "GetPlayerNetworkAddress": "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 20 48 8B B1 ?? ?? ?? ?? 48 8B DA 48 8B F9 48 85 F6"
+      },
+      "linux": {
+        "GWorld": "",
+        "GEngine": "",
+        "FNameAppendString": "",
+        "ForceGarbageCollection": "",
+        "KickPlayer": "",
+        "GetEmptyFText": "",
+        "SpawnPlayActor": "",
+        "GetGameState": "",
+        "SendAnnounce": "",
+        "GetCharacters": "",
+        "GetController": "",
+        "GetPlayerState": "",
+        "GetPlayerName": "",
+        "GetPlayerUID": "",
+        "GetWorldName": "",
+        "GetPlayerStateFromController": "",
+        "GetPlayerNetworkAddress": ""
+      }
+    }
+  }
+}
