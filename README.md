@@ -1,5 +1,7 @@
 # PalWorld-Server-Unofficial-Api
 
+[![Discord](https://img.shields.io/discord/1200798336916144188?logo=discord)](https://discord.gg/6NqDNPXE9s)
+
 PalWorld-Server-Unofficial-Api is a third-party PalWorld API with the goal of becoming a server-side development API similar to Minecraft Bukkit. The aim is to ensure that plugins do not require updates when the game version is upgraded.
 
 ***The project is currently in very early development, and its code may undergo significant rewrites.***
