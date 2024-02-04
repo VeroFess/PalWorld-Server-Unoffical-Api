@@ -17,3 +17,5 @@ __attribute__((__constructor__)) void preload(void) {
     pthread_t tid;
     pthread_create(&tid, NULL, pal_loader_thread_start_wapper, nullptr);
 }
+
+int main() {}

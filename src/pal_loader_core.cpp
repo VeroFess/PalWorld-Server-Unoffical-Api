@@ -1,160 +1,102 @@
 #include "common_entry.h"
-#include "spdlog/spdlog.h"
 #include "SDKDirect.h"
+
+#include "console.h"
+#include "spdlog/async.h"
+#include "spdlog/spdlog.h"
+#include "lockfree_queue_sink.h"
+#include "spdlog/sinks/basic_file_sink.h"
+#include "spdlog/sinks/stdout_color_sinks.h"
+
+#include "folly/Hash.h"
+#include "folly/String.h"
+#include "folly/container/F14Map.h"
 
 #include "hooks.h"
 #include "utils.h"
+#include "commands.h"
 #include "engine_functions.h"
 
 #include <cstdio>
 #include <iostream>
 
-std::string str_tolower(std::string s) {
-    std::transform(s.begin(), s.end(), s.begin(), [](unsigned char c) {
-        return std::tolower(c);
-    });
-    return s;
-}
+folly::F14FastMap<folly::fbstring, console_command_handler_type> command_handler_map;
+std::shared_ptr<spdlog::async_logger>                            pal_async_log;
 
 void pal_loader_thread_start() {
     spdlog::info("loading ...");
 
     engine_init();
     SDK::sdk_init();
+
+    // Start initializing spdlog
+    spdlog::init_thread_pool(8192, 1);
+
+    auto stdout_sink = std::make_shared<spdlog::sinks::stdout_color_sink_st>();
+
+    std::vector<spdlog::sink_ptr> backend_sinks;
+    backend_sinks.push_back(stdout_sink);
+
+    auto memory_buffer_sink = std::make_shared<lockfree_queue_sink_mt>();
+    memory_buffer_sink->add_sink(stdout_sink);
+
+    std::vector<spdlog::sink_ptr> default_sinks;
+    default_sinks.push_back(memory_buffer_sink);
+
+    auto command_logger = std::make_shared<spdlog::logger>("COMMANDS", std::begin(backend_sinks), std::end(backend_sinks));
+    pal_async_log       = std::make_shared<spdlog::async_logger>("ENGEVENT", std::begin(default_sinks), std::end(default_sinks), spdlog::thread_pool(), spdlog::async_overflow_policy::overrun_oldest);
+    spdlog::register_logger(command_logger);
+    spdlog::set_default_logger(command_logger);
+
+    // If there is a log, refresh it
+    std::thread log_watchdog([&] {
+        while (true) {
+            using namespace std::chrono_literals;
+            std::this_thread::sleep_for(200ms);
+
+            if (log_momory_queue.size() > 0) {
+                ic_async_stop();
+            }
+        }
+    });
+    log_watchdog.detach();
+
     install_hooks();
 
-    spdlog::info("Unreal::GWorld           = {:x}", uintptr_t(SDK::World));
-    spdlog::info("PalGameStateInGame       = {:x}", uintptr_t(SDK::StateInGame));
+    command_handler_map.insert({ "broadcast", broadcast_handle });
+    command_handler_map.insert({ "gc", garbage_collection_handle });
+    command_handler_map.insert({ "list", list_handle });
+    command_handler_map.insert({ "kick", kick_handle });
 
+    // All initialization has been completed, infinite loop to accept user input
     while (true) {
-        std::cout << "Pal Loader > ";
-        std::string userInput;
-        std::getline(std::cin, userInput);
+        char *input_c_ptr = ic_readline("pal loader ");
 
-        if (userInput == "state") {
-            spdlog::info("[CMD::State] Lazy, add in next version Owo");
-        } else if (userInput.starts_with("broadcast")) {
-            auto message = userInput.substr(10);
+        memory_buffer_sink->show_log();
 
-#ifdef __linux
-            auto u16str     = local_codepage_to_utf16(message);
-            auto fstringMsg = SDK::FString();
+        if (input_c_ptr != nullptr) {
+            // don't run async, keep in main thread
+            folly::fbstring user_input_raw(input_c_ptr);
+            free(input_c_ptr);
 
-            fstringMsg.Data        = (char16_t *)u16str.c_str();
-            fstringMsg.NumElements = u16str.size() / sizeof(char16_t);
-            fstringMsg.MaxElements = fstringMsg.NumElements;
-#else
-            auto fstringMsg = SDK::FString(local_codepage_to_utf16(message).c_str());
-#endif
+            auto user_input = trimWhitespace(user_input_raw);
+            if (user_input.empty()) {
+                continue;
+            }
 
-            SDK::SendSystemAnnounce(fstringMsg);
+            std::vector<folly::fbstring> splited_user_input;
+            folly::split(' ', user_input, splited_user_input);
 
-            spdlog::info("[CMD::BroadcastChatMessage] {}", message);
-        } else if (userInput == "gc") {
-            ForceGarbageCollection(Engine, true);
+            if (splited_user_input.size() != 0) {
+                auto command = splited_user_input[0];
+                splited_user_input.erase(splited_user_input.begin());
 
-            spdlog::info("[CMD::ForceGarbageCollection] done");
-        } else if (userInput == "list") {
-            SDK::TArray<SDK::APalCharacter *> player_characters;
-
-            SDK::GetAllPlayerCharacters(&player_characters);
-
-            if (player_characters.IsValid()) {
-                spdlog::info("[CMD::List] current {} player online", player_characters.Num());
-
-                for (int i = 0; i < player_characters.Num(); i++) {
-                    auto character  = static_cast<SDK::APalPlayerCharacter *>(player_characters[i]);
-                    auto controller = static_cast<SDK::APlayerController *>(SDK::GetController(character));
-
-                    SDK::FString faddress;
-
-#ifdef __linux
-                    char16_t faddress_buffer[64] = { 0 };
-#else
-                    wchar_t faddress_buffer[64] = { 0 };
-#endif
-
-                    faddress.Data        = faddress_buffer;
-                    faddress.MaxElements = 64;
-                    faddress.NumElements = 0;
-
-#ifdef __linux
-                    GetPlayerNetworkAddress(&faddress, controller);
-#else
-                    GetPlayerNetworkAddress(controller, &faddress);
-#endif
-
-                    std::string address = faddress.ToString();
-
-                    auto state = SDK::GetPlayerStateByPlayer(character);
-
-                    SDK::FString fraw_name;
-
-#ifdef __linux
-                    char16_t fraw_name_buffer[64] = { 0 };
-#else
-                    wchar_t fraw_name_buffer[64] = { 0 };
-#endif
-
-                    fraw_name.Data        = fraw_name_buffer;
-                    fraw_name.MaxElements = 64;
-                    fraw_name.NumElements = 0;
-
-                    SDK::GetPlayerName(state, &fraw_name);
-
-                    auto uid = SDK::GetPlayerUID(state);
-
-                    std::string name = utf16_to_local_codepage(fraw_name.Data, fraw_name.NumElements);
-
-                    spdlog::info("[CMD::List] {}, {:08x}, {}", name, static_cast<uint32_t>(uid->A), address);
+                if (command_handler_map.contains(command)) {
+                    command_handler_map[command](splited_user_input);
+                } else {
+                    spdlog::warn("unkonwon command -> {}", command.toStdString());
                 }
             }
-        } else if (userInput.starts_with("kick")) {
-            auto                              kick_uid = str_tolower(userInput.substr(5));
-            SDK::TArray<SDK::APalCharacter *> player_characters;
-            SDK::GetAllPlayerCharacters(&player_characters);
-
-            if (player_characters.IsValid()) {
-                for (int i = 0; i < player_characters.Num(); i++) {
-                    SDK::FString fraw_name;
-
-#ifdef __linux
-                    char16_t fraw_name_buffer[64] = { 0 };
-#else
-                    wchar_t fraw_name_buffer[64] = { 0 };
-#endif
-
-                    char hexuid[9] = {};
-
-                    fraw_name.Data        = fraw_name_buffer;
-                    fraw_name.MaxElements = 64;
-                    fraw_name.NumElements = 0;
-
-                    auto        character = static_cast<SDK::APalPlayerCharacter *>(player_characters[i]);
-                    auto        state     = SDK::GetPlayerStateByPlayer(character);
-                    auto        uid       = SDK::GetPlayerUID(state);
-                    auto        raw_name  = SDK::GetPlayerName(state, &fraw_name);
-                    std::string name      = utf16_to_local_codepage(raw_name->Data, raw_name->NumElements);
-
-#ifdef __linux
-                    sprintf(hexuid, "%08x", static_cast<uint32_t>(uid->A));
-#else
-                    sprintf_s(hexuid, "%08x", static_cast<uint32_t>(uid->A));
-#endif
-
-                    if (kick_uid == std::string(hexuid)) {
-                        SDK::FText *reason = GetEmptyFText();
-
-                        auto kicked = KickPlayer(SDK::World, uid, reason);
-
-                        if (kicked) {
-                            spdlog::info("[CMD::Kick] player {} kicked", name);
-                        }
-                    }
-                }
-            }
-        } else {
-            spdlog::info("[CMD::???] Unknown command");
         }
     }
 }

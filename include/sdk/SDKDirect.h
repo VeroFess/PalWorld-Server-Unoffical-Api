@@ -1,5 +1,11 @@
 #include "SDK.hpp"
 
+#ifdef __linux
+typedef char16_t engine_char_t;
+#else
+typedef wchar_t engine_char_t;
+#endif
+
 namespace SDK {
     extern UWorld              *World;
     extern APalGameStateInGame *StateInGame;
