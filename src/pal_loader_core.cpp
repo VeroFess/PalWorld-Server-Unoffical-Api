@@ -153,7 +153,7 @@ void pal_loader_thread_start() {
                     }
                 }
             }
-        } else {
+        } else if (!std::cin.eof()) {
             spdlog::info("[CMD::???] Unknown command");
         }
     }
