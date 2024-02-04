@@ -53,16 +53,14 @@ SDK::APlayerController *spawn_play_actor_proxy(SDK::UWorld *that, SDK::UPlayer *
         return nullptr;
     }
 
-    std::vector<uint8_t> unique_net_id(uid->ReplicationBytes.NumElements);
-
-    memcpy(&unique_net_id[0], uid->ReplicationBytes.Data, uid->ReplicationBytes.NumElements);
+    auto ip_address_value = ip_remote.value();
 
     folly::fbstring fbs_user_name = folly::fbstring(user_name);
 
-    user_login_event event_sync(fbs_user_name, unique_net_id, ip_remote.value());
+    user_login_event event_sync(fbs_user_name, ip_address_value);
 
     std::thread async_event_thread([&] {
-        user_login_event_async event_async(fbs_user_name, unique_net_id, ip_remote.value());
+        user_login_event_async event_async(fbs_user_name, ip_address_value);
         dispatcher.dispatch(event_async);
     });
     async_event_thread.detach();
@@ -74,7 +72,7 @@ SDK::APlayerController *spawn_play_actor_proxy(SDK::UWorld *that, SDK::UPlayer *
         return true;
     });
 
-    if (all_event_pass) {
+    if (!all_event_pass) {
         pal_async_log->warn("[Event::Login] player {} login blocked from {}. reason: block by plugin", user_name, address);
         return nullptr;
     }

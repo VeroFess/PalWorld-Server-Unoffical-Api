@@ -41,25 +41,19 @@ struct pal_loader_basic_event {
 
 struct user_login_event_async : pal_loader_basic_event {
     private:
-        folly::fbstring      user_name;
-        std::vector<uint8_t> unique_net_id;
-        folly::IPAddress     remote_address;
+        folly::fbstring  user_name;
+        folly::IPAddress remote_address;
 
     public:
         user_login_event_async() = delete;
 
-        user_login_event_async(const folly::fbstring user_name, const std::vector<uint8_t> unique_net_id, const folly::IPAddress remote_address)
+        user_login_event_async(const folly::fbstring user_name, const folly::IPAddress remote_address)
             : pal_loader_basic_event(EVENT_ASYNC, GAME_USERAUTH, LOGIN),
               user_name(user_name),
-              unique_net_id(unique_net_id),
               remote_address(remote_address) {}
 
         const folly::fbstring &get_user_name() {
             return user_name;
-        };
-
-        const std::vector<uint8_t> &get_unique_net_id() {
-            return unique_net_id;
         };
 
         const folly::IPAddress &get_remote_address() {
@@ -69,25 +63,19 @@ struct user_login_event_async : pal_loader_basic_event {
 
 struct user_login_event : pal_loader_basic_event {
     private:
-        folly::fbstring      user_name;
-        std::vector<uint8_t> unique_net_id;
-        folly::IPAddress     remote_address;
+        folly::fbstring  user_name;
+        folly::IPAddress remote_address;
 
     public:
         user_login_event() = delete;
 
-        user_login_event(const folly::fbstring &user_name, const std::vector<uint8_t> &unique_net_id, const folly::IPAddress &remote_address)
+        user_login_event(const folly::fbstring &user_name, const folly::IPAddress &remote_address)
             : pal_loader_basic_event(EVENT_PRE, GAME_USERAUTH, LOGIN),
               user_name(user_name),
-              unique_net_id(unique_net_id),
               remote_address(remote_address) {}
 
         const folly::fbstring &get_user_name() {
             return user_name;
-        };
-
-        const std::vector<uint8_t> &get_unique_net_id() {
-            return unique_net_id;
         };
 
         const folly::IPAddress &get_remote_address() {
