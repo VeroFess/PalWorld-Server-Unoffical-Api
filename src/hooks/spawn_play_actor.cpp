@@ -27,7 +27,7 @@ SDK::APlayerController *spawn_play_actor_proxy(SDK::UWorld *that, SDK::UPlayer *
     fs_address.ResetNum();
 
 #ifdef __linux
-    GetPlayerNetworkAddress(&faddress, controller);
+    GetPlayerNetworkAddress(&fs_address, controller);
 #else
     GetPlayerNetworkAddress(controller, &fs_address);
 #endif

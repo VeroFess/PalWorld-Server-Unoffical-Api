@@ -23,7 +23,7 @@ void list_handle(std::vector<folly::fbstring> &user_input) {
             fs_address.NumElements = 0;
 
 #ifdef __linux
-            GetPlayerNetworkAddress(&faddress, controller);
+            GetPlayerNetworkAddress(&fs_address, controller);
 #else
             GetPlayerNetworkAddress(controller, &fs_address);
 #endif
