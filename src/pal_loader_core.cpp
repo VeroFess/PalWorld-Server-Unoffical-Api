@@ -27,7 +27,11 @@ void pal_loader_thread_start() {
     spdlog::info("loading ...");
 
     engine_init();
-    SDK::sdk_init();
+
+    if (!SDK::sdk_init()) {
+        spdlog::error("sdk_init failed");
+        return;
+    }
 
     // Start initializing spdlog
     spdlog::init_thread_pool(8192, 1);
@@ -61,7 +65,9 @@ void pal_loader_thread_start() {
     });
     log_watchdog.detach();
 
-    install_hooks();
+    if (!install_hooks()) {
+        spdlog::warn("install_hooks failed");
+    }
 
     command_handler_map.insert({ "broadcast", broadcast_handle });
     command_handler_map.insert({ "gc", garbage_collection_handle });
