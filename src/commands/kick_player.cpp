@@ -2,6 +2,7 @@
 #include "SDKDirect.h"
 #include "utils.h"
 #include "engine_functions.h"
+#include "types.h"
 
 void kick_handle(std::vector<folly::fbstring> &user_input) {
     if (user_input.empty()) {
@@ -14,33 +15,23 @@ void kick_handle(std::vector<folly::fbstring> &user_input) {
 
     if (player_characters.IsValid()) {
         for (int i = 0; i < player_characters.Num(); i++) {
-            SDK::FString  fs_user_name;
-            engine_char_t fs_user_name_buffer[64] = { 0 };
-            char          hex_uid[9]              = {};
 
-            fs_user_name.Data        = fs_user_name_buffer;
-            fs_user_name.MaxElements = 64;
-            fs_user_name.NumElements = 0;
-
-            auto        character = static_cast<SDK::APalPlayerCharacter *>(player_characters[i]);
-            auto        state     = SDK::GetPlayerStateByPlayer(character);
-            auto        uid       = SDK::GetPlayerUID(state);
-            auto        raw_name  = SDK::GetPlayerName(state, &fs_user_name);
-            std::string name      = utf16_to_local_codepage(raw_name->Data, raw_name->NumElements);
+            auto            character = static_cast<SDK::APalPlayerCharacter *>(player_characters[i]);
+            pal_loader_user player(character);
+            char            hex_uid[18] = {};
 
 #ifdef __linux
-            sprintf(hex_uid, "%08x", static_cast<uint32_t>(uid->A));
+            sprintf(hex_uid, "%016llx", player.get_id());
 #else
-            sprintf_s(hex_uid, "%08x", static_cast<uint32_t>(uid->A));
+            sprintf_s(hex_uid, "%016llx", player.get_id());
 #endif
 
             if (kick_uid == folly::fbstring(hex_uid)) {
-                SDK::FText *reason = GetEmptyFText();
-
-                auto kicked = KickPlayer(SDK::World, uid, reason);
+                auto name   = player.get_name();
+                auto kicked = player.kick();
 
                 if (kicked) {
-                    spdlog::info("[CMD::Kick] player {} kicked", name);
+                    spdlog::info("[CMD::Kick] player {} kicked", name.toStdString());
                 }
             }
         }
