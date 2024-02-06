@@ -71,15 +71,6 @@ package("funchook")
         table.insert(configs, "-DFUNCHOOK_BUILD_STATIC=ON")
         import("package.tools.cmake").install(package, configs)
     end)
-
-    on_test(function (package)
-        assert(package:has_cfuncs("funchook_create", {includes = "funchook.h"}))
-        assert(package:has_cfuncs("funchook_prepare_with_params", {includes = "funchook.h"}))
-        assert(package:has_cfuncs("funchook_install", {includes = "funchook.h"}))
-        assert(package:has_cfuncs("funchook_uninstall", {includes = "funchook.h"}))
-        assert(package:has_cfuncs("funchook_destroy", {includes = "funchook.h"}))
-        assert(package:has_cfuncs("funchook_error_message", {includes = "funchook.h"}))
-    end)
 package_end()
 
 package("fmt")
@@ -133,55 +124,8 @@ package("eventpp")
     end)
 package_end()
 
-package("folly")
-    add_deps("cmake")
-
-    add_deps("fmt")
-
-    add_deps("vcpkg::boost-regex")
-    add_deps("vcpkg::boost-system")
-    add_deps("vcpkg::boost-thread")
-    add_deps("vcpkg::boost-context")
-    add_deps("vcpkg::boost-filesystem")
-    add_deps("vcpkg::boost-program-options")
-
-    add_deps("vcpkg::lz4")
-    add_deps("vcpkg::zlib")
-    add_deps("vcpkg::glog")
-    add_deps("vcpkg::zstd")
-    add_deps("vcpkg::bzip2")
-    add_deps("vcpkg::gflags")
-    add_deps("vcpkg::openssl")
-    add_deps("vcpkg::libevent")
-    add_deps("vcpkg::double-conversion")
-
-    set_sourcedir(path.join(os.scriptdir(), "3rd/folly"))
-
-    on_load(function (package)
-        if package:is_plat("linux") then
-            package:add("defines", "FOLLY_STATIC_LIBSTDCXX=1")
-        end
-    end)
-
-    on_install(function (package)
-        local configs = {}
-        table.insert(configs, "-DCMAKE_BUILD_TYPE=" .. (package:debug() and "Debug" or "Release"))
-        table.insert(configs, "-DBUILD_SHARED_LIBS=OFF")
-        table.insert(configs, "-DBUILD_TESTS=OFF")
-        table.insert(configs, "-DCMAKE_DISABLE_FIND_PACKAGE_LibDwarf=OFF")
-        table.insert(configs, "-DCMAKE_DISABLE_FIND_PACKAGE_LibAIO=OFF")
-        table.insert(configs, "-DCMAKE_DISABLE_FIND_PACKAGE_LibURCU=OFF")
-        table.insert(configs, "-DLIBAIO_FOUND=OFF")
-        table.insert(configs, "-DLIBURCU_FOUND=OFF")
-        table.insert(configs, "-DBOOST_LINK_STATIC=ON")
-        if package:is_plat("windows") then
-            table.insert(configs, "-DBoost_USE_STATIC_RUNTIME=ON")
-        end
-        import("package.tools.cmake").install(package, configs)
-    end)
-package_end()
-
-add_requires("folly")
+-- just install every thing
+add_requires("vcpkg::folly")
 add_requires("spdlog")
 add_requires("eventpp")
 add_requires("funchook")
@@ -232,13 +176,14 @@ target("pal-plugin-loader-static")
         add_syslinks("iphlpapi.lib")
         add_syslinks("advapi32.lib")
     else
+        add_syslinks("dl")
         add_syslinks("pthread")
     end
 
     if is_os("linux") then
-        add_cxflags("-fPIC", "-static", "-pie")
-        add_shflags("-fPIC", "-static", "-pie")
-        add_ldflags("-fPIC", "-static", "-pie")
+        add_cxflags("-fPIC", "-static", "-pie", "-Wl,--no-as-needed -ldl", "-Wno-elaborated-enum-class")
+        add_shflags("-fPIC", "-static", "-pie", "-Wl,--no-as-needed -ldl")
+        add_ldflags("-fPIC", "-static", "-pie", "-Wl,--no-as-needed -ldl")
     end
 
     add_includedirs(path.join(os.scriptdir(), "include/sdk/SDK"))

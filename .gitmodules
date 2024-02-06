@@ -19,6 +19,3 @@
 [submodule "3rd/eventpp"]
 	path = 3rd/eventpp
 	url = https://github.com/wqking/eventpp.git
-[submodule "3rd/folly"]
-	path = 3rd/folly
-	url = https://github.com/VeroFess/folly.git
