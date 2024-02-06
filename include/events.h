@@ -24,7 +24,8 @@ enum pal_event_subsystem_types : uint8_t {
 
 enum pal_event_types : uint16_t {
     LOGIN,
-    ATTACK
+    ATTACK,
+    ADDITEM
 };
 
 #define BUILD_PAL_EVENT_ID(B, S, E) uint32_t((B) << 24 | (S) << 16 | (E))
@@ -35,6 +36,7 @@ enum pal_avalable_event_types : uint32_t {
     EVENT_PRE_ATTACK   = BUILD_PAL_EVENT_ID(EVENT_PRE, GAME_GAMEPLAY, ATTACK),
     EVENT_POST_ATTACK  = BUILD_PAL_EVENT_ID(EVENT_POST, GAME_GAMEPLAY, ATTACK),
     EVENT_ATTACK_ASYNC = BUILD_PAL_EVENT_ID(EVENT_ASYNC, GAME_GAMEPLAY, ATTACK),
+    EVENT_PRE_ADDITEM  = BUILD_PAL_EVENT_ID(EVENT_PRE, GAME_GAMEPLAY, ADDITEM),
 };
 
 struct pal_loader_basic_event {
@@ -101,7 +103,7 @@ struct user_pre_attack_event : pal_loader_basic_event {
     public:
         user_pre_attack_event() = delete;
 
-        user_pre_attack_event(const pal_loader_user &source, const pal_loader_character &target, SDK::FPalDamageInfo *info)
+        user_pre_attack_event(pal_loader_user &source, pal_loader_character &target, SDK::FPalDamageInfo *info)
             : pal_loader_basic_event(EVENT_PRE, GAME_GAMEPLAY, ATTACK),
               source(source),
               target(target), info(info) {}
@@ -116,6 +118,41 @@ struct user_pre_attack_event : pal_loader_basic_event {
 
         pal_loader_editable_damage_info &get_info() {
             return info;
+        };
+};
+
+struct user_pre_additem_event : pal_loader_basic_event {
+    private:
+        pal_loader_user player;
+        std::string     item;
+        int             count;
+        bool            is_assign_passive;
+
+    public:
+        user_pre_additem_event() = delete;
+
+        // todo: make event editable
+        user_pre_additem_event(pal_loader_user &player, const std::string &item, int count, bool is_assign_passive)
+            : pal_loader_basic_event(EVENT_PRE, GAME_GAMEPLAY, ADDITEM),
+              player(player),
+              item(item),
+              count(count),
+              is_assign_passive(is_assign_passive) {}
+
+        pal_loader_user &get_player() {
+            return player;
+        };
+
+        std::string &get_item() {
+            return item;
+        };
+
+        int &get_count() {
+            return count;
+        };
+
+        bool &get_is_assign_passive() {
+            return is_assign_passive;
         };
 };
 

@@ -201,6 +201,31 @@ struct pal_loader_user : pal_loader_character {
             uuid_p4 = guid->D;
         }
 
+        pal_loader_user(SDK::APalPlayerController *controller)
+            : pal_loader_character(pal_loader_character_type::player) {
+            if (controller == nullptr) {
+                mark_user_as_invalid();
+                return;
+            }
+
+            if (controller->PlayerState == nullptr) {
+                mark_user_as_invalid();
+                return;
+            }
+
+            auto guid = SDK::GetPlayerUID(reinterpret_cast<SDK::APalPlayerState *>(controller->PlayerState));
+            if (guid == nullptr) {
+                mark_user_as_invalid();
+                return;
+            }
+
+            id      = controller->PlayerState->PlayerId;
+            uuid_p1 = guid->A;
+            uuid_p2 = guid->B;
+            uuid_p3 = guid->C;
+            uuid_p4 = guid->D;
+        }
+
         pal_loader_user(SDK::APalPlayerCharacter *character_init)
             : pal_loader_character(pal_loader_character_type::player) {
             auto state = SDK::GetPlayerStateByPlayer(character_init);

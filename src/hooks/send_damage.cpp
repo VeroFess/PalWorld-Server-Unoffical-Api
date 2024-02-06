@@ -73,7 +73,7 @@ void send_damage_to_server_implementation_proxy(SDK::APalPlayerState *that, SDK:
         return;
     }
 
-    if (!source.valid()) {
+    if (!pre_attack.get_source().valid()) {
         pal_async_log->warn("[Event::SendDamage] player {} damage blocked . reason: player kicked", source.get_name().toStdString());
         return;
     }

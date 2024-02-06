@@ -57,4 +57,10 @@ namespace Offsets {
 
     // void __fastcall APalPlayerState::SendDamage_ToServer_Implementation(APalPlayerState *this, APalCharacter *Target, const FPalDamageInfo *info)
     constexpr int32_t SendDamageToServer = 0x69B2100;
+
+    // APalPlayerController *__fastcall UPalNetworkComponentUtility::GetOwnerPlayerController(const UActorComponent *Component)
+    constexpr int32_t NetworkComponentGetOwnerPlayerController = 0x66F2EF0;
+
+    //__int64 __fastcall UPalNetworkPlayerComponent::RequestAddItem_ToServer_Implementation(const UActorComponent *a1, __int64 a2, unsigned int a3, unsigned __int8 a4)
+    constexpr int32_t AddItemToServer = 0x670F2A0;
 } // namespace Offsets

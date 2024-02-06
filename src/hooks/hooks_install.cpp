@@ -1,7 +1,8 @@
 #include "hooks.h"
 
-SpawnPlayActorType                   engine_spawn_play_actor;
-SendDamageToServerImplementationType engine_send_damage_to_server;
+SpawnPlayActorType                       engine_spawn_play_actor;
+SendDamageToServerImplementationType     engine_send_damage_to_server;
+RequestAddItemToServerImplementationType engine_add_item_to_server;
 
 bool install_hooks() {
     funchook_t *funchook = funchook_create();
@@ -15,6 +16,12 @@ bool install_hooks() {
 
     engine_send_damage_to_server = reinterpret_cast<SendDamageToServerImplementationType>(uintptr_t(GetImageBaseOffset()) + Offsets::SendDamageToServer);
     rv                           = funchook_prepare(funchook, (void **)&engine_send_damage_to_server, (void *)send_damage_to_server_implementation_proxy);
+    if (rv != 0) {
+        goto clean_and_exit;
+    }
+
+    engine_add_item_to_server = reinterpret_cast<RequestAddItemToServerImplementationType>(uintptr_t(GetImageBaseOffset()) + Offsets::AddItemToServer);
+    rv                        = funchook_prepare(funchook, (void **)&engine_add_item_to_server, (void *)add_item_to_server_implementation_proxy);
     if (rv != 0) {
         goto clean_and_exit;
     }
