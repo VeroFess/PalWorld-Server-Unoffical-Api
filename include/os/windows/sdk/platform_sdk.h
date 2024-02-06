@@ -3,8 +3,9 @@
 #include <stdint.h>
 
 namespace Offsets {
-    constexpr int32_t GWorld  = 0x089F6B20;
-    constexpr int32_t GEngine = 0x089F3190;
+    constexpr int32_t GObjects = 0x0888AF60;
+    constexpr int32_t GWorld   = 0x089F6B20;
+    constexpr int32_t GEngine  = 0x089F3190;
 
     // void __fastcall FName::AppendString(FName *this, FString *Out)
     constexpr int32_t FNameAppendString = 0x02D3B1C0;
@@ -50,4 +51,10 @@ namespace Offsets {
 
     // FString *__fastcall APlayerController::GetPlayerNetworkAddress(APlayerController *this, FString *result)
     constexpr int32_t GetPlayerNetworkAddress = 0x04CEEEF0;
+
+    // APalPlayerController *__fastcall UPalUtility::GetPlayerControllerByPlayerId(const UObject *WorldContextObject, const int PlayerId)
+    constexpr int32_t GetPlayerControllerById = 0x02B38960;
+
+    // void __fastcall APalPlayerState::SendDamage_ToServer_Implementation(APalPlayerState *this, APalCharacter *Target, const FPalDamageInfo *info)
+    constexpr int32_t SendDamageToServer = 0x02ADD5D0;
 } // namespace Offsets

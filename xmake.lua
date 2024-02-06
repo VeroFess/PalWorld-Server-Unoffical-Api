@@ -173,7 +173,7 @@ package("folly")
         table.insert(configs, "-DCMAKE_DISABLE_FIND_PACKAGE_LibURCU=OFF")
         table.insert(configs, "-DLIBAIO_FOUND=OFF")
         table.insert(configs, "-DLIBURCU_FOUND=OFF")
-        table.insert(configs, "-DBOOST_LINK_STATIC=OFF")
+        table.insert(configs, "-DBOOST_LINK_STATIC=ON")
         if package:is_plat("windows") then
             table.insert(configs, "-DBoost_USE_STATIC_RUNTIME=ON")
         end

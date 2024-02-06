@@ -1,5 +1,7 @@
 #pragma once
 
+#include <string.h>
+
 // Dumped with Dumper-7!
 
 
@@ -65,7 +67,7 @@ public:
 			if (!Object)
 				continue;
 			
-			if (Object->HasTypeFlag(RequiredType) && Object->GetName() == Name)
+			if (Object->HasTypeFlag(RequiredType) && strcmp(Object->GetName().c_str(), Name.c_str()) == 0)
 			{
 				return static_cast<UEType*>(Object);
 			}

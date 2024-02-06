@@ -1,7 +1,12 @@
 #include <cstdint>
-#include "folly/AtomicUnorderedMap.h"
+#include "SDKDirect.h"
+#include "folly/String.h"
+#include "folly/FBString.h"
 #include "folly/IPAddress.h"
 #include "eventpp/eventdispatcher.h"
+
+#include "utils.h"
+#include "types.h"
 
 enum pal_event_basic_types : uint8_t {
     EVENT_PRE,
@@ -18,14 +23,18 @@ enum pal_event_subsystem_types : uint8_t {
 };
 
 enum pal_event_types : uint16_t {
-    LOGIN
+    LOGIN,
+    ATTACK
 };
 
 #define BUILD_PAL_EVENT_ID(B, S, E) uint32_t((B) << 24 | (S) << 16 | (E))
 
 enum pal_avalable_event_types : uint32_t {
-    EVENT_PRE_LOGIN   = BUILD_PAL_EVENT_ID(EVENT_PRE, GAME_USERAUTH, LOGIN),
-    EVENT_LOGIN_ASYNC = BUILD_PAL_EVENT_ID(EVENT_ASYNC, GAME_USERAUTH, LOGIN),
+    EVENT_PRE_LOGIN    = BUILD_PAL_EVENT_ID(EVENT_PRE, GAME_USERAUTH, LOGIN),
+    EVENT_LOGIN_ASYNC  = BUILD_PAL_EVENT_ID(EVENT_ASYNC, GAME_USERAUTH, LOGIN),
+    EVENT_PRE_ATTACK   = BUILD_PAL_EVENT_ID(EVENT_PRE, GAME_GAMEPLAY, ATTACK),
+    EVENT_POST_ATTACK  = BUILD_PAL_EVENT_ID(EVENT_POST, GAME_GAMEPLAY, ATTACK),
+    EVENT_ATTACK_ASYNC = BUILD_PAL_EVENT_ID(EVENT_ASYNC, GAME_GAMEPLAY, ATTACK),
 };
 
 struct pal_loader_basic_event {
@@ -80,6 +89,33 @@ struct user_login_event : pal_loader_basic_event {
 
         const folly::IPAddress &get_remote_address() {
             return remote_address;
+        };
+};
+
+struct user_pre_attack_event : pal_loader_basic_event {
+    private:
+        pal_loader_user                 source;
+        pal_loader_character            target;
+        pal_loader_editable_damage_info info;
+
+    public:
+        user_pre_attack_event() = delete;
+
+        user_pre_attack_event(const pal_loader_user &source, const pal_loader_character &target, SDK::FPalDamageInfo *info)
+            : pal_loader_basic_event(EVENT_PRE, GAME_GAMEPLAY, ATTACK),
+              source(source),
+              target(target), info(info) {}
+
+        pal_loader_user &get_source() {
+            return source;
+        };
+
+        pal_loader_character &get_target() {
+            return target;
+        };
+
+        pal_loader_editable_damage_info &get_info() {
+            return info;
         };
 };
 

@@ -5,27 +5,37 @@ typedef void (*SendSystemAnnounceType)(SDK::UObject *WorldContextObject, const S
 typedef void (*GetAllPlayerCharactersType)(SDK::UObject *WorldContextObject, SDK::TArray<SDK::APalCharacter *> *OutPlayers);
 typedef SDK::AController *(*GetControllerType)(SDK::UObject *WorldContextObject, SDK::AActor *Actor);
 typedef SDK::APalPlayerState *(*GetPlayerStateByPlayerType)(SDK::APalPlayerCharacter *Player);
+typedef SDK::APalPlayerController *(*GetPlayerControllerByPlayerIdType)(SDK::UObject *WorldContextObject, int32 PlayerId);
+typedef SDK::FGuid *(*GetPlayerUIDType)(SDK::APalPlayerState *playerActor);
 #ifdef __linux
 typedef SDK::FString *(*GetPlayerNameType)(SDK::FString *Name, SDK::APlayerState *that);
 #else
 typedef SDK::FString *(*GetPlayerNameType)(SDK::APlayerState *that, SDK::FString *Name);
 #endif
-typedef SDK::FGuid *(*GetPlayerUIDType)(SDK::APalPlayerState *playerActor);
 
-GetGameStateType           GetGameState         = nullptr;
-SendSystemAnnounceType     SendAnnounce         = nullptr;
-GetAllPlayerCharactersType GetCharacters        = nullptr;
-GetControllerType          GetControllerPrivate = nullptr;
-GetPlayerStateByPlayerType GetPlayerState       = nullptr;
-GetPlayerNameType          GetPlayerNamePrivate = nullptr;
-GetPlayerUIDType           GetPlayerUIDPrivate  = nullptr;
+GetGameStateType                  GetGameState            = nullptr;
+SendSystemAnnounceType            SendAnnounce            = nullptr;
+GetAllPlayerCharactersType        GetCharacters           = nullptr;
+GetControllerType                 GetControllerPrivate    = nullptr;
+GetPlayerStateByPlayerType        GetPlayerState          = nullptr;
+GetPlayerNameType                 GetPlayerNamePrivate    = nullptr;
+GetPlayerUIDType                  GetPlayerUIDPrivate     = nullptr;
+GetPlayerControllerByPlayerIdType GetPlayerControllerById = nullptr;
 
-SDK::APalGameStateInGame *SDK::GetPalGameStateInGame(UObject *WorldContextObject) {
+SDK::APalPlayerController *SDK::GetPlayerControllerByPlayerId(int32 PlayerId) {
+    if (GetPlayerControllerById == nullptr) {
+        GetPlayerControllerById = reinterpret_cast<GetPlayerControllerByPlayerIdType>(uintptr_t(GetImageBaseOffset()) + Offsets::GetPlayerControllerById);
+    }
+
+    return GetPlayerControllerById(SDK::World, PlayerId);
+}
+
+SDK::APalGameStateInGame *SDK::GetPalGameStateInGame() {
     if (GetGameState == nullptr) {
         GetGameState = reinterpret_cast<GetGameStateType>(uintptr_t(GetImageBaseOffset()) + Offsets::GetGameState);
     }
 
-    return GetGameState(WorldContextObject);
+    return GetGameState(SDK::World);
 }
 
 void SDK::SendSystemAnnounce(SDK::FString &Message) {
