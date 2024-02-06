@@ -54,4 +54,7 @@ namespace Offsets {
 
     // APalPlayerController *__fastcall UPalUtility::GetPlayerControllerByPlayerId(const UObject *WorldContextObject, const int PlayerId)
     constexpr int32_t GetPlayerControllerById = 0x6A45610;
+
+    // void __fastcall APalPlayerState::SendDamage_ToServer_Implementation(APalPlayerState *this, APalCharacter *Target, const FPalDamageInfo *info)
+    constexpr int32_t SendDamageToServer = 0x69B2100;
 } // namespace Offsets
