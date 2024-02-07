@@ -1,7 +1,11 @@
 #include <windows.h>
 #include "common_entry.h"
+#include "SDKDirect.h"
+#include <chrono>
+#include <thread>
 
 DWORD WINAPI pal_loader_thread_start_wapper(LPVOID lpThreadParameter) {
+    std::this_thread::sleep_for(std::chrono::seconds(10));
     pal_loader_thread_start();
 
     // FIXME: pal_loader_thread_start is seen as infinitely looping.
