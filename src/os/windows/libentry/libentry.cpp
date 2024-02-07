@@ -5,7 +5,14 @@
 #include <thread>
 
 DWORD WINAPI pal_loader_thread_start_wapper(LPVOID lpThreadParameter) {
-    std::this_thread::sleep_for(std::chrono::seconds(10));
+    constexpr size_t MAX_RETRY = 20;
+    size_t retryCount = 0;
+
+    while (retryCount < MAX_RETRY && SDK::World == nullptr && SDK::StateInGame == nullptr) {
+        std::this_thread::sleep_for(std::chrono::seconds(5));
+        retryCount++;
+    }
+
     pal_loader_thread_start();
 
     // FIXME: pal_loader_thread_start is seen as infinitely looping.
