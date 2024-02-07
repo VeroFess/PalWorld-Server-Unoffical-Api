@@ -111,11 +111,11 @@ public:
 	bool                                         bIsRestricted;                                     // 0x39(0x1)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bRequireWorkerWorkingPassiveSkill;                 // 0x3A(0x1)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bIsWorking;                                        // 0x3B(0x1)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_22A2[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_1FAB[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<struct FPalPassiveAbilitySkills>      PassiveSkills;                                     // 0x40(0x10)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPrivate)
 	TMap<struct FPalDataTableRowName_PassiveSkillData, struct FPalPassiveAbilitySkillStatus> SkillStatus;                                       // 0x50(0x50)(Edit, EditConst, NativeAccessSpecifierPrivate)
 	int32                                        CurrentRank;                                       // 0xA0(0x4)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_22A3[0x54];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_1FAF[0x54];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAbilityPassiveSkill* GetDefaultObj();
@@ -192,13 +192,13 @@ public:
 	bool                                         bCanInterruptWaza;                                 // 0x3A(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsChangeWorkAnimPlayRate;                         // 0x3B(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsChangeWalkableFloorAngle;                       // 0x3C(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_22FE[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_20F6[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        ActionWalkableFloorAngle;                          // 0x40(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsDisableNavWalk;                                 // 0x44(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsReflectForClient;                               // 0x45(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2300[0xA];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_20F8[0xA];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FActionDynamicParameter               DynamicParameter;                                  // 0x50(0xE0)(NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2301[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_20F9[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalActionBase* GetDefaultObj();
@@ -246,7 +246,7 @@ public:
 	class UPalActionBase*                        CurrentAction;                                     // 0x120(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<class UPalActionBase*>                ActionQueue;                                       // 0x128(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	TArray<class UPalActionBase*>                TerminateWaitActionList;                           // 0x138(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_234E[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2293[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalActionComponent* GetDefaultObj();
@@ -293,11 +293,11 @@ public:
 class UPalWorldSubsystem : public UWorldSubsystem
 {
 public:
-	uint8                                        Pad_2359[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_22C0[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	bool                                         bShouldCreate;                                     // 0x38(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_235A[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_22C3[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<TSubclassOf<class UWorldSubsystem>>   PrerequisiteWorldSubsystemList;                    // 0x40(0x10)(Edit, ZeroConstructor, DisableEditOnInstance, UObjectWrapper, NativeAccessSpecifierPublic)
-	uint8                                        Pad_235B[0x20];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_22C5[0x20];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalWorldSubsystem* GetDefaultObj();
@@ -321,7 +321,7 @@ public:
 class UPalActionOneShotAnimation : public UPalActionBase
 {
 public:
-	uint8                                        Pad_2364[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_22D3[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalActionOneShotAnimation* GetDefaultObj();
@@ -353,7 +353,7 @@ class UPalActionTransportItem : public UPalActionBase
 public:
 	class FName                                  ItemAttachSocketName;                              // 0x138(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class AActor*                                ItemActor;                                         // 0x140(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2375[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2346[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalActionTransportItem* GetDefaultObj();
@@ -369,10 +369,10 @@ class UPalActionWazaBase : public UPalActionBase
 {
 public:
 	enum class EPalWazaID                        WazaID;                                            // 0x138(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2377[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2364[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalSoundPlayer*                       SoundPlayer;                                       // 0x140(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bApplyFullStomachCost;                             // 0x148(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2378[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2368[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalActionWazaBase* GetDefaultObj();
@@ -388,7 +388,7 @@ public:
 class UPalAction_BeLiftup : public UPalActionBase
 {
 public:
-	uint8                                        Pad_237C[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_238A[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAction_BeLiftup* GetDefaultObj();
@@ -407,7 +407,7 @@ class UPalAction_BeThrown : public UPalActionBase
 public:
 	class UAnimMontage*                          PlayingMontage;                                    // 0x138(0x8)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UNiagaraComponent*                     NiagaraComponent;                                  // 0x140(0x8)(BlueprintVisible, ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2380[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_23A7[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAction_BeThrown* GetDefaultObj();
@@ -422,13 +422,13 @@ class UPalStatusBase : public UObject
 {
 public:
 	bool                                         bIsEndStatus;                                      // 0x28(0x1)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2392[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_23E1[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FStatusDynamicParameter               DynamicParameter;                                  // 0x2C(0xC)(Edit, BlueprintVisible, BlueprintReadOnly, Net, DisableEditOnTemplate, EditConst, NoDestructor, NativeAccessSpecifierPublic)
 	enum class EPalStatusID                      StatusId;                                          // 0x38(0x1)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2394[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_23E2[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        Duration;                                          // 0x3C(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bIsNerverEnd;                                      // 0x40(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2395[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_23E4[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalStatusBase* GetDefaultObj();
@@ -448,7 +448,7 @@ public:
 class UPalAction_DrownCheckBase : public UPalStatusBase
 {
 public:
-	uint8                                        Pad_239A[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_23EC[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAction_DrownCheckBase* GetDefaultObj();
@@ -460,11 +460,11 @@ public:
 class UPalAction_FeedItemToCharacter : public UPalActionBase
 {
 public:
-	uint8                                        Pad_23A5[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_240E[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        TurnSpeed;                                         // 0x148(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_23A7[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_240F[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalAIActionFed*                       TargetCharacterAction;                             // 0x150(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_23A8[0x28];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2410[0x28];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAction_FeedItemToCharacter* GetDefaultObj();
@@ -484,7 +484,7 @@ class UPalAction_Liftup : public UPalActionBase
 public:
 	float                                        AttachRelativeLocationOffsetZ;                     // 0x138(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bIsAttachToLeftHand;                               // 0x13C(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_23B4[0x3];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2423[0x3];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAction_Liftup* GetDefaultObj();
@@ -506,7 +506,7 @@ class UPalAction_LiftupThrow : public UPalActionBase
 public:
 	float                                        AttachRelativeLocationOffsetZ;                     // 0x138(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bIsAttachToLeftHand;                               // 0x13C(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_23B9[0x3];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2431[0x3];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAction_LiftupThrow* GetDefaultObj();
@@ -522,7 +522,7 @@ class UPalAction_SleepPlayerBed : public UPalActionBase
 {
 public:
 	FMulticastInlineDelegateProperty_            OnGetupTriggerDelegate;                            // 0x138(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                        Pad_23BD[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_244B[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAction_SleepPlayerBed* GetDefaultObj();
@@ -540,7 +540,7 @@ class UPalActivatableWidget : public UCommonActivatableWidget
 public:
 	enum class EPalWidgetInputMode               InputConfig;                                       // 0x3E8(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	enum class EMouseCaptureMode                 GameMouseCaptureMode;                              // 0x3E9(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_23C3[0x6];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2451[0x6];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalActivatableWidget* GetDefaultObj();
@@ -556,14 +556,14 @@ public:
 	FMulticastInlineDelegateProperty_            OnCoolStart;                                       // 0x38(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnCoolFinish;                                      // 0x48(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	bool                                         IsCooling;                                         // 0x58(0x1)(Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_23D0[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2477[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        ReuseCoolTimer;                                    // 0x5C(0x4)(Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EPalWazaID                        WazaType;                                          // 0x60(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         IsStopTimer;                                       // 0x61(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_23D2[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_247A[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        DatabaseCoolTime;                                  // 0x64(0x4)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bIsTransient;                                      // 0x68(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_23D3[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_247B[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalActiveSkill* GetDefaultObj();
@@ -583,7 +583,7 @@ public:
 	class AActor*                                SelfActor;                                         // 0x28(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TMap<int32, class UPalActiveSkill*>          SkillMap;                                          // 0x30(0x50)(Transient, NativeAccessSpecifierPrivate)
 	bool                                         IsEndInit;                                         // 0x80(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2404[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_24F4[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FFloatContainer                       CoolDownSpeedRateMap;                              // 0x88(0x10)(Transient, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -631,10 +631,10 @@ class UPalAIActionBase : public UPawnAction_BlueprintBase
 public:
 	bool                                         bIsAutoStopBehaviorTree;                           // 0x90(0x1)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EPalAIActionCategory              AiActionCategory;                                  // 0x91(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_245E[0x6];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_256A[0x6];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalAIActionDynamicParameter          DynamicParameter;                                  // 0x98(0x50)(BlueprintVisible, Transient, NoDestructor, NativeAccessSpecifierPublic)
 	enum class EAIRequestPriority                DefaultPriority;                                   // 0xE8(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2460[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_256C[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnStartActionDelegate;                             // 0xF0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnPauseActionDelegate;                             // 0x100(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnResumeActionDelegate;                            // 0x110(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -669,9 +669,9 @@ public:
 class UPalAIActionBaseCampBase : public UPalAIActionBase
 {
 public:
-	uint8                                        Pad_2487[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_25C1[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        WalkSpeedDefault;                                  // 0x138(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2488[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_25C2[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAIActionBaseCampBase* GetDefaultObj();
@@ -707,7 +707,7 @@ public:
 class UPalAIActionBaseCampCage : public UPalAIActionBase
 {
 public:
-	uint8                                        Pad_248D[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_25EE[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAIActionBaseCampCage* GetDefaultObj();
@@ -719,15 +719,15 @@ public:
 class UPalAIActionBaseCampDefenseBase : public UPalAIActionBase
 {
 public:
-	uint8                                        Pad_2491[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_25F9[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class AActor*                                TargetActor;                                       // 0x138(0x8)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class APalCharacter*                         SelfActor;                                         // 0x140(0x8)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UPalAICombatModule*                    CombatModule;                                      // 0x148(0x8)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	enum class EPalWorkType                      CurrentWorkType;                                   // 0x150(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2495[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2600[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalWorkAssignHandleId                CurrentWorkAssignId;                               // 0x154(0x18)(Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	enum class EPalWorkDefenseCombatType         DefenseCombatType;                                 // 0x16C(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2498[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2602[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TSubclassOf<class UPalActionBase>            DefenseActionClass;                                // 0x170(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TSubclassOf<class UPalActionBase>            DefenseWaitActionClass;                            // 0x178(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TWeakObjectPtr<class UPalMapObjectDefenseBulletLauncherModel> WeakDefenseModel;                                  // 0x180(0x8)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -743,7 +743,7 @@ public:
 class UPalAIActionBaseCampDefenseGunner : public UPalAIActionBaseCampDefenseBase
 {
 public:
-	uint8                                        Pad_249D[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_260F[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAIActionBaseCampDefenseGunner* GetDefaultObj();
@@ -771,7 +771,7 @@ public:
 	float                                        WalkAroundArrivalRange;                            // 0x130(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        WalkAroundNextDistance;                            // 0x134(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FFloatInterval                        WalkAroundRandomTime;                              // 0x138(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_24A1[0x20];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2616[0x20];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAIActionBaseCampDodgeWork* GetDefaultObj();
@@ -810,18 +810,18 @@ public:
 class UPalAIActionCombatBase : public UPalAIActionBase
 {
 public:
-	uint8                                        Pad_24D2[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_269E[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnCombatFinish;                                    // 0x138(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class AActor*                                TargetActor;                                       // 0x148(0x8)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class APalCharacter*                         SelfActor;                                         // 0x150(0x8)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UPalAICombatModule*                    CombatModule;                                      // 0x158(0x8)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         NextIsWaza;                                        // 0x160(0x1)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_24D5[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_26A5[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        NextWazaSlotIndex;                                 // 0x164(0x4)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TSubclassOf<class UPalActionBase>            NextActionClass;                                   // 0x168(0x8)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	int32                                        InterruptSkillSlotID;                              // 0x170(0x4)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bInterruptSkill;                                   // 0x174(0x1)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_24D8[0x3];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_26A9[0x3];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAIActionCombatBase* GetDefaultObj();
@@ -862,7 +862,7 @@ class UPalAIActionBaseCampFighterCombatGunner : public UPalAIActionCombatBase
 public:
 	float                                        FaceAngleRange;                                    // 0x178(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TWeakObjectPtr<class UPalMapObjectDefenseBulletLauncherModel> WeakDefenseModel;                                  // 0x17C(0x8)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_24DE[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_26F5[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAIActionBaseCampFighterCombatGunner* GetDefaultObj();
@@ -887,7 +887,7 @@ public:
 class UPalAIActionBaseCampInUsingAmusement : public UPalAIActionBaseCampBase
 {
 public:
-	uint8                                        Pad_24E7[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_271D[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAIActionBaseCampInUsingAmusement* GetDefaultObj();
@@ -900,12 +900,12 @@ public:
 class UPalAIActionBaseCampRecoverHungry : public UPalAIActionBaseCampBase
 {
 public:
-	uint8                                        Pad_24ED[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2730[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FGuid                                 WantFoodHUDId;                                     // 0x148(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TSubclassOf<class UPalUserWidgetWorldHUD>    WantFoodHUDClass;                                  // 0x158(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FVector                               WantFoodHUDOffset;                                 // 0x160(0x18)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FPalMonsterControllerBaseCampHungryParameter HungeryParameter;                                  // 0x178(0xC)(Edit, BlueprintVisible, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                        Pad_24EF[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2731[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAIActionBaseCampRecoverHungry* GetDefaultObj();
@@ -919,7 +919,7 @@ public:
 class UPalAIActionBaseCampRecoverHungryChildBase : public UPalAIActionBaseCampChildBase
 {
 public:
-	uint8                                        Pad_250A[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2753[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAIActionBaseCampRecoverHungryChildBase* GetDefaultObj();
@@ -938,7 +938,7 @@ public:
 class UPalAIActionBaseCampRecoverHungryApproachToFoodBox : public UPalAIActionBaseCampRecoverHungryChildBase
 {
 public:
-	uint8                                        Pad_250E[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2760[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAIActionBaseCampRecoverHungryApproachToFoodBox* GetDefaultObj();
@@ -952,7 +952,7 @@ class UPalAIActionBaseCampRecoverHungryEat : public UPalAIActionBaseCampRecoverH
 public:
 	float                                        EatTime;                                           // 0x140(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        TurnSpeed;                                         // 0x144(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2515[0x28];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2764[0x28];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAIActionBaseCampRecoverHungryEat* GetDefaultObj();
@@ -965,7 +965,7 @@ public:
 class UPalAIActionBaseCampRecoverHungryProductFood : public UPalAIActionBaseCampRecoverHungryChildBase
 {
 public:
-	uint8                                        Pad_251E[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2772[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAIActionBaseCampRecoverHungryProductFood* GetDefaultObj();
@@ -977,7 +977,7 @@ public:
 class UPalAIActionBaseCampReturnBack : public UPalAIActionBase
 {
 public:
-	uint8                                        Pad_2521[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2774[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAIActionBaseCampReturnBack* GetDefaultObj();
@@ -989,7 +989,7 @@ public:
 class UPalAIActionBaseCampSleep : public UPalAIActionBaseCampBase
 {
 public:
-	uint8                                        Pad_2526[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2777[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAIActionBaseCampSleep* GetDefaultObj();
@@ -1001,10 +1001,10 @@ public:
 class UPalAIActionBaseCampSleepActively : public UPalAIActionBaseCampBase
 {
 public:
-	uint8                                        Pad_252D[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2783[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FGuid                                 ReservedBedModelInstanceId;                        // 0x148(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	enum class EPalAIActionBaseCampSleepActivelyMode Mode;                                              // 0x158(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_252E[0x47];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2787[0x47];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAIActionBaseCampSleepActively* GetDefaultObj();
@@ -1036,7 +1036,7 @@ public:
 	struct FInt32Interval                        AttackNumRange;                                    // 0x138(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        TurnSpeedToAttack;                                 // 0x140(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FGuid                                 AttackTargetMapObjectInstanceId;                   // 0x144(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_253E[0xC];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2795[0xC];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAIActionBaseCampTrantrum* GetDefaultObj();
@@ -1120,9 +1120,9 @@ public:
 class UPalAIActionCompositeBase : public UObject
 {
 public:
-	uint8                                        Pad_25A6[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_282C[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalAIActionCompositeBase*             Child;                                             // 0x30(0x8)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_25A8[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_282D[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalAIActionComponent*                 OwnerComponent;                                    // 0x40(0x8)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 	static class UClass* StaticClass();
@@ -1145,7 +1145,7 @@ class UPalAIActionCompositeBaseCamp : public UPalAIActionCompositeBase
 {
 public:
 	float                                        WalkSpeedDefault;                                  // 0x48(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_25B4[0x4C];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2844[0x4C];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAIActionCompositeBaseCamp* GetDefaultObj();
@@ -1173,7 +1173,7 @@ public:
 class UPalAIActionCompositeActionDummy : public UPalAIActionCompositeBase
 {
 public:
-	uint8                                        Pad_25C1[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_285A[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAIActionCompositeActionDummy* GetDefaultObj();
@@ -1195,7 +1195,7 @@ public:
 	TSubclassOf<class UPalAIActionBase>          CurrentActionClass;                                // 0x68(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class FName                                  SpeedFlagName;                                     // 0x70(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        DefaultWalkSpeed;                                  // 0x78(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_25DF[0xC];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_286D[0xC];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAIActionCompositeWorker* GetDefaultObj();
@@ -1220,7 +1220,7 @@ public:
 class UPalAIActionWorkerChildBase : public UPalAIActionBase
 {
 public:
-	uint8                                        Pad_25FC[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2884[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAIActionWorkerChildBase* GetDefaultObj();
@@ -1238,7 +1238,7 @@ public:
 class UPalAIActionCompositeWorkerBaseCamp : public UPalAIActionCompositeWorker
 {
 public:
-	uint8                                        Pad_2602[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2886[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TSubclassOf<class UPalAIActionCombatBase>    CombatActionClass;                                 // 0x90(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TSubclassOf<class UPalAIActionBaseCampDefenseBase> DefenseActionClass;                                // 0x98(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
@@ -1293,11 +1293,11 @@ public:
 	float                                        SearchLocationRadiusStep;                          // 0x138(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        SearchLocationDegStep;                             // 0x13C(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        SearchingLocationRadius;                           // 0x140(0x4)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2656[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_28F2[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class APalCharacter*                         TargetCharacter;                                   // 0x148(0x8)(Edit, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class APalCharacter*                         ReticleTarget;                                     // 0x150(0x8)(Edit, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FVector                               AimStartPoint;                                     // 0x158(0x18)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2658[0x78];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_28F4[0x78];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAIActionCoopAssaultrifleMode* GetDefaultObj();
@@ -1326,9 +1326,9 @@ public:
 class UPalAIActionFed : public UPalAIActionBase
 {
 public:
-	uint8                                        Pad_265F[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_28FF[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class APalCharacter*                         ApproachTarget;                                    // 0x138(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2660[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2900[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAIActionFed* GetDefaultObj();
@@ -1340,7 +1340,7 @@ public:
 class UPalAIActionFunnelCharacterDefault : public UPalAIActionCompositeBase
 {
 public:
-	uint8                                        Pad_2672[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2910[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAIActionFunnelCharacterDefault* GetDefaultObj();
@@ -1370,7 +1370,7 @@ public:
 class UPalAIActionLiftup : public UPalAIActionBase
 {
 public:
-	uint8                                        Pad_2676[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2922[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAIActionLiftup* GetDefaultObj();
@@ -1384,7 +1384,7 @@ public:
 class UPalAIActionOtomoDefault : public UPalAIActionCompositeBase
 {
 public:
-	uint8                                        Pad_267E[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_292A[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAIActionOtomoDefault* GetDefaultObj();
@@ -1402,7 +1402,7 @@ public:
 class UPalAIActionWorkerApproachToWorkArea : public UPalAIActionWorkerChildBase
 {
 public:
-	uint8                                        Pad_2686[0x28];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_293B[0x28];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAIActionWorkerApproachToWorkArea* GetDefaultObj();
@@ -1416,7 +1416,7 @@ class UPalAIActionWorkerReaction : public UPalAIActionBase
 {
 public:
 	class APalCharacter*                         LookTargetCharacter;                               // 0x130(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_268B[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_294C[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAIActionWorkerReaction* GetDefaultObj();
@@ -1443,7 +1443,7 @@ public:
 class UPalAIActionWorkerWaitForWorkable : public UPalAIActionWorkerChildBase
 {
 public:
-	uint8                                        Pad_26A2[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_296C[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAIActionWorkerWaitForWorkable* GetDefaultObj();
@@ -1456,9 +1456,9 @@ class UPalAIActionWorkerWorking : public UPalAIActionWorkerChildBase
 {
 public:
 	enum class EPalWorkType                      CurrentWorkType;                                   // 0x138(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_26A6[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2972[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        TurnSpeedToTarget;                                 // 0x13C(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_26A7[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2973[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAIActionWorkerWorking* GetDefaultObj();
@@ -1538,7 +1538,7 @@ public:
 class UPalAICombatModule_Invader : public UPalAICombatModule
 {
 public:
-	uint8                                        Pad_26BD[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_29A0[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAICombatModule_Invader* GetDefaultObj();
@@ -1562,7 +1562,7 @@ public:
 class UPalAICombatModule_Wild : public UPalAICombatModule
 {
 public:
-	uint8                                        Pad_26C7[0x28];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_29C0[0x28];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAICombatModule_Wild* GetDefaultObj();
@@ -1583,29 +1583,29 @@ public:
 	class FString                                DebugOrganizationName;                             // 0x3E8(0x10)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class APalCharacter*                         R1AttackTarget;                                    // 0x3F8(0x8)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        MinAIActionComponentTickInterval;                  // 0x400(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2717[0xC];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2A5F[0xC];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	bool                                         bIsActive;                                         // 0x410(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         IsSquadBehaviour;                                  // 0x411(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         IsNotSleepWildLife;                                // 0x412(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2718[0x5];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2A60[0x5];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalSquad*                             MySquad;                                           // 0x418(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalHate*                              HateSystem;                                        // 0x420(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalAIActionComponent*                 AIActionComponent;                                 // 0x428(0x8)(Edit, ExportObject, ZeroConstructor, Transient, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalAIBlackboardBase*                  PalAIBlackboard;                                   // 0x430(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2719[0x88];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2A62[0x88];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	bool                                         bOverwriteBlockDetectionParams;                    // 0x4C0(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_271A[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2A63[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalPathFollowingBlockDetectionParams BlockDetectionParams;                              // 0x4C4(0xC)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPrivate)
 	TSubclassOf<class UPalAIBlackboardBase>      PalBlackboardClass;                                // 0x4D0(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_271C[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2A64[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FTimerHandle                          DeadBodyDeleteTimerHandle;                         // 0x4E0(0x8)(Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         IsDeadBodyTimeDelate;                              // 0x4E8(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         IsSelfTimeDelate_FromSpawnTime;                    // 0x4E9(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_271D[0x6];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2A65[0x6];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FTimerHandle                          SelfDeleteTimerHandle;                             // 0x4F0(0x8)(Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_271E[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2A67[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	bool                                         bShouldCheckStuckByTick;                           // 0x4FC(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2720[0x23];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2A68[0x23];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalAIController* GetDefaultObj();
@@ -1653,7 +1653,7 @@ public:
 class UPalAIControllerBaseCampStatus : public UObject
 {
 public:
-	uint8                                        Pad_272A[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2A7B[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAIControllerBaseCampStatus* GetDefaultObj();
@@ -1749,9 +1749,9 @@ public:
 	float                                        HearingRate;                                       // 0xB0(0x4)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         HumanAndNoneWeapon;                                // 0xB4(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         IsIgnoreSoundReaction;                             // 0xB5(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2797[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2AAE[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        RecentMaxSoundLevel;                               // 0xB8(0x4)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2798[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2AB0[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        ResponsedMaxBiologicalGrade;                       // 0xC4(0x4)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalAIResponsePreset*                  AIResponsePreset;                                  // 0xC8(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalAISightResponse*                   AISightResponse;                                   // 0xD0(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -1813,7 +1813,7 @@ class UPalAISightResponse : public UObject
 {
 public:
 	class UPalAISightResponsePreset*             SightResponsePreset;                               // 0x28(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_27BC[0x50];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2AD4[0x50];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAISightResponse* GetDefaultObj();
@@ -1826,7 +1826,7 @@ class UPalAkComponent : public UAkComponent
 {
 public:
 	bool                                         PersistAcrossLevelTransition;                      // 0x488(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_27BD[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2AD5[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAkComponent* GetDefaultObj();
@@ -1839,11 +1839,11 @@ class APalAmbientSoundAreaBase : public AActor
 {
 public:
 	int32                                        AmbientPriority;                                   // 0x290(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_27C8[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2ADE[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<class UAkAudioEvent*>                 DayAmbientEvents;                                  // 0x298(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
 	TArray<class UAkAudioEvent*>                 NightAmbientEvents;                                // 0x2A8(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
 	bool                                         bIsOverlappedLocalPlayer;                          // 0x2B8(0x1)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_27C9[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2ADF[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalAmbientSoundAreaBase* GetDefaultObj();
@@ -1875,10 +1875,10 @@ class UPalAmbientSoundLineComponent : public UBoxComponent
 public:
 	class UAkAudioEvent*                         AmbientEvent;                                      // 0x578(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsEnableAmbientSound;                             // 0x580(0x1)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_27D2[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2AEA[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalAmbientSoundLineObject*            AmbinetSoundLineObject;                            // 0x588(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UAkComponent*                          AkComponent;                                       // 0x590(0x8)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_27D3[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2AEC[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAmbientSoundLineComponent* GetDefaultObj();
@@ -1890,7 +1890,7 @@ public:
 class UPalAmbientSoundLineObject : public UObject
 {
 public:
-	uint8                                        Pad_27E6[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2AF9[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<class USplineComponent*>              SplineComponents;                                  // 0x30(0x10)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
 	class UBoxComponent*                         ActivateTrigger;                                   // 0x40(0x8)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UAkComponent*                          AkComponent;                                       // 0x48(0x8)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -1912,16 +1912,16 @@ public:
 	TArray<TSubclassOf<class UAnimInstance>>     ImplementationClassList;                           // 0x368(0x10)(Edit, ZeroConstructor, DisableEditOnInstance, UObjectWrapper, NativeAccessSpecifierPublic)
 	struct FGeneralAnimationParameter            GeneralAnimationParameter;                         // 0x378(0x168)(BlueprintVisible, BlueprintReadOnly, Transient, Protected, NativeAccessSpecifierProtected)
 	bool                                         IsRotateYawInterpolation;                          // 0x4E0(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2837[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2B71[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        RotateYawInterpolation_Acceleration;               // 0x4E4(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TMap<class FName, class UPalBoneInfo*>       BoneListFullBody;                                  // 0x4E8(0x50)(Transient, NativeAccessSpecifierPrivate)
 	TMap<class FName, class UPalBoneInfo*>       BoneListOnlySpines;                                // 0x538(0x50)(Transient, NativeAccessSpecifierPrivate)
 	TArray<struct FReserveMontage>               ReservedMontageList;                               // 0x588(0x10)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2838[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2B76[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FFloatContainer                       AdditiveAnimationRate;                             // 0x5A0(0x10)(Transient, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2839[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2B77[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FFlagContainer                        DisableUpperOverrideFlag;                          // 0x5B8(0x50)(Edit, Transient, DisableEditOnInstance, EditConst, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_283A[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2B78[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAnimInstance* GetDefaultObj();
@@ -1953,7 +1953,7 @@ public:
 class UPalAnimNotifyDynamicParameterBase : public UObject
 {
 public:
-	uint8                                        Pad_2844[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2B80[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAnimNotifyDynamicParameterBase* GetDefaultObj();
@@ -1968,7 +1968,7 @@ public:
 	class UPalHitFilter*                         AttackFilter;                                      // 0x30(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class UShapeComponent*>               TransientShapeComponents;                          // 0x38(0x10)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	float                                        HitStopCount;                                      // 0x48(0x4)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2846[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2B86[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class USkeletalMeshComponent*                MyMesh;                                            // 0x50(0x8)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class AActor*                                MyActor;                                           // 0x58(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2008,7 +2008,7 @@ class UPalAnimNotifyState_AttackCollision : public UAnimNotifyState
 public:
 	class FName                                  AttachBoneName;                                    // 0x30(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsEnableHitStop;                                  // 0x38(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2852[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2BB0[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        OverrideHitStopTime;                               // 0x3C(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UPalHitFilter*                         AttackFilter;                                      // 0x40(0x8)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UShapeComponent*                       ShapeComponent;                                    // 0x48(0x8)(ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, Deprecated, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2052,7 +2052,7 @@ class UPalAnimNotifyState_FacialEye : public UAnimNotifyState
 public:
 	enum class EPalFacialEyeType                 EyeType;                                           // 0x30(0x1)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         AutoDefaultWhenEnd;                                // 0x31(0x1)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_285D[0x6];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2BCA[0x6];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAnimNotifyState_FacialEye* GetDefaultObj();
@@ -2066,7 +2066,7 @@ class UPalAnimNotifyState_FacialMouth : public UAnimNotifyState
 public:
 	enum class EPalFacialMouthType               MouthType;                                         // 0x30(0x1)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         AutoDefaultWhenEnd;                                // 0x31(0x1)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2860[0x6];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2BCE[0x6];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAnimNotifyState_FacialMouth* GetDefaultObj();
@@ -2079,7 +2079,7 @@ class UPalAnimNotifyState_FlyMeshHeight : public UAnimNotifyState
 {
 public:
 	bool                                         IsToLand;                                          // 0x30(0x1)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2865[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2BCF[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAnimNotifyState_FlyMeshHeight* GetDefaultObj();
@@ -2121,7 +2121,7 @@ public:
 	float                                        SlideAlpha;                                        // 0x44(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsDisableMovement;                                // 0x48(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsDisableJump;                                    // 0x49(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_286D[0x6];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2BDD[0x6];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAnimNotifyState_MovementControl* GetDefaultObj();
@@ -2139,7 +2139,7 @@ public:
 	bool                                         bIsDisableReload;                                  // 0x33(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsDisableChangeWeapon;                            // 0x34(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EPalShooterFlagContainerPriority  Priority;                                          // 0x35(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2874[0x2];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2BE0[0x2];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAnimNotifyState_WeaponControl* GetDefaultObj();
@@ -2152,7 +2152,7 @@ class UPalAnimNotify_FacialEye : public UAnimNotify
 {
 public:
 	enum class EPalFacialEyeType                 EyeType;                                           // 0x38(0x1)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2876[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2BE9[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAnimNotify_FacialEye* GetDefaultObj();
@@ -2165,7 +2165,7 @@ class UPalAnimNotify_FacialMouth : public UAnimNotify
 {
 public:
 	enum class EPalFacialMouthType               MouthType;                                         // 0x38(0x1)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2878[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2BED[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAnimNotify_FacialMouth* GetDefaultObj();
@@ -2219,9 +2219,9 @@ public:
 	float                                        ApplyRate;                                         // 0x38(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        PlaySpeedRate;                                     // 0x3C(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsAdjustAnimationSpeed;                           // 0x40(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_289B[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2C19[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TWeakObjectPtr<class APalCharacter>          CacheCharacter;                                    // 0x44(0x8)(BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_289C[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2C1B[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<float>                                RateList;                                          // 0x50(0x10)(BlueprintReadOnly, ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -2237,7 +2237,7 @@ class UPalAnimNotify_SendActionEvent : public UAnimNotify
 {
 public:
 	enum class EPalCurrentActionNotifyType       NotifyType;                                        // 0x38(0x1)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_289D[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2C1E[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAnimNotify_SendActionEvent* GetDefaultObj();
@@ -2275,7 +2275,7 @@ class UPalAnimNotify_WeaponNotify : public UAnimNotify
 {
 public:
 	enum class EWeaponNotifyType                 WeaponNotifyType;                                  // 0x38(0x1)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_28A0[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2C27[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAnimNotify_WeaponNotify* GetDefaultObj();
@@ -2287,7 +2287,7 @@ public:
 class UPalAssetStreamableManager : public UObject
 {
 public:
-	uint8                                        Pad_28A2[0x38];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2C28[0x38];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalAssetStreamableManager* GetDefaultObj();
@@ -2299,16 +2299,16 @@ public:
 class UPalHitFilter : public UObject
 {
 public:
-	uint8                                        Pad_28B1[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2C4F[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        MaxHitNum;                                         // 0x30(0x4)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        HitInterval;                                       // 0x34(0x4)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UPalHitLocationCalculator> HitLocationCalculator;                             // 0x38(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsIntersectionCollision;                          // 0x40(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_28B2[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2C53[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        IntersectionNum;                                   // 0x44(0x4)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	FMulticastInlineDelegateProperty_            OnHitDelegate;                                     // 0x48(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnOverlapEndDelegate;                              // 0x58(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                        Pad_28B3[0xF0];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2C54[0xF0];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalHitFilter* GetDefaultObj();
@@ -2332,10 +2332,10 @@ public:
 	FMulticastInlineDelegateProperty_            OnAttackDelegate;                                  // 0x158(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	enum class EPalWazaID                        Waza;                                              // 0x168(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EPalBlowVelocityOwner             VelocityOwner;                                     // 0x169(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_28B4[0x6];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2C5C[0x6];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               NativeBlowVelocity;                                // 0x170(0x18)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        WazaPowerRate;                                     // 0x188(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_28B5[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2C5E[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class AActor*                                Attacker;                                          // 0x190(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -2348,7 +2348,7 @@ public:
 class UPalAudioSettingSystem : public UObject
 {
 public:
-	uint8                                        Pad_28C3[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2C81[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<enum class EPalAudioBus, struct FFloatContainer> BusVolumeMap;                                      // 0x30(0x50)(Protected, NativeAccessSpecifierProtected)
 	TMap<enum class EPalAudioBus, struct FPalAudioFadeParameter> BussFadeMap;                                       // 0x80(0x50)(Protected, NativeAccessSpecifierProtected)
 
@@ -2388,7 +2388,7 @@ class UPalAudioWorldSubsystem : public UPalWorldSubsystem
 {
 public:
 	int32                                        FadeDuration;                                      // 0x70(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_28EB[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2CEA[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalSoundPlayer*                       SoundPlayer;                                       // 0x78(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -2443,7 +2443,7 @@ class APalBackWeaponBase : public AActor
 public:
 	bool                                         InFirstOrSecondSlot;                               // 0x290(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         IsEquipHand;                                       // 0x291(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_28F1[0x6];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2D16[0x6];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FFlagContainer                        HiddenBackWeapon;                                  // 0x298(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -2508,9 +2508,9 @@ public:
 	struct FGuid                                 BaseCampId;                                        // 0x58(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<class UPalIndividualCharacterHandle*> EnemyList;                                         // 0x68(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	float                                        CampAreaRange;                                     // 0x78(0x4)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_28F9[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2D46[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               CampLocation;                                      // 0x80(0x18)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_28FA[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2D47[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalBaseCampEnemyObserver* GetDefaultObj();
@@ -2537,28 +2537,28 @@ public:
 class UPalBaseCampManager : public UPalWorldSubsystem
 {
 public:
-	uint8                                        Pad_28FD[0x30];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2D93[0x30];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	class FName                                  WorkerEventClassDirectoryPath;                     // 0xA0(0x8)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TSubclassOf<class AController>               BaseCampAIControllerClass;                         // 0xA8(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	int32                                        WorkerCapacityNumDefault;                          // 0xB0(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_28FE[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2D96[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class FString                                WorkableBoundShapeName;                            // 0xB8(0x10)(Edit, ZeroConstructor, DisableEditOnInstance, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	int32                                        DisplayCapacityNum;                                // 0xC8(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_28FF[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2D97[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FDataTableRowHandle                   WarningSanityValueTextId;                          // 0xD0(0x10)(Edit, DisableEditOnInstance, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2900[0x50];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2D98[0x50];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<enum class EPalBaseCampWorkerEventType, class UPalBaseCampWorkerEventBase*> WorkerEventMap;                                    // 0x130(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	class UDataTable*                            WorkerEventMasterDataTable;                        // 0x180(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UDataTable*                            WorkerSickMasterDataTable;                         // 0x188(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                        WorkerEventTriggerTickMaxCount;                    // 0x190(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2902[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2D9A[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<TSubclassOf<class UPalAIActionBaseCampDefenseBase>> DefenseAIActionArray;                              // 0x198(0x10)(Edit, ZeroConstructor, DisableEditOnInstance, UObjectWrapper, NativeAccessSpecifierPrivate)
 	TArray<struct FPalBaseCampSignificanceInfo>  BaseCampSignificanceInfoList;                      // 0x1A8(0x10)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPrivate)
 	float                                        UpdateIntervalSquaredDistanceFromPlayer;           // 0x1B8(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2903[0x14];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2D9B[0x14];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FTransform                            SpawnPointInBaseCampPointSubLocalTransform;        // 0x1D0(0x60)(Edit, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                        BaseCampTickInvokeMaxNumInOneTick;                 // 0x230(0x4)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2904[0xC];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2D9C[0xC];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalBaseCampManager* GetDefaultObj();
@@ -2583,7 +2583,7 @@ public:
 	FMulticastInlineDelegateProperty_            OnAvailableConcreteModelDelegate;                  // 0x38(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnNotAvailableConcreteModelDelegate;               // 0x48(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TArray<struct FGuid>                         MapObjectInstanceIds;                              // 0x58(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_290C[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2DB3[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalBaseCampMapObjectCollection* GetDefaultObj();
@@ -2602,15 +2602,15 @@ class UPalBaseCampModel : public UObject
 public:
 	FMulticastInlineDelegateProperty_            OnUpdateStatusDelegate;                            // 0x28(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnDisposeDelegate;                                 // 0x38(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2922[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2E30[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FGuid                                 ID;                                                // 0x58(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class FString                                BaseCampName;                                      // 0x68(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	enum class EPalBaseCampState                 CurrentState;                                      // 0x78(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2923[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2E31[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FTransform                            Transform;                                         // 0x80(0x60)(Edit, Net, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        AreaRange;                                         // 0xE0(0x4)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FGuid                                 GroupIdBelongTo;                                   // 0xE4(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2924[0xC];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2E32[0xC];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FTransform                            FastTravelLocalTransform;                          // 0x100(0x60)(Edit, Net, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UPalBaseCampWorkerDirector*            WorkerDirector;                                    // 0x160(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UPalBaseCampMapObjectCollection*       MapObjectCollection;                               // 0x168(0x8)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -2683,7 +2683,7 @@ public:
 	TArray<struct FGuid>                         EnergyGeneratorConcreteModelIds;                   // 0x38(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
 	TArray<struct FGuid>                         EnergyConsumerConcreteModelIds;                    // 0x48(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
 	enum class EPalBaseCampModuleEnergyState     CurrentState;                                      // 0x58(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_292D[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2E69[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        ProvideWaitRemainTime;                             // 0x5C(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 	static class UClass* StaticClass();
@@ -2834,7 +2834,7 @@ public:
 class UPalBaseCampPassiveEffect_WorkSuitability : public UPalBaseCampPassiveEffectBase
 {
 public:
-	uint8                                        Pad_293C[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2ED7[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<enum class EPalWorkSuitability, float>  WorkSpeedAdditionalRateMap;                        // 0x80(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
 
 	static class UClass* StaticClass();
@@ -2847,10 +2847,10 @@ public:
 class UPalBaseCampPassiveEffect_WorkHard : public UPalBaseCampPassiveEffectBase
 {
 public:
-	uint8                                        Pad_293E[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2EDF[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnUpdateWorkHardTypeDelegate;                      // 0x80(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	enum class EPalBaseCampPassiveEffectWorkHardType WorkHardType;                                      // 0x90(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_293F[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2EE0[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalBaseCampPassiveEffect_WorkHard* GetDefaultObj();
@@ -2924,7 +2924,7 @@ class UPalBaseCampReplicator : public UPalGameStateReplicatorBase
 {
 public:
 	struct FFastPalBaseCampRepInfoArray          RepInfoArray;                                      // 0x28(0x148)(Edit, Net, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_294C[0x50];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2F15[0x50];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalBaseCampReplicator* GetDefaultObj();
@@ -2959,11 +2959,11 @@ public:
 class UPalBaseCampWorkCollection : public UObject
 {
 public:
-	uint8                                        Pad_2952[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2F31[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnUnassignWorkDelegate;                            // 0x38(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	struct FGuid                                 BaseCampId;                                        // 0x48(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<struct FGuid>                         WorkIds;                                           // 0x58(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2953[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2F35[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<struct FGuid, struct FPalBaseCampWorkCollectionStashInfo> CannotMoveToWorkInfoMap;                           // 0x70(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -2980,7 +2980,7 @@ public:
 class UPalBaseCampWorkerDirector : public UObject
 {
 public:
-	uint8                                        Pad_295C[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2F73[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnAddNewWorkerDelegate;                            // 0x40(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnRemovedWorkerInServerDelegate;                   // 0x50(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	struct FGuid                                 BaseCampId;                                        // 0x60(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -2988,16 +2988,16 @@ public:
 	class UPalIndividualCharacterContainer*      CharacterContainer;                                // 0xD0(0x8)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	enum class EPalMapBaseCampWorkerOrderType    CurrentOrderType;                                  // 0xD8(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	enum class EPalBaseCampWorkerDirectionBattleType CurrentBattleType;                                 // 0xD9(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_295D[0x6];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2F74[0x6];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalIndividualCharacterSlotsObserver*  SlotObserverForServer;                             // 0xE0(0x8)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TArray<struct FPalBaseCampWorkAssignRequest> RequiredAssignWorks;                               // 0xE8(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
 	TArray<struct FPalInstanceID>                WaitingWorkerIndividualIds;                        // 0xF8(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
 	int32                                        WorkerEventTickCount;                              // 0x108(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_295E[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2F75[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<class UPalBaseCampWorkerTaskBase*>    WorkerTasks;                                       // 0x110(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_295F[0x1];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2F76[0x1];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	enum class EPalBaseCampWorkerDirectorState   State;                                             // 0x121(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2960[0xE];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_2F77[0xE];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalBaseCampWorkerDirector* GetDefaultObj();
@@ -3028,7 +3028,7 @@ class UPalBaseCampWorkerEventBase : public UObject
 public:
 	struct FPalDataTableRowName_BaseCampWorkerEventData MasterDataId;                                      // 0x28(0x8)(Edit, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	enum class EPalLogType                       LogType;                                           // 0x30(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2963[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_2F92[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalBaseCampWorkerEventMasterData     MasterData;                                        // 0x38(0x28)(Edit, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
 	TSoftObjectPtr<class UNiagaraSystem>         OverrideSleepFX;                                   // 0x60(0x30)(Edit, DisableEditOnInstance, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
@@ -3214,7 +3214,7 @@ class UPalBattleManager : public UPalWorldSubsystem
 {
 public:
 	TMap<class AActor*, struct FActorArray>      EnemyListPerPlayer;                                // 0x70(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2983[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3018[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TSubclassOf<class APalNPCSpawnerBase>        DebugSpawnerClass;                                 // 0xC8(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnFExclamationMarkDelegate;                        // 0xD0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnFQuestionMarkDelegate;                           // 0xE0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -3251,7 +3251,7 @@ class APalBiomeAreaTriggerBase : public AActor
 {
 public:
 	enum class EPalBiomeType                     BindBiomeType;                                     // 0x290(0x1)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2989[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_302C[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalBiomeAreaTriggerBase* GetDefaultObj();
@@ -3267,7 +3267,7 @@ class UPalBiomeDetectComponent : public UActorComponent
 {
 public:
 	FMulticastInlineDelegateProperty_            OnChangedBiome;                                    // 0xA0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                        Pad_298D[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_3032[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalBiomeDetectComponent* GetDefaultObj();
@@ -3295,10 +3295,10 @@ class UPalBodyPartsBoxComponent : public UBoxComponent
 {
 public:
 	enum class EPalBodyPartsType                 BodyPartsType;                                     // 0x578(0x1)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2990[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_304D[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class FName                                  DefaultCollisionProfileName;                       // 0x57C(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FName                                  BroadcastCollisionProfileName;                     // 0x584(0x8)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2991[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_304E[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalBodyPartsBoxComponent* GetDefaultObj();
@@ -3312,10 +3312,10 @@ class UPalBodyPartsCapsuleComponent : public UCapsuleComponent
 {
 public:
 	enum class EPalBodyPartsType                 BodyPartsType;                                     // 0x560(0x1)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2992[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_304F[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class FName                                  DefaultCollisionProfileName;                       // 0x564(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FName                                  BroadcastCollisionProfileName;                     // 0x56C(0x8)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2993[0xC];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_3050[0xC];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalBodyPartsCapsuleComponent* GetDefaultObj();
@@ -3329,10 +3329,10 @@ class UPalBodyPartsSphereComponent : public USphereComponent
 {
 public:
 	enum class EPalBodyPartsType                 BodyPartsType;                                     // 0x560(0x1)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2996[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3053[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class FName                                  DefaultCollisionProfileName;                       // 0x564(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FName                                  BroadcastCollisionProfileName;                     // 0x56C(0x8)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2997[0xC];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_3054[0xC];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalBodyPartsSphereComponent* GetDefaultObj();
@@ -3351,12 +3351,12 @@ public:
 	TMap<class FName, struct FPalHeatSourceInfo> HeatSourceInfoMap;                                 // 0xD0(0x50)(NativeAccessSpecifierPrivate)
 	int32                                        CurrentTemperature;                                // 0x120(0x4)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FName                                  SelfKeyName;                                       // 0x124(0x8)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_29B5[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_308D[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FTimerHandle                          SlipDamageTimer;                                   // 0x130(0x8)(Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                        CurrentResistRank_Heat;                            // 0x138(0x4)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                        CurrentResistRank_Cold;                            // 0x13C(0x4)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	enum class EPalBodyTemperatureState          CurrentBodyState;                                  // 0x140(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_29B6[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_308E[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalBodyTemperatureComponent* GetDefaultObj();
@@ -3398,16 +3398,16 @@ public:
 class UPalBossBattleInstanceModel : public UObject
 {
 public:
-	uint8                                        Pad_29C8[0x58];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_309F[0x58];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FTransform                            FrontWarpPointTransform;                           // 0x80(0x60)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FVector_NetQuantize                   RepFrontWarpPointtLocation;                        // 0xE0(0x18)(Edit, BlueprintVisible, BlueprintReadOnly, Net, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_29C9[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_30A0[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FTransform                            TopWarpPointTransform;                             // 0x100(0x60)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FTransform                            StartPointTransform;                               // 0x160(0x60)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FTransform                            DeadItemDropTransform;                             // 0x1C0(0x60)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FPalStageInstanceId                   StageInstanceId;                                   // 0x220(0x14)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	enum class EPalBossType                      BossType;                                          // 0x234(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_29CA[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_30A1[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TSoftClassPtr<class APalCutsceneActor>       IntroCutsceneActor;                                // 0x238(0x30)(Edit, BlueprintVisible, BlueprintReadOnly, Net, DisableEditOnTemplate, Transient, EditConst, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TSoftClassPtr<class ALevelInstance>          BossRoomLevelInstanceAsset;                        // 0x268(0x30)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnTemplate, Transient, EditConst, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TSoftObjectPtr<class UAkAudioEvent>          BGMAudioEvent;                                     // 0x298(0x30)(Edit, BlueprintVisible, BlueprintReadOnly, Net, DisableEditOnTemplate, Transient, EditConst, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -3416,7 +3416,7 @@ public:
 	class APalBossBattleLevelInstance*           BossBattleLevelInstance;                           // 0x2D0(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, EditConst, RepNotify, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class APalBossTower*                         BossTower;                                         // 0x2D8(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	enum class EPalBossBattleState               BossBattleState;                                   // 0x2E0(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_29CF[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_30A5[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<class APalPlayerCharacter*>           EntryPlayers;                                      // 0x2E8(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, RepNotify, Protected, NativeAccessSpecifierProtected)
 	TArray<class APalPlayerCharacter*>           WonPlayers;                                        // 0x2F8(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
 	struct FDateTime                             CombatTimeLimit;                                   // 0x308(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -3448,7 +3448,7 @@ class APalBossBattleLevelInstance : public ALevelInstance
 public:
 	FMulticastInlineDelegateProperty_            OnBossSpawnedDelegate;                             // 0x320(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	bool                                         bIsLoaded;                                         // 0x330(0x1)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_29D7[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_30B5[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalBossBattleLevelInstance* GetDefaultObj();
@@ -3473,7 +3473,7 @@ public:
 	int32                                        MAX_TIME_LIMIT;                                    // 0xA0(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        PlayerRespawnTimeLimit;                            // 0xA4(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        BGMFadeDuration;                                   // 0xA8(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_29FA[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_30E9[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<int32, float>                           MultiPlayerBossHPMap;                              // 0xB0(0x50)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
 	TSubclassOf<class UPalBossBattleSequencer>   BossBattleSequencerClass;                          // 0x100(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TMap<enum class EPalBossType, struct FPalBossBattleStaticInfo> BossInfoMap;                                       // 0x108(0x50)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
@@ -3481,7 +3481,7 @@ public:
 	TMap<enum class EPalBossType, class UPalBossBattleSequencer*> BossBattleSequencerMap;                            // 0x1A8(0x50)(Transient, NativeAccessSpecifierPrivate)
 	struct FGuid                                 GroupGuid;                                         // 0x1F8(0x10)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	enum class EPalBossType                      DisableSkyBossType_LocalPlayer;                    // 0x208(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_29FB[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_30EA[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalBossBattleManager* GetDefaultObj();
@@ -3528,7 +3528,7 @@ class UPalBossBattleSequenceBase : public UObject
 public:
 	FMulticastInlineDelegateProperty_            OnSequenceFinishDelegate;                          // 0x28(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	enum class EPalBossBattleSequenceType        NextSequenceType;                                  // 0x38(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2A07[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_310D[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalBossBattleSequenceBase* GetDefaultObj();
@@ -3556,20 +3556,20 @@ public:
 	float                                        RemainBattleTimer;                                 // 0x38(0x4)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsBattleTimerCountDown;                            // 0x3C(0x1)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EPalBossBattleCombatResult        CombatResult;                                      // 0x3D(0x1)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2A16[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3188[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<enum class EPalBossBattleSequenceType, TSubclassOf<class UPalBossBattleSequenceBase>> SequenceClassMap;                                  // 0x40(0x50)(Edit, DisableEditOnInstance, UObjectWrapper, NativeAccessSpecifierPrivate)
 	TMap<enum class EPalBossBattleSequenceType, class UPalBossBattleSequenceBase*> SequenceMap;                                       // 0x90(0x50)(Transient, NativeAccessSpecifierPrivate)
 	class UPalBossBattleSequenceBase*            CurrentSequence;                                   // 0xE0(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalBossBattleInstanceModel*           BossBattleInstanceModel;                           // 0xE8(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<class APalPlayerCharacter*>           InRoomPlayers;                                     // 0xF0(0x10)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
 	TArray<class APalPlayerCharacter*>           SequenceEndPlayers;                                // 0x100(0x10)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2A18[0x1];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3189[0x1];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	enum class EPalBossType                      SelfBossType;                                      // 0x111(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2A19[0x6];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_318A[0x6];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class APalCharacter*                         BossCharacter;                                     // 0x118(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                        PlayingBGMId;                                      // 0x120(0x4)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bIsClientOnly;                                     // 0x124(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2A1A[0x3];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_318B[0x3];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalBossBattleSequencer* GetDefaultObj();
@@ -3629,7 +3629,7 @@ class UPalWaitInfoWorldHUDParameter : public UPalHUDDispatchParameterBase
 public:
 	class APalBossTower*                         BossTower;                                         // 0x38(0x8)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsWaiting;                                         // 0x40(0x1)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2A1C[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_319F[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalWaitInfoWorldHUDParameter* GetDefaultObj();
@@ -3642,9 +3642,9 @@ class UPalUserWidget : public UPalActivatableWidget
 {
 public:
 	bool                                         bSyncPlayerInventory;                              // 0x3F0(0x1)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2A29[0x17];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_31E4[0x17];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalHUDDispatchParameterBase*          Param;                                             // 0x408(0x8)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2A2A[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_31E5[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<struct FPalUIActionBindData>          BindedActionHandles;                               // 0x418(0x10)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 
 	static class UClass* StaticClass();
@@ -3684,7 +3684,7 @@ class UPalBossEntryWaitInfoHUD : public UPalUserWidgetWorldHUD
 {
 public:
 	bool                                         EnableCountDown;                                   // 0x428(0x1)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2A2E[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_31F6[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class APalBossTower*                         BossTower;                                         // 0x430(0x8)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FDateTime                             TimeLimitDate;                                     // 0x438(0x8)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3701,12 +3701,12 @@ public:
 class APalBossTower : public AActor
 {
 public:
-	uint8                                        Pad_2A39[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_324A[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnChangeBossTowerEntryWaitUI;                      // 0x298(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	enum class EPalBossType                      BossType;                                          // 0x2A8(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2A3A[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_324B[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FGuid                                 EntryWaitInfoHUDId;                                // 0x2AC(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2A3B[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_324D[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalBossBattleInstanceModel*           InstanceModel;                                     // 0x2C0(0x8)(BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FDateTime                             CombatTimeLimit;                                   // 0x2C8(0x8)(BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGuid                                 LocationInstanceId;                                // 0x2D0(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -3745,7 +3745,7 @@ class APalBotBuilderLocationBase : public AActor
 public:
 	int32                                        BuilderIndex;                                      // 0x290(0x4)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bIsBuilded;                                        // 0x294(0x1)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2A3C[0x3];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_325F[0x3];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalBotBuilderLocationBase* GetDefaultObj();
@@ -3778,7 +3778,7 @@ public:
 	class UCameraComponent*                      OwnerCamera;                                       // 0xD8(0x8)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class APalBuildObjectInstallChecker*         InstallChecker;                                    // 0xE0(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class APalDismantleObjectChecker*            DismantleChecker;                                  // 0xE8(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2A46[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_32A7[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalBuilderComponent* GetDefaultObj();
@@ -3803,7 +3803,7 @@ public:
 class APalMapObject : public AActor
 {
 public:
-	uint8                                        Pad_2A4E[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_32E5[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnNotifiedShowStatusHUDDelegate;                   // 0x2A0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnNotifiedShowBuildProgressHUDDelegate;            // 0x2B0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnSetConcreteModelDelegate;                        // 0x2C0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -3814,7 +3814,7 @@ public:
 	class UPalMapObjectVisualEffectComponent*    VisualEffect;                                      // 0x308(0x8)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bSpawnableIfOverlapped;                            // 0x310(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bLevelSpawnObject;                                 // 0x311(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2A50[0x6];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_32EA[0x6];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<class FName>                          AllowOverlapCollisionPresetNames;                  // 0x318(0x10)(Edit, ZeroConstructor, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
 	bool                                         bSpawnSlipAboveIfAnyOverlap;                       // 0x328(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bShakeOnDamaged;                                   // 0x329(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -3826,20 +3826,20 @@ public:
 	bool                                         bBaseObject;                                       // 0x32F(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FGuid                                 HPHUDId;                                           // 0x330(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	enum class EPalMapObjectDamagableType        DamagableType;                                     // 0x340(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2A51[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_32F3[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FGuid                                 ModelInstanceId;                                   // 0x344(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2A52[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_32F4[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalMapObjectModel*                    MapObjectModel;                                    // 0x358(0x8)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, EditConst, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bUnmanagedInLocal;                                 // 0x360(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2A53[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_32F5[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TSubclassOf<class UPalUserWidgetWorldHUD>    IndicatorWidgetClass;                              // 0x368(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<struct FPalMapObjectMeshVisibleData>  MeshVisibleDataSet;                                // 0x370(0x10)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPrivate)
 	enum class EPalMapObjectChangeMeshFXType     ChangeMeshFXType;                                  // 0x380(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2A54[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_32F7[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FGuid                                 OpenWidgetId;                                      // 0x384(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bWorkLocationGroupRaycastStartOffsetOrigin;        // 0x394(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bShouldPlayDestroyFX;                              // 0x395(0x1)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2A55[0xA];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_32FA[0xA];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalMapObject* GetDefaultObj();
@@ -3868,14 +3868,14 @@ public:
 class APalBuildObject : public APalMapObject
 {
 public:
-	uint8                                        Pad_2A5E[0x20];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_337D[0x20];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnChangeState;                                     // 0x3C0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2A5F[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_337E[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	enum class EPalBuildObjectInstallStrategy    InstallStrategy;                                   // 0x3E8(0x1)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2A60[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3380[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        InstallCapacitySlopeAngle;                         // 0x3EC(0x4)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        InstallCapacitySinkRateByHeight;                   // 0x3F0(0x4)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2A61[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3382[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalBuildObjectVisualControlComponent* VisualCtrl;                                        // 0x3F8(0x8)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class FName                                  BuildObjectId;                                     // 0x400(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UShapeComponent*                       OverlapCheckCollision;                             // 0x408(0x8)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -3885,21 +3885,21 @@ public:
 	TArray<class UMeshComponent*>                AllMeshes;                                         // 0x478(0x10)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
 	TArray<class UPrimitiveComponent*>           VirtualMeshCollisions;                             // 0x488(0x10)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
 	enum class EPalBuildObjectState              CurrentState;                                      // 0x498(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2A62[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3387[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FGuid                                 WorldHUDId;                                        // 0x49C(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FGuid                                 buildProgressWorldHUDId;                           // 0x4AC(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2A63[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3388[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               WorldHUDDisplayOffset;                             // 0x4C0(0x18)(Edit, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        WorldHUDDisplayRange;                              // 0x4D8(0x4)(Edit, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2A64[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3389[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               buildProgressHUDDisplayOffset;                     // 0x4E0(0x18)(Edit, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FVector2D                             buildProgressHUDDisplayOffsetScreen;               // 0x4F8(0x10)(Edit, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        buildProgressHUDDisplayRange;                      // 0x508(0x4)(Edit, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2A65[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_338D[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UAkAudioEvent*                         BuildCompleteSEOverride;                           // 0x510(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        BuildProgressVisualRate;                           // 0x518(0x4)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bDismantleTargetInLocal;                           // 0x51C(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2A66[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3392[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<class UPrimitiveComponent*, struct FPalBuildObjectMeshDefaultSetting> DefaultMeshSettingMap;                             // 0x520(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
 
 	static class UClass* StaticClass();
@@ -3957,7 +3957,7 @@ class UPalBuildObjectDataMap : public UObject
 {
 public:
 	TMap<class FName, struct FPalBuildObjectData> BuildObjectDataIdMap;                              // 0x28(0x50)(Transient, Protected, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2A6D[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_33C4[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalBuildObjectDataMap* GetDefaultObj();
@@ -3976,7 +3976,7 @@ public:
 	TSubclassOf<class UPalAIActionBaseCampDefenseBase> DefenseAIActionClass;                              // 0x570(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FPalDataTableRowName_ItemData         BulletItemId;                                      // 0x578(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, Transient, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	int32                                        MagazineSize;                                      // 0x580(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2A6E[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_33D0[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalBuildObjectDefenseBase* GetDefaultObj();
@@ -4007,7 +4007,7 @@ public:
 	struct FPalDataTableRowName_FarmCropData     CropDataId;                                        // 0x570(0x8)(Edit, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UNiagaraSystem*                        GrowupFX;                                          // 0x578(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class APalMapObjectFarmCrop*                 CropActor;                                         // 0x580(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2A77[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_3412[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalBuildObjectFarmBlockV2* GetDefaultObj();
@@ -4021,10 +4021,10 @@ class APalBuildObjectGenerateEnergy : public APalBuildObject
 {
 public:
 	enum class EPalEnergyType                    GenerateEnergyType;                                // 0x570(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2A79[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_344B[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        GenerateEnergyRateByWorker;                        // 0x574(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        MaxEnergyStorage;                                  // 0x578(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2A7A[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_344C[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalBuildObjectGenerateEnergy* GetDefaultObj();
@@ -4057,7 +4057,7 @@ class UPalBuildObjectInstallStrategyBase : public UObject
 {
 public:
 	class APalBuildObject*                       TargetBuildObject;                                 // 0x28(0x8)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2A7C[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_3453[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalBuildObjectInstallStrategyBase* GetDefaultObj();
@@ -4092,7 +4092,7 @@ class UPalMapObjectModelConnectorBase : public UObject
 {
 public:
 	int32                                        SupportedLevel;                                    // 0x28(0x4)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2A7D[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_345C[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalMapObjectModelConnectInfo         ConnectInfoAnyPlace;                               // 0x30(0x18)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -4175,7 +4175,7 @@ class UPalBuildObjectInstallStrategyFloor : public UPalBuildObjectInstallStrateg
 public:
 	class AActor*                                HitActorCache;                                     // 0x38(0x8)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class APalBuildObject*                       HitBuildObjectCache;                               // 0x40(0x8)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2A7F[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_3477[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalBuildObjectInstallStrategyFloor* GetDefaultObj();
@@ -4189,7 +4189,7 @@ class UPalBuildObjectInstallStrategyFoundation : public UPalBuildObjectInstallSt
 public:
 	class AActor*                                HitActorCache;                                     // 0x38(0x8)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class APalBuildObject*                       HitBuildObjectCache;                               // 0x40(0x8)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2A80[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_347D[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalBuildObjectInstallStrategyFoundation* GetDefaultObj();
@@ -4218,7 +4218,7 @@ class UPalBuildObjectInstallStrategyGroundWall : public UPalBuildObjectInstallSt
 public:
 	class AActor*                                HitActorCache;                                     // 0x38(0x8)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class APalBuildObject*                       HitBuildObjectCache;                               // 0x40(0x8)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2A82[0x20];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_3484[0x20];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalBuildObjectInstallStrategyGroundWall* GetDefaultObj();
@@ -4255,7 +4255,7 @@ class UPalBuildObjectInstallStrategyRoof : public UPalBuildObjectInstallStrategy
 public:
 	class AActor*                                HitActorCache;                                     // 0x38(0x8)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class APalBuildObject*                       HitBuildObjectCache;                               // 0x40(0x8)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2A84[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_348E[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalBuildObjectInstallStrategyRoof* GetDefaultObj();
@@ -4284,7 +4284,7 @@ class UPalBuildObjectInstallStrategyStairs : public UPalBuildObjectInstallStrate
 public:
 	class AActor*                                HitActorCache;                                     // 0x38(0x8)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class APalBuildObject*                       HitBuildObjectCache;                               // 0x40(0x8)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2A85[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_34A1[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalBuildObjectInstallStrategyStairs* GetDefaultObj();
@@ -4311,7 +4311,7 @@ class UPalBuildObjectInstallStrategyWall : public UPalBuildObjectInstallStrategy
 public:
 	class AActor*                                HitActorCache;                                     // 0x38(0x8)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class APalBuildObject*                       HitBuildObjectCache;                               // 0x40(0x8)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2A88[0x20];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_34AF[0x20];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalBuildObjectInstallStrategyWall* GetDefaultObj();
@@ -4325,7 +4325,7 @@ class UPalBuildObjectInstallStrategyWallV2 : public UPalBuildObjectInstallStrate
 public:
 	class AActor*                                HitActorCache;                                     // 0x38(0x8)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class APalBuildObject*                       HitBuildObjectCache;                               // 0x40(0x8)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2A89[0x20];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_34BA[0x20];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalBuildObjectInstallStrategyWallV2* GetDefaultObj();
@@ -4362,7 +4362,7 @@ public:
 class UPalBuildObjectOverlapChecker : public UObject
 {
 public:
-	uint8                                        Pad_2A8D[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_34EA[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UShapeComponent*                       Collision;                                         // 0x30(0x8)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class APalBuildObject*                       Owner;                                             // 0x38(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<class APalBuildObject*>               OverlapBuildObjects;                               // 0x40(0x10)(Edit, ZeroConstructor, Transient, EditConst, NativeAccessSpecifierPrivate)
@@ -4387,7 +4387,7 @@ public:
 	FMulticastInlineDelegateProperty_            OnOverlapBeginCageWalls;                           // 0x590(0x10)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, InstancedReference, BlueprintCallable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnOverlapEndCageWalls;                             // 0x5A0(0x10)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, InstancedReference, BlueprintCallable, NativeAccessSpecifierPublic)
 	float                                        BaseCampAreaRange;                                 // 0x5B0(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2A93[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_352D[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FComponentReference                   AccessPointObjectRef;                              // 0x5B8(0x28)(Edit, BlueprintVisible, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
 	struct FComponentReference                   AccessPointMovableRangeRef;                        // 0x5E0(0x28)(Edit, BlueprintVisible, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
 	struct FComponentReference                   AccessPointInteractRef;                            // 0x608(0x28)(Edit, BlueprintVisible, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
@@ -4396,7 +4396,7 @@ public:
 	struct FComponentReference                   ChestInteractRef;                                  // 0x680(0x28)(Edit, BlueprintVisible, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
 	class FName                                  ChestWorkableBoundsName;                           // 0x6A8(0x8)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	int32                                        ChestSlotNum;                                      // 0x6B0(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2A94[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_3532[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalBuildObjectPalStorage* GetDefaultObj();
@@ -4421,7 +4421,7 @@ class UPalBuildObjectVisualControlComponent : public UActorComponent
 public:
 	TMap<class UMeshComponent*, struct FPalBuildObjectMaterialArray> NormalMaterialMapCache;                            // 0xA0(0x50)(Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
 	TMap<class UDecalComponent*, class UMaterialInterface*> DecalNormalMaterialMapCache;                       // 0xF0(0x50)(Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2A95[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_353F[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	class UNiagaraComponent*                     DamageNiagaraComp;                                 // 0x158(0x8)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -4452,9 +4452,9 @@ public:
 	FMulticastInlineDelegateProperty_            OnUpdateStateDelegate;                             // 0x28(0x10)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnFinishBuildDelegate;                             // 0x38(0x10)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
 	enum class EPalBuildProcessState             State;                                             // 0x48(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2A9F[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3572[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalWorkProgress*                      BuildWork;                                         // 0x50(0x8)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, EditConst, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2AA0[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_3573[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalBuildProcess* GetDefaultObj();
@@ -4478,18 +4478,18 @@ public:
 	class UProjectileMovementComponent*          ProjectileMovement;                                // 0x2A8(0x8)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	enum class EPalPlayerDamageCameraShakeCategory PlayerDamageCameraShake;                           // 0x2B0(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bIsHitFriend;                                      // 0x2B1(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2AAD[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_35F0[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        WeaponDamage;                                      // 0x2B4(0x4)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FTimerHandle                          Handle;                                            // 0x2B8(0x8)(Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         IsDamageable;                                      // 0x2C0(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         AISoundEmitable;                                   // 0x2C1(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2AAE[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_35F1[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        SneakAttackRate;                                   // 0x2C4(0x4)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        DeleteTime;                                        // 0x2C8(0x4)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        DamageDecayStartRate;                              // 0x2CC(0x4)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        LifeTimer;                                         // 0x2D0(0x4)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	enum class EPalDamageAnimationReactionType   WeaponBulletDamageReactionType;                    // 0x2D4(0x1)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2AAF[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_35F2[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<struct FPalPassiveSkillEffect>        SkillEffectList;                                   // 0x2D8(0x10)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 	TMap<enum class EPhysicalSurface, struct FBulletHoleDecalInfo> BulletHoleDecalsMap;                               // 0x2E8(0x50)(Edit, BlueprintVisible, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	struct FBulletHoleDecalInfo                  DefaultBulletHoleDecals;                           // 0x338(0x30)(Edit, BlueprintVisible, DisableEditOnInstance, NativeAccessSpecifierPublic)
@@ -4548,7 +4548,7 @@ public:
 class UPalBurnBoxComponent : public UBoxComponent
 {
 public:
-	uint8                                        Pad_2ABA[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_3647[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalBurnBoxComponent* GetDefaultObj();
@@ -4570,7 +4570,7 @@ public:
 	struct FVOscillator                          LocOscillation;                                    // 0x120(0x24)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	struct FFOscillator                          FOVOscillation;                                    // 0x144(0xC)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	float                                        OscillatorTimeRemaining;                           // 0x150(0x4)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2ABC[0x7C];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_364C[0x7C];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalCameraShakeBase* GetDefaultObj();
@@ -4606,7 +4606,7 @@ public:
 class APalCapturedCage : public AActor
 {
 public:
-	uint8                                        Pad_2AC5[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3669[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class FName                                  FieldKeyName;                                      // 0x298(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TSubclassOf<class APalAIController>          ControllerClass;                                   // 0x2A0(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        SpawnRange;                                        // 0x2A8(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -4616,7 +4616,7 @@ public:
 	bool                                         IsRequestedInteract;                               // 0x2BC(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         IsDisableInteractive;                              // 0x2BD(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         IsInSpawnedRange;                                  // 0x2BE(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2AC7[0x1];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_366B[0x1];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalIndividualCharacterHandle*         SpawnedPalHandle;                                  // 0x2C0(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -4638,7 +4638,7 @@ public:
 class APalCaptureJudgeObject : public AActor
 {
 public:
-	uint8                                        Pad_2AD0[0x28];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_3678[0x28];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalCaptureJudgeObject* GetDefaultObj();
@@ -4670,7 +4670,7 @@ class APalCharacter : public ACharacter
 {
 public:
 	float                                        UpdateGroundInterval;                              // 0x618(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2AE2[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3703[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalActionComponent*                   ActionComponent;                                   // 0x620(0x8)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UPalCharacterParameterComponent*       CharacterParameterComponent;                       // 0x628(0x8)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UPalStaticCharacterParameterComponent* StaticCharacterParameterComponent;                 // 0x630(0x8)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4699,15 +4699,15 @@ public:
 	bool                                         bIsPalActiveActor;                                 // 0x712(0x1)(Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bIsLocalInitialized;                               // 0x713(0x1)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bIsDisable_ChangeTickInterval_ByImportance;        // 0x714(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2AE4[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3705[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FTimerHandle                          GroundCheckTimerHandle;                            // 0x718(0x8)(Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FVector                               SpawnLocation_ForServer;                           // 0x720(0x18)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FFlagContainer                        IsDisableChangeTickInterval;                       // 0x738(0x50)(Edit, DisableEditOnTemplate, EditConst, NativeAccessSpecifierPrivate)
 	enum class EPalCharacterImportanceType       ImportanceType;                                    // 0x788(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2AE5[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3706[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FTimerHandle                          CheckIndividualParameterReplicateTimerHandle;      // 0x790(0x8)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FName                                  RootCollisionProfileName;                          // 0x798(0x8)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2AE6[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3707[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<enum class EPalCharacterCompleteDelegatePriority, class UPalCharacterOnCompleteInitializeParameterWrapper*> OnCompleteInitializeParameterDelegateMap;          // 0x7A8(0x50)(Edit, Transient, EditConst, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -4811,28 +4811,28 @@ public:
 	TMap<enum class EPalWeaponType, struct FPalCameraDOFSetting> DefaultWeaponDOFSetting;                           // 0xA60(0x50)(Edit, NativeAccessSpecifierPublic)
 	TMap<TSoftClassPtr<class APalWeaponBase>, struct FPalCameraDOFSetting> UniqueWeaponDOFSetting;                            // 0xAB0(0x50)(Edit, NativeAccessSpecifierPublic)
 	bool                                         bIsDynamicDOFFocalDistance;                        // 0xB00(0x1)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2AF0[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3724[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        DynamicDOFFocalDistanceSpeed;                      // 0xB04(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        DynamicDOFFocalDistanceMAX;                        // 0xB08(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsEnableSpeedBlur;                                // 0xB0C(0x1)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2AF1[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3725[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UMaterialInterface*                    DynamicSpeedBlurMaterial;                          // 0xB10(0x8)(Edit, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        SpeedBlurInterpSpeed;                              // 0xB18(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        MinSpeedBlurSpeed;                                 // 0xB1C(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        MaxSpeedBlurSpeed;                                 // 0xB20(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        MaxSpeedBlurAlpha;                                 // 0xB24(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsEnableAimBlur;                                  // 0xB28(0x1)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2AF3[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3726[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UMaterialInterface*                    DynamicAimBlurMaterial;                            // 0xB30(0x8)(Edit, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        BlendInAimBlurInterpTime;                          // 0xB38(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        BlendOutAimBlurInterpTime;                         // 0xB3C(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        AimFOVInterpTime;                                  // 0xB40(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        AimFOV;                                            // 0xB44(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        RotateSpeedRate;                                   // 0xB48(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2AF4[0x6C];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3727[0x6C];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	class UMaterialInstanceDynamic*              DynamicSpeedBlurMaterialDynamic;                   // 0xBB8(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UMaterialInstanceDynamic*              DynamicAimBlurMaterialDynamic;                     // 0xBC0(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2AF5[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_3728[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalCharacterCameraComponent* GetDefaultObj();
@@ -4857,9 +4857,9 @@ public:
 class UPalCharacterContainerManager : public UPalWorldSubsystem
 {
 public:
-	uint8                                        Pad_2AFA[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3746[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<struct FPalContainerId, class UPalIndividualCharacterContainer*> ContainerMap_InServer;                             // 0x80(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2AFB[0x50];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3748[0x50];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<struct FPalContainerId, class UPalIndividualCharacterContainer*> LocalContainerMap;                                 // 0x120(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -4876,12 +4876,12 @@ public:
 class UPalCharacterImportanceManager : public UObject
 {
 public:
-	uint8                                        Pad_2B00[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3751[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<class APalPlayerCharacter*>           PlayerList;                                        // 0x30(0x10)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
 	TArray<class APalPlayerCharacter*>           PlayerList_ForOutsideGet;                          // 0x40(0x10)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
 	TMap<enum class EPalCharacterImportanceType, struct FCharacterListForImportanceManager> CharacterMap;                                      // 0x50(0x50)(Transient, NativeAccessSpecifierPrivate)
 	TArray<class APalNPCSpawnerBase*>            SpawnerList;                                       // 0xA0(0x10)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2B01[0x20];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_3753[0x20];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalCharacterImportanceManager* GetDefaultObj();
@@ -4897,11 +4897,11 @@ public:
 class UPalCharacterLiftupObjectComponent : public UActorComponent
 {
 public:
-	uint8                                        Pad_2B07[0xA];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3767[0xA];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	bool                                         bIsLifting;                                        // 0xAA(0x1)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2B08[0x9];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3769[0x9];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	bool                                         bEnableLiftup;                                     // 0xB4(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2B09[0x53];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_376A[0x53];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalCharacterLiftupObjectComponent* GetDefaultObj();
@@ -4919,9 +4919,9 @@ public:
 class UPalCharacterManager : public UPalWorldSubsystem
 {
 public:
-	uint8                                        Pad_2B1F[0x58];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3803[0x58];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnIndividualParameterSynced;                       // 0xC8(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2B20[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3804[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	TSubclassOf<class UPalActionBase>            AttackNearBaseClass;                               // 0xE8(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UPalActionBase>            AttackFarBaseClass;                                // 0xF0(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TMap<struct FPalInstanceID, class UPalIndividualCharacterParameter*> IndividualParameterMap;                            // 0xF8(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
@@ -4929,7 +4929,7 @@ public:
 	TArray<class UPalIndividualCharacterHandle*> InitializeWaitingHandles;                          // 0x198(0x10)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
 	TArray<class UPalIndividualCharacterHandle*> NoHoldHandles;                                     // 0x1A8(0x10)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
 	TMap<struct FPalInstanceID, class UPalIndividualCharacterHandleReference*> CachedRefenrenceOnlyHandles;                       // 0x1B8(0x50)(Transient, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2B21[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3806[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<class UPalIndividualCharacterHandle*> CreatingHandles;                                   // 0x210(0x10)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
 	TArray<class UPalIndividualCharacterHandle*> SpawningActorHandles;                              // 0x220(0x10)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
 	TArray<class UPalIndividualCharacterHandle*> ReserveDestroyActorHandles;                        // 0x230(0x10)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
@@ -5005,12 +5005,12 @@ public:
 	float                                        SlidingSubRate;                                    // 0xFE4(0x4)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        SlidingYawRate;                                    // 0xFE8(0x4)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsEnableSkySliding;                               // 0xFEC(0x1)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2B39[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3922[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        ClimbMaxSpeed;                                     // 0xFF0(0x4)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        RollingMaxSpeed;                                   // 0xFF4(0x4)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        LastLandedTransformCacheNum;                       // 0xFF8(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsUseLastLandedCache;                             // 0xFFC(0x1)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2B3A[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3929[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<int32, float>                           OverrideJumpZVelocityMap;                          // 0x1000(0x50)(Edit, NativeAccessSpecifierPublic)
 	TMap<class FName, float>                     MaxAccelerationMultiplierMap;                      // 0x1050(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	TMap<class FName, float>                     WalkSpeedMultiplierMap;                            // 0x10A0(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
@@ -5024,14 +5024,14 @@ public:
 	struct FFlagContainer                        DriveMoveFlag;                                     // 0x1320(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	struct FFlagContainer                        PysicsAccelerationFlag;                            // 0x1370(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	struct FVector                               ClientLocation;                                    // 0x13C0(0x18)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2B3B[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_392B[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FFlagContainer                        CrouchDisableFlag;                                 // 0x13E0(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	struct FFlagContainer                        SlidingDisableFlag;                                // 0x1430(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	struct FFlagContainer                        GliderDisableFlag;                                 // 0x1480(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	struct FFlagContainer                        SplintDisableFlag;                                 // 0x14D0(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	bool                                         bRequestCrouch;                                    // 0x1520(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bRequestSprint;                                    // 0x1521(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2B3C[0x6];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_392C[0x6];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               LastLandingInputVelocity;                          // 0x1528(0x18)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<struct FVector>                       LastLandingLocationCache;                          // 0x1540(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	struct FFlagContainer                        StepDisableFlag;                                   // 0x1550(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
@@ -5045,20 +5045,20 @@ public:
 	float                                        TemporaryAccelerationTimeCount;                    // 0x1654(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         IsFlyDashMode;                                     // 0x1658(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bIsGrapplingMoving;                                // 0x1659(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2B3D[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3931[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        DefaultMaxStepHeight;                              // 0x165C(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	enum class EPalCharacterMovementCustomMode   CustomMovementMode_ForReplicate;                   // 0x1660(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2B3E[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3932[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        InWaterRate;                                       // 0x1664(0x4)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        DashSwimMaxSpeed;                                  // 0x1668(0x4)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        JumpableInWaterDepth;                              // 0x166C(0x4)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EEnterWaterFlag                   EnteredWaterFlag;                                  // 0x1670(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2B3F[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3934[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        WaterPlaneZ;                                       // 0x1674(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        WaterPlaneZPrev;                                   // 0x1678(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        WaitTimeToSwimInFalling;                           // 0x167C(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bIsDashSwim;                                       // 0x1680(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2B40[0x5F];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_3937[0x5F];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalCharacterMovementComponent* GetDefaultObj();
@@ -5158,7 +5158,7 @@ public:
 	bool                                         bIsCooping;                                        // 0xA0(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsEnableSendReticleTarget;                        // 0xA1(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsEnableMuteki;                                   // 0xA2(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2B55[0x5];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3A15[0x5];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FFixedPoint64                         LeanBackPoint;                                     // 0xA8(0x8)(Edit, BlueprintVisible, EditConst, NoDestructor, NativeAccessSpecifierPublic)
 	struct FFixedPoint64                         LeanBackMaxPoint;                                  // 0xB0(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
 	struct FFixedPoint64                         StunPoint;                                         // 0xB8(0x8)(Edit, BlueprintVisible, EditConst, NoDestructor, NativeAccessSpecifierPublic)
@@ -5169,7 +5169,7 @@ public:
 	enum class EPalElementType                   ElementType1;                                      // 0xCB(0x1)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EPalElementType                   ElementType2;                                      // 0xCC(0x1)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsOverrideTarget;                                  // 0xCD(0x1)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2B56[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3A17[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               OverrideTargetLocation;                            // 0xD0(0x18)(Edit, BlueprintVisible, Net, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class APalCharacter*                         Trainer;                                           // 0xE8(0x8)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class APalCharacter*                         OtomoPal;                                          // 0xF0(0x8)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -5183,47 +5183,47 @@ public:
 	int32                                        BiologicalGrade;                                   // 0x114(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsPredator;                                        // 0x118(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsEdible;                                          // 0x119(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2B59[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3A19[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        HiddenCollisionOverlapCount;                       // 0x11C(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        BurnCollisionOverlapCount;                         // 0x120(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        LavaCollisionOverlapCount;                         // 0x124(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2B5A[0x1];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3A1A[0x1];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	enum class EPalElementType                   DamageUpElement_ByElementStatus;                   // 0x129(0x1)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EPalElementType                   DamageDownElement_ByElementStatus;                 // 0x12A(0x1)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsDarknessRandomAttack;                            // 0x12B(0x1)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        AttackUp;                                          // 0x12C(0x4)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        DefenseUp;                                         // 0x130(0x4)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2B5B[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3A1B[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<enum class EPalAdditionalEffectType, struct FPalStatusAccumulate> StatusAccumulateMap;                               // 0x138(0x50)(Transient, NativeAccessSpecifierPublic)
 	bool                                         IsSleepAction;                                     // 0x188(0x1)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2B5C[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3A1D[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               WildPalDrinkWaterPoint;                            // 0x190(0x18)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsDisableOtomoReturnEffect;                        // 0x1A8(0x1)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2B5D[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3A1E[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FHitResult                            GroundHitResult;                                   // 0x1B0(0xE8)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2B5E[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3A1F[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	bool                                         bIsUseGroundRayCast;                               // 0x29C(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2B5F[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3A20[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FFlagContainer                        DisableGroundRayCast;                              // 0x2A0(0x50)(Transient, NativeAccessSpecifierPrivate)
 	struct FFixedPoint64                         SP;                                                // 0x2F0(0x8)(Transient, NoDestructor, NativeAccessSpecifierPrivate)
 	struct FGuid                                 BaseCampDefenseModelId;                            // 0x2F8(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EPalMapBaseCampWorkerOrderType    BaseCampWorkerOrderType;                           // 0x308(0x1)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bBaseCampWorkerAttackableFriend;                   // 0x309(0x1)(Edit, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2B60[0x6];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3A22[0x6];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<struct FGuid, struct FPalMapObjectAppearanceData> UnreachableMapObjectInfos;                         // 0x310(0x50)(Transient, NativeAccessSpecifierPublic)
 	struct FPalCharacterParameter_Work           Work;                                              // 0x360(0x78)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPublic)
 	struct FPalWorkAssignHandleId                WorkAssignId;                                      // 0x3D8(0x18)(Edit, Net, DisableEditOnTemplate, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EPalWorkType                      WorkType;                                          // 0x3F0(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2B61[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3A25[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FGuid                                 BaseCampWalkAroundExcludeMapObjectInstanceId;      // 0x3F4(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                  PossessStaticItemId;                               // 0x404(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bBeingRescued;                                     // 0x40C(0x1)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2B62[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3A26[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        DyingHP;                                           // 0x410(0x4)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        DyingMaxHP;                                        // 0x414(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UPalItemContainer*                     ItemContainer;                                     // 0x418(0x8)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         IsCapturedProcessing;                              // 0x420(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2B63[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3A27[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnUpdatePossessItemDelegate;                       // 0x428(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnUpdateWorkAssignIdDelegate;                      // 0x438(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnSPOverheatDelegate;                              // 0x448(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -5232,9 +5232,9 @@ public:
 	struct FVector                               TrapDirection;                                     // 0x478(0x18)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TMap<struct FPalInstanceID, int32>           DamageMap;                                         // 0x490(0x50)(Transient, NativeAccessSpecifierPublic)
 	bool                                         CanDropItem;                                       // 0x4E0(0x1)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2B64[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3A29[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FFlagContainer                        DisableNaturalHealing_Component;                   // 0x4E8(0x50)(Transient, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2B65[0x100];                                   // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3A2A[0x100];                                   // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<TWeakObjectPtr<class AActor>>         TrapLegHoldList;                                   // 0x638(0x10)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 	TArray<TWeakObjectPtr<class AActor>>         TrapMovingPanelList;                               // 0x648(0x10)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 	class UPalOtomoAttackStopJudgeByBallList*    OtomoAttackStopJudge;                              // 0x658(0x8)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -5339,7 +5339,7 @@ public:
 class UPalCharacterParameterStorageSubsystem : public UPalWorldSubsystem
 {
 public:
-	uint8                                        Pad_2B6B[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3A72[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnStoredParameterDelegate_ForServer;               // 0x78(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnRemovedParameterDelegate_ForServer;              // 0x88(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMap<struct FPalCharacterStoredParameterId, struct FPalCharacterStoredParameterInfo> StoredParameterInfoMap;                            // 0x98(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
@@ -5423,14 +5423,14 @@ public:
 class UPalCheatManager : public UCheatManager
 {
 public:
-	uint8                                        Pad_2BB7[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3BE4[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalDebugWindowSetting*                DebugWindowSetting;                                // 0x90(0x8)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDataTable*                            DebugProgressPresetDataTable;                      // 0x98(0x8)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class APalDebug_SpawnInfoReporter> SpawnerInfoReporterClass;                          // 0xA0(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class APalImGui*                             PalImGui;                                          // 0xA8(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalStatPalCount*                      PalCountSystem;                                    // 0xB0(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class APalDebug_SpawnInfoReporter*           SpawnInfoReporter;                                 // 0xB8(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2BB8[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_3BE5[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalCheatManager* GetDefaultObj();
@@ -5769,23 +5769,23 @@ class UPalComboBoxString : public UWidget
 public:
 	TArray<class FString>                        DefaultOptions;                                    // 0x158(0x10)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
 	class FString                                SelectedOption;                                    // 0x168(0x10)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2BCA[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3C58[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FComboBoxStyle                        WidgetStyle;                                       // 0x180(0x660)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	struct FTableRowStyle                        ItemStyle;                                         // 0x7E0(0xD50)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	struct FMargin                               ContentPadding;                                    // 0x1530(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	float                                        MaxListHeight;                                     // 0x1540(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         HasDownArrow;                                      // 0x1544(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         EnableGamepadNavigationMode;                       // 0x1545(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2BCB[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3C5C[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FSlateFontInfo                        Font;                                              // 0x1548(0x60)(Edit, BlueprintVisible, BlueprintReadOnly, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSlateColor                           ForegroundColor;                                   // 0x15A8(0x14)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	bool                                         bIsFocusable;                                      // 0x15BC(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2BCC[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3C5F[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FDelegateProperty_                           OnGenerateWidgetEvent;                             // 0x15C0(0x10)(Edit, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	FDelegateProperty_                           OnGenerateTopWidgetEvent;                          // 0x15D0(0x10)(Edit, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnSelectionChanged;                                // 0x15E0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnOpening;                                         // 0x15F0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2BCD[0x50];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_3C60[0x50];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalComboBoxString* GetDefaultObj();
@@ -5812,7 +5812,7 @@ public:
 class UPalCommonBoundActionButton : public UCommonBoundActionButton
 {
 public:
-	uint8                                        Pad_2BCE[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_3C6B[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalCommonBoundActionButton* GetDefaultObj();
@@ -5850,7 +5850,7 @@ public:
 	FMulticastInlineDelegateProperty_            OnDisposeContainerDelegate;                        // 0x28(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	struct FPalContainerId                       ID;                                                // 0x38(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, Net, DisableEditOnTemplate, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	enum class EPalContainerOperationRestrictType OperationRestrictType;                             // 0x48(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2BD0[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_3C82[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalContainerBase* GetDefaultObj();
@@ -5880,13 +5880,13 @@ public:
 	class UPalAnimInstance*                      PlayerAnime;                                       // 0x30(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<enum class EHumanBone>                BoneChain;                                         // 0x38(0x10)(ZeroConstructor, NativeAccessSpecifierPrivate)
 	int32                                        CurrentIndex;                                      // 0x48(0x4)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2BD2[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3C90[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FTransform                            TargetWorldTf;                                     // 0x50(0x60)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        Progress;                                          // 0xB0(0x4)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         Complete;                                          // 0xB4(0x1)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2BD3[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3C91[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            StartStandAnimeDelegate;                           // 0xB8(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2BD4[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_3C92[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalCoopClimbPlayer* GetDefaultObj();
@@ -5902,7 +5902,7 @@ class UPalCoopSkillModuleBase : public UObject
 {
 public:
 	enum class EPalLogType                       ExecuteLog;                                        // 0x28(0x1)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2BD6[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3CB7[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class APalCharacter*                         OwnerCharacter;                                    // 0x30(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -5951,7 +5951,7 @@ public:
 	int32                                        SkillRank;                                         // 0x6C(0x4)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FGuid                                 CalledPlayerUId;                                   // 0x70(0x10)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bIsRunning;                                        // 0x80(0x1)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2BE3[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3D35[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<struct FPalCoopSkillSearchResultParameter> SearchResultParameters;                            // 0x88(0x10)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -6026,7 +6026,7 @@ public:
 	TArray<struct FGuid>                         RegisteredLocationIds;                             // 0x28(0x10)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPrivate)
 	TMap<struct FGuid, float>                    RegisteredLocationElapsedSec;                      // 0x38(0x50)(Edit, EditConst, NativeAccessSpecifierPrivate)
 	float                                        LocationDisplayTimeSec;                            // 0x88(0x4)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2BEB[0x54];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_3D76[0x54];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalCoopSkillSearchLocationRegister* GetDefaultObj();
@@ -6052,7 +6052,7 @@ public:
 class UPalCoopSkillSearchSystem : public UObject
 {
 public:
-	uint8                                        Pad_2BEE[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3D7A[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TSubclassOf<class UPalCoopSkillSearchEffectController> EffectControllerClass;                             // 0x30(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalCoopSkillSearchLocationRegister*   LocationRegister;                                  // 0x38(0x8)(Edit, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalCoopSkillSearchEffectController*   EffectController;                                  // 0x40(0x8)(Edit, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -6133,9 +6133,9 @@ public:
 	FMulticastInlineDelegateProperty_            OnPlayCutsceneDelegate;                            // 0xA0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnFinishCutsceneDelegate;                          // 0xB0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class APalCutsceneActor*                     CutsceneActor;                                     // 0xC0(0x8)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2BF4[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3DCF[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalHUDDispatchParameter_FadeWidget*   FadeParam;                                         // 0xD0(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2BF5[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_3DD0[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalCutsceneComponent* GetDefaultObj();
@@ -6183,12 +6183,12 @@ public:
 class UPalDamageExplodeComponent : public UActorComponent
 {
 public:
-	uint8                                        Pad_2BFB[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3DEF[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        ExplosionDelayTime;                                // 0xA8(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2BFC[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3DF0[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnDamageDelegate_Ex;                               // 0xB0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	bool                                         IsExploded;                                        // 0xC0(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2BFD[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_3DF2[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalDamageExplodeComponent* GetDefaultObj();
@@ -6230,7 +6230,7 @@ public:
 class UPalDamageReactionComponent : public UActorComponent
 {
 public:
-	uint8                                        Pad_2C04[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3E81[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnDamageDelegate;                                  // 0xA8(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnDamageDelegate_Always;                           // 0xB8(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnDeadDelegate;                                    // 0xC8(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -6315,7 +6315,7 @@ public:
 	class UDataTable*                            PalCapturedCageDataTable;                          // 0x120(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UDataTable*                            PalStatusEffectFoodDataTable;                      // 0x128(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UDataTable*                            PalCombiUniqueDataTable;                           // 0x130(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2C3C[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_3FF3[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<float>                                TalentMagnificationList;                           // 0x140(0x10)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
 	class UPalPettingPresset*                    PettingPressetInstance;                            // 0x150(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalCombiMonsterParameter*             CombiMonsterParameter;                             // 0x158(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -6425,7 +6425,7 @@ public:
 class UPalDebugInfoGameInstanceSubsystem : public UGameInstanceSubsystem
 {
 public:
-	uint8                                        Pad_2C44[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_402F[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UFont*                                 FontObject;                                        // 0x38(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -6441,23 +6441,23 @@ public:
 	bool                                         bEnableCommandToServer;                            // 0x28(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EPalLanguageType                  EditorPlayTextLanguageType;                        // 0x29(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsRequiredLoadPlayerSaveData;                      // 0x2A(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C46[0x5];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_403C[0x5];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class FString                                DefaultLoadPlayerSaveDataName;                     // 0x30(0x10)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsRequiredLoadWorldSaveData;                       // 0x40(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C47[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_403D[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class FString                                DefaultLoadWorldSaveDataName;                      // 0x48(0x10)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsRequiredLoadLocalWorldSaveData;                 // 0x58(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2C48[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_403F[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<int32, struct FGuid>                    EditorPlayerSaveDataOverwriteMap;                  // 0x60(0x50)(Edit, Config, NativeAccessSpecifierPublic)
 	class FString                                PlayerAutoSaveDataName;                            // 0xB0(0x10)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                WorldAutoSaveDataName;                             // 0xC0(0x10)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bDontAutoSaveInMulti;                              // 0xD0(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C4A[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4042[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class FName                                  EditorSaveDirectoryName;                           // 0xD4(0x8)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        AutoSaveSpan;                                      // 0xDC(0x4)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         AutoSaveEnable;                                    // 0xE0(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bAutoSetTruePalMainStats;                          // 0xE1(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C4B[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4045[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalDataTableRowName_GameProgressPreset PlayerDefaultPreset;                               // 0xE4(0x8)(Edit, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        PlayerLevel;                                       // 0xEC(0x4)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        ForceFixLevelForWildPal;                           // 0xF0(0x4)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6465,7 +6465,7 @@ public:
 	TArray<struct FPalDebugOtomoPalInfo>         DefaultOtomoPal;                                   // 0xF8(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	TArray<struct FPalDebugPalCaptureInfo>       DefaultCapturePalInfos;                            // 0x108(0x10)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	int32                                        DefaultCapturePalRandomNum;                        // 0x118(0x4)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C4D[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4047[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<struct FPalDebugItemCreateInfo>       DefaultItem;                                       // 0x120(0x10)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	TArray<struct FPalDebugItemCreateInfo>       DefaultLoadoutItem;                                // 0x130(0x10)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	int32                                        PlayStart_PalWorldTime;                            // 0x140(0x4)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6500,10 +6500,10 @@ public:
 	bool                                         bDisableStatus_Darkness;                           // 0x163(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsIgnoreBuildRestrictionBaseCamp;                 // 0x164(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EPalMovementSpeedType             ConfirmTransportItemBaseSpeedType;                 // 0x165(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C4F[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4055[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        ConfirmTransportItemSpeedMultipleRate;             // 0x168(0x4)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bNotConsumeMaterialsInBuild;                       // 0x16C(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C50[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4058[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        BuildRequiredWorkAmount;                           // 0x170(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsDisableEnemyEyeSight;                           // 0x174(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsEnableNPCDrawRaycastDebug;                      // 0x175(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6515,7 +6515,7 @@ public:
 	bool                                         bShowReticleLocation;                              // 0x17B(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bShowAutoAimInfo;                                  // 0x17C(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsEnableMouseAutoAim;                             // 0x17D(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C51[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4059[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        MouseSensitivityRate;                              // 0x180(0x4)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        CaptureFPS;                                        // 0x184(0x4)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsDisableDropItem;                                // 0x188(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6527,14 +6527,14 @@ public:
 	bool                                         bPalBoxInLevelBelongingToServerPlayer;             // 0x18E(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bCreateGameInstanceViewActor;                      // 0x18F(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsFixedLightingControllerTime;                    // 0x190(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C54[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_405C[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        LightingControllerTimeIfFixed;                     // 0x194(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsShowFloorLocation;                              // 0x198(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsShowGroundTilt;                                 // 0x199(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsDisableShiftKey;                                // 0x19A(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsSpawnAlwaysFromSpawner;                          // 0x19B(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsDisableSpawner;                                  // 0x19C(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C55[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_405D[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        OverrideSpawnRadius;                               // 0x1A0(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        OverrideDespawnRadius;                             // 0x1A4(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsPlayerCompleteSTEALTH;                          // 0x1A8(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6559,14 +6559,14 @@ public:
 	bool                                         bForceToggleDash;                                  // 0x1BE(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bDebugAutoRun;                                     // 0x1BF(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bDrawPlayerInDoor;                                 // 0x1C0(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C58[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4063[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        PlayerPalStoragePage;                              // 0x1C4(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         ShowPlayerMoveSpeed;                               // 0x1C8(0x1)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bSwimming_DebugDisplay;                            // 0x1C9(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bSwimming_NoDecreaseSP;                            // 0x1CA(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bPartnerSkill_DebugDisplay;                        // 0x1CB(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bPartnerSkill_NoDecrease;                          // 0x1CC(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C5A[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4067[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        PartnerSkill_CooldownSpeedRate;                    // 0x1D0(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         PartnerSkill_IgnoreRestrictedByItems;              // 0x1D4(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bNotConsumeMaterialsInCraft;                       // 0x1D5(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6579,19 +6579,19 @@ public:
 	bool                                         bContinueSpeedInTransportWork;                     // 0x1DC(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bNotInterruptTransportingWork;                     // 0x1DD(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bPrintLogWorkerEventDetail;                        // 0x1DE(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C5B[0x1];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_406B[0x1];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        BaseCampWorkerEventTriggerInterval;                // 0x1E0(0x4)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IgnoreBaseCampTask;                                // 0x1E4(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bBaseCampSpawnLevelMax;                            // 0x1E5(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bBaseCampWorkerSanityDetail;                       // 0x1E6(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C5C[0x1];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_406D[0x1];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        BaseCampWorkerEatTime;                             // 0x1E8(0x4)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bBaseCampShowCannotTransportTarget;                // 0x1EC(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C5D[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_406F[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalArrowSettings                     BaseCampCannotTransportTargetArrowSettings;        // 0x1F0(0xC)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                         bBaseCampMoveModeTeleportForce;                    // 0x1FC(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bVisibleSpawnPointFromPalBox;                      // 0x1FD(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C5E[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4070[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        FallBackDefense;                                   // 0x200(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bDebugLogWorldSecurity;                            // 0x204(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bDebugLogEnableCriminal;                           // 0x205(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6600,37 +6600,37 @@ public:
 	bool                                         bShowDebugWantedSpawnerSphere;                     // 0x208(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bTransportGrantedMonsterToPalBox;                  // 0x209(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bInvaderDisable;                                   // 0x20A(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C60[0x1];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4074[0x1];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        DebugSpawnWildPal_DistanceFromPlayer;              // 0x20C(0x4)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EPalStatusID                      DebugAddStatus;                                    // 0x210(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsDisplayDebug_PassiveSkill;                      // 0x211(0x1)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bShowPassiveSkillStatus;                           // 0x212(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C62[0x1];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4078[0x1];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        ShowPassiveSkillStatusRange;                       // 0x214(0x4)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIgnorePalPassiveSkill;                            // 0x218(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C63[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_407C[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<struct FPalDataTableRowName_PassiveSkillData> PalPassiveSkillOverride;                           // 0x220(0x10)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	bool                                         bGrantPassiveSkillAlways;                          // 0x230(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C64[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_407F[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<struct FPalDataTableRowName_PalMonsterData, struct FPalDebugAttachPassiveSkillInfo> PassiveSkill_AttachSkill;                          // 0x238(0x50)(Edit, BlueprintVisible, BlueprintReadOnly, Config, NativeAccessSpecifierPublic)
 	bool                                         bPassiveSkill_CollectItem_10Sec;                   // 0x288(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bPassiveSkill_LifeSteal_DisplayRecoverHp;          // 0x289(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bLogMapObjectFailedSpawn;                          // 0x28A(0x1)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bShowMapObjectStatus;                              // 0x28B(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bShowMapObjectFoliageStatus;                       // 0x28C(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C65[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4083[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        ShowMapObjectStatusRange;                          // 0x290(0x4)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bDisablePalFoliageComponentBeginPlay;              // 0x294(0x1)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bShowMapObjectSpawnerStatus;                       // 0x295(0x1)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bDisableMapObjectEffect;                           // 0x296(0x1)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bDrawDetectMapObjectInDoor;                        // 0x297(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bCanDamageToMapObjectFromSameGroup;                // 0x298(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C67[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_408C[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        MapObjectHpOverride;                               // 0x29C(0x4)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        FoliageRespawnIntervalOverrideSeconds;             // 0x2A0(0x4)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bVisibleFoliageChunk;                              // 0x2A4(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bShowPalEggStatus;                                 // 0x2A5(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C68[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_408F[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        ShowPalEggStatusRange;                             // 0x2A8(0x4)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsHideAllHUD;                                     // 0x2AC(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsNowHUDHide;                                     // 0x2AD(0x1)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6640,17 +6640,18 @@ public:
 	bool                                         bIsCompletePaldex;                                 // 0x2B1(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bUseFixedPositionPlayerUI;                         // 0x2B2(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bForceShowHPGauge;                                 // 0x2B3(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                         bIsFixedRandomSeed;                                // 0x2B4(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C6A[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	bool                                         bForceWordFilter_ACE;                              // 0x2B4(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                         bIsFixedRandomSeed;                                // 0x2B5(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                        Pad_4096[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        ActionRandomSeed;                                  // 0x2B8(0x4)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bAvailableBuildObjectInDevelop;                    // 0x2BC(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bShowBuildObjectInstallCheck;                      // 0x2BD(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C6B[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4099[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<enum class EPalMapObjectOperationResult> IgnoreInstallErrors;                               // 0x2C0(0x10)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	bool                                         bDrawDebugInstallConnection;                       // 0x2D0(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bUseEagleForGlider;                                // 0x2D1(0x1)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bEquipDefaultGlider;                               // 0x2D2(0x1)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C6D[0x1];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_409C[0x1];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        ExtraHpRegenRateInSleepingBed;                     // 0x2D4(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bForceDisableLamp;                                 // 0x2D8(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bForceDisableTimerLight;                           // 0x2D9(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6658,22 +6659,22 @@ public:
 	bool                                         bForceDisableDamagePopup;                          // 0x2DB(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsShowTickOptimizationType;                       // 0x2DC(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIgnoreFastTravelLock;                             // 0x2DD(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C6F[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_409F[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<enum class EPalAudioBus, float>         AudioBusVolumes;                                   // 0x2E0(0x50)(Edit, BlueprintVisible, BlueprintReadOnly, Config, NativeAccessSpecifierPublic)
 	TMap<enum class EPalAudioBus, bool>          AudioBusMute;                                      // 0x330(0x50)(Edit, BlueprintVisible, BlueprintReadOnly, Config, NativeAccessSpecifierPublic)
 	bool                                         bIsShowPostAkEvent;                                // 0x380(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C70[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_40AB[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TSubclassOf<class APalSoundDebugModel>       SoundDebugModelClass;                              // 0x388(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsMuteForPlayerSoundOnly;                         // 0x390(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bDisplayPlaySoundId;                               // 0x391(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bPlayFootStepSound;                                // 0x392(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C72[0x5];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_40AC[0x5];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<class FName>                          IgnoreSoundIds;                                    // 0x398(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	bool                                         bIsSpawnFootStepEffect;                            // 0x3A8(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsDisableCameraPitchLimit;                        // 0x3A9(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsIgnoreNetworkVersionCompatible;                 // 0x3AA(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsUseClientOtomoSetting;                          // 0x3AB(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C73[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_40AD[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<struct FPalDebugOtomoPalInfo>         DefaultOtomoPalForClient;                          // 0x3B0(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	bool                                         bIsForcedSynchronizedMapObject;                    // 0x3C0(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bEnableCharacterCountInServer;                     // 0x3C1(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6687,7 +6688,7 @@ public:
 	bool                                         bIsShowAudioSoundPlayer;                           // 0x3C9(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bForceSpawnRandomIncident;                         // 0x3CA(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bForceDisableSpawnRandomIncident;                  // 0x3CB(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C75[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_40B1[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class FString                                ForceSpawnRandomIncidentName;                      // 0x3D0(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bShowRandomIncidentSpawnArea;                      // 0x3E0(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bShowRandomIncidentEndArea;                        // 0x3E1(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6695,10 +6696,10 @@ public:
 	bool                                         bInvadeSetting_Override;                           // 0x3E3(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        InvadeProbability_Override;                        // 0x3E4(0x4)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        InvadeOccurablePlayerLevel_Override;               // 0x3E8(0x4)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C78[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_40B9[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class FString                                ForceOccurInvaderName;                             // 0x3F0(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EPalBiomeType                     Biome_Override;                                    // 0x400(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C79[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_40BB[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        InvadeJudgmentInterval_Minutes_Override;           // 0x404(0x4)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        InvadeCollTime_Max_Minutes_Override;               // 0x408(0x4)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        InvadeCollTime_Min_Minutes_Override;               // 0x40C(0x4)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6721,7 +6722,7 @@ public:
 	bool                                         bIsDisablePlayerTeleportTimeout;                   // 0x441(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bUseMalePlayer;                                    // 0x442(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bEnableLoadingScreen;                              // 0x443(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C7F[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_40D5[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnLoadingScreenVisibilityChanged;                  // 0x448(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	bool                                         bIsSkipCharacterMake;                              // 0x458(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bDrawHitCollision;                                 // 0x459(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6732,7 +6733,7 @@ public:
 	bool                                         bDrawAmbientSoundActivateTrigger;                  // 0x45E(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bDrawDefenseAttackableRange;                       // 0x45F(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bShowDefenseAttackTarget;                          // 0x460(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C80[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_40E5[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        ShowDefenseRange;                                  // 0x464(0x4)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        WorldPartitionLoadCheckRange;                      // 0x468(0x4)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         WorldPartitionLoadActivatedCheck;                  // 0x46C(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6740,7 +6741,7 @@ public:
 	bool                                         bShowStageDeathPenaltyLocation;                    // 0x46E(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bForceLocationTeleport;                            // 0x46F(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bShowInvaderDeubgLog;                              // 0x470(0x1)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2C81[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_40EE[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalDebugSetting* GetDefaultObj();
@@ -6933,9 +6934,9 @@ public:
 class APalDungeonEnemySpawnerPoint : public AActor
 {
 public:
-	uint8                                        Pad_2CA5[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_422E[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	enum class EPalDungeonEnemySpawnerRankType   RankType;                                          // 0x2A0(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2CA6[0x27];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4230[0x27];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalDungeonEnemySpawnerPoint* GetDefaultObj();
@@ -6952,7 +6953,7 @@ public:
 class APalDungeonEntrance : public AActor
 {
 public:
-	uint8                                        Pad_2CBA[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4267[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalStageModelDungeon*                 StageModel;                                        // 0x298(0x8)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -6973,9 +6974,9 @@ public:
 class APalDungeonExit : public AActor
 {
 public:
-	uint8                                        Pad_2CC2[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_427B[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	bool                                         bStartPoint;                                       // 0x298(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2CC3[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_427C[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalDungeonExit* GetDefaultObj();
@@ -6991,13 +6992,13 @@ public:
 class APalDungeonFixedEntrance : public APalDungeonEntrance
 {
 public:
-	uint8                                        Pad_2CCA[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4286[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FGuid                                 LevelObjectInstanceId;                             // 0x2A8(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, NonPIEDuplicateTransient, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FDataTableRowHandle                   DungeonNameRowHandle;                              // 0x2B8(0x10)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
 	class UDataLayerAsset*                       DataLayerAsset;                                    // 0x2C8(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, NoDestructor, NonPIEDuplicateTransient, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TSoftClassPtr<class APalNPCSpawnerBase>      EnemySpawnerSoftClass;                             // 0x2D0(0x30)(Edit, DisableEditOnTemplate, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        RespawnCoolTimeMinutesAfterBossDefeated;           // 0x300(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NonPIEDuplicateTransient, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2CCB[0x14];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_428B[0x14];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	TSubclassOf<class APalNPCSpawnerBase>        EnemySpawnerClass;                                 // 0x318(0x8)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -7026,7 +7027,7 @@ class APalDungeonGimmickUnlockableDoor_DefeatBoss : public APalDungeonGimmickUnl
 {
 public:
 	enum class EPalDungeonInstanceBossState      BossState;                                         // 0x290(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2CCE[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4290[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalDungeonGimmickUnlockableDoor_DefeatBoss* GetDefaultObj();
@@ -7041,7 +7042,7 @@ public:
 class UPalDungeonInstanceModel : public UObject
 {
 public:
-	uint8                                        Pad_2CDA[0x38];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_42A2[0x38];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnChangeInstanceStatusDelegate;                    // 0x60(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	struct FGuid                                 DungeonInstanceId;                                 // 0x70(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FGuid                                 MarkerPointId;                                     // 0x80(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -7053,18 +7054,18 @@ public:
 	struct FTransform                            StartPointTransform;                               // 0x120(0x60)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FTransform                            DeadItemDropTransform;                             // 0x180(0x60)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	enum class EPalDungeonInstanceBossState      BossState;                                         // 0x1E0(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2CDC[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_42A4[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class FName                                  EnemySpawner_Boss_RowName;                         // 0x1E4(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2CDD[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_42A5[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TSoftClassPtr<class APalNPCSpawnerBase>      EnemySpawnerClass_Boss;                            // 0x1F0(0x30)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnTemplate, Transient, EditConst, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FGameDateTime                         DisappearTimeAt;                                   // 0x220(0x8)(Edit, Net, DisableEditOnTemplate, Transient, EditConst, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	int32                                        Level;                                             // 0x228(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FPalStageInstanceId                   StageInstanceId;                                   // 0x22C(0x14)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TArray<struct FPalMapObjectSaveData>         MapObjectSaveDataArray;                            // 0x240(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
 	int32                                        ReservedDataLayerAssetIndex;                       // 0x250(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2CDE[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_42A7[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UDataLayerAsset*                       ReservedDataLayerAsset;                            // 0x258(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2CE0[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_42A8[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalDungeonInstanceModel* GetDefaultObj();
@@ -7104,7 +7105,7 @@ public:
 class APalLevelObjectActor : public AActor
 {
 public:
-	uint8                                        Pad_2CE2[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_42AE[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FGuid                                 LevelObjectInstanceId;                             // 0x298(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, NonPIEDuplicateTransient, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -7119,9 +7120,9 @@ class APalDungeonItemSpawnerPoint : public APalLevelObjectActor
 {
 public:
 	enum class EPalDungeonItemSpawnerType        ItemSpawnerType;                                   // 0x2A8(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2CE3[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_42B1[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TSoftClassPtr<class APalMapObjectSpawnerTreasureBox> TreasureBoxSpawnerSoftClass;                       // 0x2B0(0x30)(Edit, DisableEditOnInstance, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2CE4[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_42B2[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalDungeonItemSpawnerPoint* GetDefaultObj();
@@ -7135,9 +7136,9 @@ class APalDungeonPointMarker : public APalLevelObjectActor
 public:
 	TArray<struct FPalDataTableRowName_DungeonSpawnAreaData> SpawnAreaIds;                                      // 0x2A8(0x10)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 	bool                                         bEditSpawnParameter;                               // 0x2B8(0x1)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2CE5[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_42BA[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalDungeonMarkerPointSpawnParameter  EditSpawnParameter;                                // 0x2BC(0x10)(Edit, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2CE6[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_42BB[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TSubclassOf<class APalDungeonEntrance>       DungeonEntranceClass;                              // 0x2D0(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 	static class UClass* StaticClass();
@@ -7161,16 +7162,16 @@ public:
 class UPalDungeonWorldSubsystem : public UPalWorldSubsystem
 {
 public:
-	uint8                                        Pad_2CEB[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_42CC[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<struct FGuid, struct FPalDungeonMarkerPointData> MarkerPointDataMap;                                // 0x80(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
 	TMap<struct FGuid, class UPalDungeonInstanceModel*> InstanceModelMap;                                  // 0xD0(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
 	struct FVector                               DungeonMargin;                                     // 0x120(0x18)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        TickInterval;                                      // 0x138(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2CEC[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_42CF[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<class FName, struct FPalDungeonDataLayerAssetSet> DataLayerAssetMap;                                 // 0x140(0x50)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
 	TArray<class APalDungeonPointMarker*>        PointMarkersWaitSystemInitializeInServer;          // 0x190(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, EditConst, Protected, NativeAccessSpecifierProtected)
 	bool                                         bInitializedWithSaveData;                          // 0x1A0(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2CED[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_42D0[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalDungeonWorldSubsystem* GetDefaultObj();
@@ -7184,7 +7185,7 @@ public:
 class UPalDynamicItemDataBase : public UObject
 {
 public:
-	uint8                                        Pad_2CEE[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_42E4[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalDynamicItemId                     ID;                                                // 0x40(0x20)(BlueprintVisible, BlueprintReadOnly, Net, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class FName                                  StaticId;                                          // 0x60(0x8)(BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
@@ -7200,13 +7201,13 @@ public:
 class UPalDynamicArmorItemDataBase : public UPalDynamicItemDataBase
 {
 public:
-	uint8                                        Pad_2CF3[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_42F6[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        Durability;                                        // 0x70(0x4)(Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        MaxDurability;                                     // 0x74(0x4)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        OldDurability;                                     // 0x78(0x4)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2CF4[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_42F7[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<class FName>                          PassiveSkillList;                                  // 0x80(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2CF5[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_42F8[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalDynamicArmorItemDataBase* GetDefaultObj();
@@ -7226,15 +7227,15 @@ public:
 class UPalDynamicItemDataManager : public UObject
 {
 public:
-	uint8                                        Pad_2CF6[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4304[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnCreateItemInServerDelegate;                      // 0x38(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMap<struct FPalDynamicItemId, class UPalDynamicItemDataBase*> ItemDynamicDataMap;                                // 0x48(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
 	float                                        DisposeReservedDynamicItemRemainingTime;           // 0x98(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2CF7[0x14];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4306[0x14];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        DynamicItemDisposeReserveCount;                    // 0xB0(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2CF8[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4308[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<struct FGuid, struct FPalDynamicItemDisposeWaitNotifyInfo> DisposeDynamicItemIdRequestWaitInfoMap_ServerInternal; // 0xB8(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2CF9[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4309[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalDynamicItemDataManager* GetDefaultObj();
@@ -7246,7 +7247,7 @@ public:
 class UPalDynamicItemWorldSubsystem : public UPalWorldSubsystem
 {
 public:
-	uint8                                        Pad_2CFA[0x20];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_430B[0x20];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<struct FPalDynamicItemId, class UPalDynamicItemDataBase*> DynamicItemDataMap_InServer;                       // 0x90(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	TMap<struct FPalDynamicItemId, struct FPalDynamicItemInfo> WeakDynamicItemDataMap_InClient;                   // 0xE0(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	TArray<class UPalDynamicItemDataBase*>       DynamicItemDataCache_InClient;                     // 0x130(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
@@ -7285,13 +7286,13 @@ public:
 class UPalDynamicWeaponItemDataBase : public UPalDynamicItemDataBase
 {
 public:
-	uint8                                        Pad_2D05[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4314[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        Durability;                                        // 0x70(0x4)(Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        MaxDurability;                                     // 0x74(0x4)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        OldDurability;                                     // 0x78(0x4)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	int32                                        RemainingBullets;                                  // 0x7C(0x4)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<class FName>                          PassiveSkillList;                                  // 0x80(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2D06[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4315[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalDynamicWeaponItemDataBase* GetDefaultObj();
@@ -7321,7 +7322,7 @@ public:
 	class UArrowComponent*                       StackRowArrow;                                     // 0x2A0(0x8)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FVector2D                             PlacementMargin;                                   // 0x2A8(0x10)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TArray<struct FPalDataTableRowName_MapObjectData> IgnoreRowNames;                                    // 0x2B8(0x10)(Edit, ZeroConstructor, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2D09[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4317[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalEditorMapObjectCheckPlacer* GetDefaultObj();
@@ -7367,7 +7368,7 @@ class APalEnemySpawner : public AActor
 public:
 	enum class EPalEnemySpawnActorType           EnemyActorType;                                    // 0x290(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EPalEnemySpawnDefaultAction       DefaultAction;                                     // 0x291(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2D0E[0x6];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_431E[0x6];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalEnemySpawner* GetDefaultObj();
@@ -7514,11 +7515,11 @@ class APalExponentialHeightFogVolume : public AActor
 public:
 	class UExponentialHeightFogComponent*        Component;                                         // 0x290(0x8)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                        bEnabled : 1;                                      // Mask: 0x1, PropSize: 0x10x298(0x1)(Net, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        BitPad_1AD : 7;                                    // Fixing Bit-Field Size  [ Dumper-7 ]
-	uint8                                        Pad_2D23[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        BitPad_1AF : 7;                                    // Fixing Bit-Field Size  [ Dumper-7 ]
+	uint8                                        Pad_4353[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	bool                                         bEnableSwitchVisibility;                           // 0x29C(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bDisableEnabledFlag;                               // 0x29D(0x1)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2D24[0x2];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4354[0x2];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalExponentialHeightFogVolume* GetDefaultObj();
@@ -7532,9 +7533,9 @@ class UPalFacialComponent : public UActorComponent
 {
 public:
 	bool                                         bIsEnableEyeBlink;                                 // 0xA0(0x1)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2D28[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_435B[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalFacial_MainModule*                 MainModule;                                        // 0xA8(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2D29[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_435C[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalFacialComponent* GetDefaultObj();
@@ -7556,14 +7557,14 @@ public:
 class UPalFacial_MainModule : public UObject
 {
 public:
-	uint8                                        Pad_2D2B[0x40];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_435E[0x40];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        EyeMaterialIndex;                                  // 0x68(0x4)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                        MouthMaterialIndex;                                // 0x6C(0x4)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                        BrowMaterialIndex;                                 // 0x70(0x4)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2D2C[0x54];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_435F[0x54];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<enum class EPalFacialEyeType, struct FPalMorphSetting> MorphSetting_Eye;                                  // 0xC8(0x50)(Transient, NativeAccessSpecifierPrivate)
 	TMap<enum class EPalFacialMouthType, struct FPalMorphSetting> MorphSetting_Mouth;                                // 0x118(0x50)(Transient, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2D2D[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4360[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<enum class EPalFacialEyeType, float>    BlendShape_TypeEyeWeight;                          // 0x170(0x50)(Transient, NativeAccessSpecifierPrivate)
 	TMap<enum class EPalFacialMouthType, float>  BlendShape_TypeMouthWeight;                        // 0x1C0(0x50)(Transient, NativeAccessSpecifierPrivate)
 	TMap<class FName, float>                     BlendShape_EyeWeight;                              // 0x210(0x50)(Transient, NativeAccessSpecifierPrivate)
@@ -7591,7 +7592,7 @@ public:
 class UPalFirePointLightComponent : public UPointLightComponent
 {
 public:
-	uint8                                        Pad_2D2F[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4362[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalFirePointLightComponent* GetDefaultObj();
@@ -7606,12 +7607,12 @@ public:
 	float                                        FlingAdditionalHeight;                             // 0xA0(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        HighFlingAddtionalHeight;                          // 0xA4(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EPalFlyHeightType                 State;                                             // 0xA8(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2D32[0xB];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4365[0xB];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	bool                                         bIsHighFling;                                      // 0xB4(0x1)(Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bIsHighFlingCache;                                 // 0xB5(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2D33[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4366[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class USkeletalMeshComponent*                SK;                                                // 0xB8(0x8)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2D34[0x20];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4367[0x20];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalFlyMeshHeightCtrlComponent* GetDefaultObj();
@@ -7635,7 +7636,7 @@ public:
 class UPalFoliageDamageReactionComponent : public UActorComponent
 {
 public:
-	uint8                                        Pad_2D35[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4369[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalHitEffectSlot*                     EffectSlot;                                        // 0xB8(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -7648,9 +7649,9 @@ public:
 class UPalFoliageGridModel : public UObject
 {
 public:
-	uint8                                        Pad_2D36[0x20];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_436A[0x20];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<class FName, class UPalMapObjectFoliageModel*> FoliageModelMapInServer;                           // 0x48(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2D37[0xA8];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_436C[0xA8];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<class FName, struct FPalFoliageGridInstanceMap> InstanceMapByComponentId;                          // 0x140(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	TMap<struct FVector, struct FPalFoliageInstanceId> InstanceIdMapByLocation;                           // 0x190(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 
@@ -7688,18 +7689,18 @@ public:
 class UPalFoliageInstance : public UObject
 {
 public:
-	uint8                                        Pad_2D38[0x20];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_436F[0x20];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<int32, bool>                            DirtyMap;                                          // 0x48(0x50)(NativeAccessSpecifierPublic)
-	uint8                                        Pad_2D39[0x20];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4370[0x20];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalFoliageInstanceId                 InstanceId;                                        // 0xB8(0x10)(Edit, DisableEditOnTemplate, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FName                                  FoliageTypeId;                                     // 0xC8(0x8)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                        HP;                                                // 0xD0(0x4)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bAlive;                                            // 0xD4(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2D3A[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4371[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalFoliageInstanceTransform          WorldTransform;                                    // 0xD8(0x38)(Edit, Net, DisableEditOnTemplate, Transient, EditConst, RepNotify, NoDestructor, NativeAccessSpecifierPrivate)
 	struct FTransform                            WorldTransformCache;                               // 0x110(0x60)(Edit, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FGameDateTime                         RespawnTimeAt;                                     // 0x170(0x8)(Edit, DisableEditOnTemplate, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2D3B[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4372[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalFoliageInstance* GetDefaultObj();
@@ -7772,7 +7773,7 @@ class UPalFoliageType_InstancedStaticMesh : public UFoliageType_InstancedStaticM
 {
 public:
 	enum class EPalFoliagePresetType             PresetType;                                        // 0x4F0(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2D3F[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_437E[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalFoliageType_InstancedStaticMesh* GetDefaultObj();
@@ -7796,15 +7797,15 @@ class UPalFootIKComponent : public UActorComponent
 {
 public:
 	bool                                         bIsEnableFootIK;                                   // 0xA0(0x1)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2D42[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4384[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        MinMeshOffset;                                     // 0xA4(0x4)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        FootIKInterpTime;                                  // 0xA8(0x4)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2D43[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4385[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<enum class EPalFootType, struct FFootIKSetting> FootIKSettings;                                    // 0xB0(0x50)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	float                                        FootIKMeshOffset;                                  // 0x100(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2D44[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4387[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<enum class EPalFootType, struct FHitResult> FootGroundResult;                                  // 0x108(0x50)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnTemplate, Transient, EditConst, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2D45[0x50];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4388[0x50];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalFootIKComponent* GetDefaultObj();
@@ -7835,7 +7836,7 @@ public:
 	TSubclassOf<class UPalAIActionFunnelSkillBase> FunnelSkillAIActionClass;                          // 0x7F8(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UPalFunnelSkillModule>     FunnelSkillModuleClass;                            // 0x800(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FPalInstanceID                        OwnerCharacterId;                                  // 0x808(0x30)(Net, Transient, RepNotify, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2D51[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_438D[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalFunnelCharacter* GetDefaultObj();
@@ -7901,7 +7902,7 @@ public:
 	TArray<float>                                SearchItemRange;                                   // 0x30(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	struct FGuid                                 CollectItemId;                                     // 0x40(0x10)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bShouldSetSkillAction;                             // 0x50(0x1)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2D5B[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4396[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<struct FGuid, struct FPalFunnelSkillModuleCollectItemSearchInfo> SearchItemInfoList;                                // 0x58(0x50)(Protected, NativeAccessSpecifierProtected)
 
 	static class UClass* StaticClass();
@@ -7923,9 +7924,9 @@ class UPalFunnelSkillModuleReticleTargetAttack : public UPalFunnelSkillModule
 {
 public:
 	bool                                         bShouldSetSkillAction;                             // 0x30(0x1)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2D5C[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4397[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        SearchRange;                                       // 0x34(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2D5D[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4398[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        CoolTime;                                          // 0x3C(0x4)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TWeakObjectPtr<class APalCharacter>          ReticleTarget;                                     // 0x40(0x8)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
@@ -7944,13 +7945,13 @@ public:
 	FMulticastInlineDelegateProperty_            OnCompletedCharacterMakeDelegate;                  // 0x1C0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnPawnLocalPlayerControllerChangedDelegates;       // 0x1D0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
 	bool                                         bNetworkError;                                     // 0x1E0(0x1)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2D6F[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_439E[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class FString                                DisplayVersion;                                    // 0x1E8(0x10)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2D70[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_439F[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class FString                                ErrorString;                                       // 0x200(0x10)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                InputPassword;                                     // 0x210(0x10)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class FString>                        BanList;                                           // 0x220(0x10)(ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2D71[0x190];                                   // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43A0[0x190];                                   // Fixing Size After Last Property  [ Dumper-7 ]
 	TSubclassOf<class UPalGameSetting>           GameSettingClass;                                  // 0x3C0(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UPalGameSetting*                       GameSetting;                                       // 0x3C8(0x8)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UPalMasterDataTables>      MasterDataTablesClass;                             // 0x3D0(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8013,17 +8014,17 @@ public:
 	TSubclassOf<class UPalActionDummyTargetManager> ActionDummyTargetManager;                          // 0x598(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UPalLogManager>            LogManagerClass;                                   // 0x5A0(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        RevisionNum;                                       // 0x5A8(0x4)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2D7A[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43A5[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            FxiedCharacterMakeDataDelegate;                    // 0x5B0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            FxiedCharacterNameDelegate;                        // 0x5C0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TArray<TScriptInterface<class IPalGameSystemNeedSync>> NeedWorldSyncSystems;                              // 0x5D0(0x10)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2D7B[0x20];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43A6[0x20];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	TSubclassOf<class UPalPersistentSoundPlayer> TitleBGMPlayerClass;                               // 0x600(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalPersistentSoundPlayer*             TitleBGMPlayer;                                    // 0x608(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                SelectedWorldName;                                 // 0x610(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                SelectedWorldSaveDirectoryName;                    // 0x620(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bIsNewGame;                                        // 0x630(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2D7D[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43A7[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalOptionWorldSettings               NewGameWorldSetting;                               // 0x638(0x128)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -8081,7 +8082,7 @@ public:
 	class FString                                DedicatedServerName;                               // 0x48(0x10)(Edit, ZeroConstructor, Config, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EAntiAliasingMethod               AntiAliasingType;                                  // 0x58(0x1)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EUDLSSMode                        DLSSMode;                                          // 0x59(0x1)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2D83[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43A8[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        GraphicsCommonQuality;                             // 0x5C(0x4)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	static class UClass* StaticClass();
@@ -8096,7 +8097,7 @@ class APalGameModeBase : public AGameModeBase
 {
 public:
 	enum class EPalGameModeType                  GameModeType;                                      // 0x330(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2D85[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_43A9[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalGameModeBase* GetDefaultObj();
@@ -8108,7 +8109,7 @@ public:
 class APalGameMode : public APalGameModeBase
 {
 public:
-	uint8                                        Pad_2D8A[0x20];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_43AC[0x20];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalGameMode* GetDefaultObj();
@@ -8126,7 +8127,7 @@ public:
 class APalGameModeLogin : public APalGameModeBase
 {
 public:
-	uint8                                        Pad_2D96[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_43B1[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalGameModeLogin* GetDefaultObj();
@@ -8172,7 +8173,7 @@ public:
 	int32                                        GuildCharacterMaxLevel;                            // 0x2C(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        OtomoLevelSyncAddMaxLevel;                         // 0x30(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EPalPlayerSprintStaminaDecreaseType PlayerSprintStaminaType;                           // 0x34(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2DB0[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43C4[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        CharacterMaxRank;                                  // 0x38(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        ConsumStamina_PalThrow;                            // 0x3C(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        ReturnOtomoPalCoolTime;                            // 0x40(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8184,7 +8185,7 @@ public:
 	float                                        RarePal_LevelMultiply;                             // 0x58(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        BossOrRarePal_TalentMin;                           // 0x5C(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        CharacterRankUpRequiredNumDefault;                 // 0x60(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2DB1[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43C6[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<int32, int32>                           CharacterRankUpRequiredNumMap;                     // 0x68(0x50)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	float                                        NaturalUpdateSaveParameterInterval;                // 0xB8(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        CharacterHUDDisplayRange;                          // 0xBC(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8193,7 +8194,7 @@ public:
 	int32                                        PalBoxPageNum;                                     // 0xC8(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        PalBoxSlotNumInPage;                               // 0xCC(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        PlayerBattleJudge_EnemyDistance;                   // 0xD0(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2DB2[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43C7[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<int32, float>                           BodyTemperature_SlipDamage_Percent;                // 0xD8(0x50)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	TMap<int32, float>                           BodyTemperature_StomachDecreaceRate;               // 0x128(0x50)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	TSoftObjectPtr<class UNiagaraSystem>         SleepFXDefault;                                    // 0x178(0x30)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8203,14 +8204,14 @@ public:
 	float                                        IntervalForPalAttackFromBall;                      // 0x1B4(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         CanShootRiderByFullRide;                           // 0x1B8(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         HitWazaAttackForMapObject;                         // 0x1B9(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2DB5[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43CA[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        KnockBack_MaxHpPercent;                            // 0x1BC(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        KnockBack_Power;                                   // 0x1C0(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        StunTime;                                          // 0x1C4(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        StepCooldownTime;                                  // 0x1C8(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        Stun_GunDamageRate;                                // 0x1CC(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsEnableAutoReload;                                // 0x1D0(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2DB6[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43CB[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        DeadShootImpulseRate;                              // 0x1D4(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        DeadShootImpulseMax;                               // 0x1D8(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        OtomoDamageRate_Defense;                           // 0x1DC(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8249,7 +8250,7 @@ public:
 	float                                        ClimbingStamina_Jump;                              // 0x260(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        RideWazaStaminaRate;                               // 0x264(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsEnableJumpPreliminary;                          // 0x268(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2DBA[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43D2[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        JumpInterval;                                      // 0x26C(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        FlyMaxHeight;                                      // 0x270(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        FlyHover_SP;                                       // 0x274(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8273,7 +8274,7 @@ public:
 	float                                        WalkableFloorAngleForDefault;                      // 0x2BC(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        WalkableFloorAngleForRide;                         // 0x2C0(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsEnableSpeedCollision;                            // 0x2C4(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2DBD[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43D5[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        CollisionDamageMinSpeed;                           // 0x2C8(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        SpeedCollisionDamagePower;                         // 0x2CC(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        CollisionDamageSpeedMultiplay;                     // 0x2D0(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8314,7 +8315,7 @@ public:
 	int32                                        PickupItemOnLevelExp;                              // 0x3A8(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        MapObjectDestroyProceedExp;                        // 0x3AC(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        MapObjectDistributeExpRange;                       // 0x3B0(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2DC2[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43D6[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<int32, int32>                           OtomoExp_LevelDifferenceMap;                       // 0x3B8(0x50)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	int32                                        OtomoExp_HigherPlayerLevel;                        // 0x408(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        CaptureExpBonus_Tier1_TableReferenceNum;           // 0x40C(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8346,7 +8347,7 @@ public:
 	float                                        WorkCompleteReactionRangeFromPlayer;               // 0x544(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        WorkerCollectResourceStackMaxNum;                  // 0x548(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EPalFacialEyeType                 FacialTypeHardWork;                                // 0x54C(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2DC5[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43D8[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        Timeout_WorkerApproachToTarget;                    // 0x550(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        WaitTime_WorkRepairFailedFindPath;                 // 0x554(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        WorkerWaitingNotifyInterval;                       // 0x558(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8368,7 +8369,7 @@ public:
 	class FName                                  SaveDataName_PlayerDirectory;                      // 0x5AC(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                  SaveDataName_LocalData;                            // 0x5B4(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                  SaveDataName_WorldOption;                          // 0x5BC(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2DC8[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43DB[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<enum class EPalSupportedPlatformType, int32> MaxWorldDataNumMap;                                // 0x5C8(0x50)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	int32                                        PalWorldTime_GameStartHour;                        // 0x618(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        PalWorldMinutes_RealOneMinute;                     // 0x61C(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8382,7 +8383,7 @@ public:
 	float                                        BuildSimulationVerticalAdjustRate;                 // 0x650(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        BuildSimulationVerticalMinLength;                  // 0x654(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        BuildSimulationFoundationFloatingAllowance;        // 0x658(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2DCA[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43DC[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<enum class EPalBuildObjectInstallStrategy, struct FVector> BuildSimulationFoundationCheckCollisionScale;      // 0x660(0x50)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	float                                        BuildSimulationRoofHeightOffset;                   // 0x6B0(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        BuildSimulationStairHeightOffset;                  // 0x6B4(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8413,20 +8414,20 @@ public:
 	float                                        BaseCampWorkerStartSleepHpPercentage;              // 0x718(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        BaseCampWorkerSleepInPlaceRecoverSanityRate;       // 0x71C(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        BaseCampWorkerDistancePickableItem;                // 0x720(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2DCD[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43DD[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<enum class EPalBaseCampItemContainerType> BaseCampBuildingItemContainerPriority;             // 0x728(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	float                                        FoliageRespawnFailedExtraRangeOfBaseCamp;          // 0x738(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        BaseCampPalCombatRange_AddCampRange;               // 0x73C(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FFloatInterval                        BaseCampPalWalkTime_BeforeSleep;                   // 0x740(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        BaseCampTimeFinishBattleModeAfterEmptyEnemy;       // 0x748(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EPalCharacterImportanceType       BaseCampWorkerMoveModeChangeThreshold;             // 0x74C(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2DCF[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43DE[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        BaseCampWorkerDirectorTickForAssignWorkByCount;    // 0x750(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        BaseCampWorkerTimeDetectContinuousStuck;           // 0x754(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        BaseCampWorkerLookToTargetWork;                    // 0x758(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        ReviveWorkAdditionalRange;                         // 0x75C(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        WorkAroundRangeDefault;                            // 0x760(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2DD1[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43DF[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<enum class EPalWorkType>              IssueNotifyWorkTypes;                              // 0x768(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	float                                        WorkAmountByManMonth;                              // 0x778(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        WorkNotifyDelayTime;                               // 0x77C(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8434,13 +8435,13 @@ public:
 	float                                        WorkIgnitionTorchWaitTime;                         // 0x784(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TMap<enum class EPalWorkAssignableCheckResult, enum class EPalMonsterControllerBaseCampLogType> WorkAssignFailedLogTypeMap;                        // 0x788(0x50)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	float                                        WorkTransportingSpeedRate;                         // 0x7D8(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2DD3[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43E1[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<struct FPalDataTableRowName_ItemData> BaseCampNotTransportItemBlackList;                 // 0x7E0(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	float                                        WorkTransportingDelayTimeDropItem;                 // 0x7F0(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        BaseCampStopProvideEnergyInterval;                 // 0x7F4(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TMap<enum class EPalBaseCampPassiveEffectWorkHardType, struct FPalBaseCampPassiveEffectWorkHardInfo> BaseCampPassiveEffectWorkHardInfoMap;              // 0x7F8(0x50)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	float                                        BaseCampWorkCollectionRestoreStashSeconds;         // 0x848(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2DD6[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43E3[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<struct FPalWorkTypeSet>               WorkTypeAssignPriorityOrder;                       // 0x850(0x10)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	struct FPalWorkAssignDefineDataStaticSetting WorkAssignDefineData_Build;                        // 0x860(0x40)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	struct FPalWorkAssignDefineDataStaticSetting WorkAssignDefineData_FoliageWork;                  // 0x8A0(0x40)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
@@ -8450,7 +8451,7 @@ public:
 	struct FPalWorkAssignDefineDataStaticSetting WorkAssignDefineData_BreedFarm;                    // 0x9A0(0x40)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	struct FPalWorkAssignDefineDataStaticSetting WorkAssignDefineData_ExtinguishBurn;               // 0x9E0(0x40)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	int32                                        WorkSuitabilityMaxRank;                            // 0xA20(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2DD7[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43E5[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<enum class EPalWorkSuitability, struct FPalWorkSuitabilityDefineData> WorkSuitabilityDefineDataMap;                      // 0xA28(0x50)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	struct FPalWorkSuitabilityCollectionDefineData WorkSuitabilityDefineData_Collection;              // 0xA78(0x28)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	struct FPalWorkSuitabilityDeforestDefineData WorkSuitabilityDefineData_Deforest;                // 0xAA0(0x28)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
@@ -8490,13 +8491,13 @@ public:
 	float                                        DownPlayerGaugeDisplayRange_CameraSight;           // 0xB7C(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                             ReticleOffsetRate;                                 // 0xB80(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        LowHealthEffectParcent;                            // 0xB90(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2DD9[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43E9[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<enum class EPalDamageTextType, int32>   DamageTextMargineMap;                              // 0xB98(0x50)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	float                                        DamageTextDisplayLength;                           // 0xBE8(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2DDB[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43EA[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector2D                             DamageTextMaxOffset;                               // 0xBF0(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        DamageTextOffsetInterpolationLength;               // 0xC00(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2DDD[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43EC[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<enum class EPalDamageTextType, float>   DamageTextScaleMap;                                // 0xC08(0x50)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	struct FVector2D                             DamageTextRandomOffset;                            // 0xC58(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        StrongEnemyMarkLevel;                              // 0xC68(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8527,7 +8528,7 @@ public:
 	float                                        PlayerTeleportTimeoutTime;                         // 0xCE4(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<float>                                PassiveSkillAppendNumWeights;                      // 0xCE8(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	bool                                         bIsEggLauncherExplosion;                           // 0xCF8(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2DE2[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43F0[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        ThrowPalBattleRadius;                              // 0xCFC(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        ThrowPalWorkRadius;                                // 0xD00(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        RopeHitPowe;                                       // 0xD04(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8536,10 +8537,10 @@ public:
 	float                                        RaycastLengthForDetectIndoor;                      // 0xD10(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        MapObjectConnectAnyPlaceRaycastLength;             // 0xD14(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        ShootingTargetRayCastDistance;                     // 0xD18(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2DE4[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43F1[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<float>                                CaptureJudgeRateArray;                             // 0xD20(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	int32                                        CaptureBallBoundCountMax;                          // 0xD30(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2DE5[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43F2[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<class FName>                          ExceptCapturedItemList;                            // 0xD38(0x10)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	TMap<enum class EPalCaptureSphereLevelType, int32> CaptureSphereLevelMap;                             // 0xD48(0x50)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	TMap<enum class EPalStatusID, float>         CaptureRateAddByStatusMap;                         // 0xD98(0x50)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
@@ -8551,7 +8552,7 @@ public:
 	float                                        CrouchLockAttenuation;                             // 0xDFC(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsEnableCharacterWazaScale;                        // 0xE00(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsOverrideDamageAdditiveAnimation;                 // 0xE01(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2DE7[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43F4[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        BlinkInterval;                                     // 0xE04(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        CrimeStateMaintainDurationBaseDefault;             // 0xE08(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        TechnologyPointPerLevel;                           // 0xE0C(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8566,7 +8567,7 @@ public:
 	float                                        DecreaseSanity_Hunger;                             // 0xE3C(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        DecreaseSanity_Starvation;                         // 0xE40(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         Spawner_IsCheckLoadedWorldPartition;               // 0xE44(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2DEE[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43F5[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        SpawnerDisableDistanceCM_FromBaseCamp;             // 0xE48(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        Spawner_DefaultSpawnRadius_S;                      // 0xE4C(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        Spawner_DefaultSpawnRadius_M;                      // 0xE50(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8576,7 +8577,7 @@ public:
 	float                                        Spawner_DefaultDespawnDistance_M;                  // 0xE60(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        Spawner_DefaultDespawnDistance_L;                  // 0xE64(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        Spawner_DefaultDespawnDistance_NPC;                // 0xE68(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2DF3[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43F6[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UDataTable*                            CharacterHeadMeshDataTable;                        // 0xE70(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDataTable*                            CharacterBodyMeshDataTable;                        // 0xE78(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDataTable*                            CharacterHairMeshDataTable;                        // 0xE80(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8585,7 +8586,7 @@ public:
 	float                                        CharacterMakeColorLimit_SV;                        // 0xE98(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsAutoEquipMasteredWaza;                           // 0xE9C(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         ActiveUNKO;                                        // 0xE9D(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2DF4[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43F7[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        MaxSpawnableDeathPenaltyChest;                     // 0xEA0(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                  BuildObjectInstallStrategy_SinkAllowCollisionPresetName; // 0xEA4(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        MapObjectShakeTimeOnDamaged;                       // 0xEAC(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8599,7 +8600,7 @@ public:
 	float                                        MapObjectHPDisplayTime;                            // 0xEEC(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        MapObjectGateLockTime;                             // 0xEF0(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bDirectObtainFromTreasureBox;                      // 0xEF4(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2DF5[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43FA[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        MapObjectEffectTriggerAccumulate_Burn;             // 0xEF8(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        MapObjectEffect_Burn_DamageHpRate;                 // 0xEFC(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                               MapObjectEffect_Burn_DamageAroundRange;            // 0xF00(0x18)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8623,7 +8624,7 @@ public:
 	float                                        AddAttackPerAttackRank;                            // 0x1480(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        AddDefencePerDefenceRank;                          // 0x1484(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        AddWorkSpeedPerWorkSpeedRank;                      // 0x1488(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2DF7[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_43FC[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<float>                                Combi_TalentInheritNum;                            // 0x1490(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	TArray<float>                                Combi_PassiveInheritNum;                           // 0x14A0(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	TArray<float>                                Combi_PassiveRandomAddNum;                         // 0x14B0(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
@@ -8687,19 +8688,19 @@ public:
 	class UPalOptionReplicator*                  OptionReplicator;                                  // 0x2F0(0x8)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalStageReplicator*                   StageReplicator;                                   // 0x2F8(0x8)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalLocationReplicator*                LocationReplicator;                                // 0x300(0x8)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2E03[0x50];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4407[0x50];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	class APalNetworkTransmitter*                DedicatedServerTransmitter;                        // 0x358(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalGameSystemInitManagerComponent*    GameSystemInitManager;                             // 0x360(0x8)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<class APalBotBuilderLocationBase*>    BotBuilderLocation;                                // 0x368(0x10)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
 	class FString                                WorldName;                                         // 0x378(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                WorldSaveDirectoryName;                            // 0x388(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, RepNotify, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bIsDedicatedServer;                                // 0x398(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2E07[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4409[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        MaxPlayerNum;                                      // 0x39C(0x4)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FGameDateTime                         WorldTime;                                         // 0x3A0(0x8)(Net, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FDateTime                             RealUtcTime;                                       // 0x3A8(0x8)(Net, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        ServerFrameTime;                                   // 0x3B0(0x4)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2E08[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_440A[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class FString                                ServerSessionId;                                   // 0x3B8(0x10)(Net, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                        ServerWildMonsterCount;                            // 0x3C8(0x4)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                        ServerOtomoMonsterCount;                           // 0x3CC(0x4)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -8716,7 +8717,7 @@ public:
 	int32                                        ImportanceCharacterCount_Farthest;                 // 0x3F8(0x4)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                        BaseCampCount;                                     // 0x3FC(0x4)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                        NavMeshInvokerCount;                               // 0x400(0x4)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2E0A[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_440C[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<struct FPalChatMessage>               ChatMessages;                                      // 0x408(0x10)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnRecievedChatMessageDelegate;                     // 0x418(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
@@ -8741,9 +8742,9 @@ public:
 class UPalGameSystemInitProcessHandle : public UObject
 {
 public:
-	uint8                                        Pad_2E0B[0x28];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_440E[0x28];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<class UPalGameSystemInitProcessHandle*> ChildProcessHandles;                               // 0x50(0x10)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2E0C[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_440F[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalGameSystemInitProcessHandle* GetDefaultObj();
@@ -8767,10 +8768,10 @@ public:
 class UPalGameSystemInitManagerComponent : public UGameStateComponent
 {
 public:
-	uint8                                        Pad_2E13[0x40];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4413[0x40];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<struct FPalGameSystemInitSequenceSet> InitSequences;                                     // 0xE0(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	int32                                        CurrentSequenceIndex;                              // 0xF0(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2E14[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4414[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalGameSystemInitManagerComponent* GetDefaultObj();
@@ -8946,7 +8947,7 @@ public:
 	TSoftClassPtr<class APalGliderObject>        CurrentGliderSoftClass;                            // 0xD8(0x30)(Net, Transient, RepNotify, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TSubclassOf<class APalGliderObject>          CurrentGliderClass;                                // 0x108(0x8)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bIsGliding;                                        // 0x110(0x1)(Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2E3F[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4427[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalGliderComponent* GetDefaultObj();
@@ -8997,9 +8998,9 @@ public:
 	struct FRotator                              OffsetRotation;                                    // 0x2B8(0x18)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                         bUseLeftHand;                                      // 0x2D0(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bUseRightHand;                                     // 0x2D1(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2E41[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_442C[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class FName                                  AttachBoneName;                                    // 0x2D4(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2E42[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_442D[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UAnimMontage*                          GliderStartAnimation;                              // 0x2E0(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UAnimMontage*                          GliderLoopAnimation;                               // 0x2E8(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UAnimMontage*                          GliderStartPlayerAnimation;                        // 0x2F0(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -9013,19 +9014,19 @@ public:
 	class USceneComponent* GetAkOwnerComponent();
 };
 
-// 0x70 (0x98 - 0x28)
+// 0x178 (0x1A0 - 0x28)
 // Class Pal.PalGroupBase
 class UPalGroupBase : public UObject
 {
 public:
-	uint8                                        Pad_2E45[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4432[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnChangedGroupName;                                // 0x30(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnEnterCharacterDelegate;                          // 0x40(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnExitCharacterDelegate;                           // 0x50(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	struct FGuid                                 ID;                                                // 0x60(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class FString                                GroupName;                                         // 0x70(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, RepNotify, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<struct FPalInstanceID>                IndividualCharacterHandleIds;                      // 0x80(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2E46[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	struct FFastPalIndividualCharacterHandleIdArray IndividualCharacterHandleIds;                      // 0x80(0x118)(Edit, Net, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
+	uint8                                        Pad_4433[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalGroupBase* GetDefaultObj();
@@ -9060,15 +9061,15 @@ public:
 
 };
 
-// 0x20 (0xB8 - 0x98)
+// 0x20 (0x1C0 - 0x1A0)
 // Class Pal.PalGroupOrganization
 class UPalGroupOrganization : public UPalGroupBase
 {
 public:
-	uint8                                        Pad_2E47[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
-	enum class EPalOrganizationType              OrganizationType;                                  // 0xA0(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2E48[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
-	TArray<struct FGuid>                         BaseCampIds;                                       // 0xA8(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
+	uint8                                        Pad_4438[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	enum class EPalOrganizationType              OrganizationType;                                  // 0x1A8(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                        Pad_4439[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	TArray<struct FGuid>                         BaseCampIds;                                       // 0x1B0(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
 
 	static class UClass* StaticClass();
 	static class UPalGroupOrganization* GetDefaultObj();
@@ -9077,20 +9078,20 @@ public:
 	void OnDamage(const struct FPalDamageResult& DamageResult);
 };
 
-// 0x78 (0x130 - 0xB8)
+// 0x78 (0x238 - 0x1C0)
 // Class Pal.PalGroupGuildBase
 class UPalGroupGuildBase : public UPalGroupOrganization
 {
 public:
-	uint8                                        Pad_2E4A[0x38];                                    // Fixing Size After Last Property  [ Dumper-7 ]
-	class UPalGuildPalStorage*                   PalStorage;                                        // 0xF0(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<struct FGuid>                         MapObjectInstanceIds_BaseCampPoint;                // 0xF8(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
-	int32                                        BaseCampLevel;                                     // 0x108(0x4)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TWeakObjectPtr<class APalGuildInfo>          WeakGuildInfo;                                     // 0x10C(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2E4B[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
-	class FString                                GuildName;                                         // 0x118(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, RepNotify, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                         bAllPlayerNotOnlineAndAlreadyReset;                // 0x128(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2E4C[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4444[0x38];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	class UPalGuildPalStorage*                   PalStorage;                                        // 0x1F8(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<struct FGuid>                         MapObjectInstanceIds_BaseCampPoint;                // 0x200(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
+	int32                                        BaseCampLevel;                                     // 0x210(0x4)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TWeakObjectPtr<class APalGuildInfo>          WeakGuildInfo;                                     // 0x214(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                        Pad_4445[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	class FString                                GuildName;                                         // 0x220(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, RepNotify, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                         bAllPlayerNotOnlineAndAlreadyReset;                // 0x230(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                        Pad_4446[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalGroupGuildBase* GetDefaultObj();
@@ -9100,6 +9101,7 @@ public:
 	enum class EPalGroupOperationResult RequestDismantleBaseCamp(struct FGuid& BaseCampId);
 	void OnRep_Guildname();
 	void OnRep_BaseCampLevel(int32 OldValue);
+	void OnReceivedWordFilteringResult(const class FString& ResponseBody, bool bResponseOK, int32 ResponseCode);
 	void OnDeletePlayerAccount_ServerInternal(class UPalPlayerAccount* DeleteAccount);
 	void NotifyPlayerInfoDelegate__DelegateSignature(class UPalGroupGuildBase* Self, struct FGuid& PlayerUId, struct FPalGuildPlayerInfo& PlayerInfo);
 	class FString GetGuildName();
@@ -9107,13 +9109,13 @@ public:
 	int32 GetBaseCampLevel();
 };
 
-// 0x158 (0x288 - 0x130)
+// 0x158 (0x390 - 0x238)
 // Class Pal.PalGroupGuild
 class UPalGroupGuild : public UPalGroupGuildBase
 {
 public:
-	struct FPalFastGuildPlayerInfoRepInfoArray   PlayerInfoRepInfoArray;                            // 0x130(0x148)(Edit, Net, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
-	struct FGuid                                 AdminPlayerUId;                                    // 0x278(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FPalFastGuildPlayerInfoRepInfoArray   PlayerInfoRepInfoArray;                            // 0x238(0x148)(Edit, Net, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
+	struct FGuid                                 AdminPlayerUId;                                    // 0x380(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 	static class UClass* StaticClass();
 	static class UPalGroupGuild* GetDefaultObj();
@@ -9144,13 +9146,13 @@ public:
 
 };
 
-// 0x30 (0x160 - 0x130)
+// 0x30 (0x268 - 0x238)
 // Class Pal.PalGroupIndependentGuild
 class UPalGroupIndependentGuild : public UPalGroupGuildBase
 {
 public:
-	struct FGuid                                 PlayerUId;                                         // 0x130(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FPalGuildPlayerInfo                   PlayerInfo;                                        // 0x140(0x20)(Edit, Net, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
+	struct FGuid                                 PlayerUId;                                         // 0x238(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FPalGuildPlayerInfo                   PlayerInfo;                                        // 0x248(0x20)(Edit, Net, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
 
 	static class UClass* StaticClass();
 	static class UPalGroupIndependentGuild* GetDefaultObj();
@@ -9162,12 +9164,12 @@ public:
 class UPalGroupManager : public UPalWorldSubsystem
 {
 public:
-	uint8                                        Pad_2E59[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4454[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<struct FGuid, class UPalGroupBase*>     GroupMap;                                          // 0x78(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
 	TMap<struct FGuid, class UPalGroupGuildBase*> GuildMap;                                          // 0xC8(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
 	TMap<enum class EPalOrganizationType, enum class EPalGroupType> StaticOrganizationGroupTypeMap;                    // 0x118(0x50)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
 	TMap<enum class EPalOrganizationType, struct FGuid> StaticOrganizationGroupIdMap;                      // 0x168(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2E5A[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4455[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalGroupManager* GetDefaultObj();
@@ -9183,7 +9185,7 @@ public:
 	class UPalGroupBase* Debug_GetFirstGroupByType(enum class EPalGroupType Type);
 };
 
-// 0x0 (0x98 - 0x98)
+// 0x0 (0x1A0 - 0x1A0)
 // Class Pal.PalGroupNeutral
 class UPalGroupNeutral : public UPalGroupBase
 {
@@ -9228,7 +9230,7 @@ public:
 class UPalGuildPalStorage : public UObject
 {
 public:
-	uint8                                        Pad_2E63[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4459[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalGuildPalStorage* GetDefaultObj();
@@ -9262,7 +9264,7 @@ class UPalHeadUpDisplayComponent : public UActorComponent
 {
 public:
 	float                                        HeadUpOffset;                                      // 0xA0(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2E6A[0x34];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_445B[0x34];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalHeadUpDisplayComponent* GetDefaultObj();
@@ -9280,9 +9282,9 @@ class UPalHeatSourceBoxComponent : public UBoxComponent
 {
 public:
 	bool                                         DefaultActive;                                     // 0x578(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2E6D[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_445C[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalHeatSourceModule*                  HeatSourceModule;                                  // 0x580(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2E6E[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_445D[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalHeatSourceBoxComponent* GetDefaultObj();
@@ -9299,10 +9301,10 @@ public:
 	TArray<TWeakObjectPtr<class AActor>>         PlayerList;                                        // 0x28(0x10)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
 	TArray<TWeakObjectPtr<class AActor>>         ActorList;                                         // 0x38(0x10)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
 	bool                                         IsActive;                                          // 0x48(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2E73[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4461[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class FName                                  UnieqName;                                         // 0x4C(0x8)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FPalHeatSourceInfo                    HeatSourceInfo;                                    // 0x54(0x8)(Transient, NoDestructor, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2E74[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4463[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalHeatSourceModule* GetDefaultObj();
@@ -9321,7 +9323,7 @@ class UPalHeatSourceSphereComponent : public USphereComponent
 {
 public:
 	bool                                         DefaultActive;                                     // 0x560(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2E76[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4464[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalHeatSourceModule*                  HeatSourceModule;                                  // 0x568(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -9372,7 +9374,7 @@ public:
 class UPalHiddenBoxComponent : public UBoxComponent
 {
 public:
-	uint8                                        Pad_2E7D[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_446A[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalHiddenBoxComponent* GetDefaultObj();
@@ -9533,7 +9535,7 @@ class UPalHUDDispatchParameter_WorkerRadialMenu : public UPalHUDDispatchParamete
 public:
 	class UPalIndividualCharacterHandle*         IndividualHandle;                                  // 0x38(0x8)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EPalWorkerRadialMenuResult        ResultType;                                        // 0x40(0x1)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2E82[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4476[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalHUDDispatchParameter_WorkerRadialMenu* GetDefaultObj();
@@ -9546,9 +9548,9 @@ class UPalHUDDispatchParameter_HungerIcon : public UPalHUDDispatchParameterBase
 {
 public:
 	bool                                         IsExistFood;                                       // 0x38(0x1)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2E83[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4478[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FGuid                                 BelongGroupId;                                     // 0x3C(0x10)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2E84[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4479[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalHUDDispatchParameter_HungerIcon* GetDefaultObj();
@@ -9573,11 +9575,11 @@ class UPalHUDDispatchParameter_FadeWidget : public UPalHUDDispatchParameterBase
 {
 public:
 	enum class EPalFadeWidgetType                FadeWidgetType;                                    // 0x38(0x1)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2E85[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_447C[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FLinearColor                          CustomColor;                                       // 0x3C(0x10)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        FadeInTime;                                        // 0x4C(0x4)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        FadeOutTime;                                       // 0x50(0x4)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2E86[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_447E[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnStartFadeIn;                                     // 0x58(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnEndFadeIn;                                       // 0x68(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnStartFadeOut;                                    // 0x78(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
@@ -9608,9 +9610,9 @@ public:
 	struct FPalWorldHUDParameter                 Parameter;                                         // 0x28(0x68)(BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
 	struct FGuid                                 ID;                                                // 0x90(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bDisposeFlag;                                      // 0xA0(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2E87[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4481[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FGuid                                 WidgetId;                                          // 0xA4(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2E88[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4482[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalWorldHUDDisplayInfo* GetDefaultObj();
@@ -9622,7 +9624,7 @@ public:
 class APalHUDInGame : public AHUD
 {
 public:
-	uint8                                        Pad_2E8B[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_448E[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TSubclassOf<class UPalUIHUDLayoutBase>       HUDLayoutClass;                                    // 0x388(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TSubclassOf<class UPalUIInputGuard>          PlayerInputGuardClass;                             // 0x390(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UPalUIHUDLayoutBase*                   HUDLayout;                                         // 0x398(0x8)(Edit, ExportObject, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -9637,9 +9639,9 @@ public:
 	TMap<enum class EPalWorldHUDWidgetBlueprintType, TSoftClassPtr<class UPalUserWidgetWorldHUD>> WorldHUDClassMap;                                  // 0x490(0x50)(Edit, DisableEditOnInstance, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 	TMap<enum class EPalWidgetBlueprintType, TSubclassOf<class UPalUserWidgetStackableUI>> LoadedCommonUIClassMap;                            // 0x4E0(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 	TMap<enum class EPalWorldHUDWidgetBlueprintType, TSubclassOf<class UPalUserWidgetWorldHUD>> LoadedWorldHUDClassMap;                            // 0x530(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2E8C[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_448F[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalSoundPlayer*                       SoundPlayer;                                       // 0x598(0x8)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2E8D[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4490[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<struct FGameplayTag>                  GameMenuLayerTagOrder;                             // 0x5A8(0x10)(ZeroConstructor, NativeAccessSpecifierPrivate)
 	TMap<struct FGameplayTag, struct FFlagContainer> LayerHideFlagMap;                                  // 0x5B8(0x50)(NativeAccessSpecifierPrivate)
 
@@ -9696,13 +9698,13 @@ public:
 class UPalHUDService : public UObject
 {
 public:
-	uint8                                        Pad_2E97[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4499[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnPushedStackableUI;                               // 0x30(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnSuccessedCapturePal;                             // 0x40(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnApplicationActivationStateChanged;               // 0x50(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnInvalidatePlayerInputGuard;                      // 0x60(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	struct FUITransientData                      TransientData;                                     // 0x70(0x14)(BlueprintVisible, Transient, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2E98[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_449A[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TScriptInterface<class IPalHUDServiceProviderInterface> ServiceProvider;                                   // 0x88(0x10)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -9745,9 +9747,9 @@ public:
 class APalImGui : public AActor
 {
 public:
-	uint8                                        Pad_2E9B[0x118];                                   // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_449C[0x118];                                   // Fixing Size After Last Property  [ Dumper-7 ]
 	TWeakObjectPtr<class APalCharacter>          WeakCharacterForParameterDisplay;                  // 0x3A8(0x8)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2E9C[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_449D[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalImGui* GetDefaultObj();
@@ -9772,18 +9774,18 @@ class UPalIncidentBase : public UObject
 {
 public:
 	struct FPalIncidentExecutionSettings         ExecSettings;                                      // 0x28(0x1)(Edit, DisableEditOnInstance, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2EA5[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_44A3[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalIncidentIdParameter               IdParameter;                                       // 0x30(0x38)(Edit, EditConst, NativeAccessSpecifierPrivate)
 	class UPalIncidentBase*                      ParentIncident;                                    // 0x68(0x8)(Edit, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalIncidentDynamicParameter*          DynamicParameter;                                  // 0x70(0x8)(Edit, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2EA6[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_44A4[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalIncidentSystemFunctionAccessor    FunctionAccessor;                                  // 0x80(0xC0)(Edit, EditConst, NativeAccessSpecifierPrivate)
 	bool                                         bForceStop;                                        // 0x140(0x1)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2EA7[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_44A5[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UObject*                               OccuredObject;                                     // 0x148(0x8)(Edit, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UObject*                               OwnerObject;                                       // 0x150(0x8)(Edit, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	enum class EPalIncidentState                 ExecState;                                         // 0x158(0x1)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2EA8[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_44A6[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalIncidentBase* GetDefaultObj();
@@ -9827,7 +9829,7 @@ public:
 	class UPalIncidentBase*                      CurrentIncident;                                   // 0x180(0x8)(Edit, ZeroConstructor, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TArray<class UPalIncidentBase*>              CompletedIncidents;                                // 0x188(0x10)(Edit, ZeroConstructor, EditConst, Protected, NativeAccessSpecifierProtected)
 	int32                                        ProgressCount;                                     // 0x198(0x4)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2EAD[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_44A8[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalIncidentList* GetDefaultObj();
@@ -9884,7 +9886,7 @@ public:
 	TArray<class UPalIncidentBase*>              ExecuteIncidents;                                  // 0xF8(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, EditConst, Protected, NativeAccessSpecifierProtected)
 	TArray<class UPalIncidentBase*>              ResidentIncidents;                                 // 0x108(0x10)(ZeroConstructor, NativeAccessSpecifierPrivate)
 	TArray<class UPalIncidentNotifyListener*>    Listeners;                                         // 0x118(0x10)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2EC5[0xC8];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_44AE[0xC8];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalIncidentSystem* GetDefaultObj();
@@ -9919,12 +9921,12 @@ class UPalIncidentDynamicParameterTalk : public UPalIncidentDynamicParameter
 {
 public:
 	enum class EPalIncidentTalkType              TalkType;                                          // 0x30(0x1)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2EC7[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_44AF[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class FName                                  TalkId;                                            // 0x34(0x8)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                  RequestItem;                                       // 0x3C(0x8)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        RequestItemNum;                                    // 0x44(0x4)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsRequestSucceed;                                  // 0x48(0x1)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2EC8[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_44B0[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalIncidentDynamicParameterTalk* GetDefaultObj();
@@ -9938,7 +9940,7 @@ class UPalIncidentDynamicParameterRandom : public UPalIncidentDynamicParameter
 public:
 	class FName                                  SettingName;                                       // 0x30(0x8)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        PlayerId;                                          // 0x38(0x4)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2EC9[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_44B1[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalIncidentDynamicParameterRandom* GetDefaultObj();
@@ -9952,7 +9954,7 @@ class UPalIndividualCharacterContainer : public UPalContainerBase
 public:
 	FMulticastInlineDelegateProperty_            OnUpdateContentsDelegate;                          // 0x50(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnUpdateSlotsDelegate;                             // 0x60(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2ECB[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_44B3[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<class UPalIndividualCharacterSlot*>   SlotArray;                                         // 0x80(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, EditConst, RepNotify, Protected, NativeAccessSpecifierProtected)
 
 	static class UClass* StaticClass();
@@ -10069,11 +10071,11 @@ public:
 	TMap<int32, class APalCharacter*>            PhantomActorMap;                                   // 0x210(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPublic)
 	TArray<struct FPalPhantomReplicateInfo>      PhantomActorReplicateArray;                        // 0x260(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, RepNotify, NativeAccessSpecifierPublic)
 	struct FPalIndividualCharacterSaveParameter  SaveParameter;                                     // 0x270(0x218)(Edit, Net, DisableEditOnTemplate, RepNotify, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2EE6[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_44C8[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnAddEquipWazaDelegate;                            // 0x490(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnChangeEquipWazaDelegate;                         // 0x4A0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnChangeMasteredWazaDelegate;                      // 0x4B0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2EE7[0x60];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_44C9[0x60];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FFlagContainer                        DisableNaturalHealing;                             // 0x520(0x50)(Transient, NativeAccessSpecifierPrivate)
 	struct FFloatContainer                       AdditionalNatureHealingRate;                       // 0x570(0x10)(Transient, NativeAccessSpecifierPrivate)
 	struct FPalIndividualCharacterSaveParameter  SaveParameterMirror;                               // 0x580(0x218)(Transient, NativeAccessSpecifierPrivate)
@@ -10124,6 +10126,7 @@ public:
 	void OnRep_SaveParameter();
 	void OnRep_PhantomActorReplicateArray();
 	void OnRep_IndividualActor();
+	void OnReceivedWordFilteringResult(const class FString& ResponseBody, bool bResponseOK, int32 ResponseCode);
 	void NaturalUpdateSaveParameter(enum class EPalCharacterNaturalUpdateType Type);
 	bool IsSleeping();
 	bool IsRarePal();
@@ -10250,18 +10253,18 @@ public:
 class UPalIndividualCharacterSlot : public UObject
 {
 public:
-	uint8                                        Pad_2EF2[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_44DC[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnUpdateSlotHandleDelegate;                        // 0x30(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnUpdateSlotLockDelegate;                          // 0x40(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UPalIndividualCharacterHandle*         Handle;                                            // 0x50(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FPalInstanceID                        ReplicateHandleID;                                 // 0x58(0x30)(Edit, Net, DisableEditOnTemplate, Transient, EditConst, RepNotify, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2EF3[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_44DE[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalContainerId                       ContainerId;                                       // 0x90(0x10)(Edit, Net, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	int32                                        SlotIndex;                                         // 0xA0(0x4)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FGuid                                 LockPlayerUId;                                     // 0xA4(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	enum class EPalTribeID                       PermissionTribeID;                                 // 0xB4(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bIsReplicateCharacterParameter;                    // 0xB5(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2EF4[0x2];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_44DF[0x2];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalIndividualCharacterSlot* GetDefaultObj();
@@ -10299,7 +10302,7 @@ class UPalIndividualCharacterSlotsObserver : public UObject
 {
 public:
 	FMulticastInlineDelegateProperty_            OnUpdateContainerDelegate;                         // 0x28(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2EF5[0x28];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_44E5[0x28];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalIndividualCharacterSlotsObserver* GetDefaultObj();
@@ -10348,17 +10351,17 @@ public:
 class UPalInteractiveObjectSphereComponent : public USphereComponent
 {
 public:
-	uint8                                        Pad_2EFA[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_44F0[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalInteractDelegates*                 InteractDelegates;                                 // 0x570(0x8)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bIsEnableTriggerInteract;                          // 0x578(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bIsImplementedTriggerInteract;                     // 0x579(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bIsEnableInteractingTick;                          // 0x57A(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bIsEnableInteractingTickInClientOnly;              // 0x57B(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2EFB[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_44F3[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FComponentReference                   IndicatorOriginRef;                                // 0x580(0x28)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
 	TScriptInterface<class IPalInteractiveObjectIndicatorInterface> IndicatorInterface;                                // 0x5A8(0x10)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	FMulticastInlineDelegateProperty_            OnCreateInteractDelegatesDelegate;                 // 0x5B8(0x10)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2EFC[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_44F4[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalInteractiveObjectSphereComponent* GetDefaultObj();
@@ -10396,7 +10399,7 @@ public:
 	TArray<TScriptInterface<class IPalInteractiveObjectComponentInterface>> InteractiveObjects;                                // 0xD0(0x10)(Edit, ZeroConstructor, Transient, DisableEditOnInstance, EditConst, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 	TScriptInterface<class IPalInteractiveObjectComponentInterface> TargetInteractiveObject;                           // 0xE0(0x10)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TScriptInterface<class IPalInteractiveObjectComponentInterface> LastInteractingObject;                             // 0xF0(0x10)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2EFE[0x40];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_44FA[0x40];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FFlagContainer                        InteractDisableFlags;                              // 0x140(0x50)(NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -10420,19 +10423,19 @@ public:
 class UPalInteractiveObjectBoxComponent : public UBoxComponent
 {
 public:
-	uint8                                        Pad_2F01[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4504[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalInteractDelegates*                 InteractDelegates;                                 // 0x588(0x8)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bIsEnableTriggerInteract;                          // 0x590(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bIsImplementedTriggerInteract;                     // 0x591(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bIsEnableInteractingTick;                          // 0x592(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bIsEnableInteractingTickInClientOnly;              // 0x593(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2F02[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4505[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FComponentReference                   IndicatorOriginRef;                                // 0x598(0x28)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
 	bool                                         bIsAdjustIndicatorLocationZForPlayer;              // 0x5C0(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2F03[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4506[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TScriptInterface<class IPalInteractiveObjectIndicatorInterface> IndicatorInterface;                                // 0x5C8(0x10)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	FMulticastInlineDelegateProperty_            OnCreateInteractDelegatesDelegate;                 // 0x5D8(0x10)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2F04[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4508[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalInteractiveObjectBoxComponent* GetDefaultObj();
@@ -10454,16 +10457,16 @@ public:
 class UPalInteractiveObjectCapsuleComponent : public UCapsuleComponent
 {
 public:
-	uint8                                        Pad_2F07[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4512[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalInteractDelegates*                 InteractDelegates;                                 // 0x570(0x8)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bIsEnableTriggerInteract;                          // 0x578(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bIsImplementedTriggerInteract;                     // 0x579(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bIsEnableInteractingTick;                          // 0x57A(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bIsEnableInteractingTickInClientOnly;              // 0x57B(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2F08[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4514[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FComponentReference                   IndicatorOriginRef;                                // 0x580(0x28)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
 	bool                                         bIsAdjustIndicatorLocationZForPlayer;              // 0x5A8(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2F09[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4515[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TScriptInterface<class IPalInteractiveObjectIndicatorInterface> IndicatorInterface;                                // 0x5B0(0x10)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	FMulticastInlineDelegateProperty_            OnCreateInteractDelegatesDelegate;                 // 0x5C0(0x10)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPrivate)
 
@@ -10586,7 +10589,7 @@ public:
 	struct FGuid                                 TargetBaseCampId;                                  // 0x30(0x10)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bIsInvading;                                       // 0x40(0x1)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bIsCoolTime;                                       // 0x41(0x1)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2F0D[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4526[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        CoolTimeFinish;                                    // 0x44(0x4)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        CoolTimeElapsed;                                   // 0x48(0x4)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        PlayerInBaseCampTimer;                             // 0x4C(0x4)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -10602,7 +10605,7 @@ class UPalInvaderIncidentBase : public UPalIncidentBase
 {
 public:
 	enum class EPalInvaderType                   InvaderType;                                       // 0x160(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2F17[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4535[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UDataTable*                            InvaderDataTable;                                  // 0x168(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TSubclassOf<class APalAIController>          MonsterAIControllerClass;                          // 0x170(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TSubclassOf<class APalAIController>          EnemyAIControllerClass;                            // 0x178(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -10611,10 +10614,10 @@ public:
 	class FName                                  ChosenInvaderDataRowName;                          // 0x1A0(0x8)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FGuid                                 GroupGuid;                                         // 0x1A8(0x10)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bCanExecute;                                       // 0x1B8(0x1)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2F18[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4537[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalSquad*                             Squad;                                             // 0x1C0(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TMap<struct FPalInstanceID, struct FGuid>    LocationMap;                                       // 0x1C8(0x50)(Transient, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2F19[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4538[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalInvaderIncidentBase* GetDefaultObj();
@@ -10644,7 +10647,7 @@ public:
 class UPalInvaderManager : public UPalWorldSubsystem
 {
 public:
-	uint8                                        Pad_2F20[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4540[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	FDelegateProperty_                           SpawnDummyNavInvokerDelegate;                      // 0x80(0x10)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnInvaderStartDelegate;                            // 0x90(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnInvaderEndDelegate;                              // 0xA0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -10678,9 +10681,9 @@ public:
 class APalInvaderStartPoint : public AActor
 {
 public:
-	uint8                                        Pad_2F23[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4541[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	enum class EPalBiomeType                     BiomeType;                                         // 0x2A0(0x1)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2F24[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4542[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalInvaderStartPoint* GetDefaultObj();
@@ -10708,7 +10711,7 @@ public:
 	TArray<class UPalItemSlot*>                  ItemSlotArray;                                     // 0x60(0x10)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, EditConst, RepNotify, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
 	struct FPalItemPermission                    Permission;                                        // 0x70(0x30)(Edit, BlueprintVisible, BlueprintReadOnly, Net, DisableEditOnTemplate, EditConst, RepNotify, Protected, NativeAccessSpecifierProtected)
 	float                                        CorruptionMultiplier;                              // 0xA0(0x4)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2F2E[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4546[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalItemContainer* GetDefaultObj();
@@ -10728,12 +10731,12 @@ public:
 class UPalItemContainerManager : public UPalWorldSubsystem
 {
 public:
-	uint8                                        Pad_2F38[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4550[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnItemOperationMoveDelegate;                       // 0x80(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMap<struct FPalContainerId, class UPalItemContainer*> ItemContainerMap_InServer;                         // 0x90(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2F3A[0x50];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4551[0x50];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<struct FPalContainerId, struct FPalItemContainerBelongInfo> ItemContainerBelongInfo;                           // 0x130(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2F3B[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4552[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalItemContainerManager* GetDefaultObj();
@@ -10852,10 +10855,10 @@ public:
 	struct FPalItemId                            ItemId;                                            // 0xDC(0x28)(Edit, BlueprintVisible, BlueprintReadOnly, Net, DisableEditOnTemplate, EditConst, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	int32                                        StackCount;                                        // 0x104(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        CorruptionProgressValue;                           // 0x108(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2F50[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4578[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalItemPermission                    Permission;                                        // 0x110(0x30)(Edit, BlueprintVisible, BlueprintReadOnly, Net, DisableEditOnTemplate, EditConst, RepNotify, Protected, NativeAccessSpecifierProtected)
 	class UPalDynamicItemDataBase*               DynamicItemData;                                   // 0x140(0x8)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2F51[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4579[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalItemId                            LastItemId_Client;                                 // 0x158(0x28)(Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -10921,7 +10924,7 @@ public:
 class UPalLavaBoxComponent : public UBoxComponent
 {
 public:
-	uint8                                        Pad_2F6B[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_458C[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalLavaBoxComponent* GetDefaultObj();
@@ -10935,7 +10938,7 @@ public:
 class APalLevelInstance : public ALevelInstance
 {
 public:
-	uint8                                        Pad_2F6C[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_458E[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalLevelInstance* GetDefaultObj();
@@ -10970,7 +10973,7 @@ public:
 class APalLevelObjectCharacterStatusOperator : public APalLevelObjectActor
 {
 public:
-	uint8                                        Pad_2F6E[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4592[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TScriptInterface<class IPalInteractiveObjectComponentInterface> InteractComp;                                      // 0x2B0(0x10)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 	static class UClass* StaticClass();
@@ -10984,12 +10987,12 @@ public:
 class APalLevelObjectObtainable : public APalLevelObjectActor
 {
 public:
-	uint8                                        Pad_2F72[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4599[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnUpdatePickupStatusInClient;                      // 0x2B0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TSoftObjectPtr<class UNiagaraSystem>         ObtainFXSoftObj;                                   // 0x2C0(0x30)(Edit, DisableEditOnInstance, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TScriptInterface<class IPalInteractiveObjectComponentInterface> InteractComp;                                      // 0x2F0(0x10)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bPickedInClient;                                   // 0x300(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2F74[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_459A[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalLevelObjectObtainable* GetDefaultObj();
@@ -11041,14 +11044,14 @@ public:
 class APalLevelObjectUnlockableFastTravelPoint : public APalLevelObjectActor
 {
 public:
-	uint8                                        Pad_2F7B[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_459F[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnUpdateUnlockStateDelegate;                       // 0x2B0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TScriptInterface<class IPalInteractiveObjectComponentInterface> InteractComp;                                      // 0x2C0(0x10)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bUnlocked;                                         // 0x2D0(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         EnableRequestUnlock;                               // 0x2D1(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2F7C[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_45A0[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class FName                                  FastTravelPointID;                                 // 0x2D4(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2F7D[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_45A1[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalLevelObjectUnlockableFastTravelPoint* GetDefaultObj();
@@ -11077,9 +11080,9 @@ public:
 class UPalLimitVolumeBoxComponent : public UBoxComponent
 {
 public:
-	uint8                                        Pad_2F7E[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_45A2[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        LimitFlags;                                        // 0x580(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2F7F[0xC];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_45A3[0xC];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalLimitVolumeBoxComponent* GetDefaultObj();
@@ -11091,9 +11094,9 @@ public:
 class UPalLimitVolumeSphereComponent : public USphereComponent
 {
 public:
-	uint8                                        Pad_2F80[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_45A4[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        LimitFlags;                                        // 0x568(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2F81[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_45A5[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalLimitVolumeSphereComponent* GetDefaultObj();
@@ -11121,7 +11124,7 @@ public:
 	FMulticastInlineDelegateProperty_            OnEquipmentItemDelegate;                           // 0x138(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnRemoveItemDelegate;                              // 0x148(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	enum class EPalPlayerInventoryType           PrimaryTargetInventoryType;                        // 0x158(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2F98[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_45C3[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        CurrentItemSlotIndex;                              // 0x15C(0x4)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FName                                  NowEquipBallItemID;                                // 0x160(0x8)(Net, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class APalWeaponBase*                        ThrowOtomoPalWeapon;                               // 0x168(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -11129,9 +11132,9 @@ public:
 	TMap<class FName, class APalWeaponBase*>     SpawnedBallMap;                                    // 0x180(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	class APalWeaponBase*                        DummyBall;                                         // 0x1D0(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	enum class EPalPlayerInventoryType           ReplicatedPrimaryTargetInventoryType;              // 0x1D8(0x1)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2F9A[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_45C4[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        ReplicatedCurrentItemSlotIndex;                    // 0x1DC(0x4)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2F9B[0x60];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_45C5[0x60];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalLoadoutSelectorComponent* GetDefaultObj();
@@ -11186,7 +11189,7 @@ public:
 class UPalLocationCreateParameter : public UObject
 {
 public:
-	uint8                                        Pad_2F9E[0x28];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_45CA[0x28];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalLocationCreateParameter* GetDefaultObj();
@@ -11203,7 +11206,7 @@ public:
 	bool                                         bShouldDisplay;                                    // 0x48(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bShowInMap;                                        // 0x49(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bShowInCompass;                                    // 0x4A(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2FA4[0x5];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_45CD[0x5];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalLocationBase* GetDefaultObj();
@@ -11227,7 +11230,7 @@ public:
 	FMulticastInlineDelegateProperty_            OnRemoveLocationForCompass;                        // 0xA0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMap<struct FGuid, class UPalLocationBase*>  LocationMap;                                       // 0xB0(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
 	TArray<class UPalLocationPoint_Custom*>      CustomLocations;                                   // 0x100(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2FA9[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_45D2[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalLocationManager* GetDefaultObj();
@@ -11263,7 +11266,7 @@ public:
 class UPalLocationPointStaticCreateParameter : public UPalLocationCreateParameter
 {
 public:
-	uint8                                        Pad_2FAE[0x20];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_45D9[0x20];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalLocationPointStaticCreateParameter* GetDefaultObj();
@@ -11277,7 +11280,7 @@ class UPalLocationPointStatic : public UPalLocationPoint
 public:
 	struct FVector                               Location;                                          // 0x50(0x18)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        RotationZ;                                         // 0x68(0x4)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2FB0[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_45DA[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalLocationPointStatic* GetDefaultObj();
@@ -11289,7 +11292,7 @@ public:
 class UPalLocationPointCreateParameter_BaseCamp : public UPalLocationPointStaticCreateParameter
 {
 public:
-	uint8                                        Pad_2FB1[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_45DC[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalLocationPointCreateParameter_BaseCamp* GetDefaultObj();
@@ -11303,7 +11306,7 @@ class UPalLocationPointBaseCamp : public UPalLocationPointStatic
 public:
 	struct FGuid                                 BaseCampId;                                        // 0x70(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bIsAvailable;                                      // 0x80(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2FB4[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_45E0[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalLocationPointBaseCamp* GetDefaultObj();
@@ -11319,7 +11322,7 @@ public:
 class UPalLocationPointCreateParameter_BossTower : public UPalLocationPointStaticCreateParameter
 {
 public:
-	uint8                                        Pad_2FB5[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_45E2[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalLocationPointCreateParameter_BossTower* GetDefaultObj();
@@ -11344,7 +11347,7 @@ public:
 class UPalLocationPointCreateParameter_Character : public UPalLocationCreateParameter
 {
 public:
-	uint8                                        Pad_2FB8[0x48];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_45E4[0x48];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalLocationPointCreateParameter_Character* GetDefaultObj();
@@ -11358,10 +11361,10 @@ class UPalLocationPoint_Character : public UPalLocationPoint
 public:
 	struct FPalInstanceID                        IndividualId;                                      // 0x50(0x30)(Edit, Net, DisableEditOnTemplate, Transient, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	enum class EPalCharacterLocationType         CharacterLocationType;                             // 0x80(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2FBA[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_45E7[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FGuid                                 TargetBaseCampId;                                  // 0x84(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FName                                  CharacterID;                                       // 0x94(0x8)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2FBB[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_45E8[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalLocationPoint_Character* GetDefaultObj();
@@ -11377,7 +11380,7 @@ public:
 class UPalLocationPointCreateParameter_CustomMarker : public UPalLocationPointStaticCreateParameter
 {
 public:
-	uint8                                        Pad_2FBC[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_45E9[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalLocationPointCreateParameter_CustomMarker* GetDefaultObj();
@@ -11390,7 +11393,7 @@ class UPalLocationPoint_Custom : public UPalLocationPointStatic
 {
 public:
 	FMulticastInlineDelegateProperty_            OnIconTypeChanged;                                 // 0x70(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2FBF[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_45ED[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalLocationPoint_Custom* GetDefaultObj();
@@ -11406,7 +11409,7 @@ public:
 class UPalLocationPointCreateParameter_DroppedCharacter : public UPalLocationPointStaticCreateParameter
 {
 public:
-	uint8                                        Pad_2FC0[0x20];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_45EF[0x20];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalLocationPointCreateParameter_DroppedCharacter* GetDefaultObj();
@@ -11433,7 +11436,7 @@ public:
 class UPalLocationPointCreateParameter_DroppedChest : public UPalLocationPointStaticCreateParameter
 {
 public:
-	uint8                                        Pad_2FC2[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_45F5[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalLocationPointCreateParameter_DroppedChest* GetDefaultObj();
@@ -11480,7 +11483,7 @@ public:
 class UPalLocationPointCreateParameter_FastTravel : public UPalLocationPointStaticCreateParameter
 {
 public:
-	uint8                                        Pad_2FC5[0x20];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_45FA[0x20];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalLocationPointCreateParameter_FastTravel* GetDefaultObj();
@@ -11494,9 +11497,9 @@ class UPalLocationPointFastTravel : public UPalLocationPointStatic
 public:
 	struct FGuid                                 LocationId;                                        // 0x70(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         ShouldUnlockFlag;                                  // 0x80(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2FC6[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_45FB[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class FName                                  FastTravelPointID;                                 // 0x84(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2FC7[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_45FC[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalLocationPointFastTravel* GetDefaultObj();
@@ -11508,7 +11511,7 @@ public:
 class UPalLocationPointCreateParameter_MapObject : public UPalLocationCreateParameter
 {
 public:
-	uint8                                        Pad_2FC8[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_45FD[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalLocationPointCreateParameter_MapObject* GetDefaultObj();
@@ -11535,7 +11538,7 @@ public:
 class UPalLocationPointCreateParameter_Respawn : public UPalLocationPointStaticCreateParameter
 {
 public:
-	uint8                                        Pad_2FCB[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4600[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalLocationPointCreateParameter_Respawn* GetDefaultObj();
@@ -11560,7 +11563,7 @@ class UPalLocationReplicator : public UPalGameStateReplicatorBase
 {
 public:
 	struct FFastPalLocationRepInfoArray          RepInfoArray;                                      // 0x28(0x148)(Edit, Net, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2FCD[0x50];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4601[0x50];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalLocationReplicator* GetDefaultObj();
@@ -11590,7 +11593,7 @@ public:
 	float                                        NormalLogDisplayTime;                              // 0x70(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        ImportantLogDisplayTime;                           // 0x74(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        VeryImportantLogDisplayTime;                       // 0x78(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2FD2[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4605[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<struct FGuid, struct FPalLogDataSet>    VeryImportantLogMap;                               // 0x80(0x50)(Protected, NativeAccessSpecifierProtected)
 	TSubclassOf<class UPalStaticLogCollector>    StaticLogCollectorClass;                           // 0xD0(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UPalStaticLogCollector*                StaticLogCollector;                                // 0xD8(0x8)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -11635,6 +11638,7 @@ public:
 	void AddWorkerCompleteItemConvertLog(class UObject* WorldContextObject, class UPalIndividualCharacterHandle* WorkerHandle, struct FPalItemId& ItemId, int32 Num);
 	void AddWorkerCompleteBuildLog(class UObject* WorldContextObject, class UPalIndividualCharacterHandle* WorkerHandle, class FName& buildedMapObjectName);
 	void AddSkillLog(class UObject* WorldContextObject, enum class EPalLogType LogType, struct FPalLogInfo_Skill& Info);
+	void AddMealLog(class UObject* WorldContextObject, struct FPalMealLogDisplayData& DisplayData);
 	void AddItemGetLog(class UObject* WorldContextObject, struct FPalStaticItemIdAndNum& ItemIDAndNum);
 	void AddDropPalLog(class UObject* WorldContextObject, struct FPalLogInfo_DropPal& LogInfo);
 };
@@ -11658,7 +11662,7 @@ public:
 	float                                        DestroyTime;                                       // 0x428(0x4)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        ElapsedTime;                                       // 0x42C(0x4)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	enum class EPalLogWidgetState                LogState;                                          // 0x430(0x1)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_2FE5[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4615[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalStaticItemIdAndNum                ItemIDAndNum;                                      // 0x434(0xC)(BlueprintVisible, NoDestructor, Protected, NativeAccessSpecifierProtected)
 
 	static class UClass* StaticClass();
@@ -11677,7 +11681,7 @@ public:
 class UPalLongPressObject : public UObject
 {
 public:
-	uint8                                        Pad_2FE6[0x158];                                   // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4616[0x158];                                   // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalLongPressObject* GetDefaultObj();
@@ -11700,11 +11704,11 @@ public:
 	float                                        LookAtInInterpTime;                                // 0xF8(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        LookAtOutInterpTime;                               // 0xFC(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bIsEnableLookAt;                                   // 0x100(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_2FEF[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4620[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FFlagContainer                        LookAtDisableFlag;                                 // 0x108(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	float                                        InterpolatedSpeed;                                 // 0x158(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bIsShowDebugImage;                                 // 0x15C(0x1)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_2FF0[0x3];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4621[0x3];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalLookAtComponent* GetDefaultObj();
@@ -11725,7 +11729,7 @@ public:
 class APalMapLevelObject : public APalMapObject
 {
 public:
-	uint8                                        Pad_2FF1[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4624[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FGuid                                 LevelObjectInstanceId;                             // 0x3A8(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, NonPIEDuplicateTransient, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -11739,14 +11743,14 @@ public:
 class UPalMapObjectConcreteModelBase : public UObject
 {
 public:
-	uint8                                        Pad_3007[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4630[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnAvailableDelegate;                               // 0x30(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnNotAvailableDelegate;                            // 0x40(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMap<class UClass*, FMulticastInlineDelegateProperty_> OnSpawnedReadyModuleDelegateMap;                   // 0x50(0x50)(ContainsInstancedReference, NativeAccessSpecifierPrivate)
 	struct FGuid                                 InstanceId;                                        // 0xA0(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FGuid                                 ModelInstanceId;                                   // 0xB0(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bDisposed;                                         // 0xC0(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3009[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4631[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalFastMapObjectModuleRepInfoArray   ModuleRepInfoArray;                                // 0xC8(0x148)(Edit, Net, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	class UPalMapObjectWorkeeModule*             WorkeeModuleCache;                                 // 0x210(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
@@ -11779,12 +11783,12 @@ public:
 class UPalMapObjectAmusementModel : public UPalMapObjectConcreteModelBase
 {
 public:
-	uint8                                        Pad_300F[0x28];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4635[0x28];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnUpdateCharacterDelegate;                         // 0x240(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UPalIndividualCharacterHandle*         HealingCharacterHandle;                            // 0x250(0x8)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FVector                               HealingLocationOffset;                             // 0x258(0x18)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        AffectSanityRate;                                  // 0x270(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3010[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4636[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TSubclassOf<class UPalAIActionBase>          AIActionClass;                                     // 0x278(0x8)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 	static class UClass* StaticClass();
@@ -11803,7 +11807,7 @@ class UPalMapObjectAmusementParameterComponent : public UActorComponent
 {
 public:
 	float                                        AffectSanityRate;                                  // 0xA0(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3013[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4637[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TSubclassOf<class UPalAIActionBase>          AIActionClass;                                     // 0xA8(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	static class UClass* StaticClass();
@@ -11840,9 +11844,9 @@ class UPalMapObjectBaseCampPassiveEffectWorkSpeedParameterComponent : public UPa
 public:
 	int32                                        AffectMaxNum;                                      // 0xA0(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EPalWorkSuitability               TargetWorkSuitability;                             // 0xA4(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3018[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4638[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        WorkSpeedAdditionalRate;                           // 0xA8(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3019[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4639[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectBaseCampPassiveEffectWorkSpeedParameterComponent* GetDefaultObj();
@@ -11895,7 +11899,7 @@ class UPalMapObjectBaseCampWorkerDirectorModel : public UPalMapObjectConcreteMod
 public:
 	FMulticastInlineDelegateProperty_            OnNotifiedChangeBaseCampBattleTypeDelegate;        // 0x218(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	enum class EPalBaseCampWorkerDirectionBattleType BaseCampBattleTypeForClientRead;                   // 0x228(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3028[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_463C[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectBaseCampWorkerDirectorModel* GetDefaultObj();
@@ -11916,7 +11920,7 @@ public:
 	int32                                        ExistPalEggMaxNum;                                 // 0x238(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        BreedRequiredRealTime;                             // 0x23C(0x4)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        BreedProgressTime;                                 // 0x240(0x4)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3033[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4644[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<struct FPalInstanceID>                LastProceedWorkerIndividualIds;                    // 0x248(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	TArray<class FName>                          TargetBreedItemIds;                                // 0x258(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 
@@ -11939,7 +11943,7 @@ public:
 	float                                        BreedRequiredRealTime;                             // 0xA0(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        ExistPalEggMaxNum;                                 // 0xA4(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        SlotNum;                                           // 0xA8(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3034[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4647[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<struct FPalDataTableRowName_ItemData> TargetItemIds;                                     // 0xB0(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 
 	static class UClass* StaticClass();
@@ -11953,7 +11957,7 @@ class UPalMapObjectConcreteModelModuleBase : public UObject
 {
 public:
 	bool                                         bTriggeredOnSpawnedReady;                          // 0x28(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3035[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_464A[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectConcreteModelModuleBase* GetDefaultObj();
@@ -11994,10 +11998,10 @@ class UPalMapObjectCollectResourceParameterComponent : public UActorComponent
 {
 public:
 	int32                                        SlotNum;                                           // 0xA0(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3037[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4653[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<struct FPalDataTableRowName_ItemData> TargetItemIds;                                     // 0xA8(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 	float                                        AdditionalRangeOutOfBaseCamp;                      // 0xB8(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3038[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4655[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectCollectResourceParameterComponent* GetDefaultObj();
@@ -12020,7 +12024,7 @@ public:
 class UPalMapObjectConvertItemModel : public UPalMapObjectConcreteModelBase
 {
 public:
-	uint8                                        Pad_3042[0x20];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4668[0x20];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnUpdateRecipeDelegate;                            // 0x238(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnFinishConvertDelegate;                           // 0x248(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnRecieveUpdateRecipeRequestResultDelegate;        // 0x258(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -12029,7 +12033,7 @@ public:
 	int32                                        RequestedProductNum;                               // 0x280(0x4)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                        RemainProductNum;                                  // 0x284(0x4)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bIsWorkable;                                       // 0x288(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3043[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4669[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<class FName>                          RecipeIds;                                         // 0x290(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	float                                        WorkSpeedAdditionalRate;                           // 0x2A0(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                        CurrentRecipeRequestPlayerId;                      // 0x2A4(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -12037,7 +12041,7 @@ public:
 	TArray<enum class EPalItemTypeB>             TargetTypesB;                                      // 0x2B8(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	int32                                        TargetRankMax;                                     // 0x2C8(0x4)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         IsPickUpInteractable;                              // 0x2CC(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3044[0x3];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_466A[0x3];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectConvertItemModel* GetDefaultObj();
@@ -12079,7 +12083,7 @@ class UPalMapObjectDamagedScarecrowModel : public UPalMapObjectConcreteModelBase
 {
 public:
 	float                                        ProgressTimeStartAtDamaged;                        // 0x218(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3048[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4673[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectDamagedScarecrowModel* GetDefaultObj();
@@ -12092,7 +12096,7 @@ public:
 class UPalMapObjectDamageReactionComponent : public UActorComponent
 {
 public:
-	uint8                                        Pad_304A[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4675[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalHitEffectSlot*                     EffectSlot;                                        // 0xA8(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -12108,7 +12112,7 @@ public:
 	struct FPalCharacterStoredParameterId        StoredParameterId;                                 // 0x218(0x10)(Edit, DisableEditOnTemplate, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FPalIndividualCharacterSaveParameter  ForRead_CharacterSaveParameter;                    // 0x228(0x218)(Edit, Net, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	struct FGuid                                 LocationId;                                        // 0x440(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_304B[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_467A[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectPickableCharacterModelBase* GetDefaultObj();
@@ -12142,7 +12146,7 @@ class UPalMapObjectItemStorageModel : public UPalMapObjectConcreteModelBase
 {
 public:
 	bool                                         bAutoDestroyIfEmpty;                               // 0x218(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3050[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_467F[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectItemStorageModel* GetDefaultObj();
@@ -12287,12 +12291,12 @@ class UPalMapObjectDisplayCharacterModel : public UPalMapObjectConcreteModelBase
 {
 public:
 	float                                        RecoverAmountBySec;                                // 0x218(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_305E[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_468D[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FTransform                            CharacterSpawnLocalTransform;                      // 0x220(0x60)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TSubclassOf<class AController>               ControllerClass;                                   // 0x280(0x8)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TSubclassOf<class UPalUserWidgetOverlayUI>   MenuUIWidgetClass;                                 // 0x288(0x8)(Edit, Net, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalIndividualCharacterSlotsObserver*  CharacterSlotsObserver;                            // 0x290(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3060[0x58];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_468E[0x58];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectDisplayCharacterModel* GetDefaultObj();
@@ -12310,7 +12314,7 @@ class UPalMapObjectDisplayCharacterParameterComponent : public UActorComponent
 public:
 	int32                                        SlotNum;                                           // 0xA0(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        RecoverAmountBySec;                                // 0xA4(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3064[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_468F[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FTransform                            CharacterSpawnLocalTransform;                      // 0xB0(0x60)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class AController>               ControllerClass;                                   // 0x110(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UPalUserWidgetOverlayUI>   MenuUIWidgetClass;                                 // 0x118(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -12348,9 +12352,9 @@ public:
 class UPalMapObjectPickableItemModelBase : public UPalMapObjectConcreteModelBase
 {
 public:
-	uint8                                        Pad_3069[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4690[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	bool                                         bAutoPickedUp;                                     // 0x230(0x1)(BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_306A[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4691[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FTimerHandle                          RemovePickupGuardTimerHandle;                      // 0x238(0x8)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -12367,11 +12371,11 @@ public:
 class UPalMapObjectDropItemModel : public UPalMapObjectPickableItemModelBase
 {
 public:
-	uint8                                        Pad_3073[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4692[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalItemId                            ItemId;                                            // 0x248(0x28)(BlueprintVisible, BlueprintReadOnly, Net, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FVector                               ReleaseDirection;                                  // 0x270(0x18)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bEnableInteract;                                   // 0x288(0x1)(BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3074[0xF];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4693[0xF];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectDropItemModel* GetDefaultObj();
@@ -12402,14 +12406,14 @@ class UPalMapObjectEnergyModule : public UPalMapObjectConcreteModelModuleBase
 public:
 	FMulticastInlineDelegateProperty_            OnUpdateCurrentStateDelegate;                      // 0x30(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	enum class EPalEnergyType                    EnergyType;                                        // 0x40(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3079[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4694[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        ConsumeEnergySpeed;                                // 0x44(0x4)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        CurrentConsumeEnergySpeed;                         // 0x48(0x4)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	enum class EPalMapObjectEnergyModuleStatusType CurrentState;                                      // 0x4C(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bRequiredConsumeEnergy;                            // 0x4D(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_307B[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4695[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FGuid                                 StatusHUDId;                                       // 0x50(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_307C[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4696[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectEnergyModule* GetDefaultObj();
@@ -12430,17 +12434,17 @@ public:
 class UPalMapObjectFarmBlockV2Model : public UPalMapObjectConcreteModelBase
 {
 public:
-	uint8                                        Pad_307F[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4697[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnUpdateStateDelegate;                             // 0x220(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	struct FReactivePropertyFloat                CropProgressRate;                                  // 0x230(0x18)(BlueprintVisible, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FReactivePropertyFloat                WaterStackRate;                                    // 0x248(0x18)(BlueprintVisible, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UPalMapObjectFarmBlockV2ModelStateBehaviourMachine* StateBehaviourMachine;                             // 0x260(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class FName                                  CurrentCropDataId;                                 // 0x268(0x8)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	enum class EPalFarmCropState                 CurrentState;                                      // 0x270(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3080[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4698[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        CropProgressRateValue;                             // 0x274(0x4)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        WaterStackRateValue;                               // 0x278(0x4)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3081[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4699[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectFarmBlockV2Model* GetDefaultObj();
@@ -12463,7 +12467,7 @@ class UPalStateMachine : public UObject
 public:
 	TMap<class UClass*, class UPalStateMachineStateBase*> StateMap;                                          // 0x28(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
 	class UPalStateMachineStateBase*             CurrentState;                                      // 0x78(0x8)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3084[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_469A[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalStateMachine* GetDefaultObj();
@@ -12482,7 +12486,7 @@ class UPalMapObjectFarmBlockV2ModelStateBehaviourMachine : public UPalStateMachi
 {
 public:
 	class UPalMapObjectFarmBlockV2ModelStateBehaviourBase* CurrentStateBehaviourCache;                        // 0x88(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3085[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_469B[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectFarmBlockV2ModelStateBehaviourMachine* GetDefaultObj();
@@ -12494,7 +12498,7 @@ public:
 class UPalStateMachineStateBase : public UObject
 {
 public:
-	uint8                                        Pad_3086[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_469C[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalStateMachineStateBase* GetDefaultObj();
@@ -12517,7 +12521,7 @@ public:
 class UPalMapObjectFarmBlockV2ModelStateBehaviourSeeding : public UPalMapObjectFarmBlockV2ModelStateBehaviourBase
 {
 public:
-	uint8                                        Pad_3088[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_469D[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectFarmBlockV2ModelStateBehaviourSeeding* GetDefaultObj();
@@ -12532,7 +12536,7 @@ public:
 class UPalMapObjectFarmBlockV2ModelStateBehaviourWatering : public UPalMapObjectFarmBlockV2ModelStateBehaviourBase
 {
 public:
-	uint8                                        Pad_308A[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_469F[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectFarmBlockV2ModelStateBehaviourWatering* GetDefaultObj();
@@ -12547,7 +12551,7 @@ public:
 class UPalMapObjectFarmBlockV2ModelStateBehaviourGrowup : public UPalMapObjectFarmBlockV2ModelStateBehaviourBase
 {
 public:
-	uint8                                        Pad_308C[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_46A0[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectFarmBlockV2ModelStateBehaviourGrowup* GetDefaultObj();
@@ -12559,7 +12563,7 @@ public:
 class UPalMapObjectFarmBlockV2ModelStateBehaviourHarvestable : public UPalMapObjectFarmBlockV2ModelStateBehaviourBase
 {
 public:
-	uint8                                        Pad_3090[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_46A1[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectFarmBlockV2ModelStateBehaviourHarvestable* GetDefaultObj();
@@ -12612,14 +12616,14 @@ public:
 class UPalMapObjectFoliage : public UObject
 {
 public:
-	uint8                                        Pad_3094[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_46A3[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalFoliagePresetDataSet*              PresetDataSet;                                     // 0x38(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TMap<class FName, class UPalFoliageType_InstancedStaticMesh*> UsedPalFoliageTypeMap;                             // 0x40(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	TSet<enum class EPalFoliagePresetType>       LoadedPresetTypeSet;                               // 0x90(0x50)(Transient, NativeAccessSpecifierPrivate)
 	int32                                        GridSize;                                          // 0xE0(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3095[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_46A4[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<struct FPalCellCoord, class UPalFoliageGridModel*> GridModelMap;                                      // 0xE8(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3096[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_46A5[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectFoliage* GetDefaultObj();
@@ -12638,10 +12642,10 @@ public:
 	FMulticastInlineDelegateProperty_            OnDisposeModelDelegate;                            // 0x68(0x10)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
 	class FName                                  ModelId;                                           // 0x78(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TMap<struct FPalFoliageInstanceId, class UPalFoliageInstance*> InstanceMap;                                       // 0x80(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_309A[0x50];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_46AB[0x50];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalCellCoord                         CellCoord;                                         // 0x120(0x18)(Edit, DisableEditOnTemplate, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	enum class EPalFoliagePresetType             FoliagePresetType;                                 // 0x138(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_309C[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_46AC[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectFoliageModel* GetDefaultObj();
@@ -12659,7 +12663,7 @@ class UPalMapObjectFoodBoxParameterComponent : public UActorComponent
 {
 public:
 	float                                        CorruptionMultiplier;                              // 0xA0(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_30A0[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_46AD[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectFoodBoxParameterComponent* GetDefaultObj();
@@ -12687,15 +12691,15 @@ public:
 class UPalMapObjectGenerateEnergyModel : public UPalMapObjectConcreteModelBase
 {
 public:
-	uint8                                        Pad_30B0[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_46B1[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnUpdateStoredEnergyAmountDelegate;                // 0x220(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	enum class EPalEnergyType                    EnergyType;                                        // 0x230(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_30B2[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_46B2[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        GenerateEnergyRateByWorker;                        // 0x234(0x4)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        MaxEnergyStorage;                                  // 0x238(0x4)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        StoredEnergyAmount;                                // 0x23C(0x4)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        ConsumeEnergySpeed;                                // 0x240(0x4)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_30B3[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_46B3[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectGenerateEnergyModel* GetDefaultObj();
@@ -12714,10 +12718,10 @@ class UPalMapObjectGenerateEnergyParameterComponent : public UActorComponent
 {
 public:
 	enum class EPalEnergyType                    GenerateEnergyType;                                // 0xA0(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_30B5[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_46B5[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        GenerateEnergyRateByWorker;                        // 0xA4(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        MaxEnergyStorage;                                  // 0xA8(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_30B6[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_46B6[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectGenerateEnergyParameterComponent* GetDefaultObj();
@@ -12729,15 +12733,15 @@ public:
 class UPalMapObjectHatchingEggModel : public UPalMapObjectConcreteModelBase
 {
 public:
-	uint8                                        Pad_30BB[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_46B9[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnUpdateHatchedCharacterDelegate;                  // 0x220(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnUpdateHatchTemperaturDelegate;                   // 0x230(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	struct FPalIndividualCharacterSaveParameter  HatchedCharacterSaveParameter;                     // 0x240(0x218)(Edit, BlueprintVisible, BlueprintReadOnly, Net, DisableEditOnTemplate, Transient, EditConst, RepNotify, Protected, NativeAccessSpecifierProtected)
 	bool                                         bWorkable;                                         // 0x458(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_30BC[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_46BA[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TSubclassOf<class UPalUserWidgetOverlayUI>   MenuUIWidgetClass;                                 // 0x460(0x8)(Net, ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                        CurrentPalEggTemperatureDiff;                      // 0x468(0x4)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_30BD[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_46BB[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectHatchingEggModel* GetDefaultObj();
@@ -12773,7 +12777,7 @@ class UPalMapObjectHatchingEggParameterComponent : public UActorComponent
 {
 public:
 	float                                        AutoWorkAmountBySec;                               // 0xA0(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_30BE[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_46BD[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TSubclassOf<class UPalUserWidgetOverlayUI>   MenuUIWidgetClass;                                 // 0xA8(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	static class UClass* StaticClass();
@@ -12800,7 +12804,7 @@ public:
 class UPalMapObjectItemChestModel : public UPalMapObjectItemStorageModel
 {
 public:
-	uint8                                        Pad_30C0[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_46BE[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectItemChestModel* GetDefaultObj();
@@ -12814,12 +12818,12 @@ class UPalMapObjectItemChestParameterComponent : public UActorComponent
 {
 public:
 	int32                                        SlotNum;                                           // 0xA0(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_30C1[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_46BF[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<enum class EPalItemTypeA>             TargetTypesA;                                      // 0xA8(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<enum class EPalItemTypeB>             TargetTypesB;                                      // 0xB8(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 	enum class EPalContainerOperationRestrictType OperationRestrictType;                             // 0xC8(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bAutoDestroyIfEmpty;                               // 0xC9(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_30C2[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_46C0[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        CorruptionMultiplier;                              // 0xCC(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	static class UClass* StaticClass();
@@ -12843,15 +12847,15 @@ public:
 class UPalMapObjectItemContainerModule : public UPalMapObjectConcreteModelModuleBase
 {
 public:
-	uint8                                        Pad_30C4[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_46CB[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalItemContainer*                     TargetContainer;                                   // 0x40(0x8)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bDropItemAtDisposed;                               // 0x48(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_30C5[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_46CC[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<struct FPalMapObjectItemContainerModuleSlotIndexes> SlotAttributeIndexes;                              // 0x50(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	TArray<enum class EPalMapObjectItemContainerSlotAttribute> AllSlotAttribute;                                  // 0x60(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_30C6[0x80];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_46CD[0x80];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	enum class EPalContainerUsageType            UsageType;                                         // 0xF0(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_30C7[0xF];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_46CE[0xF];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectItemContainerModule* GetDefaultObj();
@@ -12879,7 +12883,7 @@ public:
 	int32                                        TargetRankMax;                                     // 0xC0(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        AutoWorkAmountBySec;                               // 0xC4(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        WorkSpeedAdditionalRate;                           // 0xC8(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_30C8[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_46CF[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectItemConverterParameterComponent* GetDefaultObj();
@@ -12891,7 +12895,7 @@ public:
 class UPalMapObjectItemDropOnDamagModel : public UPalMapObjectConcreteModelBase
 {
 public:
-	uint8                                        Pad_30CA[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_46D1[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<struct FPalItemAndNum>                DropItemInfos;                                     // 0x230(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
 
 	static class UClass* StaticClass();
@@ -12909,7 +12913,7 @@ public:
 	int32                                        SlotNum;                                           // 0xA8(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        WorkSpeedAdditionalRate;                           // 0xAC(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsGainExp;                                        // 0xB0(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_30CB[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_46D2[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectItemSimpleProductParameterComponent* GetDefaultObj();
@@ -12962,9 +12966,9 @@ public:
 class UPalMapObjectSpawnRequestHandler : public UObject
 {
 public:
-	uint8                                        Pad_30CD[0x68];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_46D4[0x68];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalMapObjectModelInitializeExtraParameters ExtraParameters;                                   // 0x90(0x28)(NativeAccessSpecifierPublic)
-	uint8                                        Pad_30CE[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_46D5[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectSpawnRequestHandler* GetDefaultObj();
@@ -12976,11 +12980,11 @@ public:
 class UPalMapObjectManager : public UPalWorldSubsystem
 {
 public:
-	uint8                                        Pad_30D8[0x48];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_46DE[0x48];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnCreateMapObjectModelInServerDelegate;            // 0xB8(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnRepMapObjectModelDelegate;                       // 0xC8(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnSpawnedMapObjectModelByInServerDelegate;         // 0xD8(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                        Pad_30D9[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_46DF[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<TScriptInterface<class IPalBuildObjectSpawnValidationCheckInterface>> BuildSpawnValidationCheckers;                      // 0x100(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, UObjectWrapper, NativeAccessSpecifierPublic)
 	class UDataTable*                            BuildObjectDataTable;                              // 0x110(0x8)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UDataTable*                            BuildObjectNameTable;                              // 0x118(0x8)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -12990,19 +12994,19 @@ public:
 	class UPalFoliagePresetDataSet*              FoliagePresetDataSet;                              // 0x168(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TSubclassOf<class APalFoliageModelChunk>     FoliageModelChunkClass;                            // 0x170(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	int32                                        FoliageGridSize;                                   // 0x178(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_30DB[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_46E2[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalMapObjectFoliage*                  Foliage;                                           // 0x180(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UPalBuildOperator*                     BuildOperator;                                     // 0x188(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UPalMapObjectWorldDisposer*            WorldDisposerForServer;                            // 0x190(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TMap<struct FGuid, class UPalMapObjectModel*> MapObjectModelMapForServer;                        // 0x198(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
 	TMap<struct FGuid, class UPalMapObjectConcreteModelBase*> MapObjectConcreteModelMapForServer;                // 0x1E8(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
-	uint8                                        Pad_30DC[0xF0];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_46E3[0xF0];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<class FName, struct FPalMapObjectModelStaticData> MapObjectModelStaticDataCacheMap;                  // 0x328(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
 	struct FPalMapObjectStaticData               StaticData;                                        // 0x378(0x48)(Edit, DisableEditOnInstance, NoDestructor, Protected, NativeAccessSpecifierProtected)
 	class FName                                  DropItemMapObjectId;                               // 0x3C0(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class FName                                  BuildObjectId_PalStorage;                          // 0x3C8(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TArray<enum class EObjectTypeQuery>          SearchObjectTypes;                                 // 0x3D0(0x10)(Edit, ZeroConstructor, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	uint8                                        Pad_30DD[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_46E4[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<enum class EPalMapObjectDestroyFXType, class UNiagaraSystem*> DestroyEffectMap;                                  // 0x3E8(0x50)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
 	class FName                                  MapObjectDestroyFXUserParamName_BoxSize;           // 0x438(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class FName                                  MapObjectDestroyFXUserParamName_BoxSurfaceArea;    // 0x440(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -13027,12 +13031,12 @@ public:
 	float                                        DamageParam_RadiusScaleMultiplier;                 // 0x4C8(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        DamageFX_StartHPRate;                              // 0x4CC(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        DamageFX_DefaultBoundsSphereRadius;                // 0x4D0(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_30DE[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_46E7[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               DamageFX_SpanwLocationOffset;                      // 0x4D8(0x18)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        DamageFX_EndFadeTime;                              // 0x4F0(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        DropItemSpawnLocationFromActorBounds;              // 0x4F4(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        DropItemSpawnDirectionZ;                           // 0x4F8(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_30DF[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_46E8[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               FoliageDropItemSpawnOffset;                        // 0x500(0x18)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FVector                               DropItemReleaseDirectionRelative;                  // 0x518(0x18)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FVector                               FoliageDestroyFXExtentsDefault;                    // 0x530(0x18)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -13041,18 +13045,18 @@ public:
 	struct FPalMapObjectVisualEffectAssets       VisualEffectAssets;                                // 0x5A0(0x50)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
 	TMap<enum class EPalMapObjectTreasureGradeType, struct FPalDataTableRowName_ItemData> TreasureBoxOpenRequiredItemMap;                    // 0x5F0(0x50)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
 	TMap<struct FGuid, class UPalMapObjectModel*> MapObjectModelHandlingMap;                         // 0x640(0x50)(Transient, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_30E0[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_46EA[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<class APalMapObject*>                 LevelMapObjectsToRegister;                         // 0x6A0(0x10)(ZeroConstructor, NativeAccessSpecifierPrivate)
 	class APalTestMapObjectRegistrationToManager* Registrator;                                       // 0x6B0(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_30E1[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_46EC[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<struct FGuid, class UPalMapObjectSpawnRequestHandler*> SpawnRequestHandlerMap;                            // 0x6C0(0x50)(Transient, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_30E2[0x48];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_46ED[0x48];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        InDoorCheckProcessIndex_AnyThread;                 // 0x758(0x4)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                        InDoorCheckMaxNumPerFrame_AnyThread;               // 0x75C(0x4)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<class APalMapObjectSpawnerBase*>      SpawnedSpawners;                                   // 0x760(0x10)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
 	TArray<TWeakObjectPtr<class UObject>>        SkeletalLODComponentArrayExec;                     // 0x770(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, UObjectWrapper, NativeAccessSpecifierPublic)
 	TArray<TWeakObjectPtr<class UObject>>        SkeletalLODComponentArrayWait;                     // 0x780(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, UObjectWrapper, NativeAccessSpecifierPublic)
-	uint8                                        Pad_30E3[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_46EF[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<TWeakObjectPtr<class UObject>>        PointLightComponents;                              // 0x798(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, UObjectWrapper, NativeAccessSpecifierPublic)
 
 	static class UClass* StaticClass();
@@ -13081,7 +13085,7 @@ public:
 class UPalMapObjectMedicalPalBedModel : public UPalMapObjectConcreteModelBase
 {
 public:
-	uint8                                        Pad_30E9[0x28];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_46F6[0x28];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnUpdateSleepingCharacterDelegate;                 // 0x240(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UPalIndividualCharacterHandle*         SleepingCharacterHandle;                           // 0x250(0x8)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FVector                               SleepLocationOffset;                               // 0x258(0x18)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -13117,7 +13121,7 @@ public:
 class UPalMapObjectModel : public UObject
 {
 public:
-	uint8                                        Pad_30F5[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_46FE[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnDamageInServerDelegate;                          // 0x38(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnDamageDelegate;                                  // 0x48(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnUpdateHp;                                        // 0x58(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -13127,7 +13131,7 @@ public:
 	FMulticastInlineDelegateProperty_            OnUpdateBaseCampIdBelongToInServerDelegate;        // 0x98(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnUpdateGroupIdBelongToInServerDelegate;           // 0xA8(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnRepBuildPlayerUIdDelegate_Client;                // 0xB8(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                        Pad_30F6[0x30];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_46FF[0x30];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FGuid                                 InstanceId;                                        // 0xF8(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FName                                  MapObjectMasterDataId;                             // 0x108(0x8)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FPalBoundsTransform                   WorkableBounds;                                    // 0x110(0x80)(Edit, DisableEditOnTemplate, Transient, EditConst, NoDestructor, NativeAccessSpecifierPrivate)
@@ -13139,9 +13143,9 @@ public:
 	class FName                                  BuildObjectId;                                     // 0x200(0x8)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalBuildProcess*                      BuildProcess;                                      // 0x208(0x8)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	enum class EPalMapObjectDamagableType        DamagableType;                                     // 0x210(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_30F8[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4700[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalMapObjectStatusValue              HP;                                                // 0x214(0x8)(Edit, Net, DisableEditOnTemplate, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_30F9[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4702[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FTransform                            InitialTransformCache;                             // 0x220(0x60)(Edit, Net, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalMapObjectModelConnectorBase*       Connector;                                         // 0x280(0x8)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalMapObjectModelEffect*              Effect;                                            // 0x288(0x8)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -13151,18 +13155,18 @@ public:
 	struct FGuid                                 BuildPlayerUId;                                    // 0x2C0(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bInDoor;                                           // 0x2D0(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	enum class EPalMapObjectInteractRestrictType InteractRestrictType;                              // 0x2D1(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_30FA[0x6];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4703[0x6];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FGameDateTime                         CreatedAt;                                         // 0x2D8(0x8)(Edit, DisableEditOnTemplate, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_30FB[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4704[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        DeteriorationDamage;                               // 0x2E4(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        DeteriorationTotalDamage;                          // 0x2E8(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bIgnoredSave;                                      // 0x2EC(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_30FC[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4706[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FGuid                                 DungeonInstanceIdBelongTo;                         // 0x2F0(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FPalStageInstanceId                   StageInstanceIdBelongTo;                           // 0x300(0x14)(Edit, DisableEditOnTemplate, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_30FD[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4707[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FFlagContainer                        TickFlagContainer;                                 // 0x318(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_30FE[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4708[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectModel* GetDefaultObj();
@@ -13187,7 +13191,7 @@ public:
 class UPalMapObjectModelEffectBase : public UObject
 {
 public:
-	uint8                                        Pad_30FF[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_470A[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectModelEffectBase* GetDefaultObj();
@@ -13211,9 +13215,9 @@ public:
 class UPalMapObjectModelEffect : public UObject
 {
 public:
-	uint8                                        Pad_3100[0x20];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_470C[0x20];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalFastMapObjectModelEffectRepInfoArray RepInfoArray;                                      // 0x48(0x148)(Edit, Net, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3101[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_470D[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectModelEffect* GetDefaultObj();
@@ -13225,9 +13229,9 @@ public:
 class UPalMapObjectModelEffect_AccumulateTrigger : public UPalMapObjectModelEffectBase
 {
 public:
-	uint8                                        Pad_3102[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_470E[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        AccumulateValue;                                   // 0x50(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3103[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_470F[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectModelEffect_AccumulateTrigger* GetDefaultObj();
@@ -13240,7 +13244,7 @@ class UPalMapObjectModelEffectGrantParameter_AccumulateTrigger : public UPalMapO
 {
 public:
 	float                                        Value;                                             // 0x30(0x4)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3105[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4710[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectModelEffectGrantParameter_AccumulateTrigger* GetDefaultObj();
@@ -13253,7 +13257,7 @@ class UPalMapObjectModelEffect_Burn : public UPalMapObjectModelEffect_Accumulate
 {
 public:
 	bool                                         bBurning;                                          // 0x58(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3108[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4717[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        PersistenceValue;                                  // 0x5C(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class APalHitCollisionBox*                   HitCollisionBox;                                   // 0x60(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
@@ -13292,7 +13296,7 @@ class UPalMapObjectModelInitializeExtraParameterBuild : public UPalMapObjectMode
 {
 public:
 	float                                        BuildWorkAmount;                                   // 0x28(0x4)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_310B[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_471A[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectModelInitializeExtraParameterBuild* GetDefaultObj();
@@ -13318,7 +13322,7 @@ class UPalMapObjectModelInitializeExtraParameterSpawner : public UPalMapObjectMo
 public:
 	struct FGuid                                 OwnerSpawnerLevelObjectInstanceId;                 // 0x28(0x10)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FPalStageInstanceId                   OwnerSpawnerStageInstanceId;                       // 0x38(0x14)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_310D[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_471B[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectModelInitializeExtraParameterSpawner* GetDefaultObj();
@@ -13343,7 +13347,7 @@ class UPalMapObjectModelInitializeExtraParameterTreasureBox : public UPalMapObje
 {
 public:
 	enum class EPalMapObjectTreasureGradeType    GradeType;                                         // 0x28(0x1)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_310E[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_471D[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectModelInitializeExtraParameterTreasureBox* GetDefaultObj();
@@ -13358,7 +13362,7 @@ public:
 	struct FPalContainerId                       TempContainerID;                                   // 0x28(0x10)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                               ReleaseDirection;                                  // 0x38(0x18)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bAutoPickup;                                       // 0x50(0x1)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_310F[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_471F[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectModelInitializeExtraParameterDropItem* GetDefaultObj();
@@ -13431,7 +13435,7 @@ class UPalMapObjectModelInitializeExtraParameterInteract : public UPalMapObjectM
 {
 public:
 	enum class EPalMapObjectInteractRestrictType RestrictType;                                      // 0x28(0x1)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3110[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4726[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectModelInitializeExtraParameterInteract* GetDefaultObj();
@@ -13515,7 +13519,7 @@ public:
 class UPalMapObjectPickupItemOnLevelModel : public UPalMapObjectPickableItemModelBase
 {
 public:
-	uint8                                        Pad_3111[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_472F[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class FName                                  VisualStaticItemId;                                // 0x248(0x8)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -13541,7 +13545,7 @@ public:
 class UPalMapObjectPalFoodBoxModel : public UPalMapObjectConcreteModelBase
 {
 public:
-	uint8                                        Pad_3114[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4732[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectPalFoodBoxModel* GetDefaultObj();
@@ -13554,7 +13558,7 @@ class UPalMapObjectPalStorageModel : public UPalMapObjectConcreteModelBase
 {
 public:
 	FMulticastInlineDelegateProperty_            OnSpawnedCharacterDelegate;                        // 0x218(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3123[0xC8];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4741[0xC8];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<struct FPalInstanceID>                SpawnedIndividualIds;                              // 0x2F0(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
 
 	static class UClass* StaticClass();
@@ -13576,7 +13580,7 @@ class UPalHUDDispatchParameter_Authentication : public UPalHUDDispatchParameter_
 {
 public:
 	bool                                         IsAuthentication;                                  // 0x40(0x1)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3125[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4743[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalHUDDispatchParameter_Authentication* GetDefaultObj();
@@ -13589,14 +13593,14 @@ class UPalMapObjectPasswordLockModule : public UPalMapObjectConcreteModelModuleB
 {
 public:
 	FMulticastInlineDelegateProperty_            OnUpdateLockStateDelegate;                         // 0x30(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3136[0x30];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4752[0x30];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnAuthenticationResultNotifyDelegate;              // 0x70(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	enum class EPalMapObjectPasswordLockState    LockState;                                         // 0x80(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3138[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4753[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class FString                                Password;                                          // 0x88(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<struct FPalMapObjectPasswordLockPlayerInfo> PlayerInfos;                                       // 0x98(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, RepNotify, NativeAccessSpecifierPrivate)
 	int32                                        TryAuthenticateMaxNum;                             // 0xA8(0x4)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_313A[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4754[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectPasswordLockModule* GetDefaultObj();
@@ -13661,7 +13665,7 @@ class UPalMapObjectPlayerBedModel : public UPalMapObjectConcreteModelBase
 public:
 	struct FVector                               RespawnLocationOffset;                             // 0x218(0x18)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bHasAuthority;                                     // 0x230(0x1)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3140[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4761[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class ACharacter*                            SleepingCharacter;                                 // 0x238(0x8)(Net, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalAction_SleepPlayerBed*             SleepPlayerBedAction;                              // 0x240(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
@@ -13688,7 +13692,7 @@ class UPalMapObjectPlayerRecordModule : public UPalMapObjectConcreteModelModuleB
 public:
 	FMulticastInlineDelegateProperty_            OnUpdatePlayerRecordBoolValDelegate;               // 0x30(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnUpdatePlayerRecordIntValDelegate;                // 0x40(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                        Pad_314C[0x20];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_476C[0x20];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	class FName                                  TargetKey;                                         // 0x70(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -13706,10 +13710,10 @@ public:
 class UPalMapObjectProductItemModel : public UPalMapObjectConcreteModelBase
 {
 public:
-	uint8                                        Pad_3155[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4771[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnFinishProductOneLoopDelegate;                    // 0x220(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	bool                                         bIsWorkable;                                       // 0x230(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3156[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4773[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class FName                                  ProductItemId;                                     // 0x234(0x8)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        WorkSpeedAdditionalRate;                           // 0x23C(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
@@ -13745,9 +13749,9 @@ public:
 class UPalMapObjectRecoverOtomoModel : public UPalMapObjectConcreteModelBase
 {
 public:
-	uint8                                        Pad_3160[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_477B[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        RecoverAmountBySec;                                // 0x220(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3161[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_477C[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TSubclassOf<class UPalUserWidgetOverlayUI>   MenuUIWidgetClass;                                 // 0x228(0x8)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 	static class UClass* StaticClass();
@@ -13778,9 +13782,9 @@ public:
 class UPalMapObjectRepairItemModel : public UPalMapObjectConcreteModelBase
 {
 public:
-	uint8                                        Pad_3167[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4780[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        RequiredRepairItemRate;                            // 0x228(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3168[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4781[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TSubclassOf<class UPalUserWidgetOverlayUI>   WidgetClass;                                       // 0x230(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -13799,7 +13803,7 @@ class UPalMapObjectRepairItemParameterComponent : public UActorComponent
 {
 public:
 	float                                        RequiredRepairItemPercent;                         // 0xA0(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3169[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4785[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectRepairItemParameterComponent* GetDefaultObj();
@@ -13837,7 +13841,7 @@ class UPalMapObjectShippingItemParameterComponent : public UActorComponent
 {
 public:
 	int32                                        SlotNum;                                           // 0xA0(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_316A[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_478A[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<int32>                                ShippingHours;                                     // 0xA8(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 
 	static class UClass* StaticClass();
@@ -13854,7 +13858,7 @@ public:
 	TSubclassOf<class UPalUserWidgetOverlayUI>   MenuUIWidgetClass;                                 // 0x228(0x8)(Net, ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                SignboardText;                                     // 0x230(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, RepNotify, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bIsEditing;                                        // 0x240(0x1)(Net, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_316D[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4793[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectSignboardModel* GetDefaultObj();
@@ -13864,6 +13868,7 @@ public:
 	void RequestEditText(int32 RequestPlayerId, bool IsEditing);
 	void OnUpdateText(const class FString& Text);
 	void OnRep_Text();
+	void OnReceivedWordFilteringResult(const class FString& ResponseBody, bool bResponseOK, int32 ResponseCode);
 	void OnOpenEdit();
 	class FString GetSignboardText();
 };
@@ -13902,7 +13907,7 @@ public:
 	int32                                        ProbabilityRespawn;                                // 0x2A8(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        LotteryCoolTimeMinutes;                            // 0x2AC(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FPalStageInstanceId                   StageInstanceIdBelongTo;                           // 0x2B0(0x14)(Edit, DisableEditOnTemplate, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_316E[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4797[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class USphereComponent*                      LocateSphere;                                      // 0x2C8(0x8)(Edit, ExportObject, ZeroConstructor, DisableEditOnTemplate, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -13927,9 +13932,9 @@ public:
 class UPalMapObjectSpawnerDamageReactionComponent : public UActorComponent
 {
 public:
-	uint8                                        Pad_3172[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4799[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	bool                                         bDropItemOnDamaged;                                // 0xA8(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3173[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_479A[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalHitEffectSlot*                     EffectSlot;                                        // 0xB0(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -13942,10 +13947,10 @@ public:
 class APalMapObjectSpawnerMultiItem : public APalMapObjectSpawnerBase
 {
 public:
-	uint8                                        Pad_3175[0x50];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_479C[0x50];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalDataTableRowName_FieldLotteryNameData FieldLotteryName;                                  // 0x320(0x8)(Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        RespawnTimeMinutesObtained;                        // 0x328(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3176[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_479D[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalMapObjectSpawnerMultiItem* GetDefaultObj();
@@ -13971,7 +13976,7 @@ public:
 	TArray<struct FPalMapObjectPickupItemPalEggLotteryData> SpawnPalEggLotteryDataArray;                       // 0x2D0(0x10)(Edit, ZeroConstructor, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
 	float                                        RespawnTimeMinutesObtained;                        // 0x2E0(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bRespawnableMulti;                                 // 0x2E4(0x1)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_317C[0x3];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_47A0[0x3];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalMapObjectSpawnerPalEgg* GetDefaultObj();
@@ -14001,7 +14006,7 @@ public:
 	struct FPalDataTableRowName_FieldLotteryNameData FieldLotteryName;                                  // 0x2D8(0x8)(Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        RespawnTimeMinutesObtained;                        // 0x2E0(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bRespawnableMulti;                                 // 0x2E4(0x1)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3183[0x3];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_47A7[0x3];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalMapObjectSpawnerTreasureBox* GetDefaultObj();
@@ -14040,7 +14045,7 @@ class UPalMapObjectSwitchModule : public UPalMapObjectConcreteModelModuleBase
 public:
 	FMulticastInlineDelegateProperty_            OnUpdateSwitchStateDelegate;                       // 0x30(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	enum class EPalMapObjectSwitchState          SwitchState;                                       // 0x40(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3185[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_47AA[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectSwitchModule* GetDefaultObj();
@@ -14067,7 +14072,7 @@ public:
 class UPalMapObjectTestFunctionModel : public UPalMapObjectConcreteModelBase
 {
 public:
-	uint8                                        Pad_3186[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_47AC[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectTestFunctionModel* GetDefaultObj();
@@ -14117,7 +14122,7 @@ class UPalMapObjectTorchModel : public UPalMapObjectConcreteModelBase
 {
 public:
 	int32                                        IgnitionMinutes;                                   // 0x218(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3188[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_47B7[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FGameDateTime                         ExtinctionDateTime;                                // 0x220(0x8)(Edit, DisableEditOnTemplate, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -14133,7 +14138,7 @@ class UPalMapObjectTorchParameterComponent : public UActorComponent
 {
 public:
 	int32                                        IgnitionMinutes;                                   // 0xA0(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3189[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_47BC[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectTorchParameterComponent* GetDefaultObj();
@@ -14146,7 +14151,7 @@ class APalMapObjectTreasureBox : public APalMapObject
 {
 public:
 	struct FVector                               DropItemLocalLocation;                             // 0x3A0(0x18)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_318A[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_47BF[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalMapObjectTreasureBox* GetDefaultObj();
@@ -14162,12 +14167,12 @@ public:
 class UPalMapObjectTreasureBoxModel : public UPalMapObjectConcreteModelBase
 {
 public:
-	uint8                                        Pad_318B[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_47C4[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	enum class EPalMapObjectTreasureGradeType    TreasureGradeType;                                 // 0x228(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_318C[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_47C5[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               DropItemLocalLocation;                             // 0x230(0x18)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bOpened;                                           // 0x248(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_318D[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_47C6[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectTreasureBoxModel* GetDefaultObj();
@@ -14257,7 +14262,7 @@ public:
 class UPalMapObjectWorldDisposerBase : public UObject
 {
 public:
-	uint8                                        Pad_3197[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_47E9[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMapObjectWorldDisposerBase* GetDefaultObj();
@@ -14269,7 +14274,7 @@ public:
 class UPalMapObjectWorldDisposer_DropItem : public UPalMapObjectWorldDisposerBase
 {
 public:
-	uint8                                        Pad_3198[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_47F6[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<enum class EPalDropItemType, struct FPalMapObjectWorldDropItemInfoSet> DropItemInfoSetMap;                                // 0x40(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -14400,7 +14405,7 @@ public:
 class UPalMasterDataTableAccess_BaseCampLevelData : public UPalMasterDataTableAccessBase
 {
 public:
-	uint8                                        Pad_31AD[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4833[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMasterDataTableAccess_BaseCampLevelData* GetDefaultObj();
@@ -14481,7 +14486,7 @@ public:
 class UPalMasterDataTableAccess_PlayerStatusRankData : public UPalMasterDataTableAccessBase
 {
 public:
-	uint8                                        Pad_31B4[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_483A[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMasterDataTableAccess_PlayerStatusRankData* GetDefaultObj();
@@ -14494,7 +14499,7 @@ public:
 class UPalMasterDataTableAccess_CharacterUpgradeData : public UPalMasterDataTableAccessBase
 {
 public:
-	uint8                                        Pad_31B7[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_483D[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMasterDataTableAccess_CharacterUpgradeData* GetDefaultObj();
@@ -14663,7 +14668,7 @@ public:
 	FMulticastInlineDelegateProperty_            OnUpdatedMoneyDelegate;                            // 0x28(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnAddMoneyDelegate;                                // 0x38(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UPalPlayerInventoryData*               ParentInventoryData;                               // 0x48(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_31C7[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4869[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalMoneyData* GetDefaultObj();
@@ -14681,9 +14686,9 @@ class APalNPC : public APalCharacter
 public:
 	class UPalNPCWeaponGenerator*                WeaponGenerator;                                   // 0x7F8(0x8)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsEnableJumpEffect;                                // 0x800(0x1)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_31C9[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_486B[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        DefaultVoiceID;                                    // 0x804(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_31CA[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_486C[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalNPC* GetDefaultObj();
@@ -14696,10 +14701,10 @@ public:
 class APalMonsterCharacter : public APalNPC
 {
 public:
-	uint8                                        Pad_31D3[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4873[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TScriptInterface<class IPalInteractiveObjectComponentInterface> InteractiveObj;                                    // 0x818(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UPalCharacterLiftupObjectComponent*    LiftupObjectComponent;                             // 0x828(0x8)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_31D4[0x60];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4874[0x60];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalMonsterCharacter* GetDefaultObj();
@@ -14780,7 +14785,7 @@ public:
 class APalWeaponBase : public AActor
 {
 public:
-	uint8                                        Pad_31FF[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_48A7[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnReloadDelegate;                                  // 0x298(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnUseBulletDelegate;                               // 0x2A8(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnShootBulletDelegate;                             // 0x2B8(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
@@ -14797,29 +14802,29 @@ public:
 	float                                        RecoilYawRange;                                    // 0x348(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        RecoilPitchTotalMax;                               // 0x34C(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        RecoilDecaySpeed;                                  // 0x350(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3201[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_48A8[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TSubclassOf<class UCameraShakeBase>          ShotCameraShake;                                   // 0x358(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EWeaponCoopType                   WeaponCoopType;                                    // 0x360(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EPalWeaponType                    WeaponType;                                        // 0x361(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsRequiredBullet;                                  // 0x362(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3202[0x1];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_48A9[0x1];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class FName                                  BulletItemName;                                    // 0x364(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3203[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_48AA[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UMaterialInterface*                    ShootBlurMaterial;                                 // 0x370(0x8)(Edit, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UCurveFloat*                           ShootBlurAlphaCurve;                               // 0x378(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FPalSpecialAttackRateInfo>     SpecialAttackRateInfos;                            // 0x380(0x10)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	TSoftObjectPtr<class UTexture2D>             WeaponIconTexture;                                 // 0x390(0x30)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EPalDamageAnimationReactionType   WeaponBulletDamageReactionType;                    // 0x3C0(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3205[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_48AC[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TSoftClassPtr<class UPalSoundSlot>           PalSoundSlotClass;                                 // 0x3C8(0x30)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TMap<enum class EWeaponPlaySoundType, struct FPalDataTableRowName_SoundID> PlaySoundIds;                                      // 0x3F8(0x50)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	bool                                         IsEmptyOtomoPal;                                   // 0x448(0x1)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3206[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_48AD[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        CoolDownTime;                                      // 0x44C(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMaterialInstanceDynamic*              ShootBlurMaterialDynamic;                          // 0x450(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3207[0x14];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_48AF[0x14];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalItemId                            OwnItemID;                                         // 0x46C(0x28)(Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3208[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_48B0[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalItemData                          OwnItemData;                                       // 0x498(0x10)(Transient, NoDestructor, NativeAccessSpecifierPrivate)
 	class UPalStaticWeaponItemData*              OwnWeaponStaticData;                               // 0x4A8(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalDynamicWeaponItemDataBase*         OwnWeaponDynamicData;                              // 0x4B0(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -14828,15 +14833,15 @@ public:
 	float                                        RecoilPowerRate;                                   // 0x510(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         IsScopeMode;                                       // 0x514(0x1)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         IsOneBulletReloadWeapon;                           // 0x515(0x1)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_320A[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_48B1[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        DelayDestorySecond;                                // 0x518(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         IsUnnecessaryDynamicData;                          // 0x51C(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	enum class EPalShooterFlagContainerPriority  ShooterFlagPriority;                               // 0x51D(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_320B[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_48B3[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TSubclassOf<class APalBackWeaponBase>        BackWeaponClass;                                   // 0x520(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class APalBackWeaponBase*                    BackWeaponModel;                                   // 0x528(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                        LoadoutSelectorIndex;                              // 0x530(0x4)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_320C[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_48B4[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalWeaponBase* GetDefaultObj();
@@ -14954,12 +14959,12 @@ public:
 class UPalNavigationInvokerComponent : public UNavigationInvokerComponent
 {
 public:
-	uint8                                        Pad_321C[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_48CC[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	bool                                         bIsAutoActivateInvoker;                            // 0xB0(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bIsWaitWorldPartition;                             // 0xB1(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_321D[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_48CD[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FIntPoint                             AreaBelongTo;                                      // 0xB4(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_321E[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_48CF[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FFlagContainer                        IsDisableInvorkerFlag;                             // 0xC0(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
 
 	static class UClass* StaticClass();
@@ -14975,9 +14980,9 @@ public:
 class UPalNavigationSystemV1 : public UNavigationSystemV1
 {
 public:
-	uint8                                        Pad_3221[0x48];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_48D2[0x48];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        UpdateInvokerCounter;                              // 0x15D8(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3222[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_48D3[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalNavigationSystemV1* GetDefaultObj();
@@ -15034,6 +15039,7 @@ public:
 	void Notify_Multicast_FVector(struct FGuid& BaseCampId, class FName FunctionName, const struct FVector& Value);
 	void Notify_Multicast_FPalNetArchive(struct FGuid& BaseCampId, class FName FunctionName, const struct FPalNetArchive& Value);
 	void Notify_Multicast_bool(struct FGuid& BaseCampId, class FName FunctionName, bool Value);
+	void BroadcastBaseCampWorkerMealLog_Server(struct FPalMealLogDisplayData& DisplayData);
 	void BroadcastBaseCampWorkerLog_Server(enum class EPalLogType DisplayLogType, struct FPalInstanceID& WorkerCharacterInstanceId, class FName& EventDataID);
 	void BroadcastBaseCampLog_Server(struct FPalMonsterControllerBaseCampLogContent& LogContent);
 	void AddBaseCampWorkerLog_Client(enum class EPalLogType DisplayLogType, struct FPalInstanceID& WorkerCharacterInstanceId, class FName& EventDataID);
@@ -15152,7 +15158,7 @@ public:
 class UPalNetworkIndividualComponent : public UActorComponent
 {
 public:
-	uint8                                        Pad_32AD[0x168];                                   // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_49B3[0x168];                                   // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalNetworkIndividualComponent* GetDefaultObj();
@@ -15439,7 +15445,7 @@ public:
 class APalNetworkTransmitter : public AActor
 {
 public:
-	uint8                                        Pad_338F[0x50];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4BA3[0x50];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalNetworkMapObjectComponent*         MapObject;                                         // 0x2E0(0x8)(Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalNetworkItemComponent*              Item;                                              // 0x2E8(0x8)(Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalNetworkBaseCampComponent*          BaseCamp;                                          // 0x2F0(0x8)(Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -15492,7 +15498,7 @@ public:
 class UPalNetworkWorkProgressComponent : public UActorComponent
 {
 public:
-	uint8                                        Pad_3394[0x50];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4BB4[0x50];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalNetworkWorkProgressComponent* GetDefaultObj();
@@ -15532,7 +15538,7 @@ class UPalNiagaraDataInterfaceSoundPlayer : public UNiagaraDataInterface
 public:
 	class UAkAudioEvent*                         AkEvent;                                           // 0x38(0x8)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        FadeOutDuration;                                   // 0x40(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3396[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4BB7[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalNiagaraDataInterfaceSoundPlayer* GetDefaultObj();
@@ -15573,7 +15579,7 @@ public:
 	FMulticastInlineDelegateProperty_            OnInitializeEnd;                                   // 0x28(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMap<enum class EPalWeaponType, struct FPalNPCWeaponCombatInfo> CombatAIParamMap;                                  // 0x38(0x50)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
 	class AActor*                                ShooterHuman;                                      // 0x88(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_33A3[0x50];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4BC8[0x50];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalNPCAIWeaponHandle* GetDefaultObj();
@@ -15624,7 +15630,7 @@ public:
 class UPalNPCInteractCondition : public UObject
 {
 public:
-	uint8                                        Pad_33A8[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4BCF[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalNPCInteractCondition* GetDefaultObj();
@@ -15651,11 +15657,11 @@ public:
 class UPalNPCInteractionComponent : public UActorComponent
 {
 public:
-	uint8                                        Pad_33AC[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4BE1[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UDataTable*                            NPCInteractionDataTable;                           // 0xA8(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDataTable*                            NPCInteractConditionConstValDataTable;             // 0xB0(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UPalNPCInteractConditionFunctions> ConditionFunctionClass;                            // 0xB8(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_33AE[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4BE3[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<class FName, enum class EPalIncidentTalkType> TalkTypeMap;                                       // 0xD0(0x50)(Edit, EditConst, NativeAccessSpecifierPrivate)
 	TMap<class FName, class UPalNPCInteractCondition*> InteractConditions;                                // 0x120(0x50)(Edit, EditConst, NativeAccessSpecifierPrivate)
 	class UPalNPCInteractConditionFunctions*     ConditionFunctions;                                // 0x170(0x8)(Edit, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -15687,13 +15693,13 @@ public:
 class UPalNPCManager : public UObject
 {
 public:
-	uint8                                        Pad_33BB[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4BFF[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TSubclassOf<class UNavigationQueryFilter>    AIOnNavMeshFilterClass;                            // 0x30(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TMap<class UPalIndividualCharacterHandle*, FDelegateProperty_> CallbackMap;                                       // 0x38(0x50)(Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
 	TMap<class UPalIndividualCharacterHandle*, struct FPalNPCSpawnInfo> SpawnInfoMap;                                      // 0x88(0x50)(Transient, NativeAccessSpecifierPrivate)
 	class UPalWildPalDrinkWaterSpotProvider*     DrinkWaterSpotProvider;                            // 0xD8(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TMap<class FName, bool>                      RespawnDisableFlag;                                // 0xE0(0x50)(Transient, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_33BD[0x50];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C03[0x50];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	TSubclassOf<class APalAIController>          NPCAIControllerBaseClass;                          // 0x180(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UDataTable*                            UniqueNPCDataTable;                                // 0x188(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UDataTable*                            NPCOneTalkDataTable;                               // 0x190(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -15754,7 +15760,7 @@ public:
 	bool                                         bDoSpawnedTick;                                    // 0x294(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	enum class EPalSpawnRadiusType               SpawnRadiusType;                                   // 0x295(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         IsSquadBehaviour;                                  // 0x296(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_33D8[0x1];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C37[0x1];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class FString                                DebugOrganizationName;                             // 0x298(0x10)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        LocationResetDistance_SpawnerToCharacterTooFar;    // 0x2A8(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        LocationResetHeight_SpawnerToCharacterTooLow;      // 0x2AC(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -15762,12 +15768,12 @@ public:
 	class UPalNavigationInvokerComponent*        NavInvokerComponent;                               // 0x2C0(0x8)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TArray<struct FVector>                       NPCLocations;                                      // 0x2C8(0x10)(BlueprintVisible, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 	FMulticastInlineDelegateProperty_            OnCreatedGroupDelegate;                            // 0x2D8(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                        Pad_33DC[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C38[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FGuid                                 WildGroupGuid;                                     // 0x2F8(0x10)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalSquad*                             Squad;                                             // 0x308(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FFlagContainer                        DisableSpawn;                                      // 0x310(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	enum class EPalSpwnerImportanceType          ImportanceType;                                    // 0x360(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_33DD[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4C39[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalNPCSpawnerBase* GetDefaultObj();
@@ -15825,7 +15831,7 @@ class UPalNPCTalkComponent : public UActorComponent
 {
 public:
 	bool                                         IsTalking;                                         // 0xA0(0x1)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_33EC[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C3C[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnTalkStartDelegate;                               // 0xA8(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnTalkEndDelegate;                                 // 0xB8(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
@@ -15846,18 +15852,18 @@ public:
 class UPalNPCTalkSystem : public UObject
 {
 public:
-	uint8                                        Pad_33F5[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C3E[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalTalkWidgetParameter*               TalkWidgetParameter;                               // 0x30(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalTalkWindowWidgetBase*              TalkWidget;                                        // 0x38(0x8)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FPalNPCTalkData                       NowExecutedTalkData;                               // 0x40(0x58)(NativeAccessSpecifierPrivate)
 	int32                                        NowTalkDataIndex;                                  // 0x98(0x4)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FName                                  NowTalkDataSeqenceName;                            // 0x9C(0x8)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_33F6[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C3F[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<class FName>                          DefaultYesNoChoiceText;                            // 0xA8(0x10)(ZeroConstructor, NativeAccessSpecifierPrivate)
 	class UFunction*                             TargetFunc;                                        // 0xB8(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UDataTable*                            FuncParam;                                         // 0xC0(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	enum class EPalNPCTalkCustomFunctionResult   CustomFuncResult;                                  // 0xC8(0x1)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_33F7[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C40[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        CustomFuncChoseIndex;                              // 0xCC(0x4)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -15895,7 +15901,7 @@ public:
 	struct FPalContainerId                       WeaponContainerId;                                 // 0x78(0x10)(Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class APalWeaponBase*                        WeaponActorBP;                                     // 0x88(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         IsDefaultEquipWeapon;                              // 0x90(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3400[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4C41[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalNPCWeaponGenerator* GetDefaultObj();
@@ -15909,7 +15915,7 @@ public:
 class UPalObjectCollector : public UPalWorldSubsystem
 {
 public:
-	uint8                                        Pad_3402[0x60];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C42[0x60];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<class APalCharacter*>                 PalCharacter_All;                                  // 0xD0(0x10)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
 	TArray<class APalCharacter*>                 PalCharacter_NPC;                                  // 0xE0(0x10)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
 	TArray<class APalCharacter*>                 PalCharacter_Player;                               // 0xF0(0x10)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
@@ -15920,12 +15926,12 @@ public:
 	TArray<class APalMapObjectSpawnerBase*>      CalculationNearSpawnerBase_FromPlayer;             // 0x1C0(0x10)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
 	TArray<struct FVector>                       BaseCampLocationList;                              // 0x1D0(0x10)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
 	bool                                         bIsUpdateBaseCamp;                                 // 0x1E0(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3405[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C43[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<class APalMapObjectSpawnerBase*>      CalculationNearSpawnerBase_FromBaseCamp;           // 0x1E8(0x10)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
 	float                                        NearStartDistanceForSpawnerBase;                   // 0x1F8(0x4)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        NearEndDistanceForSpawnerBase;                     // 0x1FC(0x4)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        NearDistanceForSpawnerBaseFromBaseCamp;            // 0x200(0x4)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3406[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4C44[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalObjectCollector* GetDefaultObj();
@@ -16015,16 +16021,16 @@ public:
 	struct FPalOptionKeyboardSettings            KeyboardSettings;                                  // 0x4E0(0x10)(NoDestructor, Protected, NativeAccessSpecifierProtected)
 	struct FPalOptionPadSettings                 PadSettings;                                       // 0x4F0(0x18)(NoDestructor, Protected, NativeAccessSpecifierProtected)
 	struct FPalKeyConfigSettings                 KeyConfigSettings;                                 // 0x508(0xC0)(Protected, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3429[0x20];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C4A[0x20];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        BaseFov;                                           // 0x5E8(0x4)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_342A[0x14];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C4B[0x14];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	class FString                                Namespace;                                         // 0x600(0x10)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_342B[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C4C[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UDataTable*                            OptionWorldPresetTable;                            // 0x618(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UDataTable*                            OptionWorldModePresetTable;                        // 0x620(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UDataTable*                            OptionGraphicsPresetTable;                         // 0x628(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TSubclassOf<class APalPlayerCharacter>       PalPlayerCharacterClass;                           // 0x630(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_342D[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4C4D[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalOptionSubsystem* GetDefaultObj();
@@ -16081,7 +16087,7 @@ class UPalOtomoAttackStopJudgeByBall : public UObject
 {
 public:
 	bool                                         IsProhibitAttack;                                  // 0x28(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3432[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4C4E[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalOtomoAttackStopJudgeByBall* GetDefaultObj();
@@ -16113,7 +16119,7 @@ public:
 	FMulticastInlineDelegateProperty_            OnOtomoSpawnedDelegate;                            // 0xE0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
 	class UPalOtomoSpawnCollisionChecker*        CollisionChecker;                                  // 0xF0(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	enum class EPalOtomoPalOrderType             OtomoOrder;                                        // 0xF8(0x1)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_346B[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C5D[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalIndividualCharacterContainer*      CharacterContainer;                                // 0x100(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TArray<class UPalIndividualCharacterHandle*> CreatingHandleCache;                               // 0x108(0x10)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 
@@ -16197,7 +16203,7 @@ public:
 class UPalOtomoSpawnCollisionChecker : public UObject
 {
 public:
-	uint8                                        Pad_346D[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4C5F[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalOtomoSpawnCollisionChecker* GetDefaultObj();
@@ -16246,7 +16252,7 @@ public:
 	TArray<struct FPalDataTableRowName_ItemData> RestrictionItems;                                  // 0x120(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	class FName                                  SkillName;                                         // 0x130(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EPalWazaID                        WazaID;                                            // 0x138(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3472[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C63[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FFixedPoint                           EffectTime;                                        // 0x13C(0x4)(Edit, DisableEditOnTemplate, EditConst, NoDestructor, NativeAccessSpecifierPublic)
 	struct FFixedPoint                           EffectTimeMax;                                     // 0x140(0x4)(Edit, DisableEditOnTemplate, EditConst, NoDestructor, NativeAccessSpecifierPublic)
 	struct FFixedPoint                           ExecCost;                                          // 0x144(0x4)(Edit, DisableEditOnTemplate, EditConst, NoDestructor, NativeAccessSpecifierPublic)
@@ -16268,9 +16274,9 @@ public:
 	TSubclassOf<class APalFunnelCharacter>       FunnelCharacterClass;                              // 0x180(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TSubclassOf<class APalAIController>          FunnelControllerClass;                             // 0x188(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	enum class EPalWazaID                        FunnelAttackWazaID;                                // 0x190(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3473[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C64[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalPartnerSkillPassiveSkill*          PassiveSkill;                                      // 0x198(0x8)(Edit, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3474[0x50];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C65[0x50];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	class FName                                  ActiveSkill_MainValue_Overview_EditorOnly;         // 0x1F0(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<float>                                ActiveSkill_MainValueByRank;                       // 0x1F8(0x10)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPrivate)
 
@@ -16348,11 +16354,11 @@ public:
 	bool                                         bIsRestricted;                                     // 0x39(0x1)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bRequireWorkerWorkingPassiveSkill;                 // 0x3A(0x1)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bIsWorking;                                        // 0x3B(0x1)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_347C[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C67[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<struct FPalPassivePartnerSkillIdAndParameters> PassiveSkills;                                     // 0x40(0x10)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPrivate)
 	TMap<struct FPalDataTableRowName_PassiveSkillData, struct FPalPassivePartnerSkillStatus> SkillStatus;                                       // 0x50(0x50)(Edit, EditConst, NativeAccessSpecifierPrivate)
 	int32                                        CurrentRank;                                       // 0xA0(0x4)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_347D[0x54];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4C68[0x54];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalPartnerSkillPassiveSkill* GetDefaultObj();
@@ -16391,11 +16397,11 @@ public:
 	FMulticastInlineDelegateProperty_            OnStartSkillEffectDelegate;                        // 0xA0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnChangeSkillEffectValueDelegate;                  // 0xB0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnEndSkillEffectDelegate;                          // 0xC0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                        Pad_34B4[0x50];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C6E[0x50];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<struct FPalPassiveSkillEffectInfos>   SkillInfos;                                        // 0x120(0x10)(Net, ZeroConstructor, RepNotify, NativeAccessSpecifierPrivate)
 	TArray<struct FPalPassiveSkillEffectInfos>   SkillInfosMirror;                                  // 0x130(0x10)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
 	TMap<enum class EPalPassiveSkillEffectType, enum class EPalStatusID> SkillStatusMap;                                    // 0x140(0x50)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	uint8                                        Pad_34B5[0x50];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4C6F[0x50];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalPassiveSkillComponent* GetDefaultObj();
@@ -16445,7 +16451,7 @@ class UPalPersistentSoundPlayer : public UObject
 public:
 	class UAkAudioEvent*                         AudioEvent;                                        // 0x28(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        FadeDuration;                                      // 0x30(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_34CA[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C74[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TWeakObjectPtr<class AActor>                 PlayActor;                                         // 0x38(0x8)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -16502,9 +16508,9 @@ class UPalPlayerAccount : public UObject
 public:
 	struct FGuid                                 PlayerUId;                                         // 0x28(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	enum class EPalPlayerAccountState            State;                                             // 0x38(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_34DE[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C7A[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalIndividualCharacterHandle*         IndividualHandle;                                  // 0x40(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_34DF[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C7B[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FTransform                            LastSavedTransform;                                // 0x50(0x60)(Edit, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalPlayerOtomoData*                   OtomoData;                                         // 0xB0(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalPlayerDataCharacterMake*           CharacterMakeData;                                 // 0xB8(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -16513,7 +16519,7 @@ public:
 	class UPalTechnologyData*                    TechnologyData;                                    // 0xD0(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalPlayerRecordData*                  RecordData;                                        // 0xD8(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bIsSelectedInitMapPoint;                           // 0xE0(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_34E0[0xF];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4C7C[0xF];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalPlayerAccount* GetDefaultObj();
@@ -16530,7 +16536,7 @@ public:
 	FMulticastInlineDelegateProperty_            OnChangeNearEnemyDelegate;                         // 0x48(0x10)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
 	TMap<struct FPalInstanceID, struct FPalPlayerBattleEnemyInfo> BattleEnemyList;                                   // 0x58(0x50)(Transient, NativeAccessSpecifierPrivate)
 	bool                                         IsNearCommonEnemy;                                 // 0xA8(0x1)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_34E1[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C7D[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        NearDistanceSqr;                                   // 0xAC(0x4)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FTimerHandle                          DistanceUpdateTimerHandle;                         // 0xB0(0x8)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
@@ -16544,7 +16550,7 @@ public:
 class APalPlayerCharacter : public APalCharacter
 {
 public:
-	uint8                                        Pad_350E[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C81[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalShooterComponent*                  ShooterComponent;                                  // 0x800(0x8)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UPalInteractComponent*                 InteractComponent;                                 // 0x808(0x8)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UPalBuilderComponent*                  BuilderComponent;                                  // 0x810(0x8)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -16570,20 +16576,20 @@ public:
 	float                                        PlayerCameraYaw;                                   // 0x928(0x4)(Net, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        PlayerCameraPitch;                                 // 0x92C(0x4)(Net, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         IsAdjustedLocationByLoad;                          // 0x930(0x1)(Net, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3515[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C82[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UAnimMontage*                          IdleAnimMontage;                                   // 0x938(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalPlayerBattleSituation*             PlayerBattleSituation;                             // 0x940(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         IsNearCommonEnemyFlag;                             // 0x948(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bIsSetRespawnTelemetry;                            // 0x949(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3517[0x6];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C83[0x6];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FTimerHandle                          InDoorTimerHandle;                                 // 0x950(0x8)(Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3518[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C84[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TSubclassOf<class UPalPlayerGenderChanger>   GenderChangerClass;                                // 0x960(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalPlayerGenderChanger*               GenderChanger;                                     // 0x968(0x8)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bSpectatorMode;                                    // 0x970(0x1)(BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3519[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C85[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalPlayerDataCharacterMakeInfo       CharacterMakeInfo;                                 // 0x974(0x94)(Net, Transient, RepNotify, NoDestructor, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_351A[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4C86[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalPlayerCharacter* GetDefaultObj();
@@ -16652,7 +16658,7 @@ class APalPlayerController : public ACommonPlayerController
 {
 public:
 	bool                                         bAdmin;                                            // 0x850(0x1)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_357E[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C8F[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalAIActionComponent*                 AIActionComponent;                                 // 0x858(0x8)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UPalNetworkMulticastGateComponent*     MulticastGateComponent;                            // 0x860(0x8)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UPalCutsceneComponent*                 CutsceneComponent;                                 // 0x868(0x8)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -16660,14 +16666,14 @@ public:
 	float                                        WeaponPaletteLongPressTime;                        // 0x878(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        PawnChangeCameraInterpChangeTime;                  // 0x87C(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsOpenConstructionMenu;                            // 0x880(0x1)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3580[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C90[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnCoopRequestDelegate;                             // 0x888(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnCoopReleaseDelegate;                             // 0x898(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnInteractDelegate;                                // 0x8A8(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnInteract2Delegate;                               // 0x8B8(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnPressedJumpDelegate;                             // 0x8C8(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnInputMoveForwardDelegate;                        // 0x8D8(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3583[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C91[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnPressedThrowPalButtonDelegate;                   // 0x8F8(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPrivate)
 	FMulticastInlineDelegateProperty_            OnReleasedThrowPalButtonDelegate;                  // 0x908(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPrivate)
 	FMulticastInlineDelegateProperty_            OnPressedSpawnPalButtonDelegate;                   // 0x918(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPrivate)
@@ -16676,9 +16682,9 @@ public:
 	FMulticastInlineDelegateProperty_            OnLongReleasedSpawnPalButtonDelegate;              // 0x948(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPrivate)
 	FMulticastInlineDelegateProperty_            OnPressedPartnerInstructionsButtonDelegate;        // 0x958(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPrivate)
 	FMulticastInlineDelegateProperty_            OnPressConstructionMenuButtonDelegate;             // 0x968(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3585[0xC8];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C92[0xC8];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	class UCurveFloat*                           RecoilCurve;                                       // 0xA40(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3586[0x70];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C93[0x70];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               TimerGaugeDisplayOffset;                           // 0xAB8(0x18)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TSubclassOf<class UCameraShakeBase>          DamageCameraShake;                                 // 0xAD0(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TSubclassOf<class UPalPlayerDamageCamShakeRegulator> DamageCamShakeRegulatorClass;                      // 0xAD8(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -16686,14 +16692,14 @@ public:
 	TArray<class UPalLongPressObject*>           LongPressObjects;                                  // 0xAE8(0x10)(ZeroConstructor, NativeAccessSpecifierPrivate)
 	TMap<class FName, float>                     CameraRotateModifierMap;                           // 0xAF8(0x50)(NativeAccessSpecifierPrivate)
 	TArray<struct FRotator>                      AutoAimRotatorList;                                // 0xB48(0x10)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3588[0x100];                                   // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4C94[0x100];                                   // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FDelegateTickFunction                 PawnAfterTickFunction;                             // 0xC58(0x38)(NativeAccessSpecifierPrivate)
 	class AActor*                                AutoAimTarget;                                     // 0xC90(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FVector                               ReticleTargetOffset;                               // 0xC98(0x18)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FVector2D                             GamePadNativeAxis;                                 // 0xCB0(0x10)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FVector2D                             MouseNativeAxis;                                   // 0xCC0(0x10)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FRotator                              CacheActorRotator;                                 // 0xCD0(0x18)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_358B[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4C95[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalPlayerController* GetDefaultObj();
@@ -16840,7 +16846,7 @@ public:
 class UPalPlayerDataCharacterMake : public UObject
 {
 public:
-	uint8                                        Pad_3598[0x98];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4C97[0x98];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalPlayerDataCharacterMake* GetDefaultObj();
@@ -16863,7 +16869,7 @@ public:
 	class UPalIndividualCharacterSlotsObserver*  SlotObserver;                                      // 0x38(0x8)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FGuid                                 OwnerPlayerUId;                                    // 0x40(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         IsOpen;                                            // 0x50(0x1)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_359F[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4C99[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalPlayerDataPalStorage* GetDefaultObj();
@@ -16897,7 +16903,7 @@ public:
 	struct FPlayerGenderParams                   FemaleCharacterParams;                             // 0xD0(0xA8)(Transient, Protected, NativeAccessSpecifierProtected)
 	bool                                         bIsEpmtyFamaleParams;                              // 0x178(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bIsFamale;                                         // 0x179(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_35A9[0x6];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4C9A[0x6];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalPlayerGenderChanger* GetDefaultObj();
@@ -16911,7 +16917,7 @@ class UPalPlayerHeadAnimInstance : public UAnimInstance
 public:
 	struct FVector                               PlayerEyeLocationRight;                            // 0x348(0x18)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FVector                               PlayerEyeLocationLeft;                             // 0x360(0x18)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_35AE[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4C9B[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalPlayerHeadAnimInstance* GetDefaultObj();
@@ -16961,7 +16967,7 @@ public:
 class UPalPlayerInventoryData : public UObject
 {
 public:
-	uint8                                        Pad_3637[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4CC1[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnUpdateInventoryContainerDelegate;                // 0x30(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnUpdateEssentialContainerDelegate;                // 0x40(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnUpdateLoadoutSlotDelegate;                       // 0x50(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -16974,16 +16980,16 @@ public:
 	FMulticastInlineDelegateProperty_            OnPickupItemDelegate;                              // 0xC0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnGetItemFromConvertItemMapObject;                 // 0xD0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	struct FPalPlayerDataInventoryInfo           InventoryInfo;                                     // 0xE0(0x60)(Edit, Net, DisableEditOnTemplate, EditConst, RepNotify, NoDestructor, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3639[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4CC2[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FTimerHandle                          FullInventoryLogGuardTimerHandle;                  // 0x148(0x8)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        NowItemWeight;                                     // 0x150(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        MaxInventoryWeight;                                // 0x154(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        MaxInventoryWeight_Cached;                         // 0x158(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_363E[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4CC3[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalItemContainerMultiHelper*          InventoryMultiHelper;                              // 0x160(0x8)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        PassiveBuffedMaxWeight;                            // 0x168(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGuid                                 OwnerPlayerUId;                                    // 0x16C(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_363F[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4CC4[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalMoneyData*                         MoneyData;                                         // 0x180(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UAkAudioEvent*                         EquipmentBreakAudioEvent;                          // 0x188(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
@@ -17051,7 +17057,7 @@ public:
 class UPalPlayerManager : public UPalWorldSubsystem
 {
 public:
-	uint8                                        Pad_364C[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4CC5[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalPlayerClassStructSet              PlayerClassStructSet;                              // 0x88(0x28)(Edit, DisableEditOnInstance, NoDestructor, Protected, NativeAccessSpecifierProtected)
 	TMap<struct FGuid, class UPalPlayerAccount*> PlayerAccountMap;                                  // 0xB0(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
 	TMap<struct FGuid, class UPalLoginPlayer*>   LoginPlayerMap;                                    // 0x100(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
@@ -17071,7 +17077,7 @@ class UPalPlayerMenuUI : public UUserWidget
 public:
 	struct FPalItemSlotId                        SelectItemSlot;                                    // 0x280(0x14)(BlueprintVisible, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         IsDraging;                                         // 0x294(0x1)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3663[0x3];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4CC7[0x3];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalPlayerMenuUI* GetDefaultObj();
@@ -17097,7 +17103,7 @@ public:
 class UPalPlayerMenuUIManager : public UObject
 {
 public:
-	uint8                                        Pad_3666[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4CC8[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalPlayerMenuUI*                      PlayerMenuUI;                                      // 0x40(0x8)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	static class UClass* StaticClass();
@@ -17116,7 +17122,7 @@ class UPalPlayerOtomoData : public UObject
 public:
 	struct FPalContainerId                       OtomoCharacterContainerId;                         // 0x28(0x10)(Edit, DisableEditOnTemplate, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	enum class EPalOtomoPalOrderType             OtomoOrder;                                        // 0x38(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3669[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4CC9[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalPlayerOtomoData* GetDefaultObj();
@@ -17134,7 +17140,7 @@ public:
 	float                                        FirstCoolTimer;                                    // 0x48(0x4)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        SecondCoolTimer;                                   // 0x4C(0x4)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        CoolDownTime;                                      // 0x50(0x4)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_367E[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4CCE[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalPlayerPartyPalHolder* GetDefaultObj();
@@ -17170,14 +17176,14 @@ public:
 	int32                                        PalCaptureCountBonusCount_Tier1;                   // 0x660(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        PalCaptureCountBonusCount_Tier2;                   // 0x664(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        PalCaptureCountBonusCount_Tier3;                   // 0x668(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_368C[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4CCF[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalPlayerRecordDataRepInfoArray_BoolVal RelicObtainForInstanceFlag;                        // 0x670(0x178)(Edit, BlueprintVisible, BlueprintReadOnly, Net, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPublic)
 	int32                                        RelicPossessNum;                                   // 0x7E8(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        RelicPossessNumMirror;                             // 0x7EC(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FPalPlayerRecordDataRepInfoArray_BoolVal NoteObtainForInstanceFlag;                         // 0x7F0(0x178)(Edit, BlueprintVisible, BlueprintReadOnly, Net, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPublic)
 	struct FPalPlayerRecordDataRepInfoArray_BoolVal FastTravelPointUnlockFlag;                         // 0x968(0x178)(Edit, BlueprintVisible, BlueprintReadOnly, Net, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPublic)
 	struct FPalStageInstanceId                   EnteringStageInstanceId;                           // 0xAE0(0x14)(Edit, BlueprintVisible, BlueprintReadOnly, Net, DisableEditOnTemplate, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_368D[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4CD0[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<struct FGuid>                         BuildingObjectMapObjectInstanceIds;                // 0xAF8(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPublic)
 	class FString                                Debug_EnteringStageDataLayerName;                  // 0xB08(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                Debug_LastEnteredStageDataLayerName;               // 0xB18(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -17225,12 +17231,12 @@ public:
 	TMap<enum class EPalPlayerInventoryType, int32> Local_LoadoutSelectedIndexMap;                     // 0x168(0x50)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPublic)
 	TMap<class FName, int32>                     Local_NewUnlockedBuilds;                           // 0x1B8(0x50)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPublic)
 	bool                                         Local_IsBuildMenuChecked;                          // 0x208(0x1)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_36BC[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4CDC[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<class FName, int32>                     Local_NPCTalkCountMap;                             // 0x210(0x50)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPublic)
 	TMap<class FName, bool>                      Local_NewUnlockedTechs;                            // 0x260(0x50)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPublic)
 	TMap<class FName, bool>                      Local_ShowedCutsceneFlag;                          // 0x2B0(0x50)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPublic)
 	int32                                        Local_PlayTime;                                    // 0x300(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_36BE[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4CDD[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalPlayerLocalRecordData* GetDefaultObj();
@@ -17265,7 +17271,7 @@ class APalPlayerState : public APlayerState
 {
 public:
 	struct FUniqueNetIdRepl                      WinGDKUniqueId;                                    // 0x3A8(0x30)(Edit, Net, DisableEditOnTemplate, EditConst, RepNotify, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3737[0x88];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4CE0[0x88];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnReportCrimeIdsDelegate;                          // 0x460(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnReleaseWantedDelegate;                           // 0x470(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnStartCrimeDelegate;                              // 0x480(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -17274,7 +17280,7 @@ public:
 	struct FGuid                                 PlayerUId;                                         // 0x4B0(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FPalInstanceID                        IndividualHandleId;                                // 0x4C0(0x30)(Edit, BlueprintVisible, BlueprintReadOnly, Net, DisableEditOnTemplate, EditConst, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FVector                               CachedPlayerLocation;                              // 0x4F0(0x18)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3738[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4CE1[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FQuat                                 CachedPlayerRotation;                              // 0x510(0x20)(Edit, Net, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UPalPlayerOtomoData*                   OtomoData;                                         // 0x530(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UPalPlayerDataCharacterMake*           CharacterMakeData;                                 // 0x538(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -17284,29 +17290,29 @@ public:
 	class UPalPlayerRecordData*                  RecordData;                                        // 0x558(0x8)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bIsSelectedInitMapPoint;                           // 0x560(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bDetectedInValidPlayer;                            // 0x561(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3739[0x6];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4CE2[0x6];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalPlayerLocalRecordData*             LocalRecordData;                                   // 0x568(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UPalWorldMapUIData*                    WorldMapData;                                      // 0x570(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UPalQuestManager*                      QuestManager;                                      // 0x578(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UPalGroupGuildBase*                    GuildBelongTo;                                     // 0x580(0x8)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, EditConst, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_373B[0x20];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4CE3[0x20];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalNetworkPlayerStateComponent*       NetworkComp;                                       // 0x5A8(0x8)(Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UPalSyncTeleportComponent*             SyncTeleportComp;                                  // 0x5B0(0x8)(Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FDateTime                             StartPlayTime;                                     // 0x5B8(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bIsNewCharacter;                                   // 0x5C0(0x1)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_373E[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4CE4[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalIndividualCharacterHandle*         TryCreateIndividualHandleTemporarily;              // 0x5C8(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FGuid                                 LoginTryingPlayerUId_InServer;                     // 0x5D0(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3740[0x1A];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4CE5[0x1A];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	bool                                         bIsCompleteSyncPlayerFromServer_InClient;          // 0x5FA(0x1)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3741[0x5];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4CE6[0x5];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalPlayerAccountInitData             AcountInitData;                                    // 0x600(0xA8)(Transient, NativeAccessSpecifierPrivate)
 	TArray<struct FPalLogInfo_DropPal>           DropPalInfo;                                       // 0x6A8(0x10)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
 	class UPalDialogParameter_RequestJoinGuild*  RequestJoinGuildDialogParameter;                   // 0x6B8(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TMap<struct FGuid, struct FTimerHandle>      WaitLoadingWorldPartitionTimerMap;                 // 0x6C0(0x50)(Transient, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3745[0x50];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4CE7[0x50];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        ChatCounter;                                       // 0x760(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3746[0x5C];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4CE8[0x5C];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalPlayerState* GetDefaultObj();
@@ -17409,6 +17415,7 @@ public:
 	void CapturePalDelegate__DelegateSignature(struct FPalUIPalCaptureInfo& CaptureInfo);
 	void CallOrRegisterOnCompleteSyncPlayerFromServer_InClient(FDelegateProperty_ Delegate);
 	void CallOrRegisterOnCompleteLoadInitWorldPartition_InClient(FDelegateProperty_ Delegate);
+	void AddMealLog(TArray<struct FPalMealLogDisplayData>& DisplayDataArray);
 	void AddItemGetLog_ToClient(struct FPalStaticItemIdAndNum& ItemAndNum);
 	void AddFullInventoryLog_ToClient();
 };
@@ -17433,7 +17440,7 @@ public:
 class UPalPoseableMeshComponent : public USkeletalMeshComponent
 {
 public:
-	uint8                                        Pad_3769[0x1B0];                                   // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4CF4[0x1B0];                                   // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalPoseableMeshComponent* GetDefaultObj();
@@ -17503,7 +17510,7 @@ public:
 	FMulticastInlineDelegateProperty_            OnUpdatedBlockDelegate;                            // 0x28(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnCompletedBlockDelegate;                          // 0x38(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	bool                                         IsAutoComplete;                                    // 0x48(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_376B[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4CF6[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalQuestBlock* GetDefaultObj();
@@ -17543,7 +17550,7 @@ class UPalQuestBlock_CheckBossDefeat : public UPalQuestBlock
 {
 public:
 	enum class EPalBossType                      CheckBossType;                                     // 0x50(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_376C[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4CF7[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FTimerHandle                          CheckTimerHandle;                                  // 0x58(0x8)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -17616,7 +17623,7 @@ public:
 	int32                                        RequireBuildCount;                                 // 0x58(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	int32                                        NowBuildCount;                                     // 0x5C(0x4)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	int32                                        NowBlueprintCount;                                 // 0x60(0x4)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_376D[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4CF8[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<TWeakObjectPtr<class UPalMapObjectModel>> CheckMapObjectModels;                              // 0x68(0x10)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
 	struct FTimerHandle                          CheckTimerHandle;                                  // 0x78(0x8)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
@@ -17735,7 +17742,7 @@ public:
 	FMulticastInlineDelegateProperty_            OnUpdatedQuestDelegate;                            // 0x28(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnCompletedQuestDelegate;                          // 0x38(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UPalQuestBlock*                        NowQuestBlock;                                     // 0x48(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_376E[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4CF9[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<TSoftClassPtr<class UPalQuestBlock>>  QuestBlockList;                                    // 0x60(0x10)(Edit, ZeroConstructor, DisableEditOnInstance, UObjectWrapper, NativeAccessSpecifierPrivate)
 	struct FPalCommonQuestRewardData             CommonRewardData;                                  // 0x70(0x58)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
 	TSoftClassPtr<class UPalQuestRewardGiver>    CustomQuestRewardGiverClass;                       // 0xC8(0x30)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -17810,10 +17817,10 @@ class UPalRadarChartWidgetBase : public UPalCustomPrimitiveWidget
 {
 public:
 	enum class EPalRadarChartDrawType            DrawType;                                          // 0x450(0x1)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_376F[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4CFA[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        ParameterNum;                                      // 0x454(0x4)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         IsMinMaxValuePerParam;                             // 0x458(0x1)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3770[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4CFB[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<int32>                                ParameterValueMin;                                 // 0x460(0x10)(Edit, BlueprintVisible, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 	TArray<int32>                                ParameterValueMax;                                 // 0x470(0x10)(Edit, BlueprintVisible, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 	struct FColor                                FillColor;                                         // 0x480(0x4)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -17821,7 +17828,7 @@ public:
 	struct FColor                                BorderColor;                                       // 0x488(0x4)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        borderSize;                                        // 0x48C(0x4)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         IsCheckParameterMaxValue;                          // 0x490(0x1)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3771[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4CFC[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalRadarChartWidgetBase* GetDefaultObj();
@@ -17851,10 +17858,10 @@ public:
 class UPalRandomIncidentActionBase : public UObject
 {
 public:
-	uint8                                        Pad_3772[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4CFD[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnRandomIncidentActionNotify;                      // 0x30(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	bool                                         bIsTickable;                                       // 0x40(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3773[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4CFE[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalRandomIncidentActionBase* GetDefaultObj();
@@ -17881,7 +17888,7 @@ public:
 	FMulticastInlineDelegateProperty_            OnExitAnyArea;                                     // 0x170(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	bool                                         bIsFinishWithIncidentSpawner;                      // 0x180(0x1)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	enum class EPalRandomIncidentSpawnerAreaType PrevEnterArea;                                     // 0x181(0x1)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3778[0xE];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4D03[0xE];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalRandomIncidentBase* GetDefaultObj();
@@ -17903,7 +17910,7 @@ class UPalRandomIncidentLotteryBase : public UObject
 {
 public:
 	float                                        LotteryRate;                                       // 0x28(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_377B[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D06[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<struct FPalRandomIncidentSpawnIncidentParameter> LotteryParameters;                                 // 0x30(0x10)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -17947,17 +17954,17 @@ public:
 	TMap<class FName, struct FPalRandomIncidentWalkPathReferenceData> WalkPointRefarences;                               // 0x290(0x50)(Edit, DisableEditOnTemplate, Protected, NativeAccessSpecifierProtected)
 	TSubclassOf<class UPalRandomIncidentLotteryBase> LotteryClass;                                      // 0x2E0(0x8)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        CoolDownTimeMinute;                                // 0x2E8(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3783[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D0E[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	double                                       CoolDownTimeSecRemain;                             // 0x2F0(0x8)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TMap<enum class EPalRandomIncidentSpawnerAreaType, float> AreaRadius;                                        // 0x2F8(0x50)(Edit, EditConst, NativeAccessSpecifierPrivate)
 	int32                                        PlayerId;                                          // 0x348(0x4)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3784[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D0F[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalIncidentBase*                      ExecIncident;                                      // 0x350(0x8)(Edit, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	enum class EPalRandomIncidentSpawnerStatus   Status;                                            // 0x358(0x1)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3785[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D10[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalIncidentDynamicParameterRandom*    Parameter;                                         // 0x360(0x8)(Edit, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalRandomIncidentLotteryBase*         Lottery;                                           // 0x368(0x8)(Edit, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3786[0x50];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4D11[0x50];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalRandomIncidentSpawnerBase* GetDefaultObj();
@@ -17987,7 +17994,7 @@ public:
 class UPalRCONSubsystem : public UGameInstanceSubsystem
 {
 public:
-	uint8                                        Pad_3787[0x190];                                   // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4D12[0x190];                                   // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalRCONSubsystem* GetDefaultObj();
@@ -17999,7 +18006,7 @@ public:
 class APalRecastNavMesh : public ARecastNavMesh
 {
 public:
-	uint8                                        Pad_3788[0xA0];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4D13[0xA0];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalRecastNavMesh* GetDefaultObj();
@@ -18054,7 +18061,7 @@ public:
 	TArray<class UClass*>                        AlwaysRelevantClasses;                             // 0x590(0x10)(ZeroConstructor, NativeAccessSpecifierPublic)
 	class UReplicationGraphNode_GridSpatialization2D* GridNode;                                          // 0x5A0(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UReplicationGraphNode_ActorList*       AlwaysRelevantNode;                                // 0x5A8(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_378A[0xE0];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4D15[0xE0];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalReplicationGraph* GetDefaultObj();
@@ -18066,10 +18073,10 @@ public:
 class UPalReplicationGraphNode_AlwaysRelevant_ForConnection : public UReplicationGraphNode
 {
 public:
-	uint8                                        Pad_378B[0x220];                                   // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D16[0x220];                                   // Fixing Size After Last Property  [ Dumper-7 ]
 	class AActor*                                LastPawn;                                          // 0x270(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<struct FAlwaysRelevantActorInfo>      PastRelevantActors;                                // 0x278(0x10)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_378C[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4D17[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalReplicationGraphNode_AlwaysRelevant_ForConnection* GetDefaultObj();
@@ -18081,7 +18088,7 @@ public:
 class UPalReplicationGraphNode_PlayerStateFrequencyLimiter : public UReplicationGraphNode
 {
 public:
-	uint8                                        Pad_378D[0x28];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4D18[0x28];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalReplicationGraphNode_PlayerStateFrequencyLimiter* GetDefaultObj();
@@ -18129,12 +18136,12 @@ class UPalRichTextBlockBase : public UCommonRichTextBlock
 public:
 	struct FDataTableRowHandle                   BindTextDatatableHandle;                           // 0x8C8(0x10)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                         IsAutoTextSetWhenWidgetRebuilt;                    // 0x8D8(0x1)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3790[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D1B[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class FName                                  DefaultStyleName;                                  // 0x8DC(0x8)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsAutoAdjustScale;                                 // 0x8E4(0x1)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3791[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D1C[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        MaxWidth;                                          // 0x8E8(0x4)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3792[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4D1D[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalRichTextBlockBase* GetDefaultObj();
@@ -18181,16 +18188,16 @@ public:
 	bool                                         bHiddenCharacterWhenAim;                           // 0x5F3(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bDisableLookAtByRide;                              // 0x5F4(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bDisableFullBodyIK_UniqueRide;                     // 0x5F5(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3794[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D1F[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TSubclassOf<class APalUniqueRideWeaponBase>  UniqueRidePalWeaponClass;                          // 0x5F8(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FPalDataTableRowName_PalMonsterData   UniqueRidePalID;                                   // 0x600(0x8)(Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnChangeRiding;                                    // 0x608(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3795[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D20[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TWeakObjectPtr<class UPalRiderComponent>     Rider;                                             // 0x61C(0x8)(ExportObject, Net, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3796[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D21[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalActiveSkillSlot*                   SkillSlot;                                         // 0x628(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class APalUniqueRideWeaponBase*              WeaponActor;                                       // 0x630(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3797[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4D22[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalRideMarkerComponent* GetDefaultObj();
@@ -18224,7 +18231,7 @@ public:
 	struct FFlagContainer                        DisableAdjustRotation;                             // 0x1C8(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	struct FVector                               DefaultMeshLocation;                               // 0x218(0x18)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FFlagContainer                        DisableUniqueRideIK;                               // 0x230(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_379E[0xC];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D29[0xC];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        DefaultJumpZVelocity;                              // 0x28C(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FVector                               InitialMeshLocation;                               // 0x290(0x18)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TMap<enum class EPalWeaponType, struct FVector2D> BackRideLimit;                                     // 0x2A8(0x50)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
@@ -18293,7 +18300,7 @@ class UPalLocalWorldSaveGame : public USaveGame
 {
 public:
 	int32                                        Version;                                           // 0x28(0x4)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_379F[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D2A[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalLocalSaveData                     SaveData;                                          // 0x30(0x2E0)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 
 	static class UClass* StaticClass();
@@ -18307,7 +18314,7 @@ class UPalWorldBaseInfoSaveGame : public USaveGame
 {
 public:
 	int32                                        Version;                                           // 0x28(0x4)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37A0[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D2B[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FDateTime                             Timestamp;                                         // 0x30(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FPalWorldBaseInfoSaveData             SaveData;                                          // 0x38(0x28)(NativeAccessSpecifierPublic)
 
@@ -18322,7 +18329,7 @@ class UPalWorldSaveGame : public USaveGame
 {
 public:
 	int32                                        Version;                                           // 0x28(0x4)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37A1[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D2C[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FDateTime                             Timestamp;                                         // 0x30(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FPalWorldSaveData                     WorldSaveData;                                     // 0x38(0x3A0)(NativeAccessSpecifierPublic)
 
@@ -18337,9 +18344,9 @@ class UPalWorldPlayerSaveGame : public USaveGame
 {
 public:
 	int32                                        Version;                                           // 0x28(0x4)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37A2[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D2D[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FDateTime                             Timestamp;                                         // 0x30(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37A3[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D2E[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalWorldPlayerSaveData               SaveData;                                          // 0x40(0x4B0)(NativeAccessSpecifierPublic)
 
 	static class UClass* StaticClass();
@@ -18353,7 +18360,7 @@ class UPalWorldOptionSaveGame : public USaveGame
 {
 public:
 	int32                                        Version;                                           // 0x28(0x4)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37A4[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D2F[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FDateTime                             Timestamp;                                         // 0x30(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FPalOptionWorldSaveData               OptionWorldData;                                   // 0x38(0x128)(NativeAccessSpecifierPublic)
 
@@ -18404,17 +18411,17 @@ public:
 	TArray<TScriptInterface<class IPalGameWorldDataSaveInterface>> GameSavers;                                        // 0xC0(0x10)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
 	TScriptInterface<class IPalGamePlayerDataSaveInterface> PlayerDataSaver;                                   // 0xD0(0x10)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         IsAppliedPlayerSaveData;                           // 0xE0(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_37AA[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D35[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalAsyncSaveProcessParallel          WorldSaveProcess;                                  // 0xE8(0x60)(NativeAccessSpecifierPrivate)
-	uint8                                        Pad_37AB[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D36[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	bool                                         bIsForceDisableAutoSave;                           // 0x158(0x1)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bIsUseBackupSaveData;                              // 0x159(0x1)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_37AC[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D37[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        NearSaveBackupNum;                                 // 0x15C(0x4)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                        MinutesSaveBackupNum;                              // 0x160(0x4)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                        HourSaveBackupNum;                                 // 0x164(0x4)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                        DaySaveBackupNum;                                  // 0x168(0x4)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_37AD[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4D38[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalSaveGameManager* GetDefaultObj();
@@ -18456,7 +18463,7 @@ public:
 	enum class EOrientation                      Orientation;                                       // 0xC40(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class ESlateVisibility                  ScrollBarVisibility;                               // 0xC41(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EConsumeMouseWheel                ConsumeMouseWheel;                                 // 0xC42(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37AF[0x5];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D3A[0x5];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector2D                             ScrollbarThickness;                                // 0xC48(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMargin                               ScrollbarPadding;                                  // 0xC58(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                         AlwaysShowScrollbar;                               // 0xC68(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -18464,15 +18471,15 @@ public:
 	bool                                         AllowOverscroll;                                   // 0xC6A(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bAnimateWheelScrolling;                            // 0xC6B(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EPalDescendantScrollDestination   NavigationDestination;                             // 0xC6C(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37B0[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D3B[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        NavigationScrollPadding;                           // 0xC70(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EPalScrollWhenFocusChanges        ScrollWhenFocusChanges;                            // 0xC74(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bAllowRightClickDragScrolling;                     // 0xC75(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37B1[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D3C[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        WheelScrollMultiplier;                             // 0xC78(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37B2[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D3D[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnUserScrolled;                                    // 0xC80(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37B3[0x20];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4D3E[0x20];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalScrollBox* GetDefaultObj();
@@ -18505,7 +18512,7 @@ public:
 	struct FMargin                               Padding;                                           // 0x38(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	enum class EHorizontalAlignment              HorizontalAlignment;                               // 0x48(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EVerticalAlignment                VerticalAlignment;                                 // 0x49(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37B4[0xE];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4D3F[0xE];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalScrollBoxSlot* GetDefaultObj();
@@ -18549,11 +18556,11 @@ public:
 	struct FVector                               IKPoleLocation_Foot_R;                             // 0x58(0x18)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                               IKPoleLocation_Foot_L;                             // 0x70(0x18)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         DisableLeftHandIK_BallMotion;                      // 0x88(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37B6[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D41[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UAnimSequence*                         RidingAnimation;                                   // 0x90(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UAnimMontage*                          RidingAnimation_Ball_Aim;                          // 0x98(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UAnimMontage*                          RidingAnimation_Ball_Fire;                         // 0xA0(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_37B7[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D42[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FWeaponNotifyAnimationInfo            WeaponNotifyAnimInfo_Ball_Aim;                     // 0xB0(0x58)(Transient, NativeAccessSpecifierPrivate)
 	struct FWeaponNotifyAnimationInfo            WeaponNotifyAnimInfo_Ball_Fire;                    // 0x108(0x58)(Transient, NativeAccessSpecifierPrivate)
 
@@ -18568,7 +18575,7 @@ public:
 class UPalShooterComponent : public UActorComponent
 {
 public:
-	uint8                                        Pad_37CB[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D56[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnChangeTargetDirectionDelegate;                   // 0xA8(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnStartAim;                                        // 0xB8(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnEndAim;                                          // 0xC8(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -18584,12 +18591,12 @@ public:
 	float                                        WalkSpeedMultiplierInAim;                          // 0x168(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        WalkSpeedMultiplierInHipShoot;                     // 0x16C(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        ChangeWeaponInterpTime;                            // 0x170(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37CC[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D57[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<enum class EPalWeaponType, TSoftClassPtr<class UPalShooterAnimeAssetBase>> DefaultWeaponAnimeAssetBPSoftClassMap;             // 0x178(0x50)(Edit, DisableEditOnInstance, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 	TMap<TSoftClassPtr<class APalWeaponBase>, TSoftClassPtr<class UPalShooterAnimeAssetBase>> OtherWeaponAnimeAssetBPSoftClassMap;               // 0x1C8(0x50)(Edit, DisableEditOnInstance, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 	TMap<TSoftClassPtr<class APalWeaponBase>, enum class EPalWeaponType> WeaponCategoryForPreLoad;                          // 0x218(0x50)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
 	bool                                         IsUseBlurUpdate;                                   // 0x268(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_37CD[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D58[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<enum class EPalWeaponType, class UPalShooterAnimeAssetBase*> DefaultWeaponAnimeAssetMap;                        // 0x270(0x50)(Transient, NativeAccessSpecifierPrivate)
 	TMap<TSoftClassPtr<class APalWeaponBase>, class UPalShooterAnimeAssetBase*> OtherWeaponAnimeAssetMap;                          // 0x2C0(0x50)(Transient, NativeAccessSpecifierPrivate)
 	TSet<enum class EPalWeaponType>              LoadedDefaultWeaponSet;                            // 0x310(0x50)(Transient, NativeAccessSpecifierPrivate)
@@ -18601,19 +18608,19 @@ public:
 	bool                                         bIsRequestAim;                                     // 0x41A(0x1)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bIsRequestPullTrigger;                             // 0x41B(0x1)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bIsReloading;                                      // 0x41C(0x1)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_37CE[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D59[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FFlagContainer                        UseControllerRotationYawFlags;                     // 0x420(0x50)(NativeAccessSpecifierPrivate)
 	class APalWeaponBase*                        HasWeapon;                                         // 0x470(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class APalWeaponBase*                        CacheNextWeapon;                                   // 0x478(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FWeaponAnimationInfo                  PrevWeaponAnimationInfo;                           // 0x480(0x258)(Transient, NativeAccessSpecifierPrivate)
 	bool                                         bIsDisableShootingTemporarily;                     // 0x6D8(0x1)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_37CF[0x17];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D5A[0x17];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FLayeredFlagContainer                 DisableAimFlag;                                    // 0x6F0(0x10)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	struct FLayeredFlagContainer                 DisableShootFlag;                                  // 0x700(0x10)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_37D0[0xA0];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D5B[0xA0];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FLayeredFlagContainer                 DisableWeaponChange;                               // 0x7B0(0x10)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	struct FFlagContainer                        HiddenWeapon;                                      // 0x7C0(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_37D1[0x150];                                   // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D5C[0x150];                                   // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        PullTriggerCountDown;                              // 0x960(0x4)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                        PullTriggerCountDownCount;                         // 0x964(0x4)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        ElapsedTimeSinceWeaponChange;                      // 0x968(0x4)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -18622,7 +18629,7 @@ public:
 	bool                                         bIsHoldTrigger;                                    // 0x96E(0x1)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bBufferedInput;                                    // 0x96F(0x1)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bIsShootingHold;                                   // 0x970(0x1)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_37D2[0x17];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D5D[0x17];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	class APalWeaponBase*                        NPCWeapon;                                         // 0x988(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        CurrentBulletBlurRate;                             // 0x990(0x4)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        RapidFireBlur;                                     // 0x994(0x4)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -18726,7 +18733,7 @@ class UPalSpringArmComponent : public USpringArmComponent
 {
 public:
 	enum class ECollisionChannel                 WaterProbeChannel;                                 // 0x3A0(0x1)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37D3[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4D5E[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalSpringArmComponent* GetDefaultObj();
@@ -18743,65 +18750,65 @@ public:
 	class UCurveFloat*                           LengthInterpCurve;                                 // 0x3B0(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UCurveFloat*                           OffsetInterpCurve;                                 // 0x3B8(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        WalkCameraArmLength;                               // 0x3C0(0x4)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37D6[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D61[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               WalkCameraOffset;                                  // 0x3C8(0x18)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        HipShootCameraArmLength;                           // 0x3E0(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37D7[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D62[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               HipShootCameraOffset;                              // 0x3E8(0x18)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        AimCameraArmLength;                                // 0x400(0x4)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37D8[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D63[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               AimCameraOffset;                                   // 0x408(0x18)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TMap<enum class EPalWeaponType, struct FShooterSpringCameraParameter> DefaultWeaponStandCameraParameterMap;              // 0x420(0x50)(Edit, NativeAccessSpecifierPublic)
 	TMap<TSoftClassPtr<class APalWeaponBase>, struct FShooterSpringCameraParameter> UniqueWeaponStandCameraParameterMap;               // 0x470(0x50)(Edit, NativeAccessSpecifierPublic)
 	float                                        AirCameraArmLength;                                // 0x4C0(0x4)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37D9[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D64[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               AirCameraOffset;                                   // 0x4C8(0x18)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        AirHipShootCameraArmLength;                        // 0x4E0(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37DA[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D65[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               AirHipShootCameraOffset;                           // 0x4E8(0x18)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        AirAimCameraArmLength;                             // 0x500(0x4)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37DB[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D66[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               AirAimCameraOffset;                                // 0x508(0x18)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        FlyCameraArmLength;                                // 0x520(0x4)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37DC[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D67[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               FlyCameraOffset;                                   // 0x528(0x18)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        FlyHipShootCameraArmLength;                        // 0x540(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37DD[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D68[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               FlyHipShootCameraOffset;                           // 0x548(0x18)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        FlyAimCameraArmLength;                             // 0x560(0x4)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37DE[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D69[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               FlyAimCameraOffset;                                // 0x568(0x18)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        CrouchCameraArmLength;                             // 0x580(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37DF[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D6A[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               CrouchCameraOffset;                                // 0x588(0x18)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        CrouchHipShootCameraArmLength;                     // 0x5A0(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37E0[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D6B[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               CrouchHipShootCameraOffset;                        // 0x5A8(0x18)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        CrouchAimCameraArmLength;                          // 0x5C0(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37E1[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D6C[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               CrouchAimCameraOffset;                             // 0x5C8(0x18)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        SlidingCameraArmLength;                            // 0x5E0(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37E2[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D6D[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               SlidingCameraOffset;                               // 0x5E8(0x18)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        SlidingHipShootCameraArmLength;                    // 0x600(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37E3[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D6E[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               SlidingHipShootCameraOffset;                       // 0x608(0x18)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        SlidingAimCameraArmLength;                         // 0x620(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37E4[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D6F[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               SlidingAimCameraOffset;                            // 0x628(0x18)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        DeadCameraArmLength;                               // 0x640(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37E5[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D70[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               DeadCameraOffset;                                  // 0x648(0x18)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37E6[0x48];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D71[0x48];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FFixedPoint64                         PrevPlayerHp;                                      // 0x6A8(0x8)(Transient, NoDestructor, NativeAccessSpecifierPrivate)
 	float                                        DefaultCameraLagSpeed;                             // 0x6B0(0x4)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_37E7[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D72[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalShooterComponent*                  ShooterComponent;                                  // 0x6B8(0x8)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalCharacterMovementComponent*        MoveComponent;                                     // 0x6C0(0x8)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalCharacterParameterComponent*       ParameterComponent;                                // 0x6C8(0x8)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPalDamageReactionComponent*           DamageReactionComponent;                           // 0x6D0(0x8)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FFloatContainer                       ArmLengthScaleContainer;                           // 0x6D8(0x10)(NativeAccessSpecifierPrivate)
-	uint8                                        Pad_37E8[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4D73[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalShooterSpringArmComponent* GetDefaultObj();
@@ -18838,7 +18845,7 @@ public:
 class UPalShopManager : public UPalWorldSubsystem
 {
 public:
-	uint8                                        Pad_37E9[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D74[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnRecievedBuyResultDelegate;                       // 0x78(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnReceivedDroppedPalDataDelegate;                  // 0x88(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMap<struct FGuid, class UPalShopBase*>      CreatedItemShopMap_ForServer;                      // 0x98(0x50)(Transient, NativeAccessSpecifierPrivate)
@@ -18860,11 +18867,11 @@ public:
 	FMulticastInlineDelegateProperty_            OnUpdateMaxStockNumDelegate;                       // 0x38(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	struct FGuid                                 MyProductID;                                       // 0x48(0x10)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         IsInfinityStockFlag;                               // 0x58(0x1)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_37EA[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D75[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        StockNum;                                          // 0x5C(0x4)(Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                        MaxStockNum;                                       // 0x60(0x4)(Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         IsValidProductFlag;                                // 0x64(0x1)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_37EB[0x3];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4D76[0x3];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalShopProductBase* GetDefaultObj();
@@ -18905,7 +18912,7 @@ public:
 class UPalShopProduct_LostPal : public UPalShopProduct_PalSaveParameter
 {
 public:
-	uint8                                        Pad_37EC[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4D77[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalShopProduct_LostPal* GetDefaultObj();
@@ -18919,7 +18926,7 @@ class UPalShopProduct_TradeItem : public UPalShopProductBase
 public:
 	class FName                                  ProductStaticItemID;                               // 0x68(0x8)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        BuyRate;                                           // 0x70(0x4)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_37ED[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4D78[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalShopProduct_TradeItem* GetDefaultObj();
@@ -18953,7 +18960,7 @@ public:
 class APalSimpleInteractableObject : public AActor
 {
 public:
-	uint8                                        Pad_37F5[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4D80[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalSimpleInteractableObject* GetDefaultObj();
@@ -18967,10 +18974,10 @@ class UPalSkeletalMeshComponent : public USkeletalMeshComponent
 {
 public:
 	bool                                         bCanRagdoll;                                       // 0xF80(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37F7[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D82[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        ClavicleAdjustDegree;                              // 0xF84(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsEnableGroundTilt;                               // 0xF88(0x1)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37F8[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D83[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        PitchAngle;                                        // 0xF8C(0x4)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        RollAngle;                                         // 0xF90(0x4)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        TiltingInterpTime;                                 // 0xF94(0x4)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -18979,27 +18986,27 @@ public:
 	struct FVector                               BeginTiltVector;                                   // 0xFC8(0x18)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                               EndTiltVector;                                     // 0xFE0(0x18)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        TiltTimer;                                         // 0xFF8(0x4)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_37F9[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D84[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnAppliedMakeInfo;                                 // 0x1000(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	struct FFlagContainer                        DisableTilt;                                       // 0x1010(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	struct FFloatContainer                       ScaleFloatContainer;                               // 0x1060(0x10)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	struct FFloatContainer                       PitchFloatContainer;                               // 0x1070(0x10)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	struct FFloatContainer                       AnimRateScaleFloatContainer;                       // 0x1080(0x10)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	float                                        DefaultAnimRateScale;                              // 0x1090(0x4)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_37FA[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D85[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               DefaultScale3D;                                    // 0x1098(0x18)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	enum class EPalSkeletalMeshType              PalSkeletalMeshType;                               // 0x10B0(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_37FB[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D86[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        CharcterMakeMorphMax;                              // 0x10B4(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_37FC[0x30];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D87[0x30];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	class FName                                  ItemName;                                          // 0x10E8(0x8)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FName                                  BodyTypeName;                                      // 0x10F0(0x8)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         DisableChangeMesh_ByPlayerDead;                    // 0x10F8(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_37FD[0x17];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D88[0x17];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	enum class EVisibilityBasedAnimTickOption    DefaultTickOption;                                 // 0x1110(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_37FE[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D89[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalPlayerDataCharacterMakeInfo       CharacterMakeInfo;                                 // 0x1114(0x94)(Transient, NoDestructor, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_37FF[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4D8A[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalSkeletalMeshComponent* GetDefaultObj();
@@ -19023,7 +19030,7 @@ public:
 class UPalSkillDamageReactionComponent : public UActorComponent
 {
 public:
-	uint8                                        Pad_3800[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D8B[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnDamageDelegate;                                  // 0xA8(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UPalHitEffectSlot*                     EffectSlot;                                        // 0xB8(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
@@ -19037,7 +19044,7 @@ public:
 class APalSkillEffectBase : public AActor
 {
 public:
-	uint8                                        Pad_3804[0x58];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D8F[0x58];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        EffectSize;                                        // 0x2E8(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        MinSize;                                           // 0x2EC(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        MaxSize;                                           // 0x2F0(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -19078,9 +19085,9 @@ public:
 	class USkyLightComponent*                    Component;                                         // 0x290(0x8)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                        bEnabled : 1;                                      // Mask: 0x1, PropSize: 0x10x298(0x1)(Net, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                        BitPad_22D : 7;                                    // Fixing Bit-Field Size  [ Dumper-7 ]
-	uint8                                        Pad_3805[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D90[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	bool                                         bDisableEnabledFlag;                               // 0x29C(0x1)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3806[0x3];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4D91[0x3];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalSkyLightVolume* GetDefaultObj();
@@ -19119,7 +19126,7 @@ class UPalSoundPlayer : public UObject
 public:
 	FDelegateProperty_                           AkCallbackOuter;                                   // 0x28(0x10)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         StopWhenOwnerDestroyed;                            // 0x38(0x1)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_380A[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D95[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class USceneComponent*                       OwnerComponent;                                    // 0x40(0x8)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UAkComponent*                          AkComponent;                                       // 0x48(0x8)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FName                                  OwnerAttachPointName;                              // 0x50(0x8)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -19238,7 +19245,7 @@ public:
 class APalSpectator : public APalCharacter
 {
 public:
-	uint8                                        Pad_3812[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4D9D[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalSpectator* GetDefaultObj();
@@ -19251,9 +19258,9 @@ class UPalSpeedCollisionComponent : public USphereComponent
 {
 public:
 	bool                                         IsSelfEnable;                                      // 0x560(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3814[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4D9F[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<struct FPalInstanceID>                HitPalList;                                        // 0x568(0x10)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3815[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4DA0[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalSpeedCollisionComponent* GetDefaultObj();
@@ -19283,7 +19290,7 @@ class APalSpotAreaBase : public AActor
 public:
 	enum class EPalAudioState                    AudioState;                                        // 0x290(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bIsOverlappedLocalPlayer;                          // 0x291(0x1)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3816[0x6];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4DA1[0x6];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalSpotAreaBase* GetDefaultObj();
@@ -19299,7 +19306,7 @@ public:
 class UPalSquad : public UObject
 {
 public:
-	uint8                                        Pad_3817[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DA2[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnSomeOneDeadDelegate;                             // 0x30(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnCombatPropagationDelegate;                       // 0x40(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnEscapePropagationDelegate;                       // 0x50(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -19337,7 +19344,7 @@ public:
 class UPalStageRegistrationParameterBase : public UObject
 {
 public:
-	uint8                                        Pad_3818[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4DA3[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalStageRegistrationParameterBase* GetDefaultObj();
@@ -19371,9 +19378,9 @@ public:
 class UPalStageModelBase : public UObject
 {
 public:
-	uint8                                        Pad_3819[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DA4[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalStageInstanceId                   InstanceId;                                        // 0x40(0x14)(Edit, BlueprintVisible, BlueprintReadOnly, Net, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_381A[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DA5[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<struct FPalStagePlayerInfo>           PlayerInfos;                                       // 0x58(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
 
 	static class UClass* StaticClass();
@@ -19387,7 +19394,7 @@ public:
 class UPalStageRegistrationParameterBossBattle : public UPalStageRegistrationParameterBase
 {
 public:
-	uint8                                        Pad_381B[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4DA6[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalStageRegistrationParameterBossBattle* GetDefaultObj();
@@ -19413,7 +19420,7 @@ public:
 class UPalStageRegistrationParameterDungeon : public UPalStageRegistrationParameterBase
 {
 public:
-	uint8                                        Pad_381C[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4DA7[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalStageRegistrationParameterDungeon* GetDefaultObj();
@@ -19439,7 +19446,7 @@ class UPalStageReplicator : public UPalGameStateReplicatorBase
 {
 public:
 	struct FPalFastStageModelRepInfoArray        RepInfoArray;                                      // 0x28(0x148)(Edit, Net, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_381D[0x50];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4DA8[0x50];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalStageReplicator* GetDefaultObj();
@@ -19482,7 +19489,7 @@ public:
 	TSoftObjectPtr<class UTexture2D>             IconTexture;                                       // 0x30(0x30)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EPalItemTypeA                     TypeA;                                             // 0x60(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EPalItemTypeB                     TypeB;                                             // 0x61(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_381F[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DAA[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        Rank;                                              // 0x64(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        Rarity;                                            // 0x68(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        Price;                                             // 0x6C(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -19490,12 +19497,12 @@ public:
 	int32                                        SortID;                                            // 0x74(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UPalDynamicItemDataBase>   DynamicItemDataClass;                              // 0x78(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bNotConsumed;                                      // 0x80(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3820[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DAB[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TSoftClassPtr<class AActor>                  ActorClass;                                        // 0x88(0x30)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSoftObjectPtr<class UStaticMesh>            StaticMeshPath;                                    // 0xB8(0x30)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSoftClassPtr<class AActor>                  VisualBlueprintClassSoft;                          // 0xE8(0x30)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EPalDropItemType                  DropItemType;                                      // 0x118(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3821[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DAC[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        Weight;                                            // 0x11C(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        Durability;                                        // 0x120(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                  PassiveSkill;                                      // 0x124(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -19503,7 +19510,7 @@ public:
 	float                                        FloatValue1;                                       // 0x130(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                  OverrideNameMsgID;                                 // 0x134(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class FName                                  OverrideDescMsgID;                                 // 0x13C(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3822[0x14];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4DAD[0x14];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalStaticItemDataBase* GetDefaultObj();
@@ -19548,7 +19555,7 @@ class UPalStaticCharacterParameterComponent : public UActorComponent
 public:
 	TMap<enum class EPalAIActionType, TSubclassOf<class UPalAIActionBase>> AIActionMap;                                       // 0xA0(0x50)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, NativeAccessSpecifierPublic)
 	float                                        CallApproachWalkSpeedMultiplier;                   // 0xF0(0x4)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3824[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DAF[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<class UAnimMontage*>                  RandomRestMontage;                                 // 0xF8(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FPalRandomRestInfo>            RandomRestMontageInfos;                            // 0x108(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	TMap<enum class EPalGeneralAnimSequenceType, class UAnimSequence*> GeneralAnimSequenceMap;                            // 0x118(0x50)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
@@ -19561,12 +19568,12 @@ public:
 	TMap<enum class EPalWazaID, TSubclassOf<class UPalActionBase>> WazaActionInstancedMap;                            // 0x308(0x50)(BlueprintVisible, BlueprintReadOnly, Transient, UObjectWrapper, NativeAccessSpecifierPublic)
 	float                                        CaptureSuccessRate;                                // 0x358(0x4)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsPal;                                             // 0x35C(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3828[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DB0[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        SkillEffectScale;                                  // 0x360(0x4)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3829[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DB1[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               SkillEffectOffsetScale;                            // 0x368(0x18)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        FollowSideDistanceRate;                            // 0x380(0x4)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_382A[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DB2[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<enum class EPhysicalSurface, struct FFootStampInfo> FootStampMap;                                      // 0x388(0x50)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	float                                        StepVelocityXY;                                    // 0x3D8(0x4)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        StepVelocityZ;                                     // 0x3DC(0x4)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -19576,22 +19583,22 @@ public:
 	struct FVector2D                             HPGaugeUIOffset;                                   // 0x3F8(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        ExclamationMarkOffsetZ;                            // 0x408(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EPalMonsterMovementType           MovementType;                                      // 0x40C(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_382B[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DB3[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        Weight_KG;                                         // 0x410(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        Mass_Scale;                                        // 0x414(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        IsGroundCrossRange;                                // 0x418(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_382C[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DB4[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<enum class EPalPhysicsBoneType, class FName> PhysicsBoneNameMap;                                // 0x420(0x50)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	bool                                         IsUncapturable;                                    // 0x470(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsBackWalkForwardAnime;                            // 0x471(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsRightLeft_WakeupFromRagdoll;                     // 0x472(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_382D[0x5];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DB5[0x5];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               GetupMotion_UtubuseOrRight_0FramePelvisLocation;   // 0x478(0x18)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                               GetupMotion_AomukeOrLeft_0FramePelvisLocation;     // 0x490(0x18)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                  Ragdoll_RightLeftGetup_ForwardTailName;            // 0x4A8(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                  Ragdoll_RightLeftGetup_RightLegName;               // 0x4B0(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EPalPettingSizeType               PettingSize;                                       // 0x4B8(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_382E[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DB6[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        PettingDistance;                                   // 0x4BC(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        PettingStartAddDistance;                           // 0x4C0(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        PettingEndLeaveDistance;                           // 0x4C4(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -19599,16 +19606,16 @@ public:
 	float                                        PettingCameraHeight_Override;                      // 0x4CC(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        PettingCameraArmLength_Override;                   // 0x4D0(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	enum class EPalSizeType                      Size;                                              // 0x4D4(0x1)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3832[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DB7[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        Ragdoll_GravityRate;                               // 0x4D8(0x4)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsLookatIKAble;                                    // 0x4DC(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3834[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DB8[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        SmallDamageAnimationApplyRate;                     // 0x4E0(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        SmallDamageAnimationPlayRate;                      // 0x4E4(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FShooterSpringCameraParameter         CameraOffsetInLiftup;                              // 0x4E8(0x20)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                         IsForcedTurnWhenDamageReaction;                    // 0x508(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         DisableNPCDamageRolling;                           // 0x509(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3836[0x6];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DB9[0x6];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TSoftClassPtr<class UPalSoundSlot>           PalSoundSlotClass;                                 // 0x510(0x30)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                  AkAttachPointName;                                 // 0x540(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSoftClassPtr<class UPalFootStepEffectAssetBase> PalFootStepEffectAssetClass;                       // 0x548(0x30)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -19619,7 +19626,7 @@ public:
 	bool                                         IsBoss_Database;                                   // 0x5E0(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         IsTowerBoss_Database;                              // 0x5E1(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	enum class EPalSpawnedCharacterType          SpawnedCharacterType;                              // 0x5E2(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3838[0x5];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4DBA[0x5];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalStaticCharacterParameterComponent* GetDefaultObj();
@@ -19650,7 +19657,7 @@ public:
 	int32                                        RestoreSatiety;                                    // 0x160(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	int32                                        RestoreSanity;                                     // 0x164(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	enum class EPalWazaID                        WazaID;                                            // 0x168(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3843[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4DBB[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalStaticConsumeItemData* GetDefaultObj();
@@ -19754,7 +19761,7 @@ public:
 class UPalStatModelPerformance : public UObject
 {
 public:
-	uint8                                        Pad_3844[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4DBC[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalStatModelPerformance* GetDefaultObj();
@@ -19769,7 +19776,7 @@ public:
 class UPalStatPalCount : public UObject
 {
 public:
-	uint8                                        Pad_3845[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DBD[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UFont*                                 FontObject;                                        // 0x30(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -19783,7 +19790,7 @@ class UPalStatusCollectItem : public UPalStatusBase
 {
 public:
 	struct FPalStaticItemIdAndNum                CollectItemInfo;                                   // 0x48(0xC)(NoDestructor, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3847[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4DBF[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalStatusCollectItem* GetDefaultObj();
@@ -19855,7 +19862,7 @@ class UPalStatus_StaminaControl : public UPalStatusBase
 public:
 	bool                                         IsLocalPlayerOrPal;                                // 0x48(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         IsPreCliming;                                      // 0x49(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3850[0x6];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4DC8[0x6];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalStatus_StaminaControl* GetDefaultObj();
@@ -19880,12 +19887,12 @@ public:
 class UPalSyncTeleportComponent : public UActorComponent
 {
 public:
-	uint8                                        Pad_3851[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DC9[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnPlayerMovedClientDelegate;                       // 0xB8(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnPlayerMoveCompleteClientDelegate;                // 0xC8(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UAkAudioEvent*                         DefaultStartSE;                                    // 0xD8(0x8)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UPalHUDDispatchParameter_FadeWidget*   FadeParameter;                                     // 0xE0(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3852[0x68];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4DCA[0x68];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalSyncTeleportComponent* GetDefaultObj();
@@ -19960,7 +19967,7 @@ public:
 	class AActor*                                Talker;                                            // 0x48(0x8)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UPalIncidentBase*                      TalkIncident;                                      // 0x50(0x8)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsCancel;                                          // 0x58(0x1)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3853[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4DCB[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalTalkWidgetParameter* GetDefaultObj();
@@ -19985,7 +19992,7 @@ class UPalUserWidgetStackableUI : public UPalUserWidgetHierarchical
 public:
 	class UAkAudioEvent*                         OpenAkEvent;                                       // 0x428(0x8)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UAkAudioEvent*                         CloseAkEvent;                                      // 0x430(0x8)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3854[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4DCC[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalUserWidgetStackableUI* GetDefaultObj();
@@ -20004,7 +20011,7 @@ class UPalUserWidgetOverlayUI : public UPalUserWidgetStackableUI
 {
 public:
 	bool                                         IsEnableCancelAction;                              // 0x440(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3856[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DCE[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalUIActionBindData                  CancelInputHandle;                                 // 0x448(0x18)(Transient, NativeAccessSpecifierPrivate)
 	struct FPalUIActionBindData                  EscInputHandle;                                    // 0x460(0x18)(Transient, NativeAccessSpecifierPrivate)
 
@@ -20022,7 +20029,7 @@ class UPalTalkWindowWidgetBase : public UPalUserWidgetOverlayUI
 {
 public:
 	class UPalNPCTalkSystem*                     TalkSystem;                                        // 0x478(0x8)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3858[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4DD0[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalTalkWindowWidgetBase* GetDefaultObj();
@@ -20093,10 +20100,10 @@ class UPalTemperatureComponent : public UBoxComponent
 {
 public:
 	FMulticastInlineDelegateProperty_            OnChangeTemperatureDelegate;                       // 0x578(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                        Pad_385F[0x50];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DD7[0x50];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        CurrentTemperature;                                // 0x5D8(0x4)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FName                                  SelfKeyName;                                       // 0x5DC(0x8)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3860[0xC];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4DD8[0xC];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalTemperatureComponent* GetDefaultObj();
@@ -20117,7 +20124,7 @@ class APalTestMapObjectRegistrationToManager : public AActor
 {
 public:
 	bool                                         bReadyVirtualBaseCamp;                             // 0x290(0x1)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3861[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4DD9[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalTestMapObjectRegistrationToManager* GetDefaultObj();
@@ -20146,7 +20153,7 @@ public:
 	struct FDataTableRowHandle                   BindTextDatatableHandle;                           // 0x378(0x10)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                         IsAutoTextSetWhenWidgetRebuilt;                    // 0x388(0x1)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsAutoAdjustScale;                                 // 0x389(0x1)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3863[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DDB[0x2];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        MaxWidth;                                          // 0x38C(0x4)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	static class UClass* StaticClass();
@@ -20163,16 +20170,16 @@ public:
 class UPalTimeManager : public UPalWorldSubsystem
 {
 public:
-	uint8                                        Pad_3865[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DDD[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnNightStartDelegate;                              // 0x80(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnNightEndDelegate;                                // 0x90(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnPreNightSkipDelegate;                            // 0xA0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnNightSkipDelegate;                               // 0xB0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnChangeHoursDelegate;                             // 0xC0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnChangeMinutesDelegate;                           // 0xD0(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3866[0x20];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DDE[0x20];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<class APalPlayerCharacter*>           SleepingPlayers;                                   // 0x100(0x10)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3867[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DDF[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FTimerHandle                          NightSkipTimerHandle;                              // 0x128(0x8)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -20209,11 +20216,11 @@ class UPalTimerPointLightComponent : public UPointLightComponent
 public:
 	class UCurveFloat*                           LightCurve;                                        // 0x418(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsLocalOnly;                                      // 0x420(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3869[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DE1[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        DefaultIntensity;                                  // 0x424(0x4)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FFlagContainer                        DisableFlag;                                       // 0x428(0x50)(Transient, NativeAccessSpecifierPrivate)
 	struct FFlagContainer                        EnableWhenDayTimeFlag;                             // 0x478(0x50)(Transient, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_386A[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4DE2[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalTimerPointLightComponent* GetDefaultObj();
@@ -20269,12 +20276,12 @@ public:
 class UPalTutorialManager : public UPalWorldSubsystem
 {
 public:
-	uint8                                        Pad_386C[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DE4[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnTutorialTriggered;                               // 0x78(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
 	TArray<class UPalTutorialTriggerBase*>       TutorialTriggers;                                  // 0x88(0x10)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 	class UDataTable*                            MsgDataTable;                                      // 0x98(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UDataTable*                            TutorialTriggersDataTable;                         // 0xA0(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_386D[0x50];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4DE5[0x50];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalTutorialManager* GetDefaultObj();
@@ -20303,7 +20310,7 @@ class UPalTutorialTriggerBase : public UObject
 public:
 	bool                                         Checked;                                           // 0x28(0x1)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         CanTriggerMultiple;                                // 0x29(0x1)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_386E[0x6];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DE6[0x6];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FDataTableRowHandle                   TutorialMsgID;                                     // 0x30(0x10)(BlueprintVisible, NoDestructor, ExposeOnSpawn, NativeAccessSpecifierPublic)
 
 	static class UClass* StaticClass();
@@ -20318,7 +20325,7 @@ class UPalTutorialTrigger_Common : public UPalTutorialTriggerBase
 {
 public:
 	enum class EPalTutorialTriggerConditionType  TriggerType;                                       // 0x40(0x1)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_386F[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4DE7[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalTutorialTrigger_Common* GetDefaultObj();
@@ -20332,9 +20339,9 @@ class UPalTutorialTrigger_AddItem : public UPalTutorialTriggerBase
 public:
 	TArray<class FName>                          StaticItemIds;                                     // 0x40(0x10)(BlueprintVisible, ZeroConstructor, ExposeOnSpawn, NativeAccessSpecifierPublic)
 	enum class EPalItemTypeB                     ItemCategory;                                      // 0x50(0x1)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3870[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DE8[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class FName                                  BuildObjectId;                                     // 0x54(0x8)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3871[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4DE9[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalTutorialTrigger_AddItem* GetDefaultObj();
@@ -20347,7 +20354,7 @@ class UPalTutorialTrigger_Individual : public UPalTutorialTriggerBase
 {
 public:
 	enum class EPalTutorialTriggerConditionType  TriggerType;                                       // 0x40(0x1)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3872[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4DEA[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalTutorialTrigger_Individual* GetDefaultObj();
@@ -20372,7 +20379,7 @@ class UPalTutorialTrigger_Capture : public UPalTutorialTriggerBase
 {
 public:
 	enum class EPalTutorialTriggerConditionType  TriggerType;                                       // 0x40(0x1)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3873[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DEB[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        TriggerCount;                                      // 0x44(0x4)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	static class UClass* StaticClass();
@@ -20455,7 +20462,7 @@ public:
 	class FName                                  OverrideMouseInputActionName;                      // 0x430(0x8)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class FName                                  OverridePadInputActionName;                        // 0x438(0x8)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	int32                                        OverrideInputType;                                 // 0x440(0x4)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3878[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4DF0[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalUIActionWidgetForPlayerInput* GetDefaultObj();
@@ -20475,7 +20482,7 @@ public:
 class UPalUIAimReticleBase : public UPalUserWidget
 {
 public:
-	uint8                                        Pad_387A[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4DF2[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalUIAimReticleBase* GetDefaultObj();
@@ -20542,7 +20549,7 @@ public:
 	TSubclassOf<class UPalBaseCampTaskChecker>   baseCampTaskCheckerClass;                          // 0x478(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FGuid                                 BaseCampId;                                        // 0x480(0x10)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                        LastCheckedBaseCampLevel;                          // 0x490(0x4)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_387E[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DF6[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalBaseCampTaskChecker*               TaskChecker;                                       // 0x498(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -20599,9 +20606,9 @@ class UPalUIBaseCampWorkersModel : public UObject
 {
 public:
 	FMulticastInlineDelegateProperty_            OnUpdatePageDelegate;                              // 0x28(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3883[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4DFB[0x10];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	int32                                        CurrentPageIndex;                                  // 0x48(0x4)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3884[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4DFC[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalUIBaseCampWorkersModel* GetDefaultObj();
@@ -20655,7 +20662,7 @@ class UPalUIBuildingParameter : public UPalHUDDispatchParameterBase
 {
 public:
 	int32                                        BuildObjectId;                                     // 0x38(0x4)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3885[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4DFD[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalUIBuildingParameter* GetDefaultObj();
@@ -20730,7 +20737,7 @@ public:
 	FMulticastInlineDelegateProperty_            OnUpdateDelegate;                                  // 0x28(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TArray<class UPalIndividualCharacterSlot*>   DisplaySlots;                                      // 0x38(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
 	TArray<struct FPalInstanceID>                NotSelectableIndividualIds;                        // 0x48(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
-	uint8                                        Pad_388B[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4E03[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalUICharacterDisplayModel* GetDefaultObj();
@@ -20780,7 +20787,7 @@ class UPalHUDDispatchParameter_CharacterMake : public UPalHUDDispatchParameterBa
 {
 public:
 	bool                                         bIsNewGame;                                        // 0x38(0x1)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_388D[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4E05[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalHUDDispatchParameter_CharacterMake* GetDefaultObj();
@@ -20801,6 +20808,37 @@ public:
 	void ChangeNickname(class UPalIndividualCharacterHandle* TargetHandle, class FText& NewNickName);
 	void ChangeActiveSkill(class UPalIndividualCharacterHandle* TargetHandle, enum class EPalWazaID ChangeWazaID, enum class EPalWazaID NewWazaID);
 	void AddActiveSkill(class UPalIndividualCharacterHandle* TargetHandle, enum class EPalWazaID NewWazaID);
+};
+
+// 0x58 (0x80 - 0x28)
+// Class Pal.PalChatFilteringWaiter
+class UPalChatFilteringWaiter : public UObject
+{
+public:
+	FMulticastInlineDelegateProperty_            OnFilteredChatMessageDelegate;                     // 0x28(0x10)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
+	struct FPalChatMessage                       ChatData;                                          // 0x38(0x48)(NativeAccessSpecifierPrivate)
+
+	static class UClass* StaticClass();
+	static class UPalChatFilteringWaiter* GetDefaultObj();
+
+	void OnReceivedWordFilteringResult(const class FString& ResponseBody, bool bResponseOK, int32 ResponseCode);
+	void OnFilteredChatMessageDelegate__DelegateSignature(class UPalChatFilteringWaiter* Waiter, struct FPalChatMessage& Message);
+};
+
+// 0x20 (0x448 - 0x428)
+// Class Pal.PalUIChat
+class UPalUIChat : public UPalUserWidget
+{
+public:
+	FMulticastInlineDelegateProperty_            OnRecievedFilteredMessageDelegate;                 // 0x428(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TArray<class UPalChatFilteringWaiter*>       FilteringWaiterArray;                              // 0x438(0x10)(ZeroConstructor, NativeAccessSpecifierPrivate)
+
+	static class UClass* StaticClass();
+	static class UPalUIChat* GetDefaultObj();
+
+	void OnRecievedFilteredMessageDelegate__DelegateSignature(struct FPalChatMessage& Message);
+	void OnReceivedChat(struct FPalChatMessage& Message);
+	void OnFilteredChat(class UPalChatFilteringWaiter* Waiter, struct FPalChatMessage& Message);
 };
 
 // 0x0 (0x428 - 0x428)
@@ -20844,7 +20882,7 @@ public:
 	float                                        DisplayTime;                                       // 0x438(0x4)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        DisplayTimer;                                      // 0x43C(0x4)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	enum class EPalDamageTextSeq                 NowSeq;                                            // 0x440(0x1)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3892[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4E0B[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               TargetLocation;                                    // 0x448(0x18)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -20873,7 +20911,7 @@ public:
 	float                                        DelayGaugeTimer;                                   // 0x58(0x4)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        DelayGaugeStartTime;                               // 0x5C(0x4)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        DelayGaugeProgressPerSecond;                       // 0x60(0x4)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3893[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4E0C[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalUIDelayGaugeCalculator* GetDefaultObj();
@@ -20892,13 +20930,13 @@ class UPalDialogParameterBase : public UPalHUDDispatchParameterBase
 {
 public:
 	enum class EPalDialogType                    DialogType;                                        // 0x38(0x1)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3894[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4E0D[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class FText                                  Message;                                           // 0x40(0x18)(BlueprintVisible, Transient, ExposeOnSpawn, NativeAccessSpecifierPublic)
 	FDelegateProperty_                           Callback;                                          // 0x58(0x10)(BlueprintVisible, ZeroConstructor, Transient, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	FDelegateProperty_                           CallbackWithParameter;                             // 0x68(0x10)(BlueprintVisible, ZeroConstructor, Transient, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsCloseWhenDamaged;                                // 0x78(0x1)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsEnableShortcutConfirmInput;                      // 0x79(0x1)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3895[0x6];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4E0E[0x6];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalDialogParameterBase* GetDefaultObj();
@@ -20912,7 +20950,7 @@ class UPalDialogParameterDialog : public UPalDialogParameterBase
 {
 public:
 	bool                                         bDefaultNegative;                                  // 0x80(0x1)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3897[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4E10[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalDialogParameterDialog* GetDefaultObj();
@@ -21164,12 +21202,12 @@ public:
 	FMulticastInlineDelegateProperty_            OnLeavePalBoxAreaDelegate;                         // 0x438(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
 	class UPalBaseCampTaskChecker*               TaskChecker;                                       // 0x448(0x8)(BlueprintVisible, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        PalboxAreaRange;                                   // 0x450(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_389C[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4E15[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TSubclassOf<class UPalLogWidgetBase>         AllTaskCompletedLogClass;                          // 0x458(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FGuid                                 LastInsideBaseCampID;                              // 0x460(0x10)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TMap<struct FPalDataTableRowName_ItemData, struct FPalInsideBaseCampUI_DisplayItemInfo> DisplayItemInfoMap;                                // 0x470(0x50)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
 	struct FPalBaseCampTaskCheckedData           CachedTaskCheckData;                               // 0x4C0(0x60)(Protected, NativeAccessSpecifierProtected)
-	uint8                                        Pad_389D[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4E16[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalUIInsideBaseCampCanvas* GetDefaultObj();
@@ -21196,7 +21234,7 @@ public:
 class UPalUIInventoryEquipment : public UPalUserWidget
 {
 public:
-	uint8                                        Pad_389E[0x50];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4E17[0x50];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalUIInventoryEquipment* GetDefaultObj();
@@ -21299,7 +21337,7 @@ public:
 class UPalUIItemShopBase : public UPalUserWidgetOverlayUI
 {
 public:
-	uint8                                        Pad_38A9[0x30];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4E22[0x30];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalUIItemShopBase* GetDefaultObj();
@@ -21316,7 +21354,7 @@ class UPalUIJoinGameBase : public UPalUserWidgetOverlayUI
 {
 public:
 	bool                                         bIsShowIgnoreVersionServer;                        // 0x478(0x1)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_38AF[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4E28[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<class FString>                        OfficialServerIPRangeList;                         // 0x480(0x10)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FPalUIServerDisplayData>       CachedServerDisplayInfo;                           // 0x490(0x10)(ZeroConstructor, NativeAccessSpecifierPrivate)
 
@@ -21339,7 +21377,7 @@ class UPalHUDDispatchParame_JoinGameInputCode : public UPalHUDDispatchParameterB
 {
 public:
 	enum class EPalUIJoinGameInputCodeType       InputCodeType;                                     // 0x38(0x1)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_38B0[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4E29[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalUIServerDisplayData               TargetServerDisplayInfo;                           // 0x40(0x1A0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 
 	static class UClass* StaticClass();
@@ -21377,9 +21415,9 @@ public:
 	FMulticastInlineDelegateProperty_            OnFailedItemOperationDelegate;                     // 0x68(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	struct FPalItemSlotId                        ItemSourceSlotId;                                  // 0x78(0x14)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FPalItemAndNum                        ItemInfo;                                          // 0x8C(0x2C)(BlueprintVisible, BlueprintReadOnly, Transient, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                        Pad_38B4[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4E2D[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalIndividualCharacterSlot*           CharacterSlot;                                     // 0xD0(0x8)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_38B5[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4E2E[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalUILiftSlotModel* GetDefaultObj();
@@ -21403,7 +21441,7 @@ class UPalUILoadOutModel : public UObject
 {
 public:
 	enum class EPalPlayerInventoryType           DraggedTargetContainerType;                        // 0x28(0x1)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_38BA[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4E33[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalUILoadOutModel* GetDefaultObj();
@@ -21445,7 +21483,7 @@ public:
 class UPalUIManagerSubsystem : public UGameUIManagerSubsystem
 {
 public:
-	uint8                                        Pad_38BD[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4E36[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalUIManagerSubsystem* GetDefaultObj();
@@ -21492,7 +21530,7 @@ public:
 class UPalUIMapObjectStatusIndicatorParameterBase : public UPalHUDDispatchParameterBase
 {
 public:
-	uint8                                        Pad_38BE[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4E37[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalUIMapObjectStatusIndicatorParameterBase* GetDefaultObj();
@@ -21566,7 +21604,7 @@ public:
 class UPalUIPalBoxBase : public UPalUserWidgetOverlayUI
 {
 public:
-	uint8                                        Pad_38C3[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4E3C[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalUIPalBoxBase* GetDefaultObj();
@@ -21595,7 +21633,7 @@ class UPalUIPalBoxModel : public UObject
 public:
 	FMulticastInlineDelegateProperty_            OnUpdatePageDelegate;                              // 0x28(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	int32                                        CurrentPageIndex;                                  // 0x38(0x4)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_38C5[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4E3E[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalUIPalBoxModel* GetDefaultObj();
@@ -21643,7 +21681,7 @@ public:
 	TSubclassOf<class UPalUIPalStorageModel>     PalStorageModelClass;                              // 0x68(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UPalUIPalStorageModel*                 PalStorageModel;                                   // 0x70(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	enum class EPalUIPalCharacterRankUpSelectMode SelectMode;                                        // 0x78(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_38CA[0x17];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4E43[0x17];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalUIPalCharacterRankUpModel* GetDefaultObj();
@@ -21736,7 +21774,7 @@ public:
 class UPalUIPalShopBase : public UPalUserWidgetOverlayUI
 {
 public:
-	uint8                                        Pad_38CF[0x30];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4E48[0x30];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalUIPalShopBase* GetDefaultObj();
@@ -21778,7 +21816,7 @@ public:
 	FMulticastInlineDelegateProperty_            OnUpdatePageDelegate;                              // 0x28(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	struct FGuid                                 OwnerBaseCampId;                                   // 0x38(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	enum class EPalPalStorageManageRightType     CurrentPageType;                                   // 0x48(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_38D0[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4E49[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TSubclassOf<class UPalUIBaseCampWorkerListModel> BaseCampWorkerListClass;                           // 0x50(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UPalUIBaseCampWorkerListModel*         BaseCampWorkerList;                                // 0x58(0x8)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TSubclassOf<class UPalUIOtomoListModel>      OtomoListClass;                                    // 0x60(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -21801,7 +21839,7 @@ class UPalUIPalStorageModel : public UObject
 public:
 	FMulticastInlineDelegateProperty_            OnUpdatePageDelegate;                              // 0x28(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	int32                                        CurrentPageIndex;                                  // 0x38(0x4)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_38D3[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4E4C[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalUICharacterDisplayModel*           DisplayModel;                                      // 0x40(0x8)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 	static class UClass* StaticClass();
@@ -21861,7 +21899,7 @@ public:
 	class FName                                  FocusedRecipeId;                                   // 0x78(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	int32                                        ProductNum;                                        // 0x80(0x4)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TWeakObjectPtr<class UPalMapObjectEnergyModule> WeakEnergyModule;                                  // 0x84(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_38D7[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4E50[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalUIProductSettingModel* GetDefaultObj();
@@ -21991,9 +22029,9 @@ public:
 	TArray<enum class EPalItemTypeA>             ShowItemTypesA;                                    // 0x60(0x10)(BlueprintVisible, ZeroConstructor, Transient, NativeAccessSpecifierPublic)
 	TArray<enum class EPalItemTypeB>             ShowItemTypesB;                                    // 0x70(0x10)(BlueprintVisible, ZeroConstructor, Transient, NativeAccessSpecifierPublic)
 	bool                                         ShouldSelectNum;                                   // 0x80(0x1)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_38DB[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4E54[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FDelegateProperty_                           Callback;                                          // 0x84(0x10)(BlueprintVisible, ZeroConstructor, Transient, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_38DC[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4E55[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalHUDDispatchParameter_SelectItemInventory* GetDefaultObj();
@@ -22022,7 +22060,7 @@ public:
 	int32                                        MinNum;                                            // 0x58(0x4)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        MaxNum;                                            // 0x5C(0x4)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                        DefaultNum;                                        // 0x60(0x4)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_38DE[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4E57[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector2D                             Position;                                          // 0x68(0x10)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 	static class UClass* StaticClass();
@@ -22061,7 +22099,7 @@ class UPalUIStatusModel : public UObject
 public:
 	FMulticastInlineDelegateProperty_            OnChangeSelectedIndexDelegate;                     // 0x28(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TArray<class UPalIndividualCharacterHandle*> PalHandles;                                        // 0x38(0x10)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                        Pad_38EB[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4E64[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalUIStatusModel* GetDefaultObj();
@@ -22252,7 +22290,7 @@ public:
 	bool                                         CanFastTravel;                                     // 0x38(0x1)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         ForRespawn;                                        // 0x39(0x1)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsInitSelect;                                      // 0x3A(0x1)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3909[0x5];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4E82[0x5];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalHUDDispatchParameter_WorldMap* GetDefaultObj();
@@ -22279,7 +22317,7 @@ class UPalHUDDispatchParameter_WorldSetting : public UPalHUDDispatchParameterBas
 {
 public:
 	bool                                         IsNewWorld;                                        // 0x38(0x1)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_390A[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4E83[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class FString                                WorldSaveDirectoryName;                            // 0x40(0x10)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                WorldName;                                         // 0x50(0x10)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -22288,16 +22326,20 @@ public:
 
 };
 
-// 0x128 (0x5A0 - 0x478)
+// 0x138 (0x5B0 - 0x478)
 // Class Pal.PalUIWorldSettingBase
 class UPalUIWorldSettingBase : public UPalUserWidgetOverlayUI
 {
 public:
 	struct FPalOptionWorldSettings               OriginalSetting;                                   // 0x478(0x128)(BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
+	class FString                                CachedInputWorldName;                              // 0x5A0(0x10)(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 	static class UClass* StaticClass();
 	static class UPalUIWorldSettingBase* GetDefaultObj();
 
+	bool TryRequestWorldNameFilter(const class FString& NewWorldName);
+	void OnReceivedWordFilteringResult(const class FString& ResponseBody, bool bResponseOK, int32 ResponseCode);
+	void OnFilteredWorldName(const class FString& NewWorldName);
 	void OnCompletedSaveSetting(bool IsSuccess);
 	bool CompleteSetting(struct FPalOptionWorldSettings& NewSetting);
 };
@@ -22307,7 +22349,7 @@ public:
 class APalUniqueRideWeaponBase : public APalWeaponBase
 {
 public:
-	uint8                                        Pad_390D[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4E88[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalUniqueRideWeaponBase* GetDefaultObj();
@@ -22359,7 +22401,7 @@ public:
 	float                                        Time;                                              // 0x40(0x4)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                  bindActionName;                                    // 0x44(0x8)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsHide;                                            // 0x4C(0x1)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_390E[0x3];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4E89[0x3];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalWidgetTimerGaugeParameter* GetDefaultObj();
@@ -22373,7 +22415,7 @@ class UPalUserWidgetTimerGaugeBase : public UPalUserWidgetWorldHUD
 public:
 	struct FTimerHandle                          TargetTimerHandle;                                 // 0x428(0x8)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        Time;                                              // 0x430(0x4)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_390F[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4E8A[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalUserWidgetTimerGaugeBase* GetDefaultObj();
@@ -22807,12 +22849,12 @@ public:
 	struct FGuid                                 MyShopID;                                          // 0xC0(0x10)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                        ItemShopRestockMinute;                             // 0xD0(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	enum class EPalShopLotteryType               ItemShopLotteryType;                               // 0xD4(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_39E8[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4F63[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalDataTableRowName_ItemShopLotteryData ItemShopSimpleLotteryTableName;                    // 0xD8(0x8)(Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TMap<enum class EPalShopLotteryBiomeType, struct FPalDataTableRowName_ItemShopLotteryData> ItemShopBiomeLotteryTableMap;                      // 0xE0(0x50)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
 	int32                                        PalShopRestockMinute;                              // 0x130(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	enum class EPalShopLotteryType               PalShopLotteryType;                                // 0x134(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_39E9[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4F64[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalDataTableRowName_PalShopCreateData PalShopSimpleLotteryTableName;                     // 0x138(0x8)(Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TMap<enum class EPalShopLotteryBiomeType, struct FPalDataTableRowName_PalShopCreateData> PalShopBiomeLotteryTableMap;                       // 0x140(0x50)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
 	class UPalShopBase*                          MyItemShop;                                        // 0x190(0x8)(Net, ZeroConstructor, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -22839,11 +22881,11 @@ class UPalVisualEffectBase : public UObject
 public:
 	bool                                         bIsEndVisualEffect;                                // 0x28(0x1)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bCanDeleteInstance;                                // 0x29(0x1)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_39EA[0x6];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4F65[0x6];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnCompleteDelegate;                                // 0x30(0x10)(BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TArray<enum class EPalVisualEffectID>        ConflictIDList;                                    // 0x40(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
 	enum class EPalVisualEffectID                VisualEffectID;                                    // 0x50(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_39EB[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4F66[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalVisualEffectDynamicParameter      DynamicParameter;                                  // 0x58(0x10)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnTemplate, EditConst, NativeAccessSpecifierPublic)
 
 	static class UClass* StaticClass();
@@ -22911,7 +22953,7 @@ public:
 	TMap<enum class EPalVisualEffectID, TSoftClassPtr<class UPalVisualEffectBase>> VisualEffectClassDataReference;                    // 0x28(0x50)(Edit, DisableEditOnInstance, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 	class UMaterialParameterCollection*          MosaicMaterialParameterCollection;                 // 0x78(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TMap<enum class EPalVisualEffectID, TSubclassOf<class UPalVisualEffectBase>> VisualEffectClassDataAsset;                        // 0x80(0x50)(Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_39FD[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4F78[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalVisualEffectDataBase* GetDefaultObj();
@@ -22946,7 +22988,7 @@ public:
 	float                                        BlowUpRate;                                        // 0x15C(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                        DamageRate;                                        // 0x160(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         IsBlow;                                            // 0x164(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3A01[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4F7C[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class AActor*                                Attacker;                                          // 0x168(0x8)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -22962,7 +23004,7 @@ public:
 	class UUserWidget*                           TargetWidget;                                      // 0x28(0x8)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TMap<class FName, class UWidgetAnimation*>   AnimationMap;                                      // 0x30(0x50)(NativeAccessSpecifierPrivate)
 	float                                        MultiplyTimeScale;                                 // 0x80(0x4)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3A02[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4F7D[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalWidgetAnimationArray* GetDefaultObj();
@@ -22987,7 +23029,7 @@ class UPalWildDrinkWaterSpot : public UObject
 {
 public:
 	bool                                         IsReserved;                                        // 0x28(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3A04[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4F7F[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               SpotActorLocation;                                 // 0x30(0x18)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<struct FVector>                       PalGoalLocations;                                  // 0x48(0x10)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
 
@@ -23035,16 +23077,27 @@ public:
 	float                                        WindDirectionResponse;                             // 0x298(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FFloatInterval                        WindSpeedInterval;                                 // 0x29C(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FFloatInterval                        WindSpeedChangeInterval;                           // 0x2A4(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3A07[0x894];                                   // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4F81[0x894];                                   // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        LastChangedDirectionTime;                          // 0xB40(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                        LastChangedSpeedTime;                              // 0xB44(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3A08[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4F82[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalWindController* GetDefaultObj();
 
 	void UpdateNiagaraParameterCollection(struct FPalWindInfo& WindInfo);
 	void OnActorSpawned(class AActor* InActor);
+};
+
+// 0x0 (0x30 - 0x30)
+// Class Pal.PalWordFilterSubsystem
+class UPalWordFilterSubsystem : public UGameInstanceSubsystem
+{
+public:
+
+	static class UClass* StaticClass();
+	static class UPalWordFilterSubsystem* GetDefaultObj();
+
 };
 
 // 0x68 (0x90 - 0x28)
@@ -23057,7 +23110,7 @@ public:
 	enum class EPalWorkWorkerState               State;                                             // 0x70(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bFixed;                                            // 0x71(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	enum class EPalWorkWorkerWorkingState        WorkingState;                                      // 0x72(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3A1B[0x5];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4F84[0x5];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FVector                               LocalRandomWorkLocation;                           // 0x78(0x18)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -23084,7 +23137,7 @@ public:
 class UPalWorkBase : public UObject
 {
 public:
-	uint8                                        Pad_3A1E[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4F87[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnDisposeDelegate;                                 // 0x30(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnFinishWorkInServerDelegate;                      // 0x40(0x10)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnReflectFinishWorkDelegate;                       // 0x50(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -23098,9 +23151,9 @@ public:
 	struct FPalBoundsTransform                   WorkableBounds;                                    // 0xD0(0x80)(Edit, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, NativeAccessSpecifierProtected)
 	class FName                                  AssignDefineDataId;                                // 0x150(0x8)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	enum class EPalWorkType                      OverrideWorkType;                                  // 0x158(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3A1F[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4F88[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<struct FPalWorkAssignLocalLocation>   AssignLocations;                                   // 0x160(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3A20[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4F89[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FGuid                                 BaseCampIdBelongTo;                                // 0x174(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FGuid                                 OwnerMapObjectModelId;                             // 0x184(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FGuid                                 OwnerMapObjectConcreteModelId;                     // 0x194(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -23109,14 +23162,14 @@ public:
 	bool                                         bAssignableOtomo;                                  // 0x1A6(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bCanTriggerWorkerEvent;                            // 0x1A7(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bCanStealAssign;                                   // 0x1A8(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3A21[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4F8A[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FGuid                                 ID;                                                // 0x1AC(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	enum class EPalWorkProgressState             CurrentState;                                      // 0x1BC(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3A22[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4F8B[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	class UPalWorkProgressTransformBase*         Transform;                                         // 0x1C0(0x8)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FPalFastWorkAssignRepInfoArray        AssignRepInfoArray;                                // 0x1C8(0x148)(Edit, Net, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 	bool                                         bGroupRaycastStartOffsetOrigin;                    // 0x310(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3A23[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4F8C[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalWorkBase* GetDefaultObj();
@@ -23145,7 +23198,7 @@ class UPalWorkBootUp : public UPalWorkBase
 {
 public:
 	FMulticastInlineDelegateProperty_            OnBootUpInServerDelegate;                          // 0x318(0x10)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3A24[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4F8D[0x18];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalWorkBootUp* GetDefaultObj();
@@ -23160,10 +23213,10 @@ public:
 	TSubclassOf<class UPalAIActionBaseCampDefenseBase> DefenseAIActionClass;                              // 0x318(0x8)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TSubclassOf<class UPalActionBase>            DefenseWaitActionClass;                            // 0x320(0x8)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	enum class EPalWorkDefenseCombatType         DefenseCombatType;                                 // 0x328(0x1)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3A25[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4F8E[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TWeakObjectPtr<class UPalMapObjectDefenseModelBase> WeakDefenseModel;                                  // 0x32C(0x8)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TWeakObjectPtr<class UPalMapObjectDefenseBulletLauncherModel> WeakDefenseBulletLauncherModel;                    // 0x334(0x8)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3A26[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4F8F[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalWorkDefense* GetDefaultObj();
@@ -23224,7 +23277,7 @@ class UPalWorkDeforestFoliage : public UPalWorkBase
 {
 public:
 	struct FPalFoliageIdentifiableInfo           IdentifiableInfo;                                  // 0x318(0x30)(Edit, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3A28[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4F91[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalWorkDeforestFoliage* GetDefaultObj();
@@ -23247,7 +23300,7 @@ public:
 class UPalWorkForLevelObject : public UPalWorkBase
 {
 public:
-	uint8                                        Pad_3A29[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4F92[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalWorkForLevelObject* GetDefaultObj();
@@ -23272,7 +23325,7 @@ class UPalWorkMonsterFarm : public UPalWorkBase
 {
 public:
 	struct FFloatInterval                        ActionIntervalSeconds;                             // 0x318(0x8)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3A2A[0x20];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4F93[0x20];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalWorkMonsterFarm* GetDefaultObj();
@@ -23286,11 +23339,11 @@ class UPalWorkAssign_MonsterFarm : public UPalWorkAssign
 public:
 	struct FFloatCounter                         ActionIntervalTimer;                               // 0x90(0x8)(Edit, DisableEditOnTemplate, Transient, EditConst, NoDestructor, NativeAccessSpecifierPrivate)
 	struct FVector                               WalkTargetLocation;                                // 0x98(0x18)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3A2B[0x20];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4F94[0x20];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FPalStaticItemIdAndNum                SpawnItemInfoPerAction;                            // 0xD0(0xC)(Edit, DisableEditOnTemplate, Transient, EditConst, NoDestructor, NativeAccessSpecifierPrivate)
 	int32                                        SpawnActionWholeCount;                             // 0xDC(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                        SpawnActionCurrentCount;                           // 0xE0(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3A2C[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4F95[0x4];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalWorkAssign_MonsterFarm* GetDefaultObj();
@@ -23302,7 +23355,7 @@ public:
 class UPalWorkOnlyJoin : public UPalWorkBase
 {
 public:
-	uint8                                        Pad_3A2D[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4F96[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalWorkOnlyJoin* GetDefaultObj();
@@ -23314,7 +23367,7 @@ public:
 class UPalWorkOnlyJoinAndWalkAround : public UPalWorkBase
 {
 public:
-	uint8                                        Pad_3A2E[0x28];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4F97[0x28];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalWorkOnlyJoinAndWalkAround* GetDefaultObj();
@@ -23327,7 +23380,7 @@ class UPalWorkAssign_OnlyJoinAndWalkAround : public UPalWorkAssign
 {
 public:
 	struct FVector                               TargetLocation;                                    // 0x90(0x18)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3A2F[0x20];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4F98[0x20];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalWorkAssign_OnlyJoinAndWalkAround* GetDefaultObj();
@@ -23339,18 +23392,18 @@ public:
 class UPalWorkProgress : public UPalWorkBase
 {
 public:
-	uint8                                        Pad_3A30[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4F99[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnUpdateWorkAmountInServerDelegate;                // 0x320(0x10)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnReflectWorkAmountDelegate;                       // 0x330(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	float                                        RequiredWorkAmount;                                // 0x340(0x4)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        CurrentWorkAmount;                                 // 0x344(0x4)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        CurrentWorkAmountByLocalPlayer;                    // 0x348(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3A31[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4F9A[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<struct FGuid>                         WorkingPlayerUIds;                                 // 0x350(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
 	int32                                        WorkExp;                                           // 0x360(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                        AutoWorkSelfAmountBySec;                           // 0x364(0x4)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bNotAllowReactionOnWorkComplete;                   // 0x368(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3A32[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4F9B[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        ProgressTimeSinceLastTick;                         // 0x36C(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 	static class UClass* StaticClass();
@@ -23371,9 +23424,9 @@ public:
 class UPalWorkProgressManager : public UPalWorldSubsystem
 {
 public:
-	uint8                                        Pad_3A33[0x40];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4F9C[0x40];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<struct FGuid, class UPalWorkBase*>      WorkMap_InServer;                                  // 0xB0(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3A34[0x60];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4F9D[0x60];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<class FName, struct FPalWorkAssignDefineData> WorkAssignDefineMap;                               // 0x160(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
 	struct FPalWorkAssignDefineData              NotWorkableAssignDefine;                           // 0x1B0(0x38)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
 	struct FPalWorkAssignDefineData              BuildAssignDefine;                                 // 0x1E8(0x38)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
@@ -23385,9 +23438,9 @@ public:
 	int32                                        MoveCheckProcessIndex;                             // 0x2F0(0x4)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                        MoveCheckMaxNumPerFrame;                           // 0x2F4(0x4)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                        WorkTickInvokeMaxNumInOneTick;                     // 0x2F8(0x4)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3A35[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4F9E[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<enum class EPalWorkType, int32>         WorkTypeAssignPriorityMap;                         // 0x300(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3A36[0x38];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4F9F[0x38];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalWorkProgressManager* GetDefaultObj();
@@ -23414,7 +23467,7 @@ public:
 class UPalWorkProgressTransformStatic : public UPalWorkProgressTransformBase
 {
 public:
-	uint8                                        Pad_3A37[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4FA0[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FTransform                            Transform;                                         // 0x30(0x60)(Edit, Net, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 	static class UClass* StaticClass();
@@ -23428,12 +23481,12 @@ class UPalWorkProgressTransformMapObject : public UPalWorkProgressTransformBase
 {
 public:
 	struct FGuid                                 MapObjectInstanceId;                               // 0x28(0x10)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3A38[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4FA1[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FTransform                            TransformCache;                                    // 0x40(0x60)(Edit, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bCached;                                           // 0xA0(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3A39[0xB];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4FA2[0xB];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	bool                                         bShouldSearchForFoliage;                           // 0xAC(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3A3A[0x3];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4FA3[0x3];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalWorkProgressTransformMapObject* GetDefaultObj();
@@ -23446,7 +23499,7 @@ class UPalWorkProgressTransformCharacter : public UPalWorkProgressTransformBase
 {
 public:
 	struct FPalInstanceID                        IndividualId;                                      // 0x28(0x30)(Edit, Net, DisableEditOnTemplate, Transient, EditConst, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                        Pad_3A3B[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4FA4[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FTransform                            TransformCache;                                    // 0x60(0x60)(Edit, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 	static class UClass* StaticClass();
@@ -23483,7 +23536,7 @@ class UPalWorkRemoveMapObjectEffect : public UPalWorkBase
 {
 public:
 	enum class EPalStatusID                      TargetEffectType;                                  // 0x318(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3A3C[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4FA5[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalWorkRemoveMapObjectEffect* GetDefaultObj();
@@ -23495,11 +23548,11 @@ public:
 class UPalWorkRepair : public UPalWorkBase
 {
 public:
-	uint8                                        Pad_3A3D[0x14];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4FA6[0x14];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	struct FGuid                                 ConnectToModelInstanceId;                          // 0x32C(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3A3E[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4FA7[0x4];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<class UPalMapObjectModel*>            ConnectedModels;                                   // 0x340(0x10)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3A3F[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4FA8[0x10];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalWorkRepair* GetDefaultObj();
@@ -23512,7 +23565,7 @@ class UPalWorkReviveCharacter : public UPalWorkBase
 {
 public:
 	struct FPalInstanceID                        TargetIndividualId;                                // 0x318(0x30)(Edit, DisableEditOnTemplate, Transient, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3A40[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4FA9[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalWorkReviveCharacter* GetDefaultObj();
@@ -23536,9 +23589,9 @@ class UPalWorkTransportItemInBaseCamp : public UPalWorkBase
 {
 public:
 	enum class EPalWorkTransportItemType         TransportType;                                     // 0x318(0x1)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3A41[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4FAA[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        ApproachFailedTimeout;                             // 0x31C(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3A42[0x20];                                    // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4FAB[0x20];                                    // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalWorkTransportItemInBaseCamp* GetDefaultObj();
@@ -23552,7 +23605,7 @@ class UPalWorkEffectComponent : public UNiagaraComponent
 public:
 	int32                                        LocationIndex;                                     // 0x7E8(0x4)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bActiveFX;                                         // 0x7EC(0x1)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3A43[0x3];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4FAC[0x3];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalWorkEffectComponent* GetDefaultObj();
@@ -23590,7 +23643,7 @@ public:
 	FMulticastInlineDelegateProperty_            OnUnlockedMap;                                     // 0x28(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UTextureRenderTarget2D*                MaskRenderTarget;                                  // 0x38(0x8)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UTexture2D*                            MaskTexture;                                       // 0x40(0x8)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3A47[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4FB0[0x18];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	TArray<uint8>                                CachedTextureRawData;                              // 0x60(0x10)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TMap<class FName, bool>                      UnlockedRegionMap;                                 // 0x70(0x50)(NativeAccessSpecifierPrivate)
 	class UDataTable*                            WorldMapDataTable;                                 // 0xC0(0x8)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -23623,7 +23676,7 @@ public:
 class UPalWorldObjectRecordWorldSubsystem : public UPalWorldSubsystem
 {
 public:
-	uint8                                        Pad_3A48[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4FB1[0x8];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TMap<class UClass*, class UPalWorldObjectRecorderBase*> RecorderMap;                                       // 0x78(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
 
 	static class UClass* StaticClass();
@@ -23689,10 +23742,10 @@ class UPalWorldSecurityLawBase : public UObject
 public:
 	struct FPalDataTableRowName_CrimeMasterData  CrimeId;                                           // 0x28(0x8)(Edit, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                         bInvalid;                                          // 0x30(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3A49[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4FB2[0x3];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	float                                        CrimeStateMaintainDurationBase;                    // 0x34(0x4)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                         bNotUseReleaseTimer;                               // 0x38(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3A4A[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4FB3[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalWorldSecurityLawBase* GetDefaultObj();
@@ -23768,7 +23821,7 @@ public:
 class UPalWorldSecuritySystem : public UPalWorldSubsystem
 {
 public:
-	uint8                                        Pad_3A51[0x28];                                    // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4FBA[0x28];                                    // Fixing Size After Last Property  [ Dumper-7 ]
 	FMulticastInlineDelegateProperty_            OnReportCriminalDelegate;                          // 0x98(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnReleaseWantedDelegate;                           // 0xA8(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_            OnRegisterdAreaTriggerDelegate;                    // 0xB8(0x10)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -23780,7 +23833,7 @@ public:
 	TMap<struct FGuid, class UPalWorldSecurityCrimeInstance*> CrimeInstanceMap;                                  // 0x190(0x50)(Edit, DisableEditOnTemplate, EditConst, NativeAccessSpecifierPrivate)
 	TArray<TWeakObjectPtr<class APalTriggerAreaBase>> WeakTriggerAreaList;                               // 0x1E0(0x10)(Edit, ZeroConstructor, DisableEditOnTemplate, EditConst, UObjectWrapper, NativeAccessSpecifierPrivate)
 	TMap<struct FGuid, class UPalIndividualCharacterHandle*> CriminalMap;                                       // 0x1F0(0x50)(Edit, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPrivate)
-	uint8                                        Pad_3A52[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4FBB[0x8];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class UPalWorldSecuritySystem* GetDefaultObj();
@@ -23819,14 +23872,14 @@ public:
 	class UDataLayerAsset*                       FieldEnvironmentDataLayerAsset;                    // 0x4D8(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UPalAudioWorldSubsystem>   AudioWorldSubsystemClass;                          // 0x4E0(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bIsPalTimerEnabled;                                // 0x4E8(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3A59[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
+	uint8                                        Pad_4FBF[0x7];                                     // Fixing Size After Last Property  [ Dumper-7 ]
 	TSubclassOf<class UPalOptionSubsystem>       OptionWorldSubsystemClass;                         // 0x4F0(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UPalTimeManager>           TimeManagerClass;                                  // 0x4F8(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UPalInvaderManager>        InvaderManagerClass;                               // 0x500(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UPalIncidentSystem>        IncidentSystemClass;                               // 0x508(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UPalFunnelCharacterManager> FunnelCharacterManagerClass;                       // 0x510(0x8)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                         bRequestCharacterMake;                             // 0x518(0x1)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                        Pad_3A5A[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
+	uint8                                        Pad_4FC0[0x7];                                     // Fixing Size Of Struct [ Dumper-7 ]
 
 	static class UClass* StaticClass();
 	static class APalWorldSettings* GetDefaultObj();
