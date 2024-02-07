@@ -1698,7 +1698,6 @@ enum class EPalIncidentState : uint8
 	Completed                      = 3,
 	Canceled                       = 4,
 	InstanceCreateFailed           = 255,
-	EPalIncidentState_MAX          = 256,
 };
 
 enum class EPalFoodStatusEffectType : uint8
@@ -3156,7 +3155,6 @@ enum class EPalMapObjectModelConnectIndex : uint8
 	Front                          = 5,
 	AnyPlace                       = 254,
 	None                           = 255,
-	EPalMapObjectModelConnectIndex_MAX = 256,
 };
 
 enum class EPalMapObjectModelInitializeExtraParameterType : uint8
