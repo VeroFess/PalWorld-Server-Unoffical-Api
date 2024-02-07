@@ -56,7 +56,7 @@ namespace Offsets {
     constexpr int32_t GetPlayerControllerById = 0x02B73D10;
 
     // void __fastcall APalPlayerState::SendDamage_ToServer_Implementation(APalPlayerState *this, APalCharacter *Target, const FPalDamageInfo *info)
-    constexpr int32_t SendDamageToServer = 0x02B160A0;
+    constexpr int32_t SendDamageToServer = 0x02B160A5;
 
     // APalPlayerController *__fastcall UPalNetworkComponentUtility::GetOwnerPlayerController(const UActorComponent *Component)
     constexpr int32_t NetworkComponentGetOwnerPlayerController = 0x028AEE70;
