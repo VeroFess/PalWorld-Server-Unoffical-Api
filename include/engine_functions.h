@@ -5,6 +5,10 @@ typedef bool (*KickPlayerType)(const SDK::UObject *WorldContextObject, const SDK
 typedef SDK::FText *(*GetEmptyFTextType)();
 typedef SDK::APlayerState *(*GetPlayerStateFromControllerType)(SDK::AController *that);
 typedef SDK::APalPlayerController *(*NetworkComponentGetOwnerPlayerControllerType)(const SDK::UActorComponent *Component);
+
+typedef SDK::FString *(*UniqueNetIdToStringType)(SDK::FUniqueNetIdWrapper *that, SDK::FString *result);
+typedef SDK::FUniqueNetIdWrapper *(*UniqueNetIdWrapperOperatorType)(SDK::FUniqueNetIdWrapper *that);
+
 #ifdef __linux
 typedef SDK::FString *(*GetPlayerNetworkAddressType)(SDK::FString *buffer, SDK::APlayerController *that);
 #else
@@ -17,6 +21,8 @@ extern KickPlayerType                               KickPlayer;
 extern GetEmptyFTextType                            GetEmptyFText;
 extern GetPlayerStateFromControllerType             GetPlayerStateFromController;
 extern NetworkComponentGetOwnerPlayerControllerType NetworkComponentGetOwnerPlayerController;
+extern UniqueNetIdToStringType                      UniqueNetIdToString;
+extern UniqueNetIdWrapperOperatorType               UniqueNetIdWrapperOperator;
 
 extern SDK::UEngine *Engine;
 

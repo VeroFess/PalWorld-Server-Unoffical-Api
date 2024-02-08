@@ -16,7 +16,7 @@ void add_item_to_server_implementation_proxy(SDK::UPalNetworkPlayerComponent *th
 
     user_pre_additem_event pre_additem_event(player, static_item_id.ToString(), count, is_assign_passive);
 
-    bool all_event_pass = dispatcher.forEachIf(EVENT_PRE_LOGIN, [&](const eventpp::EventDispatcher<uint32_t, bool(pal_loader_basic_event & e), pal_loader_event_policies>::Callback &cb) -> bool {
+    bool all_event_pass = dispatcher.forEachIf(EVENT_PRE_ADDITEM, [&](const eventpp::EventDispatcher<uint32_t, bool(pal_loader_basic_event & e), pal_loader_event_policies>::Callback &cb) -> bool {
         if (cb(dynamic_cast<pal_loader_basic_event &>(pre_additem_event))) {
             return false;
         }

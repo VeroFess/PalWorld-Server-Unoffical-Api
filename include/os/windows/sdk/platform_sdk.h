@@ -61,6 +61,16 @@ namespace Offsets {
     // APalPlayerController *__fastcall UPalNetworkComponentUtility::GetOwnerPlayerController(const UActorComponent *Component)
     constexpr int32_t NetworkComponentGetOwnerPlayerController = 0x028AEE70;
 
-    //__int64 __fastcall UPalNetworkPlayerComponent::RequestAddItem_ToServer_Implementation(const UActorComponent *a1, __int64 a2, unsigned int a3, unsigned __int8 a4)
+    // __int64 __fastcall UPalNetworkPlayerComponent::RequestAddItem_ToServer_Implementation(const UActorComponent *a1, __int64 a2, unsigned int a3, unsigned __int8 a4)
     constexpr int32_t AddItemToServer = 0x028EB2A0;
+
+    // void __fastcall UPalNetworkIndividualComponent::UpdateCharacterNickName_ToServer_Implementation(UPalNetworkIndividualComponent *this, const FPalInstanceID *id, const FString *newNickName)
+    constexpr int32_t UpdateName = 0x028C8A00;
+
+    // FString *__fastcall FUniqueNetIdWrapper::ToString(FUniqueNetIdWrapper *this, FString *result)
+    constexpr int32_t UniqueNetIdToString = 0x013DD600;
+
+    // don't use it!!
+    // const FUniqueNetId *__fastcall FUniqueNetIdWrapper::operator*(FUniqueNetIdWrapper *this)
+    constexpr int32_t UniqueNetIdWrapperOperator = 0x013B5FC0;
 } // namespace Offsets

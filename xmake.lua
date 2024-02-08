@@ -205,6 +205,7 @@ target("pal-plugin-loader-static")
     add_files("src/*.cpp")
     add_files("src/sdk/*.cpp")
     add_files("src/hooks/*.cpp")
+    add_files("src/ev_test/*.cpp")
     add_files("src/commands/*.cpp")
 
 target("pal-plugin-loader")

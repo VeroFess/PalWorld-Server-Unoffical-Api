@@ -6,6 +6,7 @@
 #include "SDKDirect.h"
 #include "folly/IPAddress.h"
 #include "events.h"
+#include "common_player_data.h"
 
 SDK::APlayerController *spawn_play_actor_proxy(SDK::UWorld *that, SDK::UPlayer *player, SDK::ENetRole role, const SDK::FURL *url, const SDK::FUniqueNetIdRepl *uid, SDK::FString *error, uint8_t index) {
     auto controller = engine_spawn_play_actor(that, player, role, url, uid, error, index);
@@ -14,6 +15,14 @@ SDK::APlayerController *spawn_play_actor_proxy(SDK::UWorld *that, SDK::UPlayer *
     }
 
     // don't use player object here!
+    static SDK::UClass *APalPlayerControllerStaticClass = nullptr;
+    if (APalPlayerControllerStaticClass == nullptr) {
+        APalPlayerControllerStaticClass = SDK::APalPlayerController::StaticClass();
+    }
+
+    if (!controller->IsA(APalPlayerControllerStaticClass)) {
+        return controller;
+    }
 
     // Verified
     auto state_raw = controller->PlayerState;
@@ -49,6 +58,21 @@ SDK::APlayerController *spawn_play_actor_proxy(SDK::UWorld *that, SDK::UPlayer *
 
     std::string user_name = utf16_to_local_codepage(fs_user_name.Data, fs_user_name.NumElements);
 
+    SDK::FString  fs_user_net_id;
+    engine_char_t fs_user_net_id_buffer[64] = { 0 };
+
+    fs_user_net_id.Data        = fs_user_net_id_buffer;
+    fs_user_net_id.MaxElements = 64;
+    fs_user_net_id.NumElements = 0;
+
+    UniqueNetIdToString((SDK::FUniqueNetIdWrapper *)uid, &fs_user_net_id);
+
+    if (!player_init_name.contains(folly::fbstring(fs_user_net_id.ToString()))) {
+        player_init_name.insert({ folly::fbstring(fs_user_net_id.ToString()), folly::fbstring(user_name) });
+    }
+
+    pal_async_log->info("[Event::Login] id {}, eid {}, uid {:08x}-{:08x}-{:08x}-{:08x}", state->PlayerId, fs_user_net_id.ToString(), state->PlayerUId.A, state->PlayerUId.B, state->PlayerUId.C, state->PlayerUId.D);
+
     auto ip_remote = folly::IPAddress::tryFromString(folly::fbstring(address));
     if (ip_remote.hasError()) {
         pal_async_log->warn("[Event::Login] player {} login blocked from {}. reason: invalid ip address", user_name, address);
@@ -61,8 +85,10 @@ SDK::APlayerController *spawn_play_actor_proxy(SDK::UWorld *that, SDK::UPlayer *
 
     user_login_event event_sync(fbs_user_name, ip_address_value);
 
+    folly::fbstring fbs_user_name2 = folly::fbstring(user_name);
+
     std::thread async_event_thread([&] {
-        user_login_event_async event_async(fbs_user_name, ip_address_value);
+        user_login_event_async event_async(fbs_user_name2, ip_address_value);
         dispatcher.dispatch(event_async);
     });
     async_event_thread.detach();

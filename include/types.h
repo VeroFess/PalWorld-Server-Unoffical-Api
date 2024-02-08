@@ -8,6 +8,7 @@
 #include "eventpp/eventdispatcher.h"
 #include "utils.h"
 #include "engine_functions.h"
+#include "common_player_data.h"
 
 enum pal_loader_element_type : uint8_t {
     none        = 0,
@@ -247,6 +248,34 @@ struct pal_loader_user : pal_loader_character {
             uuid_p4 = guid->D;
         }
 
+        pal_loader_user(const SDK::FGuid *guid_init)
+            : pal_loader_character(pal_loader_character_type::player) {
+            SDK::TArray<SDK::APalCharacter *> player_characters;
+
+            SDK::GetAllPlayerCharacters(&player_characters);
+
+            if (player_characters.IsValid()) {
+                for (int i = 0; i < player_characters.Num(); i++) {
+                    auto character = static_cast<SDK::APalPlayerCharacter *>(player_characters[i]);
+
+                    pal_loader_user player(character);
+                    auto            exist = player.get_guid();
+
+                    if ((*exist) == (*guid_init)) {
+                        id      = player.id;
+                        uuid_p1 = guid_init->A;
+                        uuid_p2 = guid_init->B;
+                        uuid_p3 = guid_init->C;
+                        uuid_p4 = guid_init->D;
+                        return;
+                    }
+                }
+            }
+
+            mark_user_as_invalid();
+            return;
+        }
+
     public:
         bool valid() const {
             return id != INT32_MAX && uuid_p1 != INT32_MAX && uuid_p2 != INT32_MAX && uuid_p3 != INT32_MAX && uuid_p4 != INT32_MAX;
@@ -321,6 +350,45 @@ struct pal_loader_user : pal_loader_character {
             remote_address = ip_remote.value();
 
             return remote_address;
+        }
+
+        SDK::FGuid *get_guid() {
+            auto controller = get_controller();
+            if (controller == nullptr) {
+                return nullptr;
+            }
+
+            if (controller->PlayerState == nullptr) {
+                return nullptr;
+            }
+
+            return SDK::GetPlayerUID(reinterpret_cast<SDK::APalPlayerState *>(controller->PlayerState));
+        }
+
+        folly::fbstring get_real_name() {
+            return player_init_name[get_net_id()];
+        }
+
+        folly::fbstring get_net_id() {
+            auto controller = get_controller();
+            if (controller == nullptr) {
+                return folly::fbstring("");
+            }
+
+            if (controller->PlayerState == nullptr) {
+                return folly::fbstring("");
+            }
+
+            SDK::FString  fs_user_net_id;
+            engine_char_t fs_user_net_id_buffer[128] = { 0 };
+
+            fs_user_net_id.Data        = fs_user_net_id_buffer;
+            fs_user_net_id.MaxElements = 128;
+            fs_user_net_id.NumElements = 0;
+
+            UniqueNetIdToString(&controller->PlayerState->UniqueId, &fs_user_net_id);
+
+            return folly::fbstring(fs_user_net_id.ToString());
         }
 
         bool kick() {

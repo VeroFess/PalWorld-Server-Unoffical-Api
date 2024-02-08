@@ -1,6 +1,8 @@
 #include "common_entry.h"
 #include "SDKDirect.h"
 
+#include "events.h"
+
 #include "console.h"
 #include "spdlog/async.h"
 #include "spdlog/spdlog.h"
@@ -25,6 +27,8 @@ std::shared_ptr<spdlog::async_logger>                            pal_async_log;
 
 void pal_loader_thread_start() {
     spdlog::info("loading ...");
+
+    install_test_event_handler();
 
     engine_init();
 

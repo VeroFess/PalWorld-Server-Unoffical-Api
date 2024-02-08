@@ -96,3 +96,12 @@ class SDK::UClass *SDK::APalSpectator::StaticClass() {
 
     return Clss;
 }
+
+class SDK::UClass *SDK::APalPlayerController::StaticClass() {
+    static class SDK::UClass *Clss = nullptr;
+
+    if (!Clss)
+        Clss = SDK::UObject::FindClassFast("PalPlayerController");
+
+    return Clss;
+}

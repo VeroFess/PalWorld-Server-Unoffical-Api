@@ -17,7 +17,7 @@ void list_handle(std::vector<folly::fbstring> &user_input) {
 
             pal_loader_user player(character);
 
-            spdlog::info("[CMD::List] {}, {:016x}, {}", player.get_name(), player.get_id(), player.get_address().str());
+            spdlog::info("[CMD::List] {}[{}], {:016x}, {}, {}", player.get_name(), player.get_real_name(), player.get_id(), player.get_address().str(), player.get_net_id().toStdString());
         }
     }
 }
