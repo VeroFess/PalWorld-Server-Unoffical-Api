@@ -99,14 +99,15 @@ struct user_pre_attack_event : pal_loader_basic_event {
         pal_loader_user                 source;
         pal_loader_character            target;
         pal_loader_editable_damage_info info;
+        int                             real_damage;
 
     public:
         user_pre_attack_event() = delete;
 
-        user_pre_attack_event(pal_loader_user &source, pal_loader_character &target, SDK::FPalDamageInfo *info)
+        user_pre_attack_event(pal_loader_user &source, pal_loader_character &target, SDK::FPalDamageInfo *info, int real_damage)
             : pal_loader_basic_event(EVENT_PRE, GAME_GAMEPLAY, ATTACK),
               source(source),
-              target(target), info(info) {}
+              target(target), info(info), real_damage(real_damage) {}
 
         pal_loader_user &get_source() {
             return source;
@@ -119,6 +120,10 @@ struct user_pre_attack_event : pal_loader_basic_event {
         pal_loader_editable_damage_info &get_info() {
             return info;
         };
+
+        int get_real_damage() {
+            return real_damage;
+        }
 };
 
 struct user_pre_additem_event : pal_loader_basic_event {

@@ -9,6 +9,7 @@ GetPlayerStateFromControllerType             GetPlayerStateFromController       
 NetworkComponentGetOwnerPlayerControllerType NetworkComponentGetOwnerPlayerController = nullptr;
 UniqueNetIdToStringType                      UniqueNetIdToString                      = nullptr;
 UniqueNetIdWrapperOperatorType               UniqueNetIdWrapperOperator               = nullptr;
+CalcDamageType                               CalcDamage                               = nullptr;
 SDK::UEngine                                *Engine                                   = nullptr;
 
 void engine_init() {
@@ -21,4 +22,5 @@ void engine_init() {
     NetworkComponentGetOwnerPlayerController = reinterpret_cast<NetworkComponentGetOwnerPlayerControllerType>(uintptr_t(GetImageBaseOffset()) + Offsets::NetworkComponentGetOwnerPlayerController);
     UniqueNetIdToString                      = reinterpret_cast<UniqueNetIdToStringType>(uintptr_t(GetImageBaseOffset()) + Offsets::UniqueNetIdToString);
     UniqueNetIdWrapperOperator               = reinterpret_cast<UniqueNetIdWrapperOperatorType>(uintptr_t(GetImageBaseOffset()) + Offsets::UniqueNetIdWrapperOperator);
+    CalcDamage                               = reinterpret_cast<CalcDamageType>(uintptr_t(GetImageBaseOffset()) + Offsets::CalcDamage);
 }

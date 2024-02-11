@@ -73,4 +73,7 @@ namespace Offsets {
     // don't use it!!
     // const FUniqueNetId *__fastcall FUniqueNetIdWrapper::operator*(FUniqueNetIdWrapper *this)
     constexpr int32_t UniqueNetIdWrapperOperator = 0x013B5FC0;
+
+    // __int64 __fastcall UPalUtility::CalcDamage(const FPalDamageInfo *DamageInfo, const AActor *defender)
+    constexpr int32_t CalcDamage = 0x02B59020;
 } // namespace Offsets

@@ -59,7 +59,9 @@ void send_damage_to_server_implementation_proxy(SDK::APalPlayerState *that, SDK:
 
     pal_loader_user source(that->PlayerId);
 
-    user_pre_attack_event pre_attack(source, target_object, info);
+    auto real_damage = CalcDamage(info, target);
+
+    user_pre_attack_event pre_attack(source, target_object, info, real_damage);
 
     bool all_event_pass = dispatcher.forEachIf(EVENT_PRE_ATTACK, [&](const eventpp::EventDispatcher<uint32_t, bool(pal_loader_basic_event & e), pal_loader_event_policies>::Callback &cb) -> bool {
         if (cb(dynamic_cast<pal_loader_basic_event &>(pre_attack))) {

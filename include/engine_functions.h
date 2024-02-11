@@ -9,6 +9,8 @@ typedef SDK::APalPlayerController *(*NetworkComponentGetOwnerPlayerControllerTyp
 typedef SDK::FString *(*UniqueNetIdToStringType)(SDK::FUniqueNetIdWrapper *that, SDK::FString *result);
 typedef SDK::FUniqueNetIdWrapper *(*UniqueNetIdWrapperOperatorType)(SDK::FUniqueNetIdWrapper *that);
 
+typedef int (*CalcDamageType)(const SDK::FPalDamageInfo *DamageInfo, const SDK::AActor *defender);
+
 #ifdef __linux
 typedef SDK::FString *(*GetPlayerNetworkAddressType)(SDK::FString *buffer, SDK::APlayerController *that);
 #else
@@ -23,6 +25,7 @@ extern GetPlayerStateFromControllerType             GetPlayerStateFromController
 extern NetworkComponentGetOwnerPlayerControllerType NetworkComponentGetOwnerPlayerController;
 extern UniqueNetIdToStringType                      UniqueNetIdToString;
 extern UniqueNetIdWrapperOperatorType               UniqueNetIdWrapperOperator;
+extern CalcDamageType                               CalcDamage;
 
 extern SDK::UEngine *Engine;
 
