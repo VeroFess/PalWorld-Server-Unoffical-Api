@@ -126,6 +126,7 @@ package_end()
 
 -- just install every thing
 add_requires("vcpkg::folly")
+add_requires("vcpkg::hyperscan")
 add_requires("spdlog")
 add_requires("eventpp")
 add_requires("funchook")
@@ -149,8 +150,10 @@ target("pal-plugin-loader-static")
     add_packages("spdlog")
     add_packages("eventpp")
     add_packages("funchook")
+    add_packages("hyperscan")
     add_packages("libisocline")
 
+    add_links("hs")
     add_links("fmt")
     add_links("glog")
     add_links("folly")

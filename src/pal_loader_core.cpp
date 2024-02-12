@@ -73,6 +73,8 @@ void pal_loader_thread_start() {
         spdlog::warn("install_hooks failed");
     }
 
+    lock_and_init_process_event();
+
     command_handler_map.insert({ "broadcast", broadcast_handle });
     command_handler_map.insert({ "gc", garbage_collection_handle });
     command_handler_map.insert({ "list", list_handle });

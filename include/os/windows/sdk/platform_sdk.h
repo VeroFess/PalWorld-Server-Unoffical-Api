@@ -76,4 +76,6 @@ namespace Offsets {
 
     // __int64 __fastcall UPalUtility::CalcDamage(const FPalDamageInfo *DamageInfo, const AActor *defender)
     constexpr int32_t CalcDamage = 0x02B59020;
+
+    constexpr int32_t ProcessEvent = 0x02F28C50;
 } // namespace Offsets
