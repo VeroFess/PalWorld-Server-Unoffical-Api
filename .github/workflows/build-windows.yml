@@ -1,0 +1,34 @@
+name: build-windows
+
+on:
+  - push
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [windows-latest]
+
+    runs-on: ${{ matrix.os }}
+
+    env:
+        VCPKG_ROOT: ${{ github.workspace }}\vcpkg
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: lukka/get-cmake@latest
+      - uses: johnwason/vcpkg-action@v6
+        id: vcpkg
+        with:
+            pkgs: folly hyperscan
+            triplet: x64-windows-release-static
+            token: ${{ github.token }}
+            github-binarycache: true
+      - uses: xmake-io/github-action-setup-xmake@master
+        with:
+            xmake-version: latest
+    
+      - name: build project
+        run: |
+          xmake -y
+
