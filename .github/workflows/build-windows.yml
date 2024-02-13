@@ -21,7 +21,7 @@ jobs:
         id: vcpkg
         with:
             pkgs: folly hyperscan
-            triplet: x64-windows-static-release
+            triplet: x64-windows
             token: ${{ github.token }}
             github-binarycache: true
       - uses: xmake-io/github-action-setup-xmake@master
@@ -32,5 +32,5 @@ jobs:
         run: git submodule update --init --recursive
     
       - name: build project
-        run: xmake -y
+        run: xmake -y -vD
 
