@@ -21,7 +21,7 @@ jobs:
         id: vcpkg
         with:
             pkgs: folly hyperscan
-            triplet: x64-windows
+            triplet: x64-windows-static
             token: ${{ github.token }}
             github-binarycache: true
       - uses: xmake-io/github-action-setup-xmake@master

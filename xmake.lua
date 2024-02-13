@@ -196,13 +196,19 @@ target("pal-plugin-loader-static")
     end
 
     add_includedirs(path.join(os.scriptdir(), "include/sdk/SDK"))
+    add_includedirs(path.join(os.scriptdir(), "include/sdk/SDK"))
     add_includedirs(path.join(os.scriptdir(), "include/dotnet"))
     add_includedirs(path.join(os.scriptdir(), "include/sdk"))
     add_includedirs(path.join(os.scriptdir(), "include"))
 
+
+    
+
     if is_os("windows") then
         add_includedirs(path.join(os.scriptdir(), "include/os/windows/sdk"))
         add_includedirs(path.join(os.scriptdir(), "include/os/windows"))
+
+        add_includedirs("$(env VCPKG_ROOT)/installed/x64-windows-static/include")
 
         add_files("src/os/windows/*.cpp")
     else 
