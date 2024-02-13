@@ -28,7 +28,9 @@ jobs:
         with:
             xmake-version: latest
     
+      - name: clone submodule
+        run: git submodule update --init --recursive
+    
       - name: build project
-        run: |
-          xmake -y
+        run: xmake -y
 
