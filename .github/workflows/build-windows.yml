@@ -3,6 +3,9 @@ name: build-windows
 on:
   - push
 
+permissions:
+  contents: write
+
 jobs:
   build:
     strategy:
@@ -33,4 +36,14 @@ jobs:
     
       - name: build project
         run: xmake -y -vD
+
+      - name: Upload binaries to release (main)
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ${{ github.workspace }}/build/windows/x64/release/pal-plugin-loader.dll
+          asset_name: pal-plugin-loader.dll
+          tag: "0.0.0-nightly"
+          overwrite: true
+          body: "This build automatically created by github action, corresponding to commit id ${{ github.sha }}."
 
