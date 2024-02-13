@@ -143,7 +143,7 @@ target("pal-plugin-loader-static")
 
     add_defines("ZYDIS_STATIC_BUILD")
     add_defines("ZYCORE_STATIC_BUILD")
-    add_defines("FOLLY_STATIC_LIBSTDCXX")
+    add_defines("NETHOST_USE_AS_STATIC")
     add_defines("GLOG_NO_ABBREVIATED_SEVERITIES")
     
     add_packages("folly")
@@ -159,13 +159,19 @@ target("pal-plugin-loader-static")
     add_links("folly")
     add_links("spdlog")
     add_links("funchook")
-    
+
     add_links("double-conversion")
 
     if is_os("windows") then
         add_links("gflags_static")
     else
         add_links("gflags")
+    end
+
+    if is_os("windows") then
+        add_links(path.join(os.scriptdir(), "bin/windows-x86-64/libnethost.lib"))
+    else
+        add_links(path.join(os.scriptdir(), "bin/linux-x86_64/libnethost.a"))
     end
 
     if is_os("windows") then
@@ -190,6 +196,7 @@ target("pal-plugin-loader-static")
     end
 
     add_includedirs(path.join(os.scriptdir(), "include/sdk/SDK"))
+    add_includedirs(path.join(os.scriptdir(), "include/dotnet"))
     add_includedirs(path.join(os.scriptdir(), "include/sdk"))
     add_includedirs(path.join(os.scriptdir(), "include"))
 

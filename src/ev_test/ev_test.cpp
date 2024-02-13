@@ -22,8 +22,20 @@ void install_test_event_handler() {
     });
 
     // first is an regex
-    register_process_event_callback("SunSky\\.SunSky_C\\.ReceiveTick", [](const char *function_name, SDK::UObject *object, SDK::UFunction *function, void *parms) -> bool {
-        pal_async_log->info("SunSky.SunSky_C.ReceiveTick event");
+    // register_process_event_callback("SunSky\\.SunSky_C\\.ReceiveTick", [](const char *function_name, SDK::UObject *object, SDK::UFunction *function, void *parms) -> bool {
+    //     pal_async_log->info("SunSky.SunSky_C.ReceiveTick event");
+    //     // return true will block this event
+    //     return false;
+    // });
+
+    register_process_event_callback("GrantExpForParty", [](const char *function_name, SDK::UObject *object, SDK::UFunction *function, void *parms) -> bool {
+        pal_async_log->info("GrantExpForParty event");
+        // return true will block this event
+        return false;
+    });
+
+    register_process_event_callback("GrantExpForParty", [](const char *function_name, SDK::UObject *object, SDK::UFunction *function, void *parms) -> bool {
+        pal_async_log->info("GrantExpForParty event");
         // return true will block this event
         return false;
     });

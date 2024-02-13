@@ -19,11 +19,16 @@
 #include "commands.h"
 #include "engine_functions.h"
 
+#include "nethost.h"
+#include "coreclr_delegates.h"
+#include "hostfxr.h"
+
 #include <cstdio>
 #include <iostream>
 
 folly::F14FastMap<folly::fbstring, console_command_handler_type> command_handler_map;
 std::shared_ptr<spdlog::async_logger>                            pal_async_log;
+char_t                                                           hostfxr_path[1024] = { 0 };
 
 void pal_loader_thread_start() {
     spdlog::info("loading ...");
@@ -55,6 +60,14 @@ void pal_loader_thread_start() {
     pal_async_log       = std::make_shared<spdlog::async_logger>("ENGEVENT", std::begin(default_sinks), std::end(default_sinks), spdlog::thread_pool(), spdlog::async_overflow_policy::overrun_oldest);
     spdlog::register_logger(command_logger);
     spdlog::set_default_logger(command_logger);
+
+    size_t host_fxr_path_buffer_size = 1024;
+    if (get_hostfxr_path(hostfxr_path, &host_fxr_path_buffer_size, nullptr) != 0) {
+        spdlog::warn("dotnet runtime not found! plugin system will disable!");
+    } else {
+        std::wstring fsrp(hostfxr_path, host_fxr_path_buffer_size);
+        spdlog::info("use dotnet runtime -> {}", std::string(fsrp.begin(), fsrp.end()));
+    }
 
     // If there is a log, refresh it
     std::thread log_watchdog([&] {
