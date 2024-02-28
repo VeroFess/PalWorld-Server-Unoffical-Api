@@ -145,7 +145,7 @@ target("pal-plugin-loader-static")
     add_defines("ZYCORE_STATIC_BUILD")
     add_defines("NETHOST_USE_AS_STATIC")
     add_defines("GLOG_NO_ABBREVIATED_SEVERITIES")
-    
+
     add_packages("folly")
     add_packages("spdlog")
     add_packages("eventpp")
@@ -202,7 +202,7 @@ target("pal-plugin-loader-static")
     add_includedirs(path.join(os.scriptdir(), "include"))
 
 
-    
+
 
     if is_os("windows") then
         add_includedirs(path.join(os.scriptdir(), "include/os/windows/sdk"))
@@ -211,7 +211,7 @@ target("pal-plugin-loader-static")
         add_includedirs("$(env VCPKG_ROOT)/installed/x64-windows-static/include")
 
         add_files("src/os/windows/*.cpp")
-    else 
+    else
         add_includedirs(path.join(os.scriptdir(), "include/os/linux/sdk"))
         add_includedirs(path.join(os.scriptdir(), "include/os/linux"))
 
@@ -240,10 +240,11 @@ target("pal-plugin-loader")
     add_includedirs(path.join(os.scriptdir(), "include"))
 
     if is_os("windows") then
+        add_linkdirs("$(env VCPKG_ROOT)/installed/x64-windows-static/lib")
         add_includedirs(path.join(os.scriptdir(), "include/os/windows/sdk"))
         add_includedirs(path.join(os.scriptdir(), "include/os/windows"))
         add_files("src/os/windows/libentry/*.cpp")
-    else 
+    else
         add_includedirs(path.join(os.scriptdir(), "include/os/linux/sdk"))
         add_includedirs(path.join(os.scriptdir(), "include/os/linux"))
         add_files("src/os/linux/libentry/*.cpp")
@@ -251,5 +252,5 @@ target("pal-plugin-loader")
 
 
 
-    
+
 
